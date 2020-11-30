@@ -1,0 +1,16 @@
+.social-wall {
+    padding-bottom: 20px;
+
+    @include tablet-large {
+        padding-bottom: 79px;
+    }
+
+    &__filter {
+        margin-bottom: 30px;
+
+        @include tablet-large {
+            padding-left: 25px;
+            margin-bottom: 40px;
+        }
+    }
+}

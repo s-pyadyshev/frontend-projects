@@ -1,0 +1,100 @@
+extends pug/base
+
+append vars
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
+block content
+    //- ...
+
+    +representation({
+        m: './images/experience-better-m.jpg',
+        d: './images/experience-better.jpg'
+    }).--img-center.--text-block
+
+        include ./pug/search-roles
+
+        +e.wrap-bottom.js-representation-text
+            +e.text-block
+                h1 Experience better and make a difference
+                p We cultivate a caring and supportive environment at Signature, not just for our residents, but for our team too.
+
+        //- .trigger-search-roles-theme.js-trigger-search-roles-theme
+
+    .container
+        +b.experience-better
+            p You can feel our strong team ethos in every one of our luxury care homes, and that’s something we’re extremely proud of.
+
+            +e.video
+                +e.play.js-play-video
+                    +svg('play')
+                <iframe src="https://player.vimeo.com/video/369605382" width="100%" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                //- video(poster="./images/wake-up-to-passion-video.jpg")
+                //-     source(src="./experience-better/videoplayback.mp4", type="video/mp4")
+
+            p When you work for us, we’ll help you achieve your potential through tailored training, and offer you exciting career development opportunities, whatever your role or level of experience. 
+
+            p As well as competitive pay and a generous company pension, we offer plenty of practical benefits too, like flexible working, subsidised meals, free uniforms, an annual bonus, holiday discounts, and a cycle to work scheme.
+
+            +e.slider
+                +benefits([{
+                    src: './images/annual-bonus.svg',
+                    label: 'Annual bonus'
+                }, {
+                    src: './images/annual-bonus.svg',
+                    label: 'Subsidised meals'
+                }, {
+                    src: './images/annual-bonus.svg',
+                    label: 'Holiday discounts'
+                }, {
+                    src: './images/annual-bonus.svg',
+                    label: 'Childcare support'
+                }, {
+                    src: './images/annual-bonus.svg',
+                    label: 'Cycle to work scheme'
+                }, {
+                    src: './images/annual-bonus.svg',
+                    label: 'Annual bonus 2'
+                }, {
+                    src: './images/annual-bonus.svg',
+                    label: 'Subsidised meals 2'
+                }])
+
+            p You’ll get to work in a truly luxurious place too. Signature have won awards for the design of our care homes, and it’s easy to see why. We take great pride in creating stunning spaces that everyone enjoys being in. 
+
+            +e.photo-grid
+                div
+                    img(src="./images/experince-better1.jpg", alt="")
+
+                div
+                    blockquote “Lorem ipsum dolor sit amet, consecte adipiscing elit. Praesent elemen.”
+
+                div
+                    img(src="./images/care-assistant.jpg", alt="")
+
+                div
+                    img(src="./images/chef.jpg", alt="")
+
+            p We strive for excellence in everything we do. By empowering our team to do the same, we’re able to give unrivalled levels of care to our residents, and a fulfilling career to everyone who works for us. 
+
+            +e.photo-grid.--right.--double
+                div
+                    img(src="./images/craft.jpg", alt="")
+
+                div
+                    blockquote “Lorem ipsum dolor sit amet, consecte adipiscing elit. Praesent elemen.”
+
+                div
+                    img(src="./images/word-search-puzzels.jpg", alt="")
+
+                div
+                    img(src="./images/choir.jpg", alt="")
+
+                div
+                    img(src="./images/craft2.jpg", alt="")
+
+            p Ready to wake up to better at Signature?
+
+            +e.button
+                +button('a', 'See our roles').--gradient-theme
+
+    include ./pug/register

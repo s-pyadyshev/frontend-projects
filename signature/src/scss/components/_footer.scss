@@ -1,0 +1,51 @@
+.footer {
+	background-image: url("../images/background-footer.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: $global-color-background-primary;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	@include tablet {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	&__nav {
+		margin-bottom: 5px;
+	}
+
+	&__social {
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__text {
+		font-size: 12px;
+		font-weight: 300;
+		line-height: 1.33;
+		letter-spacing: 0.75px;
+		color: $color-white;
+		max-width: 350px;
+
+		@include tablet {
+			font-size: 10px;
+			line-height: 1.4;
+			max-width: 290px;
+		}
+
+		p {
+			font-size: inherit;
+			font-weight: inherit;
+			line-height: inherit;
+			letter-spacing: inherit;
+			color: inherit;
+			margin: 0;
+
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}

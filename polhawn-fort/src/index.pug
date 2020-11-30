@@ -1,0 +1,80 @@
+extends ./templates/_base-template
+
+include ./components/menu/menu
+include ./components/section-land-sea/section-land-sea
+include ./components/section-advert/section-advert
+include ./components/section-intro/section-intro
+include ./components/section-mix-content/section-mix-content
+include ./components/section-offers/section-offers
+include ./components/section-social/section-social
+
+prepend head
+    - var pageTitle = 'Polhawn Fort';
+
+block content
+    main.main
+        +menu
+        +section-land-sea
+        +section-intro({
+                src: 'img/intro-home.jpg',
+                alt: 'I see the sea'
+            },
+            'Immerse yourselves in the magic of a cliff-top fort in the South West of England, standing tall among sweeping lawns. A secluded beach, <span>Polhawn Cove</span>, sits below, with exclusive access.'
+        )
+        +section-mix-content(
+            'I see the Sea...'
+        ).js-trigger-hamburger
+        .main__section-advert
+            .main__section-dots
+                ul.uk-dotnav.uk-dotnav-vertical
+                    li
+                        a(href="#expectations", title="").js-get-section
+                    li
+                        a(href="#go-fort", title="").js-get-section
+                    li
+                        a(href="#fort-comforts", title="").js-get-section
+                    li
+                        a(href="#prepare-to-dare", title="").js-get-section
+
+            +section-advert(
+                "img/dreams.jpg",
+                "Your expectations and dreams",
+                "Your expectations",
+                "& dreams",
+                "Immerse yourselves in the magic of a cliff-top fort in the South West of England, standing tall among sweeping lawns. A secluded beach, Polhawn Cove, sits below, with exclusive access.",
+                "js-section-scroll-trigger",
+                'expectations'
+            )
+
+            +section-advert(
+                "img/fort-conquer.jpg",
+                "Go fort & conquer",
+                "Go fort",
+                "& conquer",
+                "Immerse yourselves in the magic of a cliff-top fort in the South West of England, standing tall among sweeping lawns. A secluded beach, Polhawn Cove, sits below, with exclusive access.",
+                "js-section-scroll-trigger",
+                'go-fort'
+            ).uk-margin-auto-left
+
+            +section-advert(
+                "img/comforts.jpg",
+                "Fort comforts & relax",
+                "Fort comforts",
+                "& relax",
+                "Take over the fort and its comfortable living space that can sleep your family and friends in a hideaway location. Choose a whole weekend or a midweek break, it’s your call.",
+                "js-section-scroll-trigger",
+                'fort-comforts'
+            )
+
+            +section-advert(
+                "img/prepare-to-dare.jpg",
+                "Prepare to dare & explore",
+                "Prepare to dare",
+                "& explore",
+                "Immerse yourselves in the magic of a cliff-top fort in the South West of England, standing tall among sweeping lawns. A secluded beach, Polhawn Cove, sits below, with exclusive access.",
+                "js-section-scroll-trigger",
+                'prepare-to-dare'
+            ).uk-margin-auto-left
+
+        +section-offers
+        +section-social

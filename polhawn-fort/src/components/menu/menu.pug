@@ -1,0 +1,40 @@
+
+include ../nav/nav
+
+mixin menu
+    .menu.js-toggle-menu
+        .menu__inner
+            img(src="img/menu-bg.jpg" alt="Menu background")
+            img(src="img/dreams-bg.jpg" alt="Menu background" hidden)#toggle-hover1
+            img(src="img/menu-bg.jpg" alt="Menu background" hidden)#toggle-hover2
+            img(src="img/dreams-bg.jpg" alt="Menu background" hidden)#toggle-hover3
+            img(src="img/menu-bg.jpg" alt="Menu background" hidden)#toggle-hover4
+            img(src="img/dreams-bg.jpg" alt="Menu background" hidden)#toggle-hover5
+            img(src="img/menu-bg.jpg" alt="Menu background" hidden)#toggle-hover6
+            img(src="img/dreams-bg.jpg" alt="Menu background" hidden)#toggle-hover7
+            img(src="img/menu-bg.jpg" alt="Menu background" hidden)#toggle-hover8
+            img(src="img/dreams-bg.jpg" alt="Menu background" hidden)#toggle-hover9
+            img(src="img/menu-bg.jpg" alt="Menu background" hidden)#toggle-hover10
+
+            .menu__header-mobile
+                button.menu__button-back(type='button' data-uk-toggle='target: .js-toggle-menu; cls: is-menu-open;')
+                    span(data-uk-icon="menu-back")
+                a(href="tel:1234567890").menu__header-phone
+                    span(data-uk-icon="phone")
+
+            .menu__nav-wrap
+                .menu__nav
+                    +nav
+                .menu__controls.uk-flex.uk-flex-wrap(class="uk-flex-between@s")
+                    div
+                        a(class="uk-button uk-button-default" href="#") About Us
+                    div
+                        a(class="uk-button uk-button-default" href="#") Prices
+                    div
+                        a(class="uk-button uk-button-default" href="#") Talk To Us
+                .menu__links.uk-text-center
+                    a(href="#") Request a viewing
+                    .menu__links-divider
+                    a(href="#") Brochure request
+                .uk-text-center
+                    img(src="img/swirl.png" srcset="img/swirl.png, img/swirl@2x.png 2x" alt="Polhawn Fort Icon Logo" width="46" height="45")

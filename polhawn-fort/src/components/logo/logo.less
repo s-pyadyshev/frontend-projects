@@ -1,0 +1,102 @@
+.logo {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    h1 {
+        display: none;
+    }
+
+    &__img {
+        z-index: 1040;
+        position: relative;
+        top: 20px;
+        left: 5%;
+        width: 95%;
+        height: 50px;
+
+        @media (min-width: @breakpoint-small) {
+            top: 10px;
+            left: 20px;
+            width: 200px;
+            height: auto;
+        }
+
+        @media (min-width: 1600px) {
+            width: 280px;
+            height: auto;
+            top: 40px;
+            left: -10px;
+        }
+    }
+
+    &__inner {
+        position: absolute;
+        top: 55px;
+        left: -20px;
+        width: 100vw;
+        height: 110px;
+        overflow: hidden;
+        pointer-events: none;
+
+        @media (min-width: @breakpoint-small) {
+            display: none;
+        }
+
+        @media (min-width: 1600px) {
+            display: block;
+            width: 430px;
+            top: 90px;
+        }
+
+        &:before {
+            content: "";
+            z-index: 1030;
+            position: absolute;
+            top: -185px;
+            left: 0;
+            display: block;
+            width: 67vw;
+            height: 225px;
+            background-color: @global-background;
+            box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.25);
+            border-radius: 50%;
+
+            @media (min-width: @breakpoint-small) {
+                display: none;
+            }
+
+            @media (min-width: 1600px) {
+                display: block;
+                top: -370px;
+                width: 460px;
+                height: 460px;
+            }
+        }
+    }
+
+    .head-content__logo & {
+        img {
+            width: 100%;
+        }
+    }
+
+    .scrolled .head-content__logo & {
+
+        @media (min-width: @breakpoint-small) {
+            transform: translateX(calc(-40px - 100%));
+            opacity: 0;
+        }
+
+        @media (min-width: 1472px) {
+            transform: translateX(calc(~"(-100vw + 1155px) / 2"));
+        }
+    }
+}
+
+.logo-pts {
+    z-index: 1;
+    position: relative;
+    width: 185px;
+    height: 71px;
+}

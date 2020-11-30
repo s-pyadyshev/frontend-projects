@@ -1,0 +1,15 @@
+extends ./templates/_base-template
+
+include ./components/menu/menu
+include ./components/thanks/thanks
+
+prepend head
+    - var pageTitle = 'Thanks';
+
+block content
+    main.main
+        +menu
+        +thanks(
+            'img/thank-you-ask-question.jpg', 
+            'Thank you, we will be in touch soon'
+        )

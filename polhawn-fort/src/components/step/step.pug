@@ -1,0 +1,5 @@
+mixin step(current, max)
+    .step
+        | Step #{current}/#{max}
+        .step__progress
+            progress(class="uk-progress" value=current max=max)

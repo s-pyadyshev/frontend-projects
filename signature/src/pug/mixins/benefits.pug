@@ -1,0 +1,19 @@
+mixin benefits(data)
+    +b('section').benefits
+        +e('h2').title Benefits
+
+        +e.slider.js-benefits-slider.-swiper-container
+            .swiper-wrapper
+
+                each item in data
+                    +e.slide.-swiper-slide
+                        +e.image-wrap
+                            +e('img').image(src=item.src, alt="")
+
+                        +e.label #{item.label}
+
+            +e.pagination
+                .swiper-pagination
+
+        .swiper-button-prev
+        .swiper-button-next

@@ -1,0 +1,120 @@
+@inspiration-width-img-xsmall: 32px;
+@inspiration-width-img-small: 64px;
+
+.inspiration {
+    position: relative;
+    padding: 50px 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 35px;
+    margin-bottom: 50px;
+
+    @media (min-width: @breakpoint-small) {
+        margin-top: 85px;
+        margin-bottom: 135px;
+    }
+
+    &__back-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__card-image-wrap {
+        flex-shrink: 0;
+
+        img {
+            display: none;
+
+            @media (min-width: @breakpoint-small) {
+                display: block;
+                width: @inspiration-width-img-small;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__card {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        max-width: 690px;
+    }
+
+    &__card-content {
+        background-color: rgba(255, 255, 255, 1);
+        padding: 60px 24px 120px 24px;
+        width: 100%;
+        border-top: 10px solid #3b84e6;
+
+        @media (min-width: @breakpoint-small) {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 46px 68px 93px 46px;
+            width: calc(100% - @inspiration-width-img-small);
+            border-top: 0;
+        }
+    }
+
+    h2 {
+        .font-size(18);
+        color: #454545;
+        line-height: 1.04;
+        margin: 0 0 46px;
+
+        @media (min-width: @breakpoint-small) {
+            .font-size(28);
+            margin-bottom: 66px;
+        }
+    }
+
+    &--with-underline {
+        h2::after {
+            display: block;
+            background-color: #898989;
+            margin-top: 30px;
+            height: 1px;
+        }
+    }
+
+    h3 {
+        .font-size(50);
+        line-height: 0.88;
+        color: #8c8c8c;
+        margin-bottom: 50px;
+
+        @media (min-width: @breakpoint-small) {
+            .font-size(68);
+            margin-bottom: 43px;
+        }
+
+        &:after {
+            display: none;
+        }
+    }
+
+    p {
+        .font-size(16);
+        line-height: 1.81;
+        color: #454545;
+        margin: 0;
+
+        @media (min-width: @breakpoint-small) {
+            .font-size(16);
+        }
+    }
+
+    &--right &__card {
+        margin-left: auto;
+    }
+}

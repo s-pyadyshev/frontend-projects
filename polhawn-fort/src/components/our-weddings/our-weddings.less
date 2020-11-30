@@ -1,0 +1,100 @@
+.our-weddings {
+
+    @media (min-width: @breakpoint-small) {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__side-images {
+        display: none;
+
+        @media (min-width: @breakpoint-small) {
+            display: block;
+            flex-shrink: 0;
+            width: 40%;
+            padding-right: 20px;
+        }
+
+        @media (min-width: @breakpoint-large) {
+            padding-right: 73px;
+            width: 45%;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+
+            &:not(:last-child) {
+                margin-bottom: 52px;
+            }
+        }
+    }
+
+    &__content {
+
+        @media (min-width: @breakpoint-small) {
+            flex-shrink: 0;
+            width: 60%;
+            padding-left: 20px;
+            position: sticky;
+            top: 100px;
+        }
+
+        @media (min-width: @breakpoint-large) {
+            padding-left: 73px;
+            width: 55%;
+            max-width: 609px;
+        }
+    }
+
+    &__slider {
+
+        @media (min-width: @breakpoint-small) {
+            display: none;
+        }
+    }
+
+    h1 {
+        .font-size(45);
+        line-height: 1.33;
+        text-align: center;
+        font-family: 'freightbigprobook-regular';
+        margin-bottom: 44px;
+
+        @media (min-width: @breakpoint-small) {
+            text-align: left;
+        }
+
+        @media (min-width: @breakpoint-large) {
+            .font-size(65);
+            line-height: 1.25;
+        }
+    }
+
+    p {
+        line-height: 2.44;
+
+        @media (min-width: @breakpoint-large) {
+            line-height: 2.69;
+        }
+    }
+
+    &__button-wrap {
+        text-align: center;
+        margin-top: 48px;
+
+        @media (min-width: @breakpoint-small) {
+            text-align: left;
+        }
+
+        @media (min-width: @breakpoint-large) {
+            margin-top: 70px;
+        }
+
+        .uk-button {
+            padding: 15px 70px;
+            min-width: auto;
+            font-weight: normal;
+        }
+    }
+}

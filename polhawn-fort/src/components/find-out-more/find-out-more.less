@@ -1,0 +1,50 @@
+.find-out-more {
+    text-align: center;
+    margin-bottom: 20px;
+
+    &__wrap {
+        background-image: url('../img/find-out-more-back.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right, top;
+        padding: 50px 20px;
+    }
+
+    h3 {
+        .font-size(21);
+        font-style: italic;
+        line-height: 1.76;
+        letter-spacing: 0.42px;
+        color: #727272;
+        font-family: 'freightbigprobook-regular';
+        font-weight: 500;
+        margin: 0 0 30px;
+
+        @media (min-width: @breakpoint-small) {
+            .font-size(31);
+            line-height: 1.19;
+            letter-spacing: 0.62px;
+        }
+    }
+
+    p {
+        .font-size(14);
+        line-height: 2.36;
+        margin: 0 0 34px;
+        color: #4e4f4f;
+
+        @media (min-width: @breakpoint-small) {
+            .font-size(16);
+            line-height: 2.06;
+        }
+    }
+
+    &__link-wrap {
+
+        .uk-button.uk-button-small {
+            text-transform: none;
+            .font-size(13);
+            font-weight: 500;
+        }
+    }
+}

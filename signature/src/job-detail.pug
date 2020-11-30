@@ -1,0 +1,127 @@
+extends pug/base
+
+append vars
+    //- ...
+
+block content
+    //- ...
+
+    +representation({
+        m: './images/job-detail-m.jpg',
+        d: './images/job-detail.jpg'
+    }).--img-center.--text-block
+
+        include ./pug/search-roles
+
+        +e.wrap-bottom.js-representation-text
+            +e.text-block.js-link-back-place-mobile
+                h1 Sous Chef
+
+                p Wake up to better, join Signature Senior Lifestyle as a Sous Chef at our luxury residential home in xxxx. Use your experience and passion for amazing food to take an important role in our highly equipped kitchen.
+
+            +e.button.js-sticky-apply-now
+                +button('a', 'Apply now').--gradient-theme.--large-offset
+
+        .trigger-search-roles-theme.js-trigger-apply-now-sticky
+
+    .container
+        +b.job-detail
+            +e('aside').aside
+                +job-short-info([{
+                    icon: 'geo',
+                    tag: 'a',
+                    text: 'Job location goes here'
+                }, {
+                    icon: 'money',
+                    tag: 'span',
+                    text: 'Salary goes here'
+                }, {
+                    icon: 'category',
+                    tag: 'a',
+                    text: 'Job category goes here'
+                }, {
+                    icon: 'clock',
+                    tag: 'span',
+                    text: 'Permanent/temporary'
+                }, {
+                    icon: 'calendar',
+                    tag: 'span',
+                    text: 'Date posted goes here'
+                }])
+
+                +e.share
+                    +e('span').text-share
+                        | Share this role
+
+                    +social([{
+                        icon: 'facebook'
+                    }, {
+                        icon: 'instagram'
+                    }, {
+                        icon: 'twitter'
+                    }, {
+                        icon: 'linked-in'
+                    }]).--job
+
+            +e('main').main.js-link-back-place-desktop
+                +e.back.js-link-back-page
+                    a(href="#", title="Back to search results")
+                        | < Back to search results
+
+                +e('article').article
+                    h2 Your role at Signature
+
+                    p As Sous Chef you’ll play a crucial role in keeping our busy kitchen running smoothly. Second in command to the Head Chef, you’ll be responsible for ensuring every meal that leaves the kitchen is nutritious and restaurant quality. 
+
+                    p You’ll manage and develop the Chef de Partie and Commis Chef, sharing your experience and knowledge. You’ll also use your creativity and passion to help the Head Chef to regularly review and develop the menu. 
+
+                    h2 What Signature Offer
+
+                    ul
+                        li £14.50 per hour with company pension scheme
+                        li Flexible working
+                        li Award-winning Employee Assistant Program
+                        li Subsidised meals
+                        li Refer a friend with cash bonus
+                        li Plus cycle to work scheme, holiday discounts, study support and more
+
+                    h2 Signature People
+
+                    p We are kind and compassionate. Positive and resilient. Proactive and organised. Honest and accountable. Passionate and keen to develop. If this sounds like you, you’ll fit right in. 
+
+                    p With 5 years experience working in a kitchen and an NVQ Level 2 or 3 in Food & Hygiene or Catering Services, you know your way around a kitchen. Supervisory experience, awareness of COSHH, and a cool head, even in a hot kitchen, are a big advantage.
+
+                    h2 About Signature
+
+                    p Signature Senior Lifestyle offer unrivalled residential and dementia care in luxury homes. We strive for excellence in everything we do, and make a real difference to our residents’ lives. Our team is one of our biggest assets. We cultivate a supportive environment for our people, with tailored training and career development at all levels. 
+
+                    p Wake up to the passion inside you. Apply to Signature Senior Lifestyle today. 
+
+                +e.button
+                    +button('a', 'Apply now').--gradient-theme.--large-offset
+
+    +b('section').passion-inside.--gray-theme
+        .container
+            +e.slide
+                +e.media
+                    +e.play.js-play-video
+                        +svg('play')
+                    video(poster="./images/wake-up-to-passion-video.jpg")
+                        source(src="./experience-better/videoplayback.mp4", type="video/mp4")
+
+                +e.content
+                    +e.head
+                        +compile-text(
+                            'Wake up to the',
+                            'passion',
+                            'inside you'
+                        ).--border-theme
+
+                    blockquote
+                        p
+                            | “I am so passionate about good food. I love the fact that I get to cook delicious dishes, using the very best ingredients, all in a well-equipped kitchen.”
+
+                    p
+                        | Anne-Marie is a Sous Chef at Signature Reigate Grange.
+
+    include ./pug/register

@@ -1,0 +1,99 @@
+.section-blog {
+    margin-bottom: 60px;
+
+    @media (min-width: @breakpoint-small) {
+        margin-bottom: 168px;
+    }
+
+    h2 {
+        color: #606060;
+        margin-bottom: 30px;
+
+        @media (min-width: @breakpoint-large) {
+            margin-bottom: 70px;
+        }
+    }
+
+    > div {
+        padding-top: 60px;
+        padding-bottom: 120px;
+    }
+
+    &__content {
+        margin-bottom: 30px;
+
+        @media (min-width: @breakpoint-small) {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__arrows {
+        margin: 35px -15px 0;
+
+        svg {
+            width: 54px;
+            height: 54px;
+
+            @media (min-width: @breakpoint-small) {
+                width: 39px;
+                height: 39px;
+            }
+        }
+    }
+
+    &__arrow {
+        margin: 0 15px;
+        display: inline-block;
+        color: #fff;
+        transition-duration: @global-transition-duration;
+
+        &:hover,
+        &:active,
+        &:focus {
+            svg {
+                color: @global-primary-color;
+                transition-duration: @global-transition-duration;
+            }
+
+            path {
+                fill: #fff;
+            }
+        }
+
+        path {
+            fill: #b7b7b7;
+        }
+    }
+
+    .uk-dotnav {
+        margin-bottom: 28px;
+
+        > * > * {
+            background: #fff;
+        }
+
+        > .uk-active > * {
+            background: #15bb98;
+        }
+    }
+
+    &__all-blog-link.uk-button {
+        min-width: 260px;
+        background-color: #fff;
+        border-color: #fff;
+        .font-size(13);
+        font-weight: normal;
+        color: #606060;
+
+        @media (min-width: @breakpoint-small) {
+            .font-size(14);
+            letter-spacing: 0.98px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+
+        &:hover {
+            color: #30b298;
+        }
+    }
+}

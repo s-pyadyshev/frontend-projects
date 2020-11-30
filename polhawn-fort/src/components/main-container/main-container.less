@@ -1,0 +1,78 @@
+.main-container {
+    height: 100%;
+    margin-top: 115px;
+
+    @media (min-width: @breakpoint-small) {
+        margin-top: 0;
+    }
+
+    &--request {
+        margin-top: 0;
+    }
+}
+
+.main {
+
+    &__section-advert {
+        background-color: #000;
+        overflow: hidden;
+        position: relative;
+    }
+
+    &__section-dots {
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        padding: 50vh 0;
+        display: none;
+
+        @media (min-width: @breakpoint-small) {
+            display: block;
+            right: 15px;
+        }
+
+        @media (min-width: @breakpoint-large) {
+            right: 32px;
+        }
+
+        .uk-dotnav > * > * {
+            width: 17px;
+            height: 17px;
+            background: #fff;
+        }
+
+        .uk-dotnav-vertical > * {
+            padding-top: 23px;
+
+            &:first-child {
+                padding-top: 0;
+            }
+        }
+
+        a {
+            border: 2.5px solid transparent;
+            transition-property: width, height, background, border-color, margin-left;
+            transition-duration: @global-transition-duration;
+            position: relative;
+        }
+
+        a.active {
+            border-color: #fff;
+            width: 22px;
+            height: 22px;
+            background: transparent;
+            margin-left: -2.5px;
+        }
+    }
+
+    &__detail-page {
+
+        @media (min-width: @breakpoint-small) {
+            background-image: url('../img/intro-home.jpg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            margin-top: -100px;
+            padding-top: 100px;
+        }
+    }
+}

@@ -1,0 +1,370 @@
+include ../step/step
+include ../request-form/request-form
+
+mixin request-start()
+    .request-start
+        .request-start__list
+            section.request-start__item.target-arrange-viewing.target-brochure-request.target-talk-to-us
+                .container
+                    .request-start__item-inner
+                        .request-start__header
+                            h1
+                                | Your journey
+                                span starts now...
+
+                        .request-start__button
+                            button(uk-toggle="target: .target-arrange-viewing").uk-button.uk-button-default Arrange a Viewing
+
+                        .request-start__button
+                            button(uk-toggle="target: .target-brochure-request").uk-button.uk-button-default Request a Brochure
+
+                        .request-start__button
+                            button(uk-toggle="target: .target-talk-to-us").uk-button.uk-button-default Talk to us
+
+                        .request-start__button.request-start__button--continue
+                            a(href="#", title="", uk-toggle="target: .target-arrange-viewing").uk-button Continue
+
+                .request-start__swirl
+                    img(src="img/swirl.png", alt="swirl")
+
+            section.request-start__item.request-start__item--arrange-viewing.target-arrange-viewing(hidden)
+                .container
+                    form
+                        .request-start__item-inner
+                            .request-start__header
+                                h1
+                                    | Arrange a viewing
+
+                            +step-length('.request-start__steps--arrange-viewing', 8)
+
+                            .request-start__steps.request-start__steps--arrange-viewing.uk-switcher
+                                div
+                                    span(data-uk-icon="step-back", uk-toggle="target: .target-arrange-viewing").request-start__back
+
+                                    div
+                                        p Explore the Fort and grounds, meet the team, browse the photograph albums, check availability and discuss your vision of your dream wedding.
+
+                                        p Viewing times are 1.30pm to 3.00pm (finishing at 3.50pm) on Mondays & Fridays throughout the year.
+
+                                    .request-start__button.request-start__button--continue
+                                        a(href="#", title="", uk-switcher-item='1').uk-button Arrange our viewing
+
+                                div
+                                    span(data-uk-icon="step-back", uk-switcher-item='previous').request-start__back.request-start__back
+                                    +step('1', '7')
+                                    +request-form(
+                                        'What’s your name?',
+                                        'name',
+                                        '',
+                                        'name',
+                                        'text'
+                                    )
+                                    .request-start__vertical-divider
+                                    .request-start__button.request-start__button--continue
+                                        a(href="#", title="", uk-switcher-item='2').uk-button Continue
+
+                                div
+                                    span(data-uk-icon="step-back", uk-switcher-item='previous').request-start__back.request-start__back
+                                    +step('2', '7')
+                                    +request-form(
+                                        'Your partners name?',
+                                        'partners-name',
+                                        '',
+                                        'partners-name',
+                                        'text'
+                                    )
+                                    .request-start__vertical-divider
+                                    .request-start__button.request-start__button--continue
+                                        a(href="#", title="", uk-switcher-item='3').uk-button Continue
+
+                                div
+                                    span(data-uk-icon="step-back", uk-switcher-item='previous').request-start__back
+                                    +step('3', '7')
+                                    +request-form(
+                                        'Your email address?',
+                                        'email',
+                                        '',
+                                        'email',
+                                        'email'
+                                    )
+                                    .request-start__vertical-divider
+                                    .request-start__button.request-start__button--continue
+                                        a(href="#", title="", uk-switcher-item='4').uk-button Continue
+
+                                div
+                                    span(data-uk-icon="step-back", uk-switcher-item='previous').request-start__back
+                                    +step('4', '7')
+                                    +request-form(
+                                        "Your Telephone No'",
+                                        'tel-number',
+                                        '',
+                                        'tel-number',
+                                        'number'
+                                    )
+                                    .request-start__vertical-divider
+                                    .request-start__button.request-start__button--continue
+                                        a(href="#", title="", uk-switcher-item='5').uk-button Continue
+
+                                div
+                                    span(data-uk-icon="step-back", uk-switcher-item='previous').request-start__back
+                                    +step('5', '7')
+
+                                    .request-form
+                                        .request-form__label-wrap
+                                            label Choose your date
+
+                                        .request-form__choose-date
+                                            label(data-uk-icon="calendar", for="request-date")
+                                            input(id="request-date", name="request-date").js-choose-date
+
+                                    .request-start__vertical-divider
+                                    .request-start__button.request-start__button--continue
+                                        a(href="#", title="", uk-switcher-item='6').uk-button Continue
+
+                                div
+                                    span(data-uk-icon="step-back", uk-switcher-item='previous').request-start__back
+                                    +step('6', '7')
+
+                                    .request-form
+                                        .request-form__label-wrap
+                                            label Choose your time
+
+                                        .request-form__source
+                                            select.js-request-select(name="choose-time")
+                                                option(value="1.30pm") 1.30pm
+                                                option(value="2pm") 2pm
+                                                option(value="2.30pm") 2.30pm
+                                                option(value="3pm") 3pm
+
+                                    .request-start__vertical-divider
+                                    .request-start__button.request-start__button--continue
+                                        a(href="#", title="", uk-switcher-item='7').uk-button Continue
+
+                                div
+                                    span(data-uk-icon="step-back", uk-switcher-item='previous').request-start__back
+                                    +step('7', '7')
+                                    .request-form
+                                        .request-form__label-wrap
+                                            label How did you hear about us?
+
+                                        .request-form__source
+                                            select.js-request-select(name="how-do-you-hear")
+                                                option(value="Facebook") Facebook
+                                                option(value="Instagram") Instagram
+                                                option(value="LinkedIn") LinkedIn
+
+                                    .request-start__vertical-divider
+                                    .request-start__button.request-start__button--continue.request-start__button--send-away
+                                        button.uk-button Send away
+
+                .request-start__swirl
+                    img(src="img/swirl.png", alt="swirl")
+
+            section.request-start__item.target-brochure-request(hidden)
+                .container
+                    form
+                        .request-start__item-inner
+                            .request-start__header
+                                h1
+                                    | Brochure Request
+
+                            +step-length('.request-start__steps--brochure', 6)
+
+                            .request-start__steps.request-start__steps--brochure.uk-switcher
+                                div
+                                    span(data-uk-icon="step-back", uk-toggle="target: .target-brochure-request").request-start__back
+                                    +step('1', '5')
+                                    +request-form(
+                                        'What’s your name?',
+                                        'name',
+                                        '',
+                                        'name',
+                                        'text'
+                                    )
+                                    .request-start__vertical-divider
+                                    .request-start__button.request-start__button--continue
+                                        a(href="#", title="", uk-switcher-item='1').uk-button Continue
+
+                                div
+                                    span(data-uk-icon="step-back", uk-switcher-item='previous').request-start__back
+                                    +step('2', '5')
+                                    +request-form(
+                                        'Your partners name?',
+                                        'partners-name',
+                                        '',
+                                        'partners-name',
+                                        'text'
+                                    )
+                                    .request-start__vertical-divider
+                                    .request-start__button.request-start__button--continue
+                                        a(href="#", title="", uk-switcher-item='2').uk-button Continue
+
+                                div
+                                    span(data-uk-icon="step-back", uk-switcher-item='previous').request-start__back
+                                    +step('3', '5')
+                                    +request-form(
+                                        'Your email address?',
+                                        'email',
+                                        '',
+                                        'email',
+                                        'email'
+                                    )
+                                    .request-start__vertical-divider
+                                    .request-start__button.request-start__button--continue
+                                        a(href="#", title="", uk-switcher-item='3').uk-button Continue
+
+                                div
+                                    span(data-uk-icon="step-back", uk-switcher-item='previous').request-start__back
+                                    +step('4', '5')
+                                    .request-form
+                                        .request-form__label-wrap
+                                            label Would you like a printed brochure?
+
+                                    .request-start__buttons
+                                        .request-start__button.request-start__button--continue
+                                            label(uk-switcher-item='4').uk-button.js-check-brochure-label Yes
+                                                input(type="radio", id="printed-brochure-yes", name="printed-brochure", value="yes", hidden).js-check-brochure
+                                        .request-start__button.request-start__button--continue
+                                            label(uk-switcher-item='5').uk-button.js-check-brochure-label No
+                                                input(type="radio", name="printed-brochure", checked, value="no", hidden).js-check-brochure
+
+                                div
+                                    span(data-uk-icon="step-back", uk-switcher-item='previous').request-start__back
+                                    +request-form(
+                                        'What’s your address?',
+                                        'address',
+                                        '',
+                                        'address',
+                                        'text'
+                                    )
+                                    .request-start__vertical-divider
+                                    .request-start__button.request-start__button--continue
+                                        a(href="#", title="", uk-switcher-item='5').uk-button Continue
+
+                                div
+                                    span(data-uk-icon="step-back", uk-switcher-item='previous').request-start__back
+                                    +step('5', '5')
+                                    .request-form
+                                        .request-form__label-wrap
+                                            label How did you hear about us?
+
+                                        .request-form__source
+                                            select.js-request-select(name="how-do-you-hear")
+                                                option(value="Facebook") Facebook
+                                                option(value="Instagram") Instagram
+                                                option(value="LinkedIn") LinkedIn
+
+                                    .request-start__vertical-divider
+                                    .request-start__button.request-start__button--continue.request-start__button--send-away
+                                        button.uk-button Send away
+
+                .request-start__swirl
+                    img(src="img/swirl.png", alt="swirl")
+
+            section.request-start__item.target-talk-to-us(hidden)
+                .container
+                    form
+                        .request-start__item-inner
+                            .request-start__header
+                                h1
+                                    | Talk to us
+
+                            +step-length('.request-start__steps--talk-us', 6)
+
+                            .request-start__steps.request-start__steps--talk-us.uk-switcher
+                                div
+                                    span(data-uk-icon="step-back", uk-toggle="target: .target-talk-to-us").request-start__back
+                                    +step('1', '6')
+                                    +request-form(
+                                        'What’s your name?',
+                                        'name',
+                                        '',
+                                        'name',
+                                        'text'
+                                    )
+                                    .request-start__vertical-divider
+                                    .request-start__button.request-start__button--continue
+                                        a(href="#", title="", uk-switcher-item='1').uk-button Continue
+
+                                div
+                                    span(data-uk-icon="step-back", uk-switcher-item='previous').request-start__back
+                                    +step('2', '6')
+                                    +request-form(
+                                        'Your partners name?',
+                                        'partners-name',
+                                        '',
+                                        'partners-name',
+                                        'text'
+                                    )
+                                    .request-start__vertical-divider
+                                    .request-start__button.request-start__button--continue
+                                        a(href="#", title="", uk-switcher-item='2').uk-button Continue
+
+                                div
+                                    span(data-uk-icon="step-back", uk-switcher-item='previous').request-start__back
+                                    +step('3', '6')
+                                    +request-form(
+                                        'Your email address?',
+                                        'email',
+                                        '',
+                                        'email',
+                                        'email'
+                                    )
+                                    .request-start__vertical-divider
+                                    .request-start__button.request-start__button--continue
+                                        a(href="#", title="", uk-switcher-item='3').uk-button Continue
+
+                                div
+                                    span(data-uk-icon="step-back", uk-switcher-item='previous').request-start__back
+                                    +step('4', '6')
+                                    +request-form(
+                                        "Your Telephone No'",
+                                        'tel-number',
+                                        '',
+                                        'tel-number',
+                                        'number'
+                                    )
+                                    .request-start__vertical-divider
+                                    .request-start__button.request-start__button--continue
+                                        a(href="#", title="", uk-switcher-item='4').uk-button Continue
+
+                                div
+                                    span(data-uk-icon="step-back", uk-switcher-item='previous').request-start__back
+                                    +step('5', '6')
+                                    +request-form(
+                                        "How can we help?",
+                                        'help',
+                                        '',
+                                        'help',
+                                        'text'
+                                    )
+                                    .request-start__vertical-divider
+                                    .request-start__button.request-start__button--continue
+                                        a(href="#", title="", uk-switcher-item='5').uk-button Continue
+
+                                div
+                                    span(data-uk-icon="step-back", uk-switcher-item='previous').request-start__back
+                                    +step('6', '6')
+                                    .request-form
+                                        .request-form__label-wrap
+                                            label How did you hear about us?
+
+                                        .request-form__source
+                                            select.js-request-select(name="how-do-you-hear")
+                                                option(value="Facebook") Facebook
+                                                option(value="Instagram") Instagram
+                                                option(value="LinkedIn") LinkedIn
+
+                                    .request-start__vertical-divider
+                                    .request-start__button.request-start__button--continue.request-start__button--send-away
+                                        button.uk-button Send away
+
+                .request-start__swirl
+                    img(src="img/swirl.png", alt="swirl")
+
+mixin step-length(connect, length)
+    - var n = 1;
+    ul(uk-switcher="connect: " + connect + "; animation: uk-animation-fade").uk-hidden
+        while n <= length
+            li
+                a(href="#") #{n++}

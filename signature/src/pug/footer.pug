@@ -1,0 +1,38 @@
++b('footer').footer
+    .container
+        +e.wrap-inner
+            +e.nav
+                +nav([{
+                    text: 'Home',
+                    href: '/',
+                    class: 'active'
+                }, {
+                    text: 'Us',
+                    href: '#'
+                }, {
+                    text: 'Experience better',
+                    href: '#'
+                }, {
+                    text: 'Jobs',
+                    href: '#'
+                }, {
+                    text: 'Apprenticeships',
+                    href: '#'
+                }, {
+                    text: 'Join in',
+                    href: '#'
+                }]).--footer
+
+            +e.social
+                +social([{
+                    icon: 'facebook'
+                }, {
+                    icon: 'instagram'
+                }, {
+                    icon: 'twitter'
+                }, {
+                    icon: 'linked-in'
+                }]).--footer
+
+            +e.text
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis libero orci, elementum.

@@ -1,0 +1,21 @@
+// stylelint-disable no-empty-source
+@font-face {
+    src: url("../fonts/omnes-medium.woff2") format("woff2"), url("../fonts/omnes-medium.woff") format("woff");
+    font-family: "omnes";
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    src: url("../fonts/omnes-regular.woff2") format("woff2"), url("../fonts/omnes-regular.woff") format("woff");
+    font-family: "omnes";
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    src: url("../fonts/omnes-semibold.woff2") format("woff2"), url("../fonts/omnes-semibold.woff") format("woff");
+    font-family: "omnes";
+    font-weight: 600;
+    font-style: normal;
+}

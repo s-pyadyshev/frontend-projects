@@ -1,0 +1,9 @@
+mixin button(text, tag='button')
+    #{tag}.button(href=(tag === 'a' ? 'javascript:void(0);' : false))&attributes(attributes)
+        span.button__text #{text}
+        span.button__icon(data-uk-icon="chevron-right")
+
+mixin button-inverse(text, tag='button')
+    #{tag}.button.button--inverse(href=(tag === 'a' ? 'javascript:void(0);' : false))
+        span.button__text #{text}
+        span.button__icon(data-uk-icon="chevron-right")

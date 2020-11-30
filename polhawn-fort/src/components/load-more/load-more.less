@@ -1,0 +1,36 @@
+.load-more {
+    position: relative;
+    text-align: center;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        max-width: 516px; 
+        height: 2px; 
+        background-color: @global-primary-background;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__button {
+        position: relative;
+        z-index: 2;
+        background: @global-inverse-color;
+        border: none;
+        .font-bold();
+        .font-size(16);
+        line-height: 1.19;
+        color: @global-grey;
+        padding: 20px;
+        text-transform: uppercase;
+        transition: color @global-transition-duration;
+        cursor: pointer;
+
+        &:hover {
+            color: @global-primary-color;
+        }
+    }
+}

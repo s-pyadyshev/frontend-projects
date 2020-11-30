@@ -1,0 +1,25 @@
++b('form').job-filter
+    +e.title.js-toggle-dropdown
+        span Filter by
+
+        +e.arrow
+            +svg('triangle')
+
+    +e.content
+        +e.content-wrap
+            +e.fields
+                +e.field
+                    +select(['value1', 'value2', 'value3'], 'Choose Category')
+                    +e.select-arrow
+                        +svg('triangle')
+                +e.field
+                    +select(['value1', 'value2', 'value3'], 'Choose Position Type')
+                    +e.select-arrow
+                        +svg('triangle')
+                +e.field
+                    +select(['value1', 'value2', 'value3'], 'Choose Location')
+                    +e.select-arrow
+                        +svg('triangle')
+
+            +e.button
+                +button('button', 'Search').--gradient-theme.--large-offset

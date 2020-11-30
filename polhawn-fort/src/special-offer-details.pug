@@ -1,0 +1,97 @@
+extends ./templates/_base-template
+
+include ./components/blog-card/blog-card
+include ./components/advantages/advantages
+include ./components/section-signup/section-signup
+include ./components/see-more/see-more
+
+prepend head
+    - var pageTitle = 'Special offer details';
+
+block content
+    main.main
+        +menu
+
+        .main__detail-page
+            +blog-card(
+                'September',
+                'Autumn 2019 weekend wedding',
+                'calendar'
+            )(class="blog-card--calendar" data-uk-scrollspy="cls: fadeInUp animated slow; repeat: false;")
+
+            article.article.article--special-offer
+                .container.container--small
+                    .article__wrap
+                        .article__image
+                            img(src="img/blog-content1.jpg", alt="")
+
+                        h4 Weekend Dates - 3 Nights
+
+                        h2 November 04th - 07th
+
+                        h3 Was £8,995 – now only £6,750
+
+                        p A wonderful weekend wedding on the beautiful Cornish Coast 
+                            br
+                            | Friday 8th November – Monday 11th November 2019.
+
+                        p Exclusive use of Polhawn Fort and the surrounding gardens as well as accommodation for up to 24 people.
+
+                        p Late availability offers never hang about for long so if you are interested get in touch right away.
+
+            .container.container--small
+                a(href="#", title="").uk-button.uk-button-default.button--back-offers
+                    span(data-uk-icon="step-back")
+                    | Back to all offers
+
+        +advantages([{
+            text: 'Exclusively yours for your stay'
+        }, {
+            text: 'Reduced pricing, the same experience'
+        }, {
+            text: 'Book your viewing',
+            tag: 'a'
+        }])
+
+        section.article-list.article-list--our-weddings
+            img(src="img/article-list-decor-line.png").article-list__decor-line
+            .container
+                .article-list__wrap
+                    h2 Our weddings
+
+                    article.our-weddings
+                        .our-weddings__side-images
+                            img(src="img/our-weddings.png")
+                            img(src="img/our-weddings.png")
+                            img(src="img/our-weddings.png")
+
+                        .our-weddings__content
+                            h1 It’s not just a wedding it’s an experience
+
+                            .our-weddings__slider(data-uk-slideshow="animation: push")
+                                ul.uk-slideshow-items
+                                    li 
+                                        img(src="img/our-weddings.png", uk-cover)
+
+                                    li 
+                                        img(src="img/our-weddings.png", uk-cover)
+
+                                    li 
+                                        img(src="img/our-weddings.png", uk-cover)
+
+                                ul(class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin")
+
+
+                            p Polhawn fort is a blank canvas venue with a twist however you would like to create your dream wedding the way you want it, using the suppliers you want. Our team are on hand throughout your stay to make sure you and your suppliers have everything you need.
+
+                            .our-weddings__button-wrap
+                                a(href="#", title="").uk-button.uk-button-default Find out
+
+        +section-signup
+        +see-more(
+            'img/you-must-see-idos-back.png',
+            'img/you-must-see.png',
+            'You must see',
+            "Gallery",
+            'See more'
+        ).see-more--red-theme

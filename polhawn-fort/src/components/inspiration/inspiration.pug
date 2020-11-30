@@ -1,0 +1,17 @@
+mixin inspiration(srcBack, description, title, text, animation, srcLayer, jsColorWord)
+    section.inspiration(class!=attributes.class)
+        .container
+            .inspiration__wrap
+                .inspiration__back-wrapper
+                    img(src=srcBack, alt="")
+
+                .inspiration__card(data-uk-scrollspy=animation)
+                    .inspiration__card-image-wrap
+                        img(src=srcLayer, alt="")
+
+                    .inspiration__card-content(class=jsColorWord ? jsColorWord : '')
+                        h2 #{description}
+
+                        h3 #{title}
+
+                        p #{text}

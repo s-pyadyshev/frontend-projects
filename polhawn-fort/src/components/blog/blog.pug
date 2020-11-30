@@ -1,0 +1,32 @@
+mixin blog(title, iconColor, list)
+    .blog(class!=attributes.class)
+        .blog__top
+            .blog__header.uk-flex-middle
+                .blog__icon(class=iconColor ? iconColor : '')
+                    div(data-uk-icon="swirl")
+                span= title
+            .blog__content
+                p Button hole ideas and examples
+                .blog__link
+                    a(href="#").uk-button.uk-button-primary.uk-button-small Tell me more
+        if(list)
+            a(href="#", title="Button hole ideas and examples").blog__link-wrapper
+                p.blog__name Button hole ideas and examples
+                img(src="img/offer.jpg" alt="Offer image" width="322" height="322")
+
+        else
+            img(src="img/offer.jpg" alt="Offer image" width="322" height="322")
+
+
+mixin blog-offer
+    .blog
+        .blog__top
+            .blog__header
+                .blog__icon
+                    div(data-uk-icon="calendar")
+                span September
+            .blog__content
+                p Autumn 2019 weekend wedding
+                .blog__link
+                    a(href="#").uk-button.uk-button-primary.uk-button-small View offer
+        img(src="img/offer.jpg" alt="Offer image" width="322" height="322")

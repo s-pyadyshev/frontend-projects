@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Polhawn Fort</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="copyright" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="HandheldFriendly" content="True">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link href="css/main.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/ScrollToPlugin.min.js"></script>
+</head>
+
+<body class="js-toggle-menu">
+    <div class="main-container">
+        <button class="float-hamburger" type="button" data-uk-toggle="target: .js-toggle-menu; cls: is-menu-open;"><span data-uk-icon="menu"></span></button>
+        <header class="header">
+            <div>
+                <button class="menu__toggle-open" type="button" data-uk-toggle="target: .js-toggle-menu; cls: is-menu-open;"><span data-uk-icon="menu"></span></button>
+                <button class="menu__toggle-close" type="button" data-uk-toggle="target: .js-toggle-menu; cls: is-menu-open;"><span data-uk-icon="close"></span></button>
+            </div>
+            <div class="header__logo">
+                <a href="/" title="Go to Homepage">
+                    <img src="img/polhawn-fort-logo.svg" alt="Polhawn Fort logo">
+                </a>
+            </div>
+            <div class="header__phone">
+                <a href="tel:1234567890"><span data-uk-icon="phone"></span></a>
+            </div>
+            <div class="header__social" data-uk-scrollspy="cls: slideInDown animated; delay: 250; repeat: false;">
+                <ul class="social social--small">
+                    <li class="social__item">
+                        <a class="social__link" href="#" target="_blank" rel="noopener noreferrer"><span class="social__icon" data-uk-icon="social-fb"></span></a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" target="_blank" rel="noopener noreferrer"><span class="social__icon" data-uk-icon="social-twitter"></span></a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" target="_blank" rel="noopener noreferrer"><span class="social__icon" data-uk-icon="social-inst"></span></a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" target="_blank" rel="noopener noreferrer"><span class="social__icon" data-uk-icon="social-pinterest"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="menu js-toggle-menu">
+                <div class="menu__inner">
+                    <img src="img/menu-bg.jpg" alt="Menu background">
+                    <img src="img/dreams-bg.jpg" alt="Menu background" hidden id="toggle-hover1">
+                    <img src="img/menu-bg.jpg" alt="Menu background" hidden id="toggle-hover2">
+                    <img src="img/dreams-bg.jpg" alt="Menu background" hidden id="toggle-hover3">
+                    <img src="img/menu-bg.jpg" alt="Menu background" hidden id="toggle-hover4">
+                    <img src="img/dreams-bg.jpg" alt="Menu background" hidden id="toggle-hover5">
+                    <img src="img/menu-bg.jpg" alt="Menu background" hidden id="toggle-hover6">
+                    <img src="img/dreams-bg.jpg" alt="Menu background" hidden id="toggle-hover7">
+                    <img src="img/menu-bg.jpg" alt="Menu background" hidden id="toggle-hover8">
+                    <img src="img/dreams-bg.jpg" alt="Menu background" hidden id="toggle-hover9">
+                    <img src="img/menu-bg.jpg" alt="Menu background" hidden id="toggle-hover10">
+                    <div class="menu__header-mobile">
+                        <button class="menu__button-back" type="button" data-uk-toggle="target: .js-toggle-menu; cls: is-menu-open;"><span data-uk-icon="menu-back"></span></button>
+                        <a class="menu__header-phone" href="tel:1234567890"><span data-uk-icon="phone"></span></a>
+                    </div>
+                    <div class="menu__nav-wrap">
+                        <div class="menu__nav">
+                            <nav class="nav">
+                                <ul class="nav__list">
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="dream.html" data-uk-toggle="target: #toggle-hover1; mode: hover; animation: uk-animation-fade, uk-animation-fade uk-animation-reverse; queued: true">The dream</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="dream.html" data-uk-toggle="target: #toggle-hover2; mode: hover; animation: uk-animation-fade, uk-animation-fade uk-animation-reverse; queued: true">The I do’s</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="dream.html" data-uk-toggle="target: #toggle-hover3; mode: hover; animation: uk-animation-fade, uk-animation-fade uk-animation-reverse; queued: true">Plan & prep</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="dream.html" data-uk-toggle="target: #toggle-hover4; mode: hover; animation: uk-animation-fade, uk-animation-fade uk-animation-reverse; queued: true">Eat well</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="dream.html" data-uk-toggle="target: #toggle-hover5; mode: hover; animation: uk-animation-fade, uk-animation-fade uk-animation-reverse; queued: true">Sleep tight</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="dream.html" data-uk-toggle="target: #toggle-hover6; mode: hover; animation: uk-animation-fade, uk-animation-fade uk-animation-reverse; queued: true">Party time</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="dream.html" data-uk-toggle="target: #toggle-hover7; mode: hover; animation: uk-animation-fade, uk-animation-fade uk-animation-reverse; queued: true">Explore & conquer</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="dream.html" data-uk-toggle="target: #toggle-hover8; mode: hover; animation: uk-animation-fade, uk-animation-fade uk-animation-reverse; queued: true">Discover more</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="dream.html" data-uk-toggle="target: #toggle-hover9; mode: hover; animation: uk-animation-fade, uk-animation-fade uk-animation-reverse; queued: true">Gallery</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="dream.html" data-uk-toggle="target: #toggle-hover10; mode: hover; animation: uk-animation-fade, uk-animation-fade uk-animation-reverse; queued: true">Our weddings</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="menu__controls uk-flex uk-flex-wrap uk-flex-between@s">
+                            <div>
+                                <a class="uk-button uk-button-default" href="#">About Us</a>
+                            </div>
+                            <div>
+                                <a class="uk-button uk-button-default" href="#">Prices</a>
+                            </div>
+                            <div>
+                                <a class="uk-button uk-button-default" href="#">Talk To Us</a>
+                            </div>
+                        </div>
+                        <div class="menu__links uk-text-center">
+                            <a href="#">Request a viewing</a>
+                            <div class="menu__links-divider"></div>
+                            <a href="#">Brochure request</a>
+                        </div>
+                        <div class="uk-text-center">
+                            <img src="img/swirl.png" srcset="img/swirl.png, img/swirl@2x.png 2x" alt="Polhawn Fort Icon Logo" width="46" height="45">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="request">
+                <div class="request-start">
+                    <div class="request-start__list">
+
+                        <section class="request-start__item target-arrange-viewing target-brochure-request target-talk-to-us">
+                            <div class="container">
+                                <div class="request-start__item-inner">
+                                    <div class="request-start__header">
+                                        <h1>Your journey<span>starts now...</span></h1>
+                                    </div>
+                                    <div class="request-start__button">
+                                        <button class="uk-button uk-button-default" uk-toggle="target: .target-arrange-viewing">Arrange a Viewing</button>
+                                    </div>
+                                    <div class="request-start__button">
+                                        <button class="uk-button uk-button-default" uk-toggle="target: .target-brochure-request">Request a Brochure</button>
+                                    </div>
+                                    <div class="request-start__button">
+                                        <button class="uk-button uk-button-default" uk-toggle="target: .target-talk-to-us">Talk to us</button>
+                                    </div>
+                                    <div class="request-start__button request-start__button--continue">
+                                        <a class="uk-button" href="#" title="" uk-toggle="target: .target-arrange-viewing">Continue</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="request-start__swirl">
+                                <img src="img/swirl.png" alt="swirl" />
+                            </div>
+                        </section>
+
+                        <section class="request-start__item request-start__item--arrange-viewing target-arrange-viewing" hidden="hidden">
+                            <div class="container">
+                                <form>
+                                    <div class="request-start__item-inner">
+                                        <div class="request-start__header">
+                                            <h1>Arrange a viewing</h1>
+                                        </div>
+                                        <ul class="uk-hidden" uk-switcher="connect: .request-start__steps--arrange-viewing; animation: uk-animation-fade">
+                                            <li>
+                                                <a href="#">1</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">2</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">3</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">4</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">5</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">6</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">7</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">8</a>
+                                            </li>
+                                        </ul>
+                                        <div class="request-start__steps request-start__steps--arrange-viewing uk-switcher">
+                                            <div><span class="request-start__back" data-uk-icon="step-back" uk-toggle="target: .target-arrange-viewing"></span>
+                                                <div>
+                                                    <p>Explore the Fort and grounds, meet the team, browse the photograph albums, check availability and discuss your vision of your dream wedding.</p>
+                                                    <p>Viewing times are 1.30pm to 3.00pm (finishing at 3.50pm) on Mondays & Fridays throughout the year.</p>
+                                                </div>
+                                                <div class="request-start__button request-start__button--continue">
+                                                    <a class="uk-button" href="#" title="" uk-switcher-item="1">Arrange our viewing</a>
+                                                </div>
+                                            </div>
+                                            <div><span class="request-start__back request-start__back" data-uk-icon="step-back" uk-switcher-item="previous"></span>
+                                                <div class="step">Step 1/7<div class="step__progress"><progress class="uk-progress" value="1" max="7"></progress></div>
+                                                </div>
+                                                <div class="request-form">
+                                                    <div class="request-form__label-wrap"><label for="name">What’s your name?</label></div>
+                                                    <div class="request-form__input-wrap"><input id="name" placeholder="Write here" name="name" type="text" /></div>
+                                                </div>
+                                                <div class="request-start__vertical-divider"></div>
+                                                <div class="request-start__button request-start__button--continue">
+                                                    <a class="uk-button" href="#" title="" uk-switcher-item="2">Continue</a>
+                                                </div>
+                                            </div>
+                                            <div><span class="request-start__back request-start__back" data-uk-icon="step-back" uk-switcher-item="previous"></span>
+                                                <div class="step">Step 2/7<div class="step__progress"><progress class="uk-progress" value="2" max="7"></progress></div>
+                                                </div>
+                                                <div class="request-form">
+                                                    <div class="request-form__label-wrap"><label for="partners-name">Your partners name?</label></div>
+                                                    <div class="request-form__input-wrap"><input id="partners-name" placeholder="Write here" name="partners-name" type="text" /></div>
+                                                </div>
+                                                <div class="request-start__vertical-divider"></div>
+                                                <div class="request-start__button request-start__button--continue">
+                                                    <a class="uk-button" href="#" title="" uk-switcher-item="3">Continue</a>
+                                                </div>
+                                            </div>
+                                            <div><span class="request-start__back" data-uk-icon="step-back" uk-switcher-item="previous"></span>
+                                                <div class="step">Step 3/7<div class="step__progress"><progress class="uk-progress" value="3" max="7"></progress></div>
+                                                </div>
+                                                <div class="request-form">
+                                                    <div class="request-form__label-wrap"><label for="email">Your email address?</label></div>
+                                                    <div class="request-form__input-wrap"><input id="email" placeholder="Write here" name="email" type="email" /></div>
+                                                </div>
+                                                <div class="request-start__vertical-divider"></div>
+                                                <div class="request-start__button request-start__button--continue">
+                                                    <a class="uk-button" href="#" title="" uk-switcher-item="4">Continue</a>
+                                                </div>
+                                            </div>
+                                            <div><span class="request-start__back" data-uk-icon="step-back" uk-switcher-item="previous"></span>
+                                                <div class="step">Step 4/7<div class="step__progress"><progress class="uk-progress" value="4" max="7"></progress></div>
+                                                </div>
+                                                <div class="request-form">
+                                                    <div class="request-form__label-wrap"><label for="tel-number">Your Telephone No'</label></div>
+                                                    <div class="request-form__input-wrap"><input id="tel-number" placeholder="Write here" name="tel-number" type="number" /></div>
+                                                </div>
+                                                <div class="request-start__vertical-divider"></div>
+                                                <div class="request-start__button request-start__button--continue">
+                                                    <a class="uk-button" href="#" title="" uk-switcher-item="5">Continue</a>
+                                                </div>
+                                            </div>
+                                            <div><span class="request-start__back" data-uk-icon="step-back" uk-switcher-item="previous"></span>
+                                                <div class="step">Step 5/7<div class="step__progress"><progress class="uk-progress" value="5" max="7"></progress></div>
+                                                </div>
+                                                <div class="request-form">
+                                                    <div class="request-form__label-wrap"><label>Choose your date</label></div>
+                                                    <div class="request-form__choose-date"><label data-uk-icon="calendar" for="request-date"></label><input class="js-choose-date" id="request-date" name="request-date" /></div>
+                                                </div>
+                                                <div class="request-start__vertical-divider"></div>
+                                                <div class="request-start__button request-start__button--continue">
+                                                    <a class="uk-button" href="#" title="" uk-switcher-item="6">Continue</a>
+                                                </div>
+                                            </div>
+                                            <div><span class="request-start__back" data-uk-icon="step-back" uk-switcher-item="previous"></span>
+                                                <div class="step">Step 6/7<div class="step__progress"><progress class="uk-progress" value="6" max="7"></progress></div>
+                                                </div>
+                                                <div class="request-form">
+                                                    <div class="request-form__label-wrap"><label>Choose your time</label></div>
+                                                    <div class="request-form__source"><select class="js-request-select" name="choose-time">
+                                                            <option value="1.30pm">1.30pm</option>
+                                                            <option value="2pm">2pm</option>
+                                                            <option value="2.30pm">2.30pm</option>
+                                                            <option value="3pm">3pm</option>
+                                                        </select></div>
+                                                </div>
+                                                <div class="request-start__vertical-divider"></div>
+                                                <div class="request-start__button request-start__button--continue">
+                                                    <a class="uk-button" href="#" title="" uk-switcher-item="7">Continue</a>
+                                                </div>
+                                            </div>
+                                            <div><span class="request-start__back" data-uk-icon="step-back" uk-switcher-item="previous"></span>
+                                                <div class="step">Step 7/7<div class="step__progress"><progress class="uk-progress" value="7" max="7"></progress></div>
+                                                </div>
+                                                <div class="request-form">
+                                                    <div class="request-form__label-wrap"><label>How did you hear about us?</label></div>
+                                                    <div class="request-form__source"><select class="js-request-select" name="how-do-you-hear">
+                                                            <option value="Facebook">Facebook</option>
+                                                            <option value="Instagram">Instagram</option>
+                                                            <option value="LinkedIn">LinkedIn</option>
+                                                        </select></div>
+                                                </div>
+                                                <div class="request-start__vertical-divider"></div>
+                                                <div class="request-start__button request-start__button--continue request-start__button--send-away">
+                                                    <button class="uk-button">Send away</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="request-start__swirl">
+                                <img src="img/swirl.png" alt="swirl" />
+                            </div>
+                        </section>
+
+                        <section class="request-start__item target-brochure-request" hidden="hidden">
+                            <div class="container">
+                                <form>
+                                    <div class="request-start__item-inner">
+                                        <div class="request-start__header">
+                                            <h1>Brochure Request</h1>
+                                        </div>
+                                        <ul class="uk-hidden" uk-switcher="connect: .request-start__steps--brochure; animation: uk-animation-fade">
+                                            <li>
+                                                <a href="#">1</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">2</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">3</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">4</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">5</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">6</a>
+                                            </li>
+                                        </ul>
+                                        <div class="request-start__steps request-start__steps--brochure uk-switcher">
+                                            <div><span class="request-start__back" data-uk-icon="step-back" uk-toggle="target: .target-brochure-request"></span>
+                                                <div class="step">Step 1/5<div class="step__progress"><progress class="uk-progress" value="1" max="5"></progress></div>
+                                                </div>
+                                                <div class="request-form">
+                                                    <div class="request-form__label-wrap"><label for="name">What’s your name?</label></div>
+                                                    <div class="request-form__input-wrap"><input id="name" placeholder="Write here" name="name" type="text" /></div>
+                                                </div>
+                                                <div class="request-start__vertical-divider"></div>
+                                                <div class="request-start__button request-start__button--continue">
+                                                    <a class="uk-button" href="#" title="" uk-switcher-item="1">Continue</a>
+                                                </div>
+                                            </div>
+                                            <div><span class="request-start__back" data-uk-icon="step-back" uk-switcher-item="previous"></span>
+                                                <div class="step">Step 2/5<div class="step__progress"><progress class="uk-progress" value="2" max="5"></progress></div>
+                                                </div>
+                                                <div class="request-form">
+                                                    <div class="request-form__label-wrap"><label for="partners-name">Your partners name?</label></div>
+                                                    <div class="request-form__input-wrap"><input id="partners-name" placeholder="Write here" name="partners-name" type="text" /></div>
+                                                </div>
+                                                <div class="request-start__vertical-divider"></div>
+                                                <div class="request-start__button request-start__button--continue">
+                                                    <a class="uk-button" href="#" title="" uk-switcher-item="2">Continue</a>
+                                                </div>
+                                            </div>
+                                            <div><span class="request-start__back" data-uk-icon="step-back" uk-switcher-item="previous"></span>
+                                                <div class="step">Step 3/5<div class="step__progress"><progress class="uk-progress" value="3" max="5"></progress></div>
+                                                </div>
+                                                <div class="request-form">
+                                                    <div class="request-form__label-wrap"><label for="email">Your email address?</label></div>
+                                                    <div class="request-form__input-wrap"><input id="email" placeholder="Write here" name="email" type="email" /></div>
+                                                </div>
+                                                <div class="request-start__vertical-divider"></div>
+                                                <div class="request-start__button request-start__button--continue">
+                                                    <a class="uk-button" href="#" title="" uk-switcher-item="3">Continue</a>
+                                                </div>
+                                            </div>
+                                            <div><span class="request-start__back" data-uk-icon="step-back" uk-switcher-item="previous"></span>
+                                                <div class="step">Step 4/5<div class="step__progress"><progress class="uk-progress" value="4" max="5"></progress></div>
+                                                </div>
+                                                <div class="request-form">
+                                                    <div class="request-form__label-wrap"><label>Would you like a printed brochure?</label></div>
+                                                </div>
+                                                <div class="request-start__buttons">
+                                                    <div class="request-start__button request-start__button--continue"><label class="uk-button js-check-brochure-label" uk-switcher-item="4">Yes<input class="js-check-brochure" type="radio" id="printed-brochure-yes" name="printed-brochure" value="yes" hidden="hidden" /></label></div>
+                                                    <div class="request-start__button request-start__button--continue"><label class="uk-button js-check-brochure-label" uk-switcher-item="5">No<input class="js-check-brochure" type="radio" name="printed-brochure" checked="checked" value="no" hidden="hidden" /></label></div>
+                                                </div>
+                                            </div>
+                                            <div><span class="request-start__back" data-uk-icon="step-back" uk-switcher-item="previous"></span>
+                                                <div class="request-form">
+                                                    <div class="request-form__label-wrap"><label for="address">What’s your address?</label></div>
+                                                    <div class="request-form__input-wrap"><input id="address" placeholder="Write here" name="address" type="text" /></div>
+                                                </div>
+                                                <div class="request-start__vertical-divider"></div>
+                                                <div class="request-start__button request-start__button--continue">
+                                                    <a class="uk-button" href="#" title="" uk-switcher-item="5">Continue</a>
+                                                </div>
+                                            </div>
+                                            <div><span class="request-start__back" data-uk-icon="step-back" uk-switcher-item="previous"></span>
+                                                <div class="step">Step 5/5<div class="step__progress"><progress class="uk-progress" value="5" max="5"></progress></div>
+                                                </div>
+                                                <div class="request-form">
+                                                    <div class="request-form__label-wrap"><label>How did you hear about us?</label></div>
+                                                    <div class="request-form__source"><select class="js-request-select" name="how-do-you-hear">
+                                                            <option value="Facebook">Facebook</option>
+                                                            <option value="Instagram">Instagram</option>
+                                                            <option value="LinkedIn">LinkedIn</option>
+                                                        </select></div>
+                                                </div>
+                                                <div class="request-start__vertical-divider"></div>
+                                                <div class="request-start__button request-start__button--continue request-start__button--send-away">
+                                                    <button class="uk-button">Send away</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="request-start__swirl">
+                                <img src="img/swirl.png" alt="swirl" />
+                            </div>
+                        </section>
+
+                        <section class="request-start__item target-talk-to-us" hidden="hidden">
+                            <div class="container">
+                                <form>
+                                    <div class="request-start__item-inner">
+                                        <div class="request-start__header">
+                                            <h1>Talk to us</h1>
+                                        </div>
+                                        <ul class="uk-hidden" uk-switcher="connect: .request-start__steps--talk-us; animation: uk-animation-fade">
+                                            <li>
+                                                <a href="#">1</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">2</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">3</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">4</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">5</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">6</a>
+                                            </li>
+                                        </ul>
+                                        <div class="request-start__steps request-start__steps--talk-us uk-switcher">
+                                            <div><span class="request-start__back" data-uk-icon="step-back" uk-toggle="target: .target-talk-to-us"></span>
+                                                <div class="step">Step 1/6<div class="step__progress"><progress class="uk-progress" value="1" max="6"></progress></div>
+                                                </div>
+                                                <div class="request-form">
+                                                    <div class="request-form__label-wrap"><label for="name">What’s your name?</label></div>
+                                                    <div class="request-form__input-wrap"><input id="name" placeholder="Write here" name="name" type="text" /></div>
+                                                </div>
+                                                <div class="request-start__vertical-divider"></div>
+                                                <div class="request-start__button request-start__button--continue">
+                                                    <a class="uk-button" href="#" title="" uk-switcher-item="1">Continue</a>
+                                                </div>
+                                            </div>
+                                            <div><span class="request-start__back" data-uk-icon="step-back" uk-switcher-item="previous"></span>
+                                                <div class="step">Step 2/6<div class="step__progress"><progress class="uk-progress" value="2" max="6"></progress></div>
+                                                </div>
+                                                <div class="request-form">
+                                                    <div class="request-form__label-wrap"><label for="partners-name">Your partners name?</label></div>
+                                                    <div class="request-form__input-wrap"><input id="partners-name" placeholder="Write here" name="partners-name" type="text" /></div>
+                                                </div>
+                                                <div class="request-start__vertical-divider"></div>
+                                                <div class="request-start__button request-start__button--continue">
+                                                    <a class="uk-button" href="#" title="" uk-switcher-item="2">Continue</a>
+                                                </div>
+                                            </div>
+                                            <div><span class="request-start__back" data-uk-icon="step-back" uk-switcher-item="previous"></span>
+                                                <div class="step">Step 3/6<div class="step__progress"><progress class="uk-progress" value="3" max="6"></progress></div>
+                                                </div>
+                                                <div class="request-form">
+                                                    <div class="request-form__label-wrap"><label for="email">Your email address?</label></div>
+                                                    <div class="request-form__input-wrap"><input id="email" placeholder="Write here" name="email" type="email" /></div>
+                                                </div>
+                                                <div class="request-start__vertical-divider"></div>
+                                                <div class="request-start__button request-start__button--continue">
+                                                    <a class="uk-button" href="#" title="" uk-switcher-item="3">Continue</a>
+                                                </div>
+                                            </div>
+                                            <div><span class="request-start__back" data-uk-icon="step-back" uk-switcher-item="previous"></span>
+                                                <div class="step">Step 4/6<div class="step__progress"><progress class="uk-progress" value="4" max="6"></progress></div>
+                                                </div>
+                                                <div class="request-form">
+                                                    <div class="request-form__label-wrap"><label for="tel-number">Your Telephone No'</label></div>
+                                                    <div class="request-form__input-wrap"><input id="tel-number" placeholder="Write here" name="tel-number" type="number" /></div>
+                                                </div>
+                                                <div class="request-start__vertical-divider"></div>
+                                                <div class="request-start__button request-start__button--continue">
+                                                    <a class="uk-button" href="#" title="" uk-switcher-item="4">Continue</a>
+                                                </div>
+                                            </div>
+                                            <div><span class="request-start__back" data-uk-icon="step-back" uk-switcher-item="previous"></span>
+                                                <div class="step">Step 5/6<div class="step__progress"><progress class="uk-progress" value="5" max="6"></progress></div>
+                                                </div>
+                                                <div class="request-form">
+                                                    <div class="request-form__label-wrap"><label for="help">How can we help?</label></div>
+                                                    <div class="request-form__input-wrap"><input id="help" placeholder="Write here" name="help" type="text" /></div>
+                                                </div>
+                                                <div class="request-start__vertical-divider"></div>
+                                                <div class="request-start__button request-start__button--continue">
+                                                    <a class="uk-button" href="#" title="" uk-switcher-item="5">Continue</a>
+                                                </div>
+                                            </div>
+                                            <div><span class="request-start__back" data-uk-icon="step-back" uk-switcher-item="previous"></span>
+                                                <div class="step">Step 6/6<div class="step__progress"><progress class="uk-progress" value="6" max="6"></progress></div>
+                                                </div>
+                                                <div class="request-form">
+                                                    <div class="request-form__label-wrap"><label>How did you hear about us?</label></div>
+                                                    <div class="request-form__source"><select class="js-request-select" name="how-do-you-hear">
+                                                            <option value="Facebook">Facebook</option>
+                                                            <option value="Instagram">Instagram</option>
+                                                            <option value="LinkedIn">LinkedIn</option>
+                                                        </select></div>
+                                                </div>
+                                                <div class="request-start__vertical-divider"></div>
+                                                <div class="request-start__button request-start__button--continue request-start__button--send-away">
+                                                    <button class="uk-button">Send away</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="request-start__swirl">
+                                <img src="img/swirl.png" alt="swirl" />
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <section class="section-signup">
+                    <div class="container">
+                        <div>
+                            <h2>Sign up for exclusive Pricing</h2>
+                            <p>Be the ‘first’ to receive exclusive pricing as and when they are released</p>
+                            <form method="post">
+                                <div data-uk-grid="data-uk-grid">
+                                    <div class="uk-width-1-3@s"><input class="uk-input" type="email" name="email" placeholder="Email Address" /></div>
+                                    <div class="uk-width-1-3@s"><input class="uk-input" type="text" name="name" placeholder="Name" /></div>
+                                    <div class="uk-width-1-3@s"><input class="uk-input" type="tel" name="tel" placeholder="Phone Number" /></div>
+                                    <div class="uk-width-1-3@s"></div>
+                                    <div class="uk-width-1-3@s uk-flex uk-flex-center">
+                                        <button class="uk-button uk-button-primary" type="submit" name="submit">Submit</button>
+                                    </div>
+                                    <div class="uk-width-1-3@s"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section-blog uk-cover-container">
+                    <img src="img/offers-bg.png" alt="Offers section background" data-uk-cover="data-uk-cover" />
+                    <div class="uk-position-relative">
+                        <div class="uk-flex uk-flex-center" data-uk-scrollspy="cls: fadeInUp animated; delay: 250; repeat: false;">
+                            <h2>Polhawn Blog</h2>
+                        </div>
+                        <div class="container">
+                            <div class="section-blog__content" data-uk-slider="" data-uk-scrollspy="cls: fadeInUp animated; delay: 250; repeat: false;">
+                                <div class="uk-position-relative">
+                                    <ul class="uk-slider-nav uk-dotnav uk-flex-center"></ul>
+                                    <div class="uk-slider-container">
+                                        <div class="uk-slider-items uk-grid uk-grid-small uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-4@l">
+                                            <div>
+                                                <div class="blog">
+                                                    <div class="blog__top">
+                                                        <div class="blog__header uk-flex-middle">
+                                                            <div class="blog__icon blog__icon--purple">
+                                                                <div data-uk-icon="swirl"></div>
+                                                            </div><span>Inspiration</span>
+                                                        </div>
+                                                        <div class="blog__content">
+                                                            <p>Button hole ideas and examples</p>
+                                                            <div class="blog__link">
+                                                                <a class="uk-button uk-button-primary uk-button-small" href="#">Tell me more</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <img src="img/offer.jpg" alt="Offer image" width="322" height="322" />
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="blog">
+                                                    <div class="blog__top">
+                                                        <div class="blog__header uk-flex-middle">
+                                                            <div class="blog__icon blog__icon--green">
+                                                                <div data-uk-icon="swirl"></div>
+                                                            </div><span>Polhawn Blog</span>
+                                                        </div>
+                                                        <div class="blog__content">
+                                                            <p>Button hole ideas and examples</p>
+                                                            <div class="blog__link">
+                                                                <a class="uk-button uk-button-primary uk-button-small" href="#">Tell me more</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <img src="img/offer.jpg" alt="Offer image" width="322" height="322" />
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="blog">
+                                                    <div class="blog__top">
+                                                        <div class="blog__header uk-flex-middle">
+                                                            <div class="blog__icon blog__icon--orange">
+                                                                <div data-uk-icon="swirl"></div>
+                                                            </div><span>Latest News</span>
+                                                        </div>
+                                                        <div class="blog__content">
+                                                            <p>Button hole ideas and examples</p>
+                                                            <div class="blog__link">
+                                                                <a class="uk-button uk-button-primary uk-button-small" href="#">Tell me more</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <img src="img/offer.jpg" alt="Offer image" width="322" height="322" />
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="blog">
+                                                    <div class="blog__top">
+                                                        <div class="blog__header uk-flex-middle">
+                                                            <div class="blog__icon blog__icon--purple">
+                                                                <div data-uk-icon="swirl"></div>
+                                                            </div><span>Inspiration</span>
+                                                        </div>
+                                                        <div class="blog__content">
+                                                            <p>Button hole ideas and examples</p>
+                                                            <div class="blog__link">
+                                                                <a class="uk-button uk-button-primary uk-button-small" href="#">Tell me more</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <img src="img/offer.jpg" alt="Offer image" width="322" height="322" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="uk-hidden@l section-blog__arrows uk-text-center">
+                                        <a class="section-blog__arrow" href="#" data-uk-slider-item="previous"><span data-uk-icon="arrow-left"></span></a>
+                                        <a class="section-blog__arrow" href="#" data-uk-slider-item="next"><span data-uk-icon="arrow-right"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-text-center">
+                                <a class="uk-button section-blog__all-blog-link" href="#">View all blog area</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer class="footer uk-cover-container">
+            <div class="uk-position-relative">
+                <div class="container">
+                    <div class="footer__top" data-uk-scrollspy="cls: fadeInUp animated slow; delay: 250; repeat: false;">
+                        <div class="call-our-team">
+                            <p>Call our team</p>
+                            <a href="tel:01752822864">01752 822864</a>
+                        </div>
+                    </div>
+                    <div class="footer__center" data-uk-scrollspy="cls: fadeInUp animated slow; delay: 250; repeat: false;">
+                        <div class="uk-flex-center uk-flex-between@s" data-uk-grid>
+                            <div>
+                                <a class="uk-button uk-button-default" href="#">About Us</a>
+                            </div>
+                            <div>
+                                <a class="uk-button uk-button-default" href="#">Prices</a>
+                            </div>
+                            <div>
+                                <a class="uk-button uk-button-default" href="#">Talk To Us</a>
+                            </div>
+                        </div>
+                        <div class="footer__links uk-text-center" data-uk-scrollspy="cls: fadeInUp animated slow; delay: 250; repeat: false;">
+                            <div class="request-links request-links--footer">
+                                <a href="#">Request a viewing</a>
+                                <div class="request-links__divider"></div>
+                                <a href="#">Brochure request</a>
+                            </div>
+                        </div>
+                        <div class="uk-text-center uk-visible@s">
+                            <img src="img/swirl.png" srcset="img/swirl.png, img/swirl@2x.png 2x" alt="Polhawn Fort Icon Logo" width="46" height="45">
+                        </div>
+                    </div>
+                    <div class="footer__social" data-uk-scrollspy="cls: fadeInUp animated slow; delay: 250; repeat: false;">
+                        <ul class="social">
+                            <li class="social__item">
+                                <a class="social__link" href="#" target="_blank" rel="noopener noreferrer"><span class="social__icon" data-uk-icon="social-fb"></span></a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link" href="#" target="_blank" rel="noopener noreferrer"><span class="social__icon" data-uk-icon="social-twitter"></span></a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link" href="#" target="_blank" rel="noopener noreferrer"><span class="social__icon" data-uk-icon="social-inst"></span></a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link" href="#" target="_blank" rel="noopener noreferrer"><span class="social__icon" data-uk-icon="social-pinterest"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__bottom" data-uk-scrollspy="cls: fadeInUp animated slow; delay: 250; repeat: false;">
+                    <div class="container uk-flex uk-flex-center uk-flex-wrap uk-flex-between@s">
+                        <div class="footer__bottom-left">Copyright 2019© Polhawn Fort</div>
+                        <div class="footer__bottom-center">
+                            <ul class="list-divided uk-flex uk-flex-center uk-flex-wrap">
+                                <li>
+                                    <a href="#">Accessibility</a>
+                                </li>
+                                <li>
+                                    <a href="#">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="#">Terms & Conditions</a>
+                                </li>
+                                <li>
+                                    <a href="#">Copyright</a>
+                                </li>
+                                <li>
+                                    <a href="#">Sitemap</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__bottom-right">
+                            <ul class="list-divided uk-flex uk-flex-wrap">
+                                <li><span>Web Design by <a href="https://www.own-design.com" target="_blank" class="link-design">OWN DESIGN</a></span></li>
+                                <li>
+                                    <a href="#">Terms</a>
+                                </li>
+                                <li>
+                                    <a href="#">Privacy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="uk-flex-top modal-video" id="modal-media-video" data-uk-modal="">
+            <div class="uk-modal-dialog uk-width-1-1 uk-height-1-1 uk-margin-auto-vertical">
+                <button class="uk-modal-close-outside" type="button" data-uk-close=""></button><iframe class="uk-width-1-1 uk-height-1-1" src="https://www.youtube-nocookie.com/embed/c2pz2mlSfXA" data-uk-video=""></iframe>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit.min.js"></script>
+        <script src="js/app.js"></script>
+    </div>
+</body>
+</html>

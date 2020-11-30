@@ -1,0 +1,178 @@
+mixin month(name)
+    .month-price
+        h4= name
+        p <span>04th</span> – <span>07th</span> - <span>£5,995</span> <button data-uk-toggle="target: #prices-alert"><span data-uk-icon="plus"></span></button>
+        p <span>11th</span> – <span>14th</span> - <span>£5,995</span>
+        p <span>18th</span> – <span>21st</span> - <span>£5,995</span>
+        p <span>25th</span> – <span>28th</span> - <span>£6,695</span>
+mixin month-split(name, days1, days2)
+    .month-price
+        h4= name
+        h5= days1
+        p <span>04th</span> – <span>07th</span> - <span>£5,995</span> <button data-uk-toggle="target: #prices-alert"><span data-uk-icon="plus"></span></button>
+        p <span>11th</span> – <span>14th</span> - <span>£5,995</span>
+        p <span>18th</span> – <span>21st</span> - <span>£5,995</span>
+        p <span>25th</span> – <span>28th</span> - <span>£6,695</span>
+        h5= days2
+        p <span>04th</span> – <span>07th</span> - <span>£5,995</span> <button data-uk-toggle="target: #prices-alert"><span data-uk-icon="plus"></span></button>
+        p <span>11th</span> – <span>14th</span> - <span>£5,995</span>
+        p <span>18th</span> – <span>21st</span> - <span>£5,995</span>
+        p <span>25th</span> – <span>28th</span> - <span>£6,695</span>
+
+
+mixin section-pricing
+    section.section.section-pricing
+        .section-pricing__header
+            .container(data-uk-scrollspy="cls: fadeInDown animated slow; repeat: false;")
+                .uk-flex.uk-flex-between.uk-flex-wrap
+                    .uk-flex.uk-flex-wrap.section-pricing__select-wrap
+                        img(src="img/green-line-short.png" alt="green line short")
+                        div
+                            h2 Exclusive use
+
+                            .uk-flex
+                                select#select-pricing(name="pricing")
+                                    option(value="2019") Pricing 2019
+                                    option(value="2020") Pricing 2020
+                                    option(value="2021") Pricing 2021
+                                a(href="dream.html").select-pricing-link.choices__list--dropdown.choices__item Talk to us
+                    .month-price-note.uk-flex.uk-flex-bottom
+                        div.uk-margin-right
+                            span(data-uk-icon="plus")
+                        span Not to be missed
+
+        .container.section-pricing__content(data-uk-scrollspy="cls: fadeInUp animated slow; repeat: false;")
+            .tab-wrapper
+                a#tab1.active(href='javascript:;').tab-button.pricing-tab
+                    .pricing-tab__badge 3 Nights
+                    h3 Weekend
+                    p Friday 4pm – Monday 10am
+                .tab-content
+                    .tab-content-background
+                    h3 Weekend Dates - 3 Nights
+                    .month-prices-slider.month-prices-slider1
+                        .swiper-container
+                            .swiper-wrapper
+                                .swiper-slide
+                                    +month('January')
+                                .swiper-slide
+                                    +month('February')
+                                .swiper-slide
+                                    +month('March')
+                                .swiper-slide
+                                    +month('April')
+                                .swiper-slide
+                                    +month('May')
+                                .swiper-slide
+                                    +month('June')
+                                .swiper-slide
+                                    +month('July')
+                                .swiper-slide
+                                    +month('August')
+                                .swiper-slide
+                                    +month('September')
+                                .swiper-slide
+                                    +month('October')
+                                .swiper-slide
+                                    +month('November')
+                                .swiper-slide
+                                    +month('December')
+                        .swiper-controls
+                            .swiper-button-prev.swiper-button-prev1
+                                span(data-uk-icon="chevron-left")
+                            .swiper-button-next.swiper-button-next1
+                                span(data-uk-icon="chevron-right")
+                    .tab-content-bottom
+                        p Secure your dates
+                        a(href="#").uk-button What’s the next steps?
+                a#tab2(href='javascript:;').tab-button.pricing-tab
+                    .pricing-tab__badge 4 Nights
+                    h3 Mid Week
+                    p Monday 4pm – Friday 10am
+                .tab-content(style="background: #949ca6;")
+                    .tab-content-background
+                    h3 Weekend Dates - 3 Nights
+                    .month-prices-slider.month-prices-slider2
+                        .swiper-container
+                            .swiper-wrapper
+                                .swiper-slide
+                                    +month('January')
+                                .swiper-slide
+                                    +month('February')
+                                .swiper-slide
+                                    +month('March')
+                                .swiper-slide
+                                    +month('April')
+                                .swiper-slide
+                                    +month('May')
+                                .swiper-slide
+                                    +month('June')
+                                .swiper-slide
+                                    +month('July')
+                                .swiper-slide
+                                    +month('August')
+                                .swiper-slide
+                                    +month('September')
+                                .swiper-slide
+                                    +month('October')
+                                .swiper-slide
+                                    +month('November')
+                                .swiper-slide
+                                    +month('December')
+                        .swiper-controls
+                            .swiper-button-prev.swiper-button-prev2
+                                span(data-uk-icon="chevron-left")
+                            .swiper-button-next.swiper-button-next2
+                                span(data-uk-icon="chevron-right")
+                    .tab-content-bottom
+                        p Secure your dates
+                        a(href="#").uk-button What’s the next steps?
+                a#tab3(href='javascript:;').tab-button.pricing-tab
+                    .pricing-tab__badge 2 Nights
+                    h3 Split mid-week
+                    p Monday 4pm – Wednesday 10am
+                    p or Wednesday 4pm – Friday 10am
+                .tab-content(style="background: #a2b9ca;")
+                    .tab-content-background
+                    h3 Weekend Dates - 3 Nights
+                    .month-prices-slider.month-prices-slider3
+                        .swiper-container
+                            .swiper-wrapper
+                                .swiper-slide
+                                    +month-split('January', 'Monday - Wednesday', 'Wednesday - Friday')
+                                .swiper-slide
+                                    +month-split('February', 'Monday - Wednesday', 'Wednesday - Friday')
+                                .swiper-slide
+                                    +month-split('March', 'Monday - Wednesday', 'Wednesday - Friday')
+                                .swiper-slide
+                                    +month-split('April', 'Monday - Wednesday', 'Wednesday - Friday')
+                                .swiper-slide
+                                    +month-split('May', 'Monday - Wednesday', 'Wednesday - Friday')
+                                .swiper-slide
+                                    +month-split('June', 'Monday - Wednesday', 'Wednesday - Friday')
+                                .swiper-slide
+                                    +month-split('July', 'Monday - Wednesday', 'Wednesday - Friday')
+                                .swiper-slide
+                                    +month-split('August', 'Monday - Wednesday', 'Wednesday - Friday')
+                                .swiper-slide
+                                    +month-split('September', 'Monday - Wednesday', 'Wednesday - Friday')
+                                .swiper-slide
+                                    +month-split('October', 'Monday - Wednesday', 'Wednesday - Friday')
+                                .swiper-slide
+                                    +month-split('November', 'Monday - Wednesday', 'Wednesday - Friday')
+                                .swiper-slide
+                                    +month-split('December', 'Monday - Wednesday', 'Wednesday - Friday')
+                        .swiper-controls
+                            .swiper-button-prev.swiper-button-prev3
+                                span(data-uk-icon="chevron-left")
+                            .swiper-button-next.swiper-button-next3
+                                span(data-uk-icon="chevron-right")
+                    .tab-content-bottom
+                        p Secure your dates
+                        a(href="#").uk-button What’s the next steps?
+            .swiper-controls-desktop
+                .swiper-button-prev
+                    span(data-uk-icon="chevron-left")
+                .swiper-button-next
+                    span(data-uk-icon="chevron-right")
+

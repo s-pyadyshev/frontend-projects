@@ -1,0 +1,25 @@
+.scroll-to {
+    .font-size(30);
+    font-weight: 900;
+    text-decoration: none;
+    color: @global-color;
+
+    @media (min-width: @breakpoint-small) {
+        .font-size(60);
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        .link-hover-color-primary;
+
+        .scroll-to__icon {
+            transform: translateY(20px);
+            transition-duration: @global-transition-duration;
+        }
+    }
+
+    &__icon {
+        transition-duration: @global-transition-duration;
+    }
+}

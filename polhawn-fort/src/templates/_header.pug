@@ -1,0 +1,17 @@
+include ./../components/menu/menu
+include ./../components/social/social
+
+header.header
+  div
+    button.menu__toggle-open(type='button' data-uk-toggle='target: .js-toggle-menu; cls: is-menu-open;')
+      span(data-uk-icon="menu")
+    button.menu__toggle-close(type='button' data-uk-toggle='target: .js-toggle-menu; cls: is-menu-open;')
+      span(data-uk-icon="close")
+  .header__logo
+    a(href="/" title="Go to Homepage")
+      img(src="img/polhawn-fort-logo.svg" alt="Polhawn Fort logo")
+  .header__phone
+    a(href="tel:1234567890")
+      span(data-uk-icon="phone")
+  .header__social(data-uk-scrollspy="cls: slideInDown animated; delay: 250; repeat: false;")
+    +social(class="social--small")

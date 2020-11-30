@@ -1,0 +1,8 @@
+mixin select(options, placeholder)
+    +b('select').select
+        if(placeholder)
+            option(value="", disabled, selected) #{placeholder}
+        each option in options
+            option(value=option) #{option}
+
+//- options = ['']

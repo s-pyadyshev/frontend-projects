@@ -1,0 +1,27 @@
+.play-button {
+  display: block;
+  width: 109px;
+  height: 109px;
+  background: none;
+  border: 0;
+
+  @media (min-width: @breakpoint-small) {
+    width: 151px;
+    height: 151px;
+  }
+
+  svg {
+    &:hover,
+    &:active,
+    &:focus {
+      circle {
+        opacity: 1;
+        transition-duration: @global-transition-duration;
+      }
+    }
+
+    circle {
+      transition-duration: @global-transition-duration;
+    }
+  }
+}

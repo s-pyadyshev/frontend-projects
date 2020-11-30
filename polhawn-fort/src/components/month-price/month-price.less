@@ -1,0 +1,92 @@
+.month-price-note-icon {
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: none;
+    background-color: @global-primary-color;
+    color: #fff;
+
+    svg {
+        width: 13px;
+        height: 14px;
+    }
+}
+
+.month-price-note {
+    > div {
+        .month-price-note-icon;
+    }
+
+    > span {
+        font-family: 'freightdispprolight';
+        color: #8c8c8c;
+    }
+}
+
+.month-price {
+    max-width: 280px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (min-width: @breakpoint-small) {
+        max-width: 230px;
+    }
+
+    @media (min-width: @breakpoint-large) {
+        max-width: 280px;
+    }
+
+    button {
+        position: relative;
+        right: -12px;
+        .month-price-note-icon;
+        .pulse;
+        .animated;
+        animation-iteration-count: infinite;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    h4 {
+        .font-size(40);
+        font-family: 'freightdispprolight', sans-serif;
+        margin-bottom: 0;
+        text-align: center;
+
+        @media (min-width: @breakpoint-small) {
+            .font-size(40);
+            letter-spacing: 2px;
+            text-align: left;
+        }
+
+        @media (min-width: @breakpoint-large) {
+            .font-size(50);
+        }
+    }
+
+    h5 {
+        .font-size(18);
+        font-weight: 400;
+        margin: 0 0 10px;
+        color: #657383;
+    }
+
+    p {
+        .font-size(18);
+        letter-spacing: 1.6px;
+        margin-bottom: 6px;
+
+        @media (min-width: @breakpoint-small) {
+            .font-size(14);
+        }
+
+        @media (min-width: @breakpoint-large) {
+            .font-size(18);
+        }
+    }
+}

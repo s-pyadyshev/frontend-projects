@@ -1,0 +1,127 @@
+.request-form {
+    width: 270px;
+    text-align: center;
+    margin: 0 auto;
+
+    @media (min-width: @breakpoint-small) {
+        width: 100%;
+        max-width: 866px;
+    }
+
+    &__label-wrap {
+        margin-bottom: 22px;
+
+        @media (min-width: @breakpoint-small) {
+            margin-bottom: 40px;
+        }
+
+        label {
+            font-family: 'freightbigprobook-regular';
+            .font-size(24);
+            line-height: 1.29;
+            letter-spacing: 0.72px;
+            color: #fff;
+        }
+    }
+
+    &__input-wrap {
+        position: relative;
+
+        input {
+            background-color: transparent;
+            border: none;
+            border-bottom: 4px solid #fff;
+            .font-size(18);
+            line-height: 1.22;
+            color: #fff;
+            width: 100%;
+            height: 62px;
+            text-align: center;
+            outline: none;
+
+            &::placeholder {
+                background-image: url('../img/write-icon.svg');
+                background-repeat: no-repeat;
+                // background-size: contain;
+                background-position: center top;
+                overflow: visible;
+                .font-size(26);
+                color: transparent;
+                padding-bottom: 10px;
+            }
+        }
+    }
+
+    &__source {
+        .choices[data-type*="select-one"]:after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Cdefs%3E%3Cstyle%3E .cls-1%7Bfill:%23c6c6c6%7D %3C/style%3E%3C/defs%3E%3Cg id='Backward_arrow' data-name='Backward arrow' transform='rotate(-90 7 7)'%3E%3Cpath id='Path_10' d='M7 0L5.727 1.273l4.818 4.818H0v1.818h10.545l-4.818 4.818L7 14l7-7z' class='cls-1' data-name='Path 10' transform='rotate(180 7 7)'/%3E%3C/g%3E%3C/svg%3E%0A");
+        }
+
+        .choices {
+            z-index: 5;
+            margin-left: auto;
+            margin-right: auto;
+
+            &__inner {
+                border-radius: 0;
+                border: none;
+                font-family: 'sofia-pro';
+                font-weight: normal;
+                min-height: 52px;
+                line-height: 38px;
+
+                @media (min-width: @breakpoint-small) {
+                    min-height: 86px;
+                    line-height: 78px;
+                }
+            }
+
+            &__item {
+                .font-size(16);
+                line-height: 1.25;
+                color: #c6c6c6;
+
+                @media (min-width: @breakpoint-small) {
+                    .font-size(25);
+                }
+            }
+        }
+    }
+
+    &__choose-date {
+        position: relative;
+
+        input {
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 50%;
+            bottom: 0;
+            z-index: 0;
+            transform: translateX(-50%);
+        }
+
+        label {
+            color: #083933;
+            cursor: pointer;
+
+            path {
+                fill: #fff;
+            }
+        }
+    }
+}
+
+.daterangepicker {
+    font-family: 'sofia-pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    .calendar-table .prev span,
+    .calendar-table .next span {
+        border-color: #18655C;
+    }
+
+    td.active, 
+    .daterangepicker td.active:hover {
+        background-color: #30af95;
+    }
+}

@@ -1,0 +1,25 @@
+.container {
+    width: 100%;
+    max-width: 1480px;
+    padding: 0px 20px;
+    margin: 0px auto;
+
+    @media (min-width: @breakpoint-small) {
+        padding: 0px 40px;
+    }
+
+    @media (min-width: @breakpoint-large) {
+        padding: 0px 80px;
+    }
+
+    &--small {
+
+        @media (min-width: @breakpoint-small) {
+            max-width: 889px;
+        }
+
+        @media (min-width: @breakpoint-large) {
+            max-width: 969px;
+        }
+    }
+}

@@ -1,0 +1,180 @@
+.pricing-tab {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 210px;
+    background-size: contain;
+    background-position: 50% 0%;
+
+    @media (min-width: @breakpoint-small) {
+        min-height: 285px;
+        margin-bottom: 66px;
+        background-size: cover;
+    }
+
+    &:after,
+    &:before {
+        @media (min-width: @breakpoint-small) {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -29px;
+            left: 0;
+            width: 0;
+            height: 0;
+            margin-right: auto;
+            margin-left: auto;
+            border-style: solid;
+            border-width: 32px 37px 0 37px;
+            border-color: transparent transparent transparent transparent;
+        }
+    }
+
+    &:nth-of-type(1) {
+        margin-left: 0;
+        background-image: url("../img/weekend.png"), url("../img/tab-weekend.png");
+        background-repeat: no-repeat;
+        background-color: #95afb9;
+
+        @media (min-width: @breakpoint-small) {
+            background-color: transparent;
+        }
+
+        @media (min-width: @breakpoint-xlarge) {
+            margin-left: auto;
+        }
+
+        &.active:after {
+            border-color: #95afb9 transparent transparent transparent;
+        }
+
+        &.active:before {
+            z-index: 1;
+            bottom: -94px;
+            border-color: #fff transparent transparent transparent;
+        }
+
+        .pricing-tab__badge {
+            background-image: url("../img/weekend-badge.png");
+            background-repeat: no-repeat;
+        }
+    }
+
+    &:nth-of-type(2) {
+        background-image: url("../img/mid-week.png"), url("../img/tab-mid-week.png");
+        background-repeat: no-repeat;
+        background-color: #949ca6;
+
+        @media (min-width: @breakpoint-small) {
+            background-color: transparent;
+        }
+
+        @media (min-width: @breakpoint-xlarge) {
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+        &.active:after {
+            border-color: #949ca6 transparent transparent transparent;
+        }
+
+        &.active:before {
+            z-index: 1;
+            bottom: -94px;
+            border-color: #fff transparent transparent transparent;
+        }
+
+        .pricing-tab__badge {
+            background-image: url("../img/mid-week-badge.png");
+            background-repeat: no-repeat;
+        }
+    }
+
+    &:nth-of-type(3) {
+        margin-right: 0;
+        background-image: url("../img/split-mid-week.png"), url("../img/tab-split-mid-week.png");
+        background-repeat: no-repeat;
+        background-color: #a2b9ca;
+
+        @media (min-width: @breakpoint-small) {
+            background-color: transparent;
+        }
+
+        @media (min-width: @breakpoint-xlarge) {
+            margin-right: auto;
+        }
+
+        &.active:after {
+            border-color: #a2b9ca transparent transparent transparent;
+        }
+
+        &.active:before {
+            z-index: 1;
+            bottom: -94px;
+            border-color: #fff transparent transparent transparent;
+        }
+
+        .pricing-tab__badge {
+            background-image: url("../img/split-mid-week-badge.png");
+            background-repeat: no-repeat;
+        }
+    }
+    
+    h3 {
+        font-family: 'freightbigprobook-regular', sans-serif;
+        .font-size(45);
+        margin-bottom: 0;
+
+        @media (min-width: @breakpoint-small) {
+            .font-size(32);
+        }
+
+        @media (min-width: @breakpoint-large) {
+            .font-size(44);
+        }
+    }
+
+    p {
+        .font-size(16);
+        margin-bottom: 0;
+        
+        @media (min-width: @breakpoint-small) {
+            .font-size(20);
+        }
+    }
+
+    &__badge {
+        .font-size(26);
+        position: absolute;
+        top: -30px;
+        right: 0;
+        left: 0;
+        max-width: 153px;
+        width: 100%;
+        min-height: 50px;
+        padding: 12px 0;
+        margin-right: auto;
+        margin-left: auto;
+        font-family: 'freightdispprolight', sans-serif;
+        letter-spacing: 1.04px;
+        text-align: center;
+        background-size: contain;
+        color: #fff;
+
+        @media (min-width: @breakpoint-small) {
+            top: -6px;
+            .font-size(19);
+            right: 8px;
+            margin-right: 0;
+            max-width: 122px;
+        }
+
+        @media (min-width: @breakpoint-large) {
+            top: -30px;
+            .font-size(26);
+            max-width: 153px;
+        }
+    }
+}

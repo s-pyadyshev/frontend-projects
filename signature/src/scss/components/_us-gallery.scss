@@ -1,0 +1,34 @@
+.us-gallery {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    @include tablet-large {
+        margin-top: 49px;
+        margin-bottom: 49px;
+    }
+
+    &__pagination {
+        margin-top: 20px;
+
+        .swiper-pagination {
+            position: static;
+        }
+
+        .swiper-pagination-bullet {
+            background-color: $global-color-background-light-gray;
+
+            &-active {
+                background-color: $global-color-background-primary;
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    .swiper-container {
+        margin: 0 (-$global-offset-container-mobile);
+        padding: 0 $global-offset-container-mobile;
+    }
+}

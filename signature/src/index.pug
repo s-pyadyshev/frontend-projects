@@ -1,0 +1,108 @@
+extends pug/base
+
+append vars
+	//- ...
+
+block content
+	//- ...
+
+	+representation({
+		m: './images/home-representation-m.jpg',
+		d: './images/home-representation.jpg'
+	})
+		+e.main
+			+b.compile-text.--big-size-text
+				+e.top.-uk-animation-scale-up
+					span Wake up to
+
+				+e.gradient.--animation
+					+e.gradient-wrap
+						span better
+
+				+e.bottom.-uk-animation-slide-left-medium
+					span at signature
+
+		include ./pug/search-roles
+
+	+big-text(['By creating a workplace that cares as much for our team as we do for our residents, everyone can <strong>wake up to better at Signature.</strong>'])
+
+	include ./pug/passion-inside.pug
+
+	+info-place(
+		'Us', ['Signature Senior Lifestyle offers unrivalled elderly care in stunning locations across London and the Home Counties.'], {
+			style: 'gradient',
+			text: 'Get to know us better'
+		}
+	).--light-gray
+		+e.image-wrap
+			+e('img')(src="./images/main-us-section.jpg", alt="").image
+
+	+info-place(
+		'Experience Better', ['From our supportive, team ethos to our tailored training and development opportunities, there are many reasons why people love working for Signature.'], {
+			style: 'gray',
+			text: 'Find out more'
+		}
+	).--brown.--reverse
+		.swiper-container.js-video-swiper
+			+e.video-list.swiper-wrapper
+				+e.video-item.swiper-slide
+					picture
+						source(media="(max-width: 1249px)" srcset='./images/video-preview.jpg')
+						source(media="(min-width: 1250px)" srcset='./images/video-preview-d.jpg')
+						+e('img').image(src='./images/video-preview-d.jpg', alt="")
+
+				+e.video-item.swiper-slide
+					picture
+						source(media="(max-width: 1249px)" srcset='./images/video-preview.jpg')
+						source(media="(min-width: 1250px)" srcset='./images/video-preview-d.jpg')
+						+e('img').image(src='./images/video-preview-d.jpg', alt="")
+
+				+e.video-item.swiper-slide
+					picture
+						source(media="(max-width: 1249px)" srcset='./images/video-preview.jpg')
+						source(media="(min-width: 1250px)" srcset='./images/video-preview-d.jpg')
+						+e('img').image(src='./images/video-preview-d.jpg', alt="")
+
+				+e.video-item.swiper-slide
+					picture
+						source(media="(max-width: 1249px)" srcset='./images/video-preview.jpg')
+						source(media="(min-width: 1250px)" srcset='./images/video-preview-d.jpg')
+						+e('img').image(src='./images/video-preview-d.jpg', alt="")
+
+				+e.video-item.swiper-slide
+					picture
+						source(media="(max-width: 1249px)" srcset='./images/video-preview.jpg')
+						source(media="(min-width: 1250px)" srcset='./images/video-preview-d.jpg')
+						+e('img').image(src='./images/video-preview-d.jpg', alt="")
+
+				+e.video-item.swiper-slide
+					picture
+						source(media="(max-width: 1249px)" srcset='./images/video-preview.jpg')
+						source(media="(min-width: 1250px)" srcset='./images/video-preview-d.jpg')
+						+e('img').image(src='./images/video-preview-d.jpg', alt="")
+
+				+e.video-item.swiper-slide
+					picture
+						source(media="(max-width: 1249px)" srcset='./images/video-preview.jpg')
+						source(media="(min-width: 1250px)" srcset='./images/video-preview-d.jpg')
+						+e('img').image(src='./images/video-preview-d.jpg', alt="")
+
+				+e.video-item.swiper-slide
+					picture
+						source(media="(max-width: 1249px)" srcset='./images/video-preview.jpg')
+						source(media="(min-width: 1250px)" srcset='./images/video-preview-d.jpg')
+						+e('img').image(src='./images/video-preview-d.jpg', alt="")
+
+			+e.pagination
+				.swiper-pagination
+
+	+info-place(
+		'Join In', ["Take a look at what's been happening at Signature. Follow us, give us a like, send us a message - we’re a social bunch here."], {
+			style: 'gradient',
+			text: 'Take a look'
+		}
+	).--light-purple
+		+e.image-wrap
+			+e('img')(src="./images/join-us-section.png", alt="").image
+
+	include ./pug/register

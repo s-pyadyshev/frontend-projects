@@ -1,0 +1,31 @@
+mixin read-more(text, collapsedText, imgSrc, imgAlt, title, button, video)
+    .read-more
+        div
+            .uk-overflow-hidden.read-more__text
+                div(data-uk-scrollspy="cls: slideInLeft animated; delay: 250; repeat: false;")
+                    if(title)
+                        h2 #{title}
+
+                    p= text
+
+            if(imgSrc)
+                img(src=imgSrc alt=imgAlt)
+
+            if(video)
+                .read-more__play-button
+                    button(data-uk-toggle="target: #modal-media-video" type="button").play-button
+                        span
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 151 151"><circle cx="75.5" cy="75.5" r="75.5" fill="#fff" opacity=".6"/><path d="M88.61 81L72.39 91.56A4.14 4.14 0 0166 88.09V67a4.13 4.13 0 016.39-3.46l16.22 10.54a4.14 4.14 0 010 6.92z" fill="#30b298"/></svg>
+                        span Watch this
+
+        if(button)
+            .read-more__button
+                a(href="#", title=button).uk-button.uk-button-default #{button}
+        if (collapsedText)
+            ul(data-uk-accordion='')
+                li
+                    a.uk-accordion-title(href='#')
+                        span(data-uk-icon="chevron-down")
+                        span Read more
+                    .uk-accordion-content
+                        p= collapsedText

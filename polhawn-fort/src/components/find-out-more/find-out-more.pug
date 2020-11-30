@@ -1,0 +1,12 @@
+mixin find-out-more(title, text)
+    section.find-out-more(data-uk-scrollspy="cls: fadeInRight animated slow; repeat: false;")
+        .container.container--small
+            .find-out-more__wrap
+
+                h3 !{title}
+
+                p !{text}
+
+                .find-out-more__link-wrap
+                    a(class="uk-button uk-button-primary uk-button-small")
+                        | Tell me more

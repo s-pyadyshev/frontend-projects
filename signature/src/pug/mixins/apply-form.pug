@@ -1,0 +1,37 @@
+mixin apply-form(title, text, buttonText, buttonTheme)
+    +b('form').apply-form&attributes(attributes)
+        .container
+            +e.inner-wrap
+                h2 #{title}
+                    if(text)
+                        span #{text}
+
+                +e.field-wrap
+                    +e.field.--half
+                        +input('type-job', '', 'text', 'First Name*')
+
+                    +e.field.--half
+                        +input('type-job', '', 'text', 'Last Name*')
+
+                    +e.field
+                        +input('type-job', '', 'email', 'Email Address*').--error
+
+                +e.upload.js-upload
+                    +e.upload-title Upload your CV
+                    +e('span').upload-text Attach your CV by dropping  it here or
+                    .uk-form-custom
+                        input(type="file" multiple)
+                        +e('span').upload-text.--underline selecting one
+
+                +e.check
+                    +checkbox('By choosing to continue you will register your CV with Signature Senior Lifestyle. We will use your contact information to send you relevant jobs that match your criteria. All CVs will be viewable across the Signature Senior Lifestyle recruiter network.', 'agree-1')
+
+                +e.check
+                    +checkbox('​I acknowledge and give permission for my data to be held by Signature Senior Lifestyle in accordance with the <a href="#">General Data Protection Regulation</a>', 'agree-2')
+
+                if buttonTheme === 'gray'
+                    +e.button
+                        +button('button', buttonText).--gray-theme
+                else
+                    +e.button
+                        +button('button', buttonText).--gradient-theme

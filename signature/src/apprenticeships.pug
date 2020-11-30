@@ -1,0 +1,61 @@
+extends pug/base
+
+append vars
+    //- ...
+
+block content
+    //- ...
+
+    +representation({
+        m: './images/apprenticeships-m.jpg',
+        d: './images/apprenticeships.jpg'
+    }).--img-center.--text-block
+
+        include ./pug/search-roles
+
+        +e.wrap-bottom.js-representation-text
+            +e.text-block
+                h1 Training at Signature Senior Lifestyle
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum lectus at tortor fringilla iaculis.
+
+        //- .trigger-search-roles-theme.js-trigger-search-roles-theme
+
+    +b('article').apprenticeships.-article-big
+        .container
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum lectus at tortor fringilla iaculis. Cras faucibus varius massa, a volutpat velit congue sed. Mauris finibus lorem ligula.
+
+            h2 Have you thought about an apprenticeship?
+
+            ul
+                li Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum lectus at tortor fringilla iaculis.
+                li Nunc interdum lectus at tortor fringilla iaculis. Cras faucibus varius massa, a volutpat velit congue sed. Mauris finibus lorem ligula.
+                li Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum lectus at tortor fringilla iaculis.
+                li Nunc interdum lectus at tortor fringilla iaculis. Cras faucibus varius massa, a volutpat velit congue sed. Mauris finibus lorem ligula.
+
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum lectus at tortor fringilla iaculis. Cras faucibus varius massa, a volutpat velit congue sed. Mauris finibus lorem ligula.
+
+            h2 What we look for
+
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum lectus at tortor fringilla iaculis. Cras faucibus varius massa, a volutpat velit congue sed. Mauris finibus lorem ligula.
+
+            +e.with-image
+
+                img(src="./images/what-we-look.jpg", alt="")
+
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum lectus at tortor fringilla iaculis. Cras faucibus varius massa, a volutpat velit congue sed. Mauris finibus lorem ligula.
+
+                ul
+                    li 11 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum lectus at tortor fringilla iaculis.
+                    li 11 Nunc interdum lectus at tortor fringilla iaculis. Cras faucibus varius massa, a volutpat velit congue sed.
+
+            h2 What to expect when you apply
+
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum lectus at tortor fringilla iaculis. Cras faucibus varius massa, a volutpat velit congue sed. Mauris finibus lorem ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum lectus at tortor fringilla iaculis. Cras faucibus varius massa, a volutpat velit congue sed. Mauris finibus lorem ligula.
+
+    +apply-form(
+        'Register your interest in an apprenticeship',
+        '',
+        'Apply now'
+    )
+
+    include ./pug/register

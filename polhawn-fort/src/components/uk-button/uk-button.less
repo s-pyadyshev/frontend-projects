@@ -1,0 +1,120 @@
+.uk-button {
+  min-width: 260px;
+  padding: 9px 20px;
+  font-weight: 500;
+  .font-size(17);
+  letter-spacing: 0.85px;
+  border-width: 2px;
+  border-style: solid;
+  text-transform: uppercase;
+  transition-duration: @global-transition-duration;
+
+  @media (min-width: @breakpoint-small) {
+    min-width: 200px;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    transition-duration: @global-transition-duration;
+  }
+
+  &--brushed {
+    min-width: 282px;
+    padding: 24px 20px;
+    .font-size(13);
+    letter-spacing: 0.91px;
+    border: 0;
+    color: #383838;
+    position: relative;
+    z-index: 10;
+    transition: color @global-transition-duration;
+
+    &::before {
+      content: '';
+      background-image: url('../img/button-smashed.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: opacity @global-transition-duration;
+    }
+    
+    &:active,
+    &:hover {
+      color: #fff;
+
+      &::before {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &.uk-button-small {
+    padding: 13px 22px;
+    line-height: 1;
+    .font-size(14);
+    font-weight: 400;
+    min-width: auto;
+  }
+
+  &-primary {
+    .font-size(16);
+    font-weight: 500;
+    background-color: @global-primary-color;
+    border: 2px solid @global-primary-color;
+    color: #fff;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #fff;
+      border: 2px solid @global-primary-color;
+      color: @global-primary-color;
+    }
+  }
+
+  &-detail {
+    position: relative;
+    padding: 8px 20px;
+    background-color: rgba(156, 133, 148, 0.9);
+    border: 2px solid transparent;
+    font-family: 'freightdispprolight', sans-serif;
+    font-weight: 300;
+    .font-size(18);
+    width: 100%;
+    min-width: 0;
+    color: #fff;
+
+    @media (min-width: @breakpoint-small) {
+      width: auto;
+      padding: 0 24px;
+    }
+
+    @media (min-width: @breakpoint-large) {
+      padding: 24px 37px;
+      line-height: 1.06;
+      display: inline-block;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #fff;
+      border: 2px solid rgba(156, 133, 148, 0.9);
+      color: rgba(156, 133, 148, 0.9);
+    }
+  }
+}
+
+.uk-button-default {
+  &:hover,
+  &:focus {
+    border-color: @button-default-hover-border;
+  }
+}

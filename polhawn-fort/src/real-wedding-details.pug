@@ -1,0 +1,91 @@
+extends ./templates/_base-template
+
+include ./components/blog-card/blog-card
+include ./components/watch-video/watch-video
+include ./components/find-out-more/find-out-more
+include ./components/share-this/share-this
+include ./components/blog/blog
+include ./components/section-signup/section-signup
+include ./components/see-more/see-more
+
+prepend head
+    - var pageTitle = 'Real wedding details';
+
+block content
+    main.main
+        +menu
+
+        .main__detail-page
+            +blog-card(
+                'Real wedding',
+                'Joanne & Gemma<br>21.08.18',
+                'swirl'
+            )(class="blog-card--real-wedding" data-uk-scrollspy="cls: fadeInUp animated slow; repeat: false;")
+
+            article.article
+                .container.container--small
+                    .article__wrap
+                        .article__image
+                            img(src="img/blog-content1.jpg", alt="")
+
+                .container.container--small
+                    .article__wrap
+                        h4 Everything you need know about marques
+
+                        p With salty air and the stunning backdrop of the sea, Sweeping lawns, English borders we wouldn’t want you to miss out on having some outdoor fun!
+
+                        p You can have a marquee on the paved area outside the Garden House, on the lower lawn, along the bridge into the garden or the roof terrace, but not on the main lawn. The paved area and roof terrace are a great place to hire a marquee for your reception if you are worried about the weather, and the lower lawn can be used if you would like hire a marquee to dine outside in. 
+
+                .container.container--small
+                    .article__wrap
+                        .article__image-masonry(class="uk-child-width-1-1@s uk-child-width-1-2@s", uk-grid="parallax: 150")
+                            img(src="img/blog-content2.jpg", alt="")
+
+                            img(src="img/blog-content3.jpg", alt="")
+
+                .container.container--small
+                    .article__wrap
+
+                        h3 The supplier
+
+                        p Thank you to Igloo Structures for sharing their time lapse video with us. Igloo Structures provided the stretch tent as a reception/drinks area for the guests as they arrived offering somewhere to mingle and enjoy the views.
+
+        +watch-video
+
+        +find-out-more('Did you know', 'The ability to add in 2 lines of text here and a button to link off')
+
+        +share-this
+
+        h5.article-list-title You may also like…
+        section.article-list
+            img(src="img/article-list-decor.png").article-list__decor
+            img(src="img/article-list-decor-line.png").article-list__decor-line
+            .container
+                .article-list__wrap
+                    ul.article-list__list(data-uk-scrollspy="cls: fadeInUp animated slow; repeat: false;")
+                        li.article-list__item
+                            +blog('Inspiration', '', true).blog--list.blog--inspiration
+
+                        li.article-list__item
+                            +blog('Feature post', '', true).blog--list.blog--feature-post
+
+                        li.article-list__item
+                            +blog('Latest News', '', true).blog--list.blog--latest-news
+
+                        li.article-list__item
+                            +blog('Inspiration', '', true).blog--list.blog--inspiration
+
+                    .article-list__loading
+                        img(src="img/polhawn-icon.png", alt="Polhawn icon").article-list__loading-image
+                        p Loading older posts…
+
+            img(src="img/article-list-decor-line.png").article-list__decor-line
+
+        +section-signup
+        +see-more(
+            'img/you-must-see-idos-back.png',
+            'img/you-must-see.png',
+            'You must see',
+            "Gallery",
+            'See more'
+        ).see-more--red-theme

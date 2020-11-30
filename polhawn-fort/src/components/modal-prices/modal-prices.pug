@@ -1,0 +1,26 @@
+include ../call-our-team/call-our-team
+
+mixin modal-prices
+    <div id="prices-alert" class="modal-prices" data-uk-modal>
+        <div class="uk-modal-dialog uk-modal-body">
+            .modal-prices__header.uk-flex.uk-flex-between
+                span(data-uk-icon="calendar")
+                span(data-uk-icon="swirl" class="uk-visible@s")
+            div(data-uk-grid)
+                div(class="uk-width-1-2@s")
+                    <h2 class="uk-modal-title">Weekend Dates - 3 Nights</h2>
+                    h3 February <br class="uk-hidden@s"> 04th - 07th
+                    p This winter date has come available and it is the perfect opportunity to experience polhawn Fort through the Winter period where the coastal colours and offerings are truly special. Burn the log fire, take a winter stroll along a coastline that will take your breath away.
+                    .details
+                        p Friday  February 04th - Monday 07th 2020.<br class="uk-visible@s"> Was £7,695 – now only £3,995!
+                div(class="uk-width-1-2@s")
+                    img(src="img/modal-prices.png" alt="modal price image" width="469" height="627").modal-prices__background
+            .modal-prices__footer
+                +call-our-team-prices
+                <div class="request-links request-links--modal uk-visible@s">
+                    <a href="#">Request a viewing</a>
+                    <div class="request-links__divider"></div>
+                    <a href="#">Brochure request</a>
+                </div>
+        </div>
+    </div>

@@ -1,0 +1,37 @@
+.float-hamburger {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    color: #21b2a0;
+    backdrop-filter: blur(19.1px);
+    box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.35);
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 9;
+    visibility: hidden;
+    opacity: 0;
+    touch-action: none;
+    pointer-events: none;
+    transition: opacity 0.5s, visibility 0s 0.5s;
+
+    svg {
+        width: 60px;
+        height: 60px;
+    }
+
+    &.show {
+        visibility: visible;
+        opacity: 1;
+        touch-action: auto;
+        pointer-events: all;
+        transition: opacity 0.5s, visibility 0s 0s;
+    }
+
+    @media (min-width: @breakpoint-small) {
+        display: none;
+    }
+}

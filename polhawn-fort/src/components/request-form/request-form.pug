@@ -1,0 +1,7 @@
+mixin request-form(label, id, placeholder, name, type)
+    .request-form
+        .request-form__label-wrap
+            label(for=id) #{label}
+
+        .request-form__input-wrap
+            input(id=id, placeholder='Write here', name=name, type=type)

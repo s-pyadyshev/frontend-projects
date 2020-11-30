@@ -1,0 +1,134 @@
+.events-description {
+    margin-bottom: 60px;
+
+    @media (min-width: @breakpoint-small) {
+        margin-bottom: 87px;
+    }
+
+    @media (min-width: @breakpoint-large) {
+        margin-top: 202px;
+    }
+
+    h2 {
+        .font-size(18);
+        line-height: 1.61;
+        color: #454545;
+
+        @media (min-width: @breakpoint-small) {
+            .font-size(28);
+            line-height: 1.04;
+        }
+    }
+
+    h3 {
+        font-family: 'freightbigprobook-regular';
+        color: #8c8c8c;
+        .font-size(55);
+        line-height: 1.09;
+        letter-spacing: normal;
+
+        @media (min-width: @breakpoint-small) {
+            .font-size(68);
+            line-height: 0.88;
+        }
+    }
+
+    p {
+        color: #454545;
+        margin: 0;
+    }
+
+    &__media {
+        position: relative;
+        margin-bottom: 50px;
+
+        @media (min-width: @breakpoint-small) {
+            width: 50%;
+            flex-shrink: 0;
+            order: 1;
+            padding-left: 40px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__back-wrap {
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        width: 100%;
+
+        @media (min-width: @breakpoint-small) {
+            top: -20px;
+            right: -25px;
+        }
+
+        @media (min-width: @breakpoint-large) {
+            top: -67px;
+            right: -45px;
+            max-width: 613px;
+        }
+    }
+
+    &__image-wrap {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+
+        @media (min-width: @breakpoint-large) {
+            max-width: 613px;
+        }
+    }
+
+    &__content {
+        display: flex;
+
+        @media (min-width: @breakpoint-small) {
+            width: 50%;
+        }
+
+        @media (min-width: @breakpoint-large) {
+            padding-right: 80px;
+        }
+    }
+
+    &__content-body {
+        padding: 0 0 20px 20px;
+
+        @media (min-width: @breakpoint-large) {
+            padding-left: 70px;
+        }
+
+        @media (min-width: @breakpoint-xlarge) {
+            padding-left: 114px;
+        }
+    }
+
+    &__line {
+        display: none;
+        flex-shrink: 0;
+
+        @media (min-width: @breakpoint-small) {
+            display: block;
+        }
+
+        img {
+            max-width: none;
+            height: 100%;
+        }
+    }
+
+    &__wrap {
+
+        @media (min-width: @breakpoint-small) {
+            display: flex;
+            align-items: flex-start;
+        }
+    }
+
+    &--light-brown-theme {
+
+        h2:after {
+            background-color: #c0b297;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+mixin advantages(data)
+    section.advantages(data-uk-scrollspy="cls: fadeInDown animated slow; offset: 250; repeat: false;")
+        .container
+            ul.advantages__list
+                each item in data
+                    li.advantages__item
+                        +advantage(item.text, item.tag)
+
+mixin advantage(text, tag="span")
+    #{tag}.advantage(href=(tag === 'a' ? '#' : false))
+        p !{text}
+
+        if (tag === 'a')
+            span.advantage__arrow(data-uk-icon="step-back")

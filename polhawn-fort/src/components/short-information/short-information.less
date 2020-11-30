@@ -1,0 +1,48 @@
+.short-information {
+    h3 {
+        margin-bottom: 24px;
+
+        &:after {
+            display: block;
+            width: 65px;
+            height: 2px;
+            content: '';
+            background-color: #ed077a;
+            margin-top: 8px;
+        }
+    }
+
+    a, &__item {
+        color: @global-grey;
+    }
+
+    &__item span:first-child {
+        display: inline-block;
+        min-width: 35px;
+    }
+
+    &__text {
+        margin-bottom: 14px;
+    }
+
+    dl {
+        margin: 0px;
+        
+        div:not(:last-child) {
+            margin-bottom: 6px;
+        }
+    }
+
+    dt, dd {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    dt {
+        color: @global-emphasis-color;
+    }
+
+    dd {
+        margin-left: 0;
+    }
+}

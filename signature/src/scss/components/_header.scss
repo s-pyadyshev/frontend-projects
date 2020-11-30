@@ -1,0 +1,138 @@
+.header {
+	height: $global-header-height-mobile;
+
+	@include tablet-large {
+		height: $global-header-height-desktop;
+	}
+
+	&__wrap {
+		height: $global-header-height-mobile;
+		padding-top: 11px;
+		position: fixed;
+		width: 100%;
+		left: 0;
+		top: 0;
+		z-index: 50;
+		transition: background-color $global-animation-time;
+
+		@include tablet-large {
+			height: $global-header-height-desktop;
+			padding-top: 24px;
+		}
+	}
+
+	&__wrap-inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__close-ico {
+		display: none;
+		line-height: 0;
+
+		svg {
+			width: 25px;
+			height: 25px;
+		}
+	}
+
+	&__open-ico {
+		line-height: 0;
+
+		svg {
+			fill: #fff;
+			width: 25px;
+			height: 19px;
+		}
+	}
+
+	&__hamburger {
+		padding: 5px;
+		margin-right: -5px;
+		display: inline-block;
+		line-height: 0;
+		position: relative;
+		z-index: 5;
+
+		@include tablet-large {
+			display: none;
+		}
+	}
+
+	&__menu {
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 4;
+		padding: $global-header-height-mobile $global-offset-container-mobile
+			30px;
+		height: 100%;
+		width: 100%;
+		background-color: $global-color-background-primary;
+		transform: translateX(100%);
+		transition: transform $global-animation-time-double ease-out;
+		overflow-y: auto;
+
+		@include tablet {
+			padding-left: $global-offset-container-tablet;
+			padding-right: $global-offset-container-tablet;
+		}
+
+		@include tablet-large {
+			overflow: hidden;
+			position: static;
+			transform: translateX(0);
+			padding: 0;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			background-color: transparent;
+		}
+
+		.menu-open & {
+			transform: translateX(0);
+		}
+	}
+
+	&__logo {
+		position: relative;
+		z-index: 5;
+		display: flex;
+	}
+
+	&__nav {
+		padding-top: 38px;
+
+		@include tablet-large {
+			padding-top: 0;
+			margin-right: 25px;
+		}
+
+		@include desktop {
+			margin-right: 45px;
+		}
+	}
+
+	.menu-open & {
+		&__close-ico {
+			display: block;
+		}
+
+		&__open-ico {
+			display: none;
+		}
+	}
+
+	&.scroll-scene & {
+		&__wrap {
+			background-color: $color-white;
+		}
+
+		&__open-ico {
+			svg {
+				fill: $global-color-text-primary;
+			}
+		}
+	}
+}

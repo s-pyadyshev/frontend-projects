@@ -1,0 +1,11 @@
+include ../description-section/description-section
+
+mixin head-section(title, description, textLink)
+    .head-section(data-uk-grid, class=!attributes.class).uk-grid-collapse
+        .head-section__title(class="uk-width-1-2@m" data-uk-scrollspy="cls: fadeInLeft animated; delay: 250; repeat: false;")
+            h2 #{title}
+            if description
+                p.text-secondary #{description}
+        
+        .head-section__description(class="uk-width-1-2@m uk-width-1-3@l" data-uk-scrollspy="cls: fadeInRight animated; delay: 250; repeat: false;")
+            +description-section(textLink)

@@ -1,0 +1,45 @@
++b('header').header.js-add-scene-for-header
+    +e.wrap
+        .container
+            +e.wrap-inner
+                +e.logo
+                    +logo().js-logo-white-for-scene
+                    +logo('./images/signature-purple.svg').--head-purple.js-logo-purple-for-scene
+
+                +e.menu
+                    +e.nav
+                        +nav([{
+                            text: 'Us',
+                            href: '#'
+                        }, {
+                            text: 'Experience better',
+                            href: '#'
+                        }, {
+                            text: 'Jobs',
+                            href: '#',
+                            class: '-active'
+                        }, {
+                            text: 'Apprenticeships',
+                            href: '#'
+                        }, {
+                            text: 'Join in',
+                            href: '#'
+                        }])
+
+                    +e.social
+                        +social([{
+                            icon: 'facebook'
+                        }, {
+                            icon: 'instagram'
+                        }, {
+                            icon: 'twitter'
+                        }, {
+                            icon: 'linked-in'
+                        }]).--header
+
+                +e('a')(href="javascript:void(0);", title="").hamburger.js-toggle-menu
+                    +e.open-ico
+                        +svg('hamburger')
+
+                    +e.close-ico
+                        +svg('close')

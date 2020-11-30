@@ -1,0 +1,19 @@
+.faq-list {
+	list-style-type: none;
+	padding-left: 0;
+	max-width: 640px;
+
+	li {
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+}
+
+.faq-note {
+	max-width: 640px;
+
+	.link {
+		font-weight: 700;
+	}
+}

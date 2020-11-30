@@ -1,0 +1,127 @@
+.section-advert {
+  position: relative;
+  height: 452px;
+
+  @media (min-width: @breakpoint-small) {
+    height: 100vh;
+  }
+
+  &-main {
+    background-color: #000;
+  }
+
+  > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .section-detail {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 100px;
+    padding-bottom: 77px;
+
+    @media (min-width: @breakpoint-small) {
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-top: 219px;
+    }
+
+    @media (min-width: @breakpoint-large) {
+      margin-top: 130px;
+    }
+
+    @media (min-width: @breakpoint-xxlarge) {
+      margin-top: 219px;
+    }
+
+    h2 {
+      top: auto;
+
+      @media (min-width: @breakpoint-small) {
+        margin-bottom: 44px;
+      }
+
+      @media (min-width: @breakpoint-large) {
+        margin-bottom: 25px;
+      }
+
+      @media (min-width: @breakpoint-xxlarge) {
+        margin-bottom: 44px;
+      }
+    }
+
+    h3 {
+      @media (min-width: @breakpoint-small) {
+        margin-bottom: 77px;
+      }
+
+      @media (min-width: @breakpoint-large) {
+        margin-bottom: 50px;
+      }
+
+      @media (min-width: @breakpoint-xxlarge) {
+        margin-bottom: 77px;
+      }
+    }
+
+    &__description {
+      display: none;
+
+      @media (min-width: @breakpoint-small) {
+        display: block;
+      }
+    }
+
+    &__head {
+      z-index: 1;
+      position: relative;
+    }
+  }
+
+  &__image-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0,0,0,0.3);
+      display: block;
+      z-index: 1;
+
+      @media (min-width: @breakpoint-small) {
+        display: none;
+      }
+    }
+  }
+
+  &__image {
+    object-fit: cover;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+
+    @media (min-width: @breakpoint-small) {
+      transform: scale(1.5);
+    }
+  }
+
+  &__content {
+    display: flex;
+
+    @media (min-width: @breakpoint-small) {
+      display: block;
+    }
+  }
+}

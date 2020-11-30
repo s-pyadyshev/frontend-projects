@@ -1,0 +1,20 @@
+mixin events-description(srcBack, srcImage, name, title, text, srcLine)
+    section.events-description(class!=attributes.class)
+        .container
+            .events-description__wrap
+                .events-description__media
+                    .events-description__back-wrap(data-uk-scrollspy="cls: fadeInUp animated; repeat: false;")
+                        img(src=srcBack alt="image")
+
+                    .events-description__image-wrap(data-uk-scrollspy="cls: fadeInUp animated; delay: 250; repeat: false;")
+                        img(src=srcImage alt="image")
+
+                .events-description__content(data-uk-scrollspy="cls: fadeInUp animated; delay: 350; repeat: false;")
+                    .events-description__line
+                        img(src=srcLine alt="decoration line")
+
+                    .events-description__content-body
+                        h2 #{name}
+                        h3 #{title}
+
+                        p #{text}

@@ -1,0 +1,25 @@
+mixin job()
+    +b.job
+        +e.title Sous Chef
+
+        +e('ul').short-info
+            +e.short-item
+                +e('span').icon
+                    +svg('geo').icon-geo
+                +e('a')(href="#", title="").short-info-text Job location goes here
+
+            +e.short-item
+                +e('span').icon
+                    +svg('money').icon-money
+                +e.short-info-text Salary goes here
+
+            +e.short-item
+                +e('span').icon
+                    +svg('calendar').icon-calendar
+                +e.short-info-text Date posted goes here
+
+        +e.text-info
+            p As Sous Chef you’ll play a crucial role in keeping our busy kitchen running smoothly. Second in command to the Head Chef, you’ll be responsible for ensuring every meal that leaves the kitchen is nutritious and restaurant quality.
+
+        +e.button
+            +button('a', 'View role').--gradient-theme.--large-offset

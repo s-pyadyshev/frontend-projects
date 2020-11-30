@@ -1,0 +1,23 @@
+.section-price-info {
+    padding-bottom: 60px;
+
+    @media (min-width: @breakpoint-small) {
+        padding-top: 60px;
+    }
+
+    h2 {
+        font-family: 'freightdispprolight', sans-serif;
+        .font-size(46);
+        line-height: 1.26;
+        text-align: center;
+        color: @global-heading-color;
+
+        @media (min-width: @breakpoint-small) {
+            margin-bottom: 80px;
+        }
+
+        &:after {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,376 @@
+.blog {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: 100%;
+
+    img {
+        width: 100%;
+        height: 124px;
+        object-fit: cover;
+
+        @media (min-width: @breakpoint-large) {
+            width: 322px;
+            height: 322px;
+        }
+    }
+
+    p {
+        .font-size(25);
+        line-height: 1.46;
+        width: 100%; // ie11 fix
+        color: #606060;
+    }
+
+    span {
+        .font-size(25);
+        line-height: 1.04;
+        color: #939393;
+        margin: 0 auto;
+        padding-right: 43px;
+
+        @media (min-width: @breakpoint-large) {
+            .font-size(23);
+            line-height: 1.2;
+            margin: 0;
+            padding-right: 0;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        text-align: center;
+        flex-grow: 1;
+
+        @media (min-width: @breakpoint-large) {
+            text-align: left;
+        }
+
+        .uk-button-primary.uk-button-small {
+            .font-size(13);
+            padding: 20px;
+            min-width: 190px;
+
+            @media (min-width: @breakpoint-small) {
+                .font-size(14);
+                padding: 13px 22px;
+                min-width: auto;
+            }
+        }
+
+        p {
+            margin-bottom: 60px;
+
+            @media (min-width: @breakpoint-large) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    &__header {
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    &__icon {
+        margin-right: 20px;
+
+        &--green {
+            color: #d64da7;
+        }
+
+        &--orange {
+            color: @global-primary-color;
+        }
+
+        &--purple {
+            color: #fda034;
+        }
+    }
+
+    &__link {
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (min-width: @breakpoint-large) {
+        margin-left: 0;
+        margin-right: 0;
+        }
+    }
+
+    &__top {
+        padding: 33px 26px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &--inspiration {
+
+        .blog__icon {
+            color: #ba97ae;
+        }
+    }
+
+    &--feature-post {
+
+        .blog__icon {
+            color: #ecb87e;
+        }
+    }
+
+    &--latest-news {
+
+        .blog__icon {
+            color: #a3bcb7;
+        }
+    }
+
+    &--list {
+
+        .blog__top {
+            display: none;
+
+            @media (min-width: @breakpoint-large) {
+                display: flex;
+            }
+        }
+    }
+
+    &__link-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        line-height: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            z-index: 2;
+            left: 0;
+            height: 10px;
+            width: 100%;
+
+            @media (min-width: @breakpoint-large) {
+                display: none;
+            }
+        }
+
+        .blog--feature-post &::before {
+            background-color: #ecb87e;
+        }
+
+        .blog--inspiration &::before {
+            background-color: #ba97ae;
+        }
+
+        .blog--latest-news &::before {
+            background-color: #a3bcb7;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background-image: linear-gradient(to top, #3c5258, transparent);
+            z-index: 2;
+
+            @media (min-width: @breakpoint-large) {
+                display: none;
+            }
+        }
+
+        img {
+            height: 100%;
+
+            @media (min-width: @breakpoint-large) {
+                height: 322px;
+            }
+        }
+    }
+
+    p.blog__name {
+        color: #fff;
+        .font-size(23);
+        line-height: 1.35;
+        font-family: 'sofia-pro';
+        font-weight: normal;
+        position: absolute;
+        width: 100%;
+        bottom: 16px;
+        z-index: 4;
+        left: 0;
+        padding: 0 30px;
+
+        @media (min-width: @breakpoint-large) {
+            display: none;
+        }
+    }
+}
+
+.article-list {
+    margin-bottom: 60px;
+
+    @media (min-width: @breakpoint-large) {
+        background-color: #a2b9ca;
+        position: relative;
+        padding: 54px 0 84px;
+        margin-bottom: 0;
+    }
+
+    &-title {
+        padding: 0 20px;
+        .font-size(22);
+        font-weight: 500;
+        font-family: 'freightbigprobook-regular';
+        letter-spacing: 1.43px;
+        text-align: center;
+        color: #4e4f4f;
+        margin: 0 0 24px;
+        font-style: italic;
+
+        @media (min-width: @breakpoint-large) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__decor {
+        display: none;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        z-index: 2;
+        top: 1px;
+        transform: translateY(-100%);
+
+        @media (min-width: @breakpoint-large) {
+            display: block;
+        }
+    }
+
+    &__decor-line {
+        display: none;
+        position: absolute;
+        z-index: 3;
+        top: 2px;
+        left: 0;
+        width: 100%;
+
+        @media (min-width: @breakpoint-large) {
+            display: block;
+        }
+
+        &:last-child {
+            top: auto;
+            bottom: 34px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 -20px 20px;
+
+        @media (min-width: @breakpoint-large) {
+            justify-content: flex-start;
+            margin: 0 -12px;
+        }
+    }
+
+    &__item {
+        width: 344px;
+        height: 304px;
+        padding: 0 20px;
+        margin-bottom: 40px;
+
+        @media (min-width: @breakpoint-large) {
+            height: auto;
+            width: 25%;
+            padding: 0 12px;
+        }
+    }
+
+    &__loading {
+        text-align: center;
+
+        p {
+            .font-size(22);
+            font-weight: 500;
+            font-style: italic;
+            line-height: 1.5;
+            letter-spacing: 1.72px;
+            color: #606060;
+            font-family: 'freightbigprobook-regular';
+            margin: 12px 0;
+
+            @media (min-width: @breakpoint-large) {
+                .font-size(26);
+                color: #fff;
+                letter-spacing: 2.03px;
+            }
+        }
+    }
+
+    &--offers {
+        background-color: #a2b9ca;
+        padding: 54px 0 84px;
+
+        .article-list__item {
+            height: auto;
+        }
+
+        .article-list__decor,
+        .article-list__decor-line {
+            display: block;
+        }
+
+        h2 {
+            color: #fff;
+            .font-size(30);
+            line-height: 1.5;
+            text-align: center;
+            margin: 60px 0 40px;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    &--our-weddings {
+        background-color: #b4bcbf;
+        padding-top: 1px;
+        padding-bottom: 80px;
+        margin-bottom: 0;
+
+        h2 {
+            color: #fff;
+            .font-size(20);
+            line-height: 1.5;
+            text-align: center;
+            margin: 60px 0 40px;
+            letter-spacing: 4px;
+
+            &:after {
+                display: none;
+            }
+
+            @media (min-width: @breakpoint-large) {
+                margin-top: 120px;
+            }
+        }
+
+        .article-list__decor-line {
+            top: 30px;
+        }
+    }
+}

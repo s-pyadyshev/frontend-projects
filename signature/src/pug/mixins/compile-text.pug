@@ -1,0 +1,10 @@
+mixin compile-text(top, middle, bottom)
+    +b.compile-text&attributes(attributes)
+        +e.top
+            span #{top}
+
+        +e.gradient
+            span !{middle}
+
+        +e.bottom
+            span #{bottom}

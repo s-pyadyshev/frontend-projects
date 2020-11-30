@@ -1,0 +1,23 @@
+.modal-video {
+    padding-top: 40px;
+
+    iframe {
+        display: block;
+        border: 0;
+        max-width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+
+        @media (min-width: @breakpoint-small) {
+            max-width: 80%;
+        }
+    }
+
+    &.uk-open > .uk-modal-dialog {
+        background: none;
+    }
+
+    .uk-modal-dialog {
+        transform: translateY(0);
+    }
+}

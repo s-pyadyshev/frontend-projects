@@ -1,0 +1,211 @@
+// Overrides of UIkit v3 global variables + custom variables
+
+
+// Global variables
+// ========================================================================
+
+
+// Breakpoints
+
+@breakpoint-xsmall:                            640px;
+@breakpoint-small:                             768px;  // Phone landscape
+@breakpoint-medium:                            960px;  // Tablet Landscape
+@breakpoint-large:                             1200px; // Desktop
+@breakpoint-xlarge:                            1440px; // Large Screens
+@breakpoint-xxlarge:                           1920px; // XXLarge screens
+
+@breakpoint-xsmall-max:                        (@breakpoint-small - 1);
+@breakpoint-small-max:                         (@breakpoint-medium - 1);
+@breakpoint-medium-max:                        (@breakpoint-large - 1);
+@breakpoint-large-max:                         (@breakpoint-xlarge - 1);
+
+//
+// Colors
+//
+
+@global-color: #353538;
+@global-emphasis-color: #30b298;
+@global-primary-color: #30b298;
+@global-secondary-color: #2dacc2;
+@global-text-color: #4e4f4f;
+@global-heading-color: #727272;
+
+@global-link-color: @global-color;
+@global-link-hover-color: @global-color;
+
+@global-light-gray-border: #d5d5d5;
+@global-white: #fff;
+@global-grey: #727272;
+@global-light-gray: #c6c6c6;
+@global-green: #21B2A0;
+@global-dark-green: #18655C;
+@global-light-green: #c2be33;
+@global-blue: #09579d;
+@global-yellow: #ffa600;
+@global-dark-yellow: #ed9d07;
+@global-purple: #884eb9;
+@global-purple-dark: #4e397e;
+
+
+.uk-text-muted-light {
+    color: @global-muted-background;
+}
+
+//
+// Typography
+//
+
+@global-font-family: 'sofia-pro',"Helvetica Neue", Helvetica, Arial, sans-serif;
+@global-font-family-secondary: 'freight-display-pro', serif;
+@global-title-font-family: 'freightdispprolight', serif;
+@base-heading-color: @global-color;
+
+@base-link-hover-text-decoration: none;
+@text-secondary-color: #ed077a;
+@secondary-color-hover: @global-blue;
+@text-primary-color: @global-primary-color;
+@text-label-without-background: #b9b9b9;
+
+//
+// Backgrounds
+//
+
+
+@global-muted-background: #f4f4f4;
+@global-primary-background: #30b298;
+@global-secondary-background: #2dacc2;
+
+// custom
+@global-dark-background: #36434b;
+.uk-background-dark {
+    background-color: @global-dark-background;
+}
+
+//
+// Borders
+//
+
+
+@global-border-width: 1px;
+@global-border: #9499a9;
+@global-border-radius: 30px;
+@border-secondary-color: #ed077a;
+
+
+//
+// Spacings
+//
+
+// Used in margin, section, list
+@global-margin:                                 20px;
+@global-small-margin:                           10px;
+@global-medium-margin:                          40px;
+@global-large-margin:                           50px;
+@global-xlarge-margin:                          140px;
+
+// Used in grid, column, container, align, card, padding
+@global-small-gutter:                           20px;
+@global-medium-gutter:                          30px;
+@global-large-gutter:                           70px;
+
+
+//
+// Form controls
+//
+
+
+@card-default-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.25);
+
+@button-primary-background: @global-primary-background;
+@button-primary-color: @global-white;
+// @button-primary-hover-background: @global-secondary-background;
+// @button-primary-hover-color: @global-primary-color;
+// @button-primary-active-background: @global-secondary-background;
+// @button-primary-active-color: @global-primary-color;
+
+@button-secondary-background: @global-primary-background;;
+@button-secondary-color: @global-secondary-color;
+// @button-secondary-hover-background: @global-primary-background;
+// @button-secondary-hover-color: @global-secondary-color;
+// @button-secondary-active-background: @global-primary-background;
+// @button-secondary-active-color: @global-secondary-color;
+
+@button-small-padding-horizontal: 4px;
+@button-small-line-height: 1;
+@button-small-font-size: .font-size(14);
+
+
+//
+// Animations
+//
+
+
+@global-transition-duration: 0.3s;
+
+// card.less
+@card-default-title-color: @global-color;
+
+// container.less
+@container-max-width: 1260px;
+@container-large-max-width: 1725px;
+
+
+// button.less
+@button-default-background: transparent;
+@button-default-color: @global-white;
+@button-default-hover-background: @global-white;
+@button-default-hover-color: @global-primary-color;
+@button-default-active-background: @global-white;
+@button-default-active-color: @global-primary-color;
+@button-default-border: @global-white;
+@button-default-hover-border: @global-white;
+@button-default-active-border: @global-white;
+
+// @button-primary-background: transparent;
+// @button-primary-color: @global-white;
+@button-primary-hover-background: @global-white;
+@button-primary-hover-color: @global-primary-color;
+@button-primary-active-background: @global-white;
+@button-primary-active-color: @global-primary-color;
+@button-primary-border: @global-white;
+@button-primary-hover-border: @global-primary-color;
+@button-primary-active-border: @global-primary-color;
+
+@button-secondary-background: @global-secondary-background;
+@button-secondary-color: @global-inverse-color;
+@button-secondary-hover-background: darken(@button-secondary-background, 5%);
+@button-secondary-hover-color: @global-inverse-color;
+@button-secondary-active-background: darken(@button-secondary-background, 10%);
+@button-secondary-active-color: @global-inverse-color;
+
+
+
+// dotnav.less
+// @dotnav-item-width: 14px;
+// @dotnav-item-background: @button-default-color;
+// @dotnav-item-active-background: @button-primary-background;
+
+// forms.less
+@form-border: @global-primary-color;
+@form-label-color: #222;
+
+// inverse.less
+@inverse-global-color: @global-inverse-color;
+
+// navbar.less
+@navbar-background: @global-background;
+@navbar-nav-item-color: @global-color;
+@navbar-nav-item-active-color: @global-color;
+
+
+// text.less
+.uk-text-small {
+    .font-size(14);
+}
+
+//
+// Controls
+//
+
+@global-control-large-height: 60px;
+@global-control-placeholder-color: @global-grey;

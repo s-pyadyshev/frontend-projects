@@ -1,0 +1,40 @@
+.register {
+    background-color: $global-color-background-light-gray;
+    padding: 15px 20px;
+
+    @include tablet {
+        padding: 15px 0;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.75px;
+        margin-bottom: 10px;
+
+        @include tablet {
+            margin-bottom: 0;
+            margin-right: 30px;
+        }
+
+        @include tablet-large {
+            font-size: 21px;
+            line-height: 1.57;
+            letter-spacing: 1px;
+        }
+    }
+
+    &__inner-wrap {
+
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__button {
+        flex-shrink: 0;
+        line-height: 0;
+    }
+}

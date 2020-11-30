@@ -1,0 +1,48 @@
+mixin price-info(highlight, title, detail)
+    .price-info
+        .dropdown
+            button(type='button').dropdown__toggle
+                span
+                    span= highlight
+                    | #{title}
+                span.dropdown__icon
+                    span(data-uk-icon="chevron-down")
+            .dropdown__content= detail
+                .dropdown__footer
+                    p For more information see
+                    .uk-flex.uk-flex-between.uk-flex-middle
+                        a(href="#") Tell me more
+                        button(type='button').dropdown__close
+                            span(data-uk-icon="arrow-up")
+
+mixin price-info-alt(title, highlight, detail)
+    .price-info
+        .dropdown
+            button(type='button').dropdown__toggle
+                span
+                    | #{title}
+                    span= highlight
+                span.dropdown__icon
+                    span(data-uk-icon="chevron-down")
+            .dropdown__content= detail
+                .dropdown__footer
+                    p For more information see
+                    .uk-flex.uk-flex-between.uk-flex-middle
+                        a(href="#") Tell me more
+                        button(type='button').dropdown__close
+                            span(data-uk-icon="arrow-up")
+
+mixin section-price-info
+    section.section.section-price-info
+        .container(data-uk-scrollspy="cls: fadeInUp animated slow; repeat: false;")
+            h2 What’s included in the Price
+
+            div(data-uk-grid)
+                div(class="uk-width-1-2@s" data-uk-scrollspy="cls: fadeInLeft animated slow; repeat: false;")
+                    +price-info('Exclusive ', 'use of Polhawn Fort', 'Think of it as your own for the duration of your stay. Your own sanctuary with exclusive use from the moment you arrive. The Fort, gardens, summerhouse, all weather tennis court, private path to the beach.')
+                    +price-info('Accommodation ', 'for 24 people', 'All rooms have sea views, top of the range Vi-Spring beds that are ready made up, and plenty of soft white fluffy towels, Cots and extra mattresses for children and young adults are also supplied and room layouts are pretty flexible too!')
+                    +price-info('Banquet equipment ', 'to cater for up to 120 people', 'Including a full range of crockery, cutlery, glassware, banqueting chairs and a choice of circular &/or rectangular tables. Table linen & chair covers/sashes can be ordered separately to match.')
+                .uk-margin-remove-top(class="uk-width-1-2@s" data-uk-scrollspy="cls: fadeInRight animated slow; repeat: false;")
+                    +price-info-alt('Fully equipped ', 'commercial kitchen', 'You can hire one of our listed caterers or choose your own, or arrange all the food yourself – it’s up to you!')
+                    +price-info('No ', 'corkage charges!', 'You can supply your own choice of top quality wines/drinks for you and your guests with no extra charges! A pay bar option is also available if you’d prefer.')
+                    +price-info('Entertainment ', 'and Extras', 'Professional disco sound and lights system (for mp3 player, laptop or iPod/Pad/Phone), logs for the open fire, croquet set, tennis racquets/balls, barbeque equipment.')

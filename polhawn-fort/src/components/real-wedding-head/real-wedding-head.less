@@ -1,0 +1,41 @@
+.real-wedding-head {
+    margin-bottom: 15px;
+
+    &__bg {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center, bottom;
+        min-height: 666px;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        color: #4e4f4f;
+        letter-spacing: 3px;
+        text-align: center;
+        .font-size(21);
+
+        @media (min-width: @breakpoint-small) {
+            .font-size(26);
+        }
+    }
+
+    &__divider {
+        height: 2px;
+        background-color: #efdbd3;
+        width: 74px;
+        margin: 40px auto;
+    }
+
+    &__subtitle {
+        color: #c6c6c6;
+        letter-spacing: 1.5px;
+        text-align: center;
+        .font-size(15);
+
+        @media (min-width: @breakpoint-small) {
+            .font-size(24);
+            letter-spacing: 2.4;
+        }
+    }
+}

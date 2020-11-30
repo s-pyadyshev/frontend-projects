@@ -1,0 +1,60 @@
+extends pug/base
+
+append vars
+    //- ...
+
+block content
+    //- ...
+    +representation({
+        m: './images/us-representation-m.jpg',
+        d: './images/us-representation.jpg'
+    }).--img-center.--text-block
+    .container
+        section
+            h1 FAQs
+            ul.faq-list
+                li.dropdown.js-dropdown
+                    button.dropdown__title What does the recruitment process involve?
+                        .dropdown__title-icon
+                            +svg('triangle')
+                    .dropdown__details What does the recruitment process involve?
+                li.dropdown.js-dropdown
+                    button.dropdown__title What are you doing to protect staff and residents from COVID?
+                        .dropdown__title-icon
+                            +svg('triangle')
+                    .dropdown__details What are you doing to protect staff and residents from COVID?
+                li.dropdown.js-dropdown
+                    button.dropdown__title What would my induction look like?
+                        .dropdown__title-icon
+                            +svg('triangle')
+                    .dropdown__details What would my induction look like?
+                li.dropdown.js-dropdown
+                    button.dropdown__title What training is provided?
+                        .dropdown__title-icon
+                            +svg('triangle')
+                    .dropdown__details What training is provided?
+                li.dropdown.js-dropdown
+                    button.dropdown__title What career development opportunities are there?
+                        .dropdown__title-icon
+                            +svg('triangle')
+                    .dropdown__details What career development opportunities are there?
+                li.dropdown.js-dropdown
+                    button.dropdown__title What hours will I be working/what do the shift patterns look like?
+                        .dropdown__title-icon
+                            +svg('triangle')
+                    .dropdown__details What hours will I be working/what do the shift patterns look like?
+                li.dropdown.js-dropdown
+                    button.dropdown__title How far in advance will I be able to see my rota?
+                        .dropdown__title-icon
+                            +svg('triangle')
+                    .dropdown__details How far in advance will I be able to see my rota?
+                li.dropdown.js-dropdown
+                    button.dropdown__title Is uniform provided?
+                        .dropdown__title-icon
+                            +svg('triangle')
+                    .dropdown__details Is uniform provided?
+
+            h2 Didn’t find the answer to your question?
+            .faq-note
+                p Email your query to <a href="mailto:recruitment@signaturesl.co.uk" class="link">recruitment@signaturesl.co.uk</a>.
+                p Your email will be sent to our central recruitment team so please allow 3-5 days for a response as the team may need to contact our homes to find the right answer for you.

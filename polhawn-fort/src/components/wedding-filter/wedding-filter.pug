@@ -1,0 +1,130 @@
+mixin wedding-filter()
+    .wedding-filter
+        .wedding-filter__title Show me, show me show me…
+
+        .wedding-filter__link
+            a(href="#", title="").uk-active All
+
+        .wedding-filter__slider.swiper-container.js-wedding-filter-slider
+            ul.swiper-wrapper.wedding-filter__list
+                li.wedding-filter__item.swiper-slide
+                    a(href="#").wedding-filter__filter-link The Outside
+                    a(href="#").wedding-filter__filter-link Everything Summer House
+
+                li.wedding-filter__item.swiper-slide
+                    a(href="#").wedding-filter__filter-link Garden
+                    a(href="#").wedding-filter__filter-link That View!
+
+                li.wedding-filter__item.swiper-slide
+                    a(href="#").wedding-filter__filter-link Our Beach
+                    a(href="#").wedding-filter__filter-link Winter Style
+
+                li.wedding-filter__item.swiper-slide
+                    a(href="#").wedding-filter__filter-link Summer Love
+
+            .wedding-filter__slider-button
+                .swiper-button-prev
+                    span(data-uk-icon="chevron-left")
+
+                .swiper-button-next
+                    span(data-uk-icon="chevron-right")
+
+mixin wedding-filter-gallery()
+    div(data-uk-filter="target: .js-filter")
+        .wedding-filter.wedding-filter--gallery
+            .wedding-filter__title I love it, I love it a lot…
+
+            .wedding-filter__slider.swiper-container.js-gallery-slider
+                <ul class="wedding-filter__link">
+                    <li data-uk-filter-control>
+                        <a href="#" class="uk-active">All</a>
+                    </li>
+                </ul>
+                ul.swiper-wrapper.wedding-filter__list
+                    li.wedding-filter__item.swiper-slide
+                        a(href="#" data-uk-filter-control="[filter='outside']").wedding-filter__filter-link The Outside
+                        a(href="#" data-uk-filter-control="[filter='food']").wedding-filter__filter-link Food
+
+                    li.wedding-filter__item.swiper-slide
+                        a(href="#" data-uk-filter-control="[filter='garden']").wedding-filter__filter-link Garden
+                        a(href="#" data-uk-filter-control="[filter='view']").wedding-filter__filter-link That View!
+
+                    li.wedding-filter__item.swiper-slide
+                        a(href="#" data-uk-filter-control="[filter='beach']").wedding-filter__filter-link Our Beach
+                        a(href="#" data-uk-filter-control="[filter='bedrooms']").wedding-filter__filter-link Bedrooms
+
+                    li.wedding-filter__item.swiper-slide
+                        a(href="#" data-uk-filter-control="[filter='sea']").wedding-filter__filter-link The sea
+
+                .wedding-filter__slider-button
+                    .swiper-button-prev
+                        span(data-uk-icon="chevron-left")
+
+                    .swiper-button-next
+                        span(data-uk-icon="chevron-right")
+
+        <ul class="js-filter uk-child-width-1-2 uk-child-width-1-4@m uk-light" uk-grid="masonry: true; parallax: 200;">
+            <li filter="outside" date="2016-06-01">
+                div(data-uk-lightbox="animation: fade")
+                    a(href="img/gallery1.jpg" data-alt="alt")
+                        img(src="img/gallery1.jpg" alt="gallery-thumb")
+            </li>
+            <li filter="food" date="2016-12-13">
+                div(data-uk-lightbox="animation: fade")
+                    a(href="img/gallery2.jpg" data-alt="alt")
+                        img(src="img/gallery2.jpg" alt="gallery-thumb")
+            </li>
+            <li filter="garden" date="2017-05-20">
+                div(data-uk-lightbox="animation: fade")
+                    a(href="img/gallery3.jpg" data-alt="alt")
+                        img(src="img/gallery3.jpg" alt="gallery-thumb")
+            </li>
+            <li filter="view" date="2017-09-17">
+                div(data-uk-lightbox="animation: fade")
+                    a(href="img/gallery3.jpg" data-alt="alt")
+                        img(src="img/gallery3.jpg" alt="gallery-thumb")
+            </li>
+            <li filter="beach" date="2017-11-03">
+                div(data-uk-lightbox="animation: fade")
+                    a(href="img/gallery3.jpg" data-alt="alt")
+                        img(src="img/gallery3.jpg" alt="gallery-thumb")
+            </li>
+            <li filter="bedrooms" date="2017-12-25">
+                div(data-uk-lightbox="animation: fade")
+                    a(href="img/gallery1.jpg" data-alt="alt")
+                        img(src="img/gallery1.jpg" alt="gallery-thumb")
+            </li>
+            <li filter="sea" date="2018-01-30">
+                div(data-uk-lightbox="animation: fade")
+                    a(href="img/gallery2.jpg" data-alt="alt")
+                        img(src="img/gallery2.jpg" alt="gallery-thumb")
+            </li>
+            <li filter="outside" date="2018-02-01">
+                div(data-uk-lightbox="animation: fade")
+                    a(href="img/gallery2.jpg" data-alt="alt")
+                        img(src="img/gallery2.jpg" alt="gallery-thumb")
+            </li>
+            <li filter="food" date="2018-03-11">
+                div(data-uk-lightbox="animation: fade")
+                    a(href="img/gallery2.jpg" data-alt="alt")
+                        img(src="img/gallery2.jpg" alt="gallery-thumb")
+            </li>
+            <li filter="garden" date="2018-06-13">
+                div(data-uk-lightbox="animation: fade")
+                    a(href="img/gallery1.jpg" data-alt="alt")
+                        img(src="img/gallery1.jpg" alt="gallery-thumb")
+            </li>
+            <li filter="outside" date="2018-10-27">
+                div(data-uk-lightbox="animation: fade")
+                    a(href="img/gallery3.jpg" data-alt="alt")
+                        img(src="img/gallery3.jpg" alt="gallery-thumb")
+            </li>
+            <li filter="outside" date="2018-12-02">
+                div(data-uk-lightbox="animation: fade")
+                    a(href="https://www.youtube.com/watch?v=c2pz2mlSfXA").wedding-filter__video-link
+                        img(src="img/gallery3.jpg" alt="gallery-thumb")
+                        div
+                            span(data-uk-icon="camera")
+                            span play
+            </li>
+        </ul>

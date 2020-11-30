@@ -1,0 +1,12 @@
+mixin social(data)
+    +b('ul').social(class!=attributes.class)
+        each item in data
+            +e.item
+                +e('a').link(href=item.href ? item.href : '#', title=item.title ? item.title : '')
+                    +svg(item.icon)
+
+//- data = [{
+//-     icon: '',
+//-     href: '',
+//-     title: ''
+//- }]

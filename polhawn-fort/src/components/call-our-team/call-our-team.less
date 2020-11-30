@@ -1,0 +1,66 @@
+.call-our-team {
+    text-align: center;
+
+    a {
+        .link-hover-color-primary;
+        font-family: @global-font-family-secondary;
+        .font-size(52);
+        font-weight: 300;
+        line-height: 1;
+        letter-spacing: 1px;
+        color: @global-grey;
+
+        @media (min-width: @breakpoint-small) {
+            .font-size(65);
+        }
+    }
+
+    p {
+        .font-size(20);
+        line-height: 1.3 !important;
+        margin-bottom: 0;
+        color: @global-blue;
+
+        @media (min-width: @breakpoint-small) {
+            .font-size(25);
+        }
+    }
+
+    span {
+        line-height: normal !important;
+    }
+
+    .uk-close {
+        display: flex;
+        position: static;
+        cursor: pointer;
+
+        svg:last-child {
+            display: none;
+        }
+    }
+
+    .uk-icon {
+        line-height: normal;
+        color: @global-primary-color;
+    }
+
+    &.call-our-team--prices {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (min-width: @breakpoint-small) {
+            flex-direction: column;
+        }
+
+        p {
+            margin-bottom: 0;
+            color: @global-primary-color;
+
+            @media (min-width: @breakpoint-small) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

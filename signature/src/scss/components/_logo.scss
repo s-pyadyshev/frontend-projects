@@ -1,0 +1,17 @@
+.logo {
+    display: inline-block;
+    line-height: 0;
+    width: 95px;
+
+    @include tablet-large {
+        width: 126px;
+    }
+
+    &--head-purple {
+        display: none;
+    }
+
+    &__image {
+        width: 100%;
+    }
+}

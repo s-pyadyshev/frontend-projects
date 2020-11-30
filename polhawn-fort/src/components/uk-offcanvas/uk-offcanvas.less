@@ -1,0 +1,51 @@
+@offcanvas-background-color: #dddde3;
+
+.uk-offcanvas {
+    z-index: 10000;
+}
+
+.uk-offcanvas-bar {
+    top: 0;
+    width: 100vw;
+    left: -100vw;
+    z-index: 23;
+    background-color: @offcanvas-background-color;
+
+    @media (min-width: @breakpoint-small) {
+        width: 50vw;
+        left: -50vw;
+        padding-left: 40px;
+    }
+
+    @media (min-width: @breakpoint-large) {
+        width: 618px;
+        left: -618px;
+        padding-left: 148px;
+    }
+
+    &.uk-background-primary {
+        background-color: @global-primary-background;
+    }
+}
+
+.uk-offcanvas-close {
+    display: none;
+}
+
+.uk-offcanvas-page {
+
+    .header__hamburger {
+        opacity: 0;
+    }
+
+    .uk-offcanvas-close {
+        display: block;
+        padding: 0;
+        color: @global-inverse-color;
+
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+    }
+}

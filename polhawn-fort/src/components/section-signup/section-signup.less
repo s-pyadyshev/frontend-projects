@@ -1,0 +1,44 @@
+.section-signup {
+    padding: 30px 20px 30px;
+    background-color: #d8dbdc;
+
+    @media (min-width: @breakpoint-small) {
+        padding: 45px 20px 90px;
+    }
+
+    @media (min-width: @breakpoint-large) {
+        background-image: url(../img/form-signup.png);
+        background-repeat: no-repeat;
+        background-position: 1% 50%;
+    }
+
+    form {
+        max-width: 1220px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    h2 {
+        .font-size(44);
+        line-height: 1.1;
+        font-family: 'freightbigprobook-regular', sans-serif;
+        margin-bottom: 24px;
+        text-align: center;
+        color: #30af95;
+
+        @media (min-width: @breakpoint-small) {
+            margin-bottom: 6px;
+        }
+
+        &:after {
+            display: none;
+        }
+    }
+
+    p {
+        .font-size(19);
+        margin-bottom: 32px;
+        text-align: center;
+        color: #8c8c8c;
+    }
+}

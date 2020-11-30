@@ -1,0 +1,70 @@
+extends ./templates/_base-template
+
+include ./components/menu/menu
+include ./components/slideshow/slideshow
+include ./components/section-advert/section-advert
+include ./components/section-intro/section-intro
+include ./components/section-mix-content/section-mix-content
+include ./components/inspiration/inspiration
+include ./components/see-more/see-more
+include ./components/events-description/events-description
+
+prepend head
+    - var pageTitle = 'Dream';
+
+block content
+    main.main
+        +menu
+        section
+            +slideshow-dream
+
+        +section-intro({
+                src: "img/section-intro-bg.png",
+                alt: "Section intro background image"
+            },
+            "<span>Polhawn Fort</span> is a one-off, unique place. It stands alone, quite literally. So if you’re looking for a coastal wedding venue to make your own, <br>you’ve found it.", {
+                url: "img/polhawn-icon.png",
+                alt: "Polhawn icon",
+                width: '43',
+                height: '43'
+            }
+        ).section-intro--dream
+
+        +section-mix-content-dream().js-trigger-hamburger
+
+        +inspiration(
+            'img/cornish-coast-back.png',
+            'The Cornish Coast',
+            'All inspiring',
+            'Polhawn Fort sits on Rame Head a uniue piece of coast land at the end of Whitsand bay. Showered in history and wonder it’s been',
+            'cls: fadeInRight animated slow; repeat: true',
+            "img/layer.jpg"
+        ).inspiration--right
+
+        +events-description(
+            'img/believe-in-choice-bg.png',
+            'img/believe-in-choice.png',
+            'We believe in choice',
+            'The vibe',
+            'A wedding at Polhawn Fort gives you the time and freedom to do exactly as you please for the whole time you’re here. You can create the wedding of your dreams. From the simplest of days to a seriously stylish affair. We’ve been helping couples do this for years and will help you all the way.',
+            'img/color-line-blue.png'
+        )
+
+        +section-mix-content-dream-right().section-mix-content--right-content
+
+        +inspiration(
+            'img/cornish-coast-back.png',
+            'It’s all yours',
+            'Be inspired',
+            'Polhawn Fort sits on Rame Head a uniue piece of coast land at the end of Whitsand bay. Showered in history and wonder it’s been',
+            'cls: fadeInLeft animated slow; repeat: true',
+            "img/layer.jpg"
+        )
+
+        +see-more(
+            'img/the-i-do-back.jpg',
+            'img/the-i-do.png',
+            'You must see',
+            "The I do's",
+            'See more'
+        )

@@ -1,0 +1,13 @@
+mixin blog-card(name, title, icon)
+    section.blog-card.js-parent-to-next-section&attributes(attributes)
+        .container
+            .blog-card__wrap
+                .blog-card__name 
+                    | !{name}
+                    span(data-uk-icon="underline")
+
+                h1 !{title}
+
+                .blog-card__icon(data-uk-icon=icon)
+
+                .blog-card__arrow.js-to-next-section(data-uk-icon='down-arrow-roughness')

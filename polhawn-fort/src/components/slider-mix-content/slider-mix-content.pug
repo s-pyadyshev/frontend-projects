@@ -1,0 +1,27 @@
+mixin slider-mix-content(images, options, isPlayButton)
+    .slider-mix-content
+        div(data-uk-slideshow= options)
+            .uk-position-relative.uk-height-1-1(tabindex='-1')
+                ul.uk-slideshow-items.uk-height-1-1
+                    each image in images
+                        li
+                            img(src=image.src alt=image.alt)
+
+                            if(isPlayButton)
+                                .section-mix-content__play-button
+                                    button(data-uk-toggle="target: #modal-media-video" type="button").play-button
+                                        span
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 151 151"><circle cx="75.5" cy="75.5" r="75.5" fill="#fff" opacity=".6"/><path d="M88.61 81L72.39 91.56A4.14 4.14 0 0166 88.09V67a4.13 4.13 0 016.39-3.46l16.22 10.54a4.14 4.14 0 010 6.92z" fill="#30b298"/></svg>
+            ul.uk-slideshow-nav.uk-dotnav.uk-flex-center
+
+mixin slider-mix-content-awards(images, options)
+    .slider-mix-content.slider-mix-content--awards
+        div(data-uk-slideshow= options)
+            .slider-mix-content__title Our awards & partners
+            .uk-position-relative.uk-height-1-1(tabindex='-1')
+                ul.uk-slideshow-items.uk-height-1-1
+                    each image in images
+                        li
+                            div
+                                img(src=image.src alt=image.alt)
+            ul.uk-slideshow-nav.uk-dotnav.uk-flex-center

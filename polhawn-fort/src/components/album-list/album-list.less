@@ -1,0 +1,170 @@
+.album-list {
+    background-color: #efdbd3;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @media (min-width: @breakpoint-small) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    &--gallery {
+        padding-bottom: 120px;
+        background-color: #ddd;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        @media (min-width: @breakpoint-large) {
+            margin: 0 -58px;
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        margin-bottom: 60px;
+        max-width: 432px;
+        flex-shrink: 0;
+        width: 100%;
+
+        @media (min-width: @breakpoint-small) {
+            margin-bottom: 80px;
+        }
+
+        @media (min-width: @breakpoint-large) {
+            margin-right: 58px;
+            margin-left: 58px;
+        }
+    }
+
+    &__decor {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        z-index: 2;
+        top: 1px;
+        transform: translateY(-100%);
+    }
+
+    &__decor-line {
+        position: absolute;
+        z-index: 3;
+        top: 4px;
+        left: 0;
+        width: 100%;
+
+        &:last-child {
+            display: none;
+            top: auto;
+            bottom: 34px;
+
+            @media (min-width: @breakpoint-small) {
+                display: block;
+            }
+        }
+    }
+
+    &__loading {
+        text-align: center;
+
+        p {
+            .font-size(22);
+            font-weight: 500;
+            font-style: italic;
+            line-height: 1.5;
+            letter-spacing: 1.72px;
+            color: #606060;
+            font-family: 'freightbigprobook-regular';
+            margin: 12px 0;
+
+            @media (min-width: @breakpoint-large) {
+                .font-size(26);
+                letter-spacing: 2.03px;
+            }
+        }
+    }
+}
+
+.album-item {
+    text-align: center;
+
+    h5,
+    p {
+        margin: 0 0 30px;
+        .font-size(37);
+        font-family: 'freightdispprolight';
+        font-weight: 300;
+        line-height: 1.14;
+        color: #606060;
+
+        @media (min-width: @breakpoint-small) {
+            .font-size(40);
+        }
+    }
+
+    p {
+        .font-size(22);
+        margin-bottom: 1px;
+
+        @media (min-width: @breakpoint-small) {
+            .font-size(22);
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    &__button {
+        margin-top: 20px;
+
+        @media (min-width: @breakpoint-small) {
+            margin-top: 54px;
+        }
+
+        .uk-button {
+            position: relative;
+            z-index: 10;
+            min-width: auto;
+            padding: 15px 65px;
+            transition: color @global-transition-duration;
+            letter-spacing: 1px;
+            color: #575858;
+            border: 0;
+            .font-size(20);
+            line-height: 1.8;
+            text-transform: none;
+            font-family: 'freightbigprobook-regular';
+
+            &:before {
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+                content: '';
+                transition: all @global-transition-duration;
+                background-image: url(../img/smashed-pink.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: #fff;
+                transition: opacity @global-transition-duration;
+
+                &:before {
+                    background-image: url(../img/smashed-pink-active.svg);
+                    transition: all @global-transition-duration;
+                }
+            }
+        }
+    }
+}

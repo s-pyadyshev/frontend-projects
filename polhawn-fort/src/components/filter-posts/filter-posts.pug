@@ -1,0 +1,29 @@
+mixin filter-posts()
+    section.filter-posts(data-uk-scrollspy="cls: fadeInUp animated slow; repeat: false;")
+        .container
+            h3.filter-posts__title Filter Posts
+
+            .filter-posts__search-wrapper
+                .filter-posts__search-title-wrapper
+                    .filter-posts__search-title 
+                        a(href="#", title="").uk-active All
+
+                form.filter-posts__search
+                    span(data-uk-icon="search").filter-posts__search-icon.js-toggle-input-search
+                    input(placeholder="Type here...").filter-posts__search-input.uk-input
+
+            ul.filter-posts__category-list
+                li.filter-posts__category-item
+                    a(href="#", title="Latest News").filter-posts__category-link
+                        span(data-uk-icon="swirl").filter-posts__category-icon.filter-posts__category-icon--green
+                        span.filter-posts__category-name Latest News
+
+                li.filter-posts__category-item
+                    a(href="#", title="Latest News").filter-posts__category-link
+                        span(data-uk-icon="swirl").filter-posts__category-icon.filter-posts__category-icon--purple
+                        span.filter-posts__category-name Inspiration
+
+                li.filter-posts__category-item
+                    a(href="#", title="Feature post").filter-posts__category-link
+                        span(data-uk-icon="swirl").filter-posts__category-icon.filter-posts__category-icon--orange
+                        span.filter-posts__category-name Feature post

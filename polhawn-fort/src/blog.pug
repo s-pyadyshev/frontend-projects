@@ -1,0 +1,53 @@
+extends ./templates/_base-template
+
+include ./components/filter-posts/filter-posts
+include ./components/blog/blog
+include ./components/section-signup/section-signup
+include ./components/see-more/see-more
+
+prepend head
+    - var pageTitle = 'Blog';
+
+block content
+    main.main
+        +menu
+
+        section.section-prices-header(data-uk-scrollspy="cls: fadeInDown animated slow; offset: 250; repeat: false;")
+            .section-prices-header__bg(style='background-image: url(img/blog-head.jpg)')
+                div(data-uk-scrollspy="cls: fadeInUp animated slow; repeat: false;")
+                    h1 Polhawn Blog
+
+        +filter-posts
+
+        section.article-list
+            img(src="img/article-list-decor.png").article-list__decor
+            img(src="img/article-list-decor-line.png").article-list__decor-line
+            .container
+                .article-list__wrap
+                    ul.article-list__list(data-uk-scrollspy="cls: fadeInUp animated slow; repeat: false;")
+                        li.article-list__item
+                            +blog('Inspiration', '', true).blog--list.blog--inspiration
+
+                        li.article-list__item
+                            +blog('Feature post', '', true).blog--list.blog--feature-post
+
+                        li.article-list__item
+                            +blog('Latest News', '', true).blog--list.blog--latest-news
+
+                        li.article-list__item
+                            +blog('Inspiration', '', true).blog--list.blog--inspiration
+
+                    .article-list__loading
+                        img(src="img/polhawn-icon.png", alt="Polhawn icon").article-list__loading-image
+                        p Loading older posts…
+
+            img(src="img/article-list-decor-line.png").article-list__decor-line
+
+        +section-signup
+        +see-more(
+            'img/you-must-see-idos-back.png',
+            'img/you-must-see.png',
+            'You must see',
+            "Gallery",
+            'See more'
+        ).see-more--red-theme

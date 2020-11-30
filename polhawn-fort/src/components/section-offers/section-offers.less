@@ -1,0 +1,97 @@
+.section-offers {
+    margin-bottom: 60px;
+
+    @media (min-width: @breakpoint-small) {
+        margin-bottom: 168px;
+    }
+
+    h2 {
+        color: #606060;
+        margin-bottom: 30px;
+
+        @media (min-width: @breakpoint-large) {
+            margin-bottom: 70px;
+        }
+    }
+
+    > div {
+        padding-top: 60px;
+        padding-bottom: 120px;
+    }
+
+    &__content {
+        margin-bottom: 30px;
+
+        @media (min-width: @breakpoint-small) {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__arrows {
+        margin: 35px -15px 0;
+
+        svg {
+            width: 54px;
+            height: 54px;
+
+            @media (min-width: @breakpoint-small) {
+                width: 39px;
+                height: 39px;
+            }
+        }
+    }
+
+    &__arrow {
+        margin: 0 15px;
+        display: inline-block;
+        color: #fff;
+
+        &:hover,
+        &:active,
+        &:focus {
+            svg {
+                color: @global-primary-color;
+            }
+
+            path {
+                fill: #fff;
+            }
+        }
+
+        path {
+            fill: #b7b7b7;
+        }
+    }
+
+    .uk-dotnav {
+        margin-bottom: 28px;
+
+        > * > * {
+            background: #fff;
+        }
+
+        > .uk-active > * {
+            background: #15bb98;
+        }
+    }
+
+    &__all-offers-link.uk-button {
+        padding: 2px 20px;
+        min-width: 280px;
+        background-color: #fff;
+        border-color: #fff;
+        .font-size(13);
+        font-weight: normal;
+
+        @media (min-width: @breakpoint-small) {
+            .font-size(14);
+            letter-spacing: 0.98px;
+        }
+
+        &:hover {
+            background-color: @global-primary-color;
+            border: 2px solid @global-primary-color;
+            color: #fff;
+        }
+    }
+}

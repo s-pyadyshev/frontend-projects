@@ -1,0 +1,32 @@
+extends pug/base
+
+append vars
+    //- ...
+
+block content
+    //- ...
+
+    +representation({
+        m: './images/social-wall-m.jpg',
+        d: './images/social-wall.jpg'
+    }).--img-center.--text-block
+
+        include ./pug/search-roles
+
+        +e.wrap-bottom.js-representation-text
+            +e.text-block.js-link-back-place-mobile
+                h1 Join In
+
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum lectus at tortor fringilla iaculis.
+
+        //- .trigger-search-roles-theme.js-trigger-search-roles-theme
+
+    .container
+        +b.social-wall
+            +e.filter
+                +social-post-filter(['All', 'Facebook', 'Twitter', 'Instagram', 'LinkedIn'])
+
+            +e.posts
+                | Social wall
+
+    include ./pug/register

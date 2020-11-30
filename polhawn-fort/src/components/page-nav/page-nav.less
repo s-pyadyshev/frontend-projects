@@ -1,0 +1,44 @@
+.page-nav {
+    .font-size(20);
+    font-weight: 600;
+
+    &--in-section {
+        margin-bottom: 40px;
+        .font-bold();
+        .font-size(16);
+
+        @media (min-width: @breakpoint-small) {
+            margin-bottom: 59px;
+            .font-size(21);
+        }
+    }
+
+    &__link {
+        .link-hover-color-primary;
+        color: @global-inverse-color;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &--in-section & {
+        
+        &__link {
+            color: #000;
+
+            &.active {
+                color: @global-emphasis-color;
+            }
+        }
+    }
+}
+
+
+.page-nav--in-section .list-divided-inverse > li:not(:last-child):after {
+    background-color: @global-light-gray-border;
+    margin-right: 14px;
+    margin-left: 11px;
+    width: 2px;
+}

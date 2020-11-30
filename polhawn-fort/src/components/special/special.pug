@@ -1,0 +1,15 @@
+mixin special(src, name, title, text)
+    section.special
+        .special__border
+            .container
+                .special__wrap
+                    img(src=src, alt="", data-uk-scrollspy="cls: slideInUp animated; repeat: false;")
+
+                    .special__content(data-uk-scrollspy="cls: slideInUp animated; delay: 250; repeat: false;")
+                        h2 #{name}
+                        h3 #{title}
+
+                        p #{text}
+
+                        .special__button-wrap
+                            a(href="#", title="").uk-button.uk-button-default See more ideas

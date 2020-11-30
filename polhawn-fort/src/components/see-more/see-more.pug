@@ -1,0 +1,18 @@
+mixin see-more(srcBack, srcCard, name, title, textButton)
+    section.see-more(class!=attributes.class)
+        .container
+            .see-more__wrap
+                .see-more__back-wrap
+                    img(src=srcBack alt="image")
+
+                .see-more__card(data-uk-scrollspy="cls: fadeInUp animated; delay: 250; repeat: false;")
+                    .see-more__card-image-wrap
+                        img(src=srcCard alt="image")
+
+                    .see-more__card-body
+                        .see-more__body-content
+                            h2 #{name}
+                            h3 #{title}
+
+                        .see-more__body-button
+                            a(href="#" title="").uk-button.uk-button-detail #{textButton}

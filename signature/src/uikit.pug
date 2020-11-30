@@ -1,0 +1,15 @@
+extends pug/base
+
+append vars
+	//- ...
+
+block content
+	//- ...
+	.container
+		h1 Buttons
+		+button('button', 'See our hospitality roles').--gradient-theme
+		+button('button', 'See our hospitality roles').--light-gray-theme
+		+button('button', 'See our hospitality roles').--gray-theme
+
+		h1 Fields
+		+input('example', 'Type job title here')

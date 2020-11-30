@@ -1,0 +1,18 @@
+.uk-input {
+    .font-size(15);
+    min-height: 64px;
+    padding-left: 26px;
+    background-color: #fff;
+    color: #d3d3d3;
+    transition-duration: @global-transition-duration;
+
+    @media (min-width: @breakpoint-small) {
+        .font-size(18);
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        transition-duration: @global-transition-duration;
+    }
+}

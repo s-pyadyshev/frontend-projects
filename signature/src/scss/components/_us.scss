@@ -1,0 +1,33 @@
+.us {
+    margin-bottom: 30px;
+
+    @include tablet-large {
+        margin-bottom: 49px;
+    }
+
+    &__button {
+        text-align: center;
+    }
+
+    p, ul {
+
+        @include tablet-large {
+            font-size: 20px;
+        }
+    }
+
+    .container {
+
+        & > p {
+            @include tablet-large {
+                padding: 0 30px;
+            }
+        }
+
+        & > h2 {
+            @include tablet-large {
+                padding: 0 30px;
+            }
+        }
+    }
+}

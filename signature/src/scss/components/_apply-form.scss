@@ -1,0 +1,121 @@
+.apply-form {
+    background-color: #edeae6;
+    padding: 40px 0 50px;
+    margin-top: 47px;
+
+    h2 {
+        margin: 0 0 26px;
+        text-align: center;
+
+        @include tablet-large {
+            margin-bottom: 48px;
+        }
+
+        span {
+            display: block;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-top: 15px;
+            font-weight: 300;
+
+            @include tablet-large {
+                font-size: 21px;
+                line-height: 1.57;
+                margin-top: 12px;
+            }
+        }
+    }
+
+    @include tablet-large {
+        padding: 56px 0;
+        margin-top: 81px;
+    }
+
+    &__inner-wrap {
+
+        @include tablet {
+            max-width: 770px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__field-wrap {
+
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+    }
+
+    &__field {
+        width: 100%;
+        margin-bottom: 26px;
+
+        @include tablet {
+            padding: 0 15px;
+        }
+
+        @include tablet-large {
+            margin-bottom: 56px;
+        }
+
+        &--half {
+
+            @include tablet {
+                width: 50%;
+            }
+        }
+    }
+
+    &__upload {
+        text-align: center;
+        padding: 47px 27px 40px;
+        border: 2px dashed $global-color-background-primary;
+        margin-bottom: 26px;
+
+        @include tablet-large {
+            margin-bottom: 56px;
+            padding-bottom: 56px;
+        }
+    }
+
+    &__upload-title {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 1.5px;
+        margin-bottom: 20px;
+    }
+
+    &__upload-text {
+        font-size: 14px;
+        line-height: normal;
+        letter-spacing: 0.75px;
+        color: $global-color-text-brown;
+
+        &--underline {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    &__check {
+        margin-bottom: 26px;
+
+        @include tablet-large {
+            margin-bottom: 31px;
+        }
+    }
+
+    &__button {
+        text-align: center;
+
+        .button {
+            @include tablet {
+                min-width: 370px;
+            }
+        }
+    }
+}

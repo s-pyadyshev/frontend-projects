@@ -1,0 +1,11 @@
+mixin section-intro(backImg, text, icon)
+    section.section-intro(class!=attributes.class)
+        if(backImg)
+            img(src=backImg.src alt=backImg.alt)
+        .section-intro__wrap(data-uk-scrollspy="cls: fadeInUp animated slow; repeat: false; offset-top: -250")
+            .section-intro__detail
+                h2 !{text}
+
+            if(icon)
+                .section-intro__icon.uk-text-center
+                    img(src=icon.url, alt=icon.alt, width=icon.width, height=icon.height)

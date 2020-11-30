@@ -1,0 +1,323 @@
+include ../read-more/read-more
+include ../slider-mix-content/slider-mix-content
+
+mixin section-mix-content(title)
+    section.section-mix-content(class!=attributes.class)
+        .container.uk-position-relative
+            if (title)
+                .section-mix-content__title(data-uk-scrollspy="cls: slideInLeft animated slow; repeat: false;")
+                    h2 #{title}
+            .section-mix-content__media
+                img.section-mix-content__line(src="img/color-line-green.png" srcset="img/color-line-green.png, img/color-line-green@2x.png 2x" alt="decoration line" width="11" height="575" data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                .section-mix-content__media-wrap(data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                    img(src="img/i-see-the-sea-media.png" alt="I see the sea media modal")
+                    .section-mix-content__play-button
+                        button(data-uk-toggle="target: #modal-media-video" type="button").play-button
+                            span
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 151 151"><circle cx="75.5" cy="75.5" r="75.5" fill="#fff" opacity=".6"/><path d="M88.61 81L72.39 91.56A4.14 4.14 0 0166 88.09V67a4.13 4.13 0 016.39-3.46l16.22 10.54a4.14 4.14 0 010 6.92z" fill="#30b298"/></svg>
+                .section-mix-content__aside
+                    div(data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                        +slider-mix-content-awards([
+                            {
+                                src: "img/guides-for-brides-2019.png",
+                                alt: "image description"
+                            },
+                            {
+                                src: "img/guides-for-brides-2019.png",
+                                alt: "image description"
+                            },
+                            {
+                                src: "img/guides-for-brides-2019.png",
+                                alt: "image description"
+                            }
+                        ],
+                        "min-height: 404")
+                    div(data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                        +slider-mix-content([
+                            {
+                                src: "img/mix-content-slider-bg1.png",
+                                alt: "image description"
+                            },
+                            {
+                                src: "img/mix-content-slider-bg1.png",
+                                alt: "image description"
+                            },
+                            {
+                                src: "img/mix-content-slider-bg1.png",
+                                alt: "image description"
+                            }
+                        ],
+                        "animation: push; min-height: 514")
+            .section-mix-content__content
+                +read-more(
+                    'Imagine a home-from-home vibe (if ‘home’ happens to be a Napoleonic fort, complete with drawbridge)! There’s a set of steps leading from the Fort directly down to our very own beach where you can steal a little private time together, frolic in the waves with your wedding guests and catch some very special memories – the sea views from the beach are surreal.',
+                    'Imagine a home-from-home vibe (if ‘home’ happens to be a Napoleonic fort, complete with drawbridge)! There’s a set of steps leading from the Fort directly down to our very own beach where you can steal a little private time together, frolic in the waves with your wedding guests and catch some very special memories – the sea views from the beach are surreal.'
+                )
+
+mixin section-mix-content-dream
+    section.section-mix-content(class!=attributes.class)
+        .container.uk-position-relative
+            .section-mix-content__title(data-uk-scrollspy="cls: slideInLeft animated slow; repeat: false;")
+                h2 You’ve Arrived
+            .section-mix-content__media
+                img.section-mix-content__line(src="img/color-line-grey.png" srcset="img/color-line-grey.png, img/color-line-grey@2x.png 2x" alt="decoration line" width="11" height="576" data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                .section-mix-content__media-wrap(data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                    img(src="img/you-arrived-media1.png" alt="You’ve Arrived")
+                .section-mix-content__aside
+                    div(data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                        +slider-mix-content([
+                            {
+                                src: "img/you-arrived-media2.png",
+                                alt: "image description"
+                            },
+                            {
+                                src: "img/you-arrived-media2.png",
+                                alt: "image description"
+                            },
+                            {
+                                src: "img/you-arrived-media2.png",
+                                alt: "image description"
+                            }
+                        ],
+                        "min-height: 450")
+            .section-mix-content__content
+                +read-more(
+                    'Imagine a home-from-home vibe (if ‘home’ happens to be a Napoleonic fort, complete with drawbridge)! There’s a set of steps leading from the Fort directly down to our very own beach where you can steal a little private time together, frolic in the waves with your wedding guests and catch some very special memories – the sea views from the beach are surreal.',
+                    'Imagine a home-from-home vibe (if ‘home’ happens to be a Napoleonic fort, complete with drawbridge)! There’s a set of steps leading from the Fort directly down to our very own beach where you can steal a little private time together, frolic in the waves with your wedding guests and catch some very special memories – the sea views from the beach are surreal.',
+                    'img/you-arrived-content.png',
+                    'You`ve arrived content image'
+                )
+
+mixin section-mix-content-dream-right(title)
+    section.section-mix-content(class!=attributes.class)
+        .container.uk-position-relative
+            if (title)
+                .section-mix-content__title(data-uk-scrollspy="cls: slideInLeft animated slow; repeat: false;")
+                    h2 #{title}
+            .section-mix-content__media
+                img.section-mix-content__line(src="img/color-line-purple.png" alt="decoration line" width="11" height="575" data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                .section-mix-content__media-wrap(data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                    img(src="img/dream-mix-content.png" alt="dream mix content")
+                    //- .section-mix-content__play-button
+                    //-     button(data-uk-toggle="target: #modal-media-video" type="button").play-button
+                    //-         span
+                    //-             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 151 151"><circle cx="75.5" cy="75.5" r="75.5" fill="#fff" opacity=".6"/><path d="M88.61 81L72.39 91.56A4.14 4.14 0 0166 88.09V67a4.13 4.13 0 016.39-3.46l16.22 10.54a4.14 4.14 0 010 6.92z" fill="#30b298"/></svg>
+                .section-mix-content__aside
+                    div(data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                        +slider-mix-content([
+                            {
+                                src: "img/dream-mix-content-aside-1.png",
+                                alt: "image description"
+                            }
+                        ],
+                        "min-height: 452")
+                    div(data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                        +slider-mix-content([
+                            {
+                                src: "img/dream-mix-content-aside-2.png",
+                                alt: "image description"
+                            }
+                        ],
+                        "min-height: 475")
+            .section-mix-content__content
+                +read-more(
+                    'Imagine a home-from-home vibe (if ‘home’ happens to be a Napoleonic fort, complete with drawbridge)! There’s a set of steps leading from the Fort directly down to our very own beach where you can steal a little private time together, frolic in the waves with your wedding guests and catch some very special memories – the sea views from the beach are surreal.',
+                    'Imagine a home-from-home vibe (if ‘home’ happens to be a Napoleonic fort, complete with drawbridge)! There’s a set of steps leading from the Fort directly down to our very own beach where you can steal a little private time together, frolic in the waves with your wedding guests and catch some very special memories – the sea views from the beach are surreal.',
+                    '',
+                    '',
+                    'Much more than one day'
+                )
+
+mixin section-mix-content-idos-right(title)
+    section.section-mix-content(class!=attributes.class)
+        .container.uk-position-relative
+            if (title)
+                .section-mix-content__title(data-uk-scrollspy="cls: slideInLeft animated slow; repeat: false;")
+                    h2 #{title}
+            .section-mix-content__media
+                img.section-mix-content__line(src="img/color-line-purple.png" alt="decoration line" width="11" height="575" data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                .section-mix-content__media-wrap(data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                    img(src="img/idos-mix-content.png" alt="dream mix content")
+                    //- .section-mix-content__play-button
+                    //-     button(data-uk-toggle="target: #modal-media-video" type="button").play-button
+                    //-         span
+                    //-             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 151 151"><circle cx="75.5" cy="75.5" r="75.5" fill="#fff" opacity=".6"/><path d="M88.61 81L72.39 91.56A4.14 4.14 0 0166 88.09V67a4.13 4.13 0 016.39-3.46l16.22 10.54a4.14 4.14 0 010 6.92z" fill="#30b298"/></svg>
+                .section-mix-content__aside
+                    div(data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                        +slider-mix-content([
+                            {
+                                src: "img/idos-mix-content-aside-1.png",
+                                alt: "image description"
+                            }
+                        ],
+                        "min-height: 452")
+                    div(data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                        +slider-mix-content([
+                            {
+                                src: "img/idos-mix-content-aside-2.png",
+                                alt: "image description"
+                            }
+                        ],
+                        "min-height: 475")
+            .section-mix-content__content
+                +read-more(
+                    'Our central heating’s up to the challenge and there’s a roaring fire to gather around. Inside you’ll find plenty of rooms to conduct your whole wedding, from the actual ceremony through to the reception and evening party, making the Fort the perfect venue for a winter wedding, whatever the weather.',
+                    '',
+                    '',
+                    '',
+                    'Why go winter, why not?'
+                )
+
+mixin section-mix-content-idos-right--space-to-chill(title)
+    section.section-mix-content(class!=attributes.class)
+        .container.uk-position-relative
+            if (title)
+                .section-mix-content__title(data-uk-scrollspy="cls: slideInLeft animated slow; repeat: false;")
+                    h2 #{title}
+            .section-mix-content__media
+                img.section-mix-content__line(src="img/color-line-purple.png" alt="decoration line" width="11" height="575" data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                .section-mix-content__media-wrap(data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                    img(src="img/idos-mix-content-space-to-chill.png" alt="dream mix content")
+                    //- .section-mix-content__play-button
+                    //-     button(data-uk-toggle="target: #modal-media-video" type="button").play-button
+                    //-         span
+                    //-             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 151 151"><circle cx="75.5" cy="75.5" r="75.5" fill="#fff" opacity=".6"/><path d="M88.61 81L72.39 91.56A4.14 4.14 0 0166 88.09V67a4.13 4.13 0 016.39-3.46l16.22 10.54a4.14 4.14 0 010 6.92z" fill="#30b298"/></svg>
+                .section-mix-content__aside
+                    div(data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                        +slider-mix-content([
+                            {
+                                src: "img/idos-mix-content-aside-1-space-to-chill.png",
+                                alt: "image description"
+                            }
+                        ],
+                        "min-height: 452")
+                    div(data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                        +slider-mix-content([
+                            {
+                                src: "img/idos-mix-content-aside-2-space-to-chill.png",
+                                alt: "image description"
+                            }
+                        ],
+                        "min-height: 475")
+            .section-mix-content__content
+                +read-more(
+                    'Our outside space can be used in many different ways to best suit your wedding plans, from oversized games and deckchairs to hottubs on the lower lawn one thing for sure is it will make a mark in the memory of anyone who gets to experience it.',
+                    '',
+                    '',
+                    '',
+                    'Space to chill & room to thrill'
+                )
+
+mixin section-mix-content-idos-right--perfect-match(title)
+    section.section-mix-content(class!=attributes.class)
+        .container.uk-position-relative
+            if (title)
+                .section-mix-content__title(data-uk-scrollspy="cls: slideInLeft animated slow; repeat: false;")
+                    h2 #{title}
+            .section-mix-content__media
+                img.section-mix-content__line(src="img/color-line-purple.png" alt="decoration line" width="11" height="575" data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                .section-mix-content__media-wrap(data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                    img(src="img/idos-mix-content-perfect-match.png" alt="dream mix content")
+                    //- .section-mix-content__play-button
+                    //-     button(data-uk-toggle="target: #modal-media-video" type="button").play-button
+                    //-         span
+                    //-             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 151 151"><circle cx="75.5" cy="75.5" r="75.5" fill="#fff" opacity=".6"/><path d="M88.61 81L72.39 91.56A4.14 4.14 0 0166 88.09V67a4.13 4.13 0 016.39-3.46l16.22 10.54a4.14 4.14 0 010 6.92z" fill="#30b298"/></svg>
+                .section-mix-content__aside
+                    div(data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                        +slider-mix-content([
+                            {
+                                src: "img/idos-mix-content-aside-1-perfect-match.png",
+                                alt: "image description"
+                            }
+                        ],
+                        "min-height: 452")
+                    div(data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                        +slider-mix-content([
+                            {
+                                src: "img/idos-mix-content-aside-2-perfect-match.png",
+                                alt: "image description"
+                            }
+                        ],
+                        "min-height: 475")
+            .section-mix-content__content
+                +read-more(
+                    'Polhawn Fort is a great venue for same-sex weddings as well as religious and non-religious ceremonies of all kinds. Whatever your plans, the Fort won’t disappoint with its stunning sea views and its own private beach. All ceremonies can be conducted both inside the Fort as well as outside in the gardens overlooking the Bay.',
+                    '',
+                    '',
+                    '',
+                    'The perfect match',
+                    'Tell me more'
+                )
+
+mixin section-mix-content--grand-hall-ceremonies(title)
+    section.section-mix-content(class!=attributes.class)
+        .container.uk-position-relative
+            if (title)
+                .section-mix-content__title(data-uk-scrollspy="cls: slideInLeft animated slow; repeat: false;")
+                    h2 #{title}
+            .section-mix-content__media
+                img.section-mix-content__line(src="img/color-line-light-pink.png" srcset="img/color-line-light-pink.png, img/color-line-light-pink@2x.png 2x" alt="decoration line" width="11" height="575" data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                .section-mix-content__media-wrap(data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                    img(src="img/grand-hall-ceremonies.png" alt="I see the sea media modal")
+                .section-mix-content__aside
+                    div(data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                        +slider-mix-content([
+                            {
+                                src: "img/grand-hall-ceremonies-aside.png",
+                                alt: "image description"
+                            },
+                            {
+                                src: "img/grand-hall-ceremonies-aside.png",
+                                alt: "image description"
+                            },
+                            {
+                                src: "img/grand-hall-ceremonies-aside.png",
+                                alt: "image description"
+                            }
+                        ],
+                        "animation: push; min-height: 514", true)
+            .section-mix-content__content
+                +read-more(
+                    'An inside wedding can be grand and formal or small and simple. It’s up to you. There are two rooms within the Fort’s mighty walls where you can tie the knot. For maximum wow factor, there’s The Grand Napoleonic Hall which seats up to 120 guests. The Emperors Room is perfect for small and intimate weddings with up to 30 guests. Receptions can be held indoors or in a marquee on the lawn. The choice is yours.',
+                    'An inside wedding can be grand and formal or small and simple. It’s up to you. There are two rooms within the Fort’s mighty walls where you can tie the knot. For maximum wow factor, there’s The Grand Napoleonic Hall which seats up to 120 guests. The Emperors Room is perfect for small and intimate weddings with up to 30 guests. Receptions can be held indoors or in a marquee on the lawn. The choice is yours.',
+                    'img/grand-hall-ceremonies-read-more.png',
+                    'Grand hall ceremonies image'
+                )
+
+mixin section-mix-content--garden-ceremonies(title)
+    section.section-mix-content(class!=attributes.class)
+        .container.uk-position-relative
+            if (title)
+                .section-mix-content__title(data-uk-scrollspy="cls: slideInLeft animated slow; repeat: false;")
+                    h2 #{title}
+            .section-mix-content__media
+                img.section-mix-content__line(src="img/color-line-light-pink.png" srcset="img/color-line-light-pink.png, img/color-line-light-pink@2x.png 2x" alt="decoration line" width="11" height="575" data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                .section-mix-content__media-wrap(data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                    img(src="img/garden-ceremonies.png" alt="I see the sea media modal")
+                .section-mix-content__aside
+                    div(data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;")
+                        +slider-mix-content([
+                            {
+                                src: "img/garden-ceremonies-aside.png",
+                                alt: "image description"
+                            },
+                            {
+                                src: "img/garden-ceremonies-aside.png",
+                                alt: "image description"
+                            },
+                            {
+                                src: "img/garden-ceremonies-aside.png",
+                                alt: "image description"
+                            }
+                        ],
+                        "animation: push; min-height: 514")
+            .section-mix-content__content
+                +read-more(
+                    'Create your own fairytale. When it comes to outdoor wedding venues, it doesn’t get much more romantic than tying the knot in our Summerhouse. Shimmering sea below, coastline stretching into the distance. Private beach, sweeping lawns, stunning roof terrace, sunset views. Welcome to Cornwall.',
+                    'Create your own fairytale. When it comes to outdoor wedding venues, it doesn’t get much more romantic than tying the knot in our Summerhouse. Shimmering sea below, coastline stretching into the distance. Private beach, sweeping lawns, stunning roof terrace, sunset views. Welcome to Cornwall.',
+                    '',
+                    '',
+                    'I do by the sea',
+                    '',
+                    true
+                )

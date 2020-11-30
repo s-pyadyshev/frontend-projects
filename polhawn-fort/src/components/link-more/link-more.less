@@ -1,0 +1,55 @@
+.link-more {
+    .font-heavy();
+    .font-size(12);
+    letter-spacing: 0.144rem;
+    line-height: 1.25;
+    text-decoration: none;
+    color: @global-color;
+    transition: color @global-transition-duration;
+    text-transform: uppercase;
+
+    @media (min-width: @breakpoint-small) {
+        .font-size(14);
+        line-height: 1.29;
+        letter-spacing: 0.168rem;
+
+        &:hover {
+            color: @secondary-color-hover;
+
+            span {
+                transform: translateX(10px);
+            }
+        }
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        .uk-icon svg {
+            stroke: @secondary-color-hover;
+        }
+    }
+
+    span {
+        vertical-align: middle;
+        padding-left: 5px;
+        transition: transform @global-transition-duration;
+    }
+
+    .uk-icon svg {
+        stroke: @global-primary-color;
+        transition: @global-transition-duration;
+    }
+
+    .uk-section-secondary & {
+        svg path {
+            stroke: @global-inverse-color !important;
+        }
+
+        @media (min-width: @breakpoint-small) {
+            &:hover {
+                color: @text-secondary-color;
+            }
+        }
+    }
+}

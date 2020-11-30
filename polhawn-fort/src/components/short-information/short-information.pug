@@ -1,0 +1,9 @@
+mixin short-information(data)
+    .short-information
+        h3 #{data.title}
+        .short-information__text
+            block
+        
+        if data.src
+            .short-information__image-wrapper
+                img(src=data.src alt="Short info alt").short-information__image

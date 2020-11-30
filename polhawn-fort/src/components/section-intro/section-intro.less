@@ -1,0 +1,145 @@
+.section-intro {
+  padding-bottom: 310px;
+  z-index: -1;
+  margin-bottom: -272px;
+  overflow: hidden;
+
+  @media (min-width: @breakpoint-medium) {
+    margin-bottom: -200px;
+  }
+
+  @media (min-width: @breakpoint-large) {
+    margin-bottom: -280px;
+    padding-bottom: 410px;
+  }
+
+  > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+  }
+
+  h2 {
+    margin-bottom: 0;
+    font-weight: 300;
+    font-family: @global-title-font-family;
+    .font-size(27);
+    line-height: 1.41;
+    text-align: center;
+    color: @global-grey;
+
+    @media (min-width: @breakpoint-large) {
+      .font-size(50);
+      line-height: 1.26;
+    }
+
+    &:after {
+      display: none;
+    }
+
+    span {
+      color: @global-emphasis-color;
+    }
+  }
+
+  &__detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1168px;
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding: 30px 40px 70px;
+    font-family: @global-font-family-secondary;
+    background-image: url('../img/intro-home-detail.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-width: @breakpoint-small) {
+      padding: 60px 120px 80px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: @breakpoint-large) {
+      margin-top: 88px;
+      padding-top: 77px;
+      padding-bottom: 92px;
+    }
+  }
+
+  &__icon {
+    img {
+      width: 43px;
+      height: 43px;
+    }
+  }
+
+  &--dream,
+  &--idos {
+    padding-bottom: 40px;
+    margin-bottom: 0;
+
+    @media (min-width: @breakpoint-small) {
+      padding-bottom: 50px;
+    }
+
+    @media (min-width: @breakpoint-large) {
+      margin-bottom: 30px;
+    }
+
+    > img {
+      width: auto;
+      max-width: 75%;
+      height: auto;
+      left: auto;
+      top: 50px;
+      right: 30px;
+      max-height: calc(100% - 50px);
+
+      @media (min-width: @breakpoint-small) {
+        right: 40px;
+      }
+    }
+
+    .section-intro__detail {
+      background-image: none;
+      margin-right: 0;
+      margin-left: 0;
+      padding-bottom: 30px;
+
+      @media (min-width: @breakpoint-small) {
+        padding-bottom: 60px;
+      }
+    }
+  }
+
+  &--special-offers {
+    z-index: 1;
+
+    .section-intro__detail {
+      margin-top: 0;
+    }
+
+    h2 {
+      color: #4e4f4f;
+    }
+  }
+}

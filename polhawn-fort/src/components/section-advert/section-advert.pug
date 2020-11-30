@@ -1,0 +1,33 @@
+mixin section-advert(imgSrc, imgAlt, h2, h3, text, js, id)
+    section(class=(js ? js : '') id=id ? id : '').section-advert-main
+        .section-advert
+            .section-advert__image-wrapper
+                img(src=imgSrc alt=imgAlt).section-advert__image
+            div.section-advert__content
+                .container
+                    .section-detail(class!=attributes.class)
+                        div.section-detail__head
+                            h2 #{h2}
+                            h3 #{h3}
+
+                        div.section-detail__description
+                            p #{text}
+                        .section-detail__link
+                            a(href="#").uk-button.uk-button--brushed Tell me more
+
+//- TODO: хз зачем это вообще сделано, я не использую и не трогаю, я боюсь даже смотреть сюда. Изначально от верхнего миксина отличалось всего одним классом. Зачем дублировать если существуют переменные атрибутов я не понял, поэтому не стал использовать в секциях с dots.
+mixin section-advert-right(imgSrc, imgAlt, h2, h3, text)
+    section
+        .section-advert
+            img(src=imgSrc alt=imgAlt)
+            div
+                .container
+                    .section-detail.uk-margin-auto-left
+                        div
+                            h2 #{h2}
+                            h3 #{h3}
+
+                        div
+                            p #{text}
+                        .section-detail__link
+                            a(href="#").uk-button.uk-button--brushed Tell me more

@@ -1,0 +1,228 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+    font-size: 62.5%;
+    background-color: @global-background;
+    word-break: normal;
+    color: @global-color;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+    display: block;
+}
+
+body {
+    min-height: 100%;
+    font-family: @global-font-family;
+    .font-size(16);
+    .font-regular();
+    line-height: @global-line-height;
+    margin: 0;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    transition: left 1s ease-in-out;
+    left: 0;
+    color: @global-text-color;
+
+    &.is-menu-open {
+        overflow: hidden;
+
+        @media (max-width: 767px) {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: calc(-100vw + 24px);
+        }
+
+        .header {
+            background-color: transparent !important;
+
+            @media (min-width: @breakpoint-small) {
+                display: flex;
+            }
+
+            &__logo {
+                padding-left: 20px;
+            }
+        }
+
+        .header__logo.show {
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .header__social,
+        .uk-slidenav {
+            display: none;
+        }
+
+        .menu__header-mobile {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @media (min-width: @breakpoint-small) {
+                display: none;
+            }
+        }
+
+        .menu__controls {
+            > div {
+                &:first-child {
+                    .fadeInUp;
+                    .animated;
+                    animation-delay: 0.5s;
+                }
+
+                &:nth-child(2) {
+                    .fadeInUp;
+                    .animated;
+                    animation-delay: 0.75s;
+                }
+
+                &:nth-child(3) {
+                    .fadeInUp;
+                    .animated;
+                    animation-delay: 1s;
+                }
+            }
+        }
+
+        .menu__links {
+            .fadeInUp;
+            .animated;
+            animation-delay: 1s;
+        }
+
+        .menu__toggle-open {
+            display: block;
+            opacity: 0;
+            transition-duration: 0.5s;
+        }
+
+        .menu__toggle-close {
+            .slideInDownOriginal;
+            .animated;
+            opacity: 1;
+            display: block;
+            animation-delay: 0.75s;
+        }
+
+        .nav__link {
+            animation-name: none;
+
+            @media (min-width: @breakpoint-small) {
+                animation-name: bounceLetterSpacing;
+                animation-duration: 5s;
+            }
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    transition-duration: @global-transition-duration;
+
+    &:hover,
+    &:focus,
+    &:active {
+        transition-duration: @global-transition-duration;
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 400;
+    margin-top: 0;
+    color: #fff;
+}
+
+h2 {
+    .font-size(28);
+
+    &:after {
+        content: "";
+        display: block;
+        width: 62px;
+        height: 3px;
+        margin-top: 12px;
+        background-color: @global-primary-color;
+    }
+}
+
+h3 {
+    font-family: @global-font-family-secondary;
+    .font-size(68);
+    margin-bottom: 40px;
+}
+
+h4 {
+    .font-size(16);
+}
+
+p {
+    margin-top: 0;
+    word-break: normal;
+    .font-size(16);
+    line-height: 1.88;
+
+    @media (min-width: @breakpoint-medium) {
+        .font-size(16);
+        line-height: 1.88;
+    }
+}
+
+strong {
+    font-weight: 600;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input {
+    border: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+}
+
+svg {
+    fill: currentColor;
+
+    &:not(:root) {
+        overflow: hidden;
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}

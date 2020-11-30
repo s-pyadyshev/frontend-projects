@@ -1,0 +1,51 @@
+include ../wedding-filter/wedding-filter
+
+mixin album-list()
+    section.album-list
+        img(src="img/album-list-decor.png").album-list__decor
+        img(src="img/article-list-decor-line.png").album-list__decor-line
+
+        .container
+            .album-list__wrap
+                .album-list__filter(data-uk-scrollspy="cls: fadeInUp animated slow; repeat: false;")
+                    +wedding-filter()
+
+                ul.album-list__list(data-uk-scrollspy="target: > li; cls: uk-animation-fade; delay: 500; repeat: false;")
+                    li.album-list__item
+                        +album-item('Joanne & Gemma', '21.08.18', 'img/joanne-gemma.png')
+
+                    li.album-list__item
+                        +album-item('Joanne & Gemma', '21.08.18', 'img/joanne-gemma.png')
+
+                    li.album-list__item
+                        +album-item('Joanne & Gemma', '21.08.18', 'img/joanne-gemma.png')
+
+                    li.album-list__item
+                        +album-item('Joanne & Gemma', '21.08.18', 'img/joanne-gemma.png')
+
+                .album-list__loading
+                    img(src="img/polhawn-icon.png", alt="Polhawn icon").article-list__loading-image
+                    p Loading older posts…
+
+        img(src="img/article-list-decor-line.png").album-list__decor-line
+
+mixin album-item(title, text, img)
+    .album-item
+        h5 !{title}
+        p !{text}
+        image(src=img, alt=title)
+
+        .album-item__button
+            a(href="#", title="").uk-button Show me
+
+mixin album-list-gallery()
+    section.album-list.album-list--gallery
+        img(src="img/album-list-decor-grey.png").album-list__decor
+        img(src="img/article-list-decor-line.png").album-list__decor-line
+
+        .container
+            .album-list__wrap
+                .album-list__filter(data-uk-scrollspy="cls: fadeInUp animated slow; repeat: false;")
+                    +wedding-filter-gallery()
+
+        img(src="img/article-list-decor-line.png").album-list__decor-line

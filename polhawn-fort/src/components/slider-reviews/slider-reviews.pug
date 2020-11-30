@@ -1,0 +1,55 @@
+mixin slider-reviews
+    .slider-reviews(data-uk-scrollspy="cls: fadeInUp animated slow; repeat: false;")
+        .swiper-container
+            .swiper-wrapper(data-uk-lightbox)
+                .swiper-slide(class="uk-width-2-3@s uk-width-1-2@l")
+                    a(data-uk-lightbox  href="img/review.png")
+                        img(src="img/review.png" alt="review image")
+                .swiper-slide(class="uk-width-2-3@s uk-width-1-2@l")
+                    a(data-uk-lightbox  href="img/review1.png")
+                        img(src="img/review1.png" alt="review image")
+                .swiper-slide(class="uk-width-2-3@s uk-width-1-2@l")
+                    a(data-uk-lightbox  href="img/review2.png")
+                        img(src="img/review2.png" alt="review image")
+            .swiper-controls
+                .swiper-button-prev
+                    span(data-uk-icon="chevron-left")
+                .swiper-button-next
+                    span(data-uk-icon="chevron-right")
+
+//- mixin slider-reviews
+//-     .slider-reviews
+//-         .uk-position-relative.uk-visible-toggle.uk-slider(tabindex='-1' data-uk-slider='center: true')
+//-             ul.uk-slider-items.uk-grid-large
+//-                 li(class="uk-width-1-3")
+//-                     .uk-panel
+//-                         img(src='img/dreams.jpg' alt='')
+//-                         .uk-position-center.uk-panel
+//-                             h1 1
+//-                 li(class="uk-width-1-3")
+//-                     .uk-panel
+//-                         img(src='img/dreams.jpg' alt='')
+//-                         .uk-position-center.uk-panel
+//-                             h1 2
+//-                 li(class="uk-width-1-3")
+//-                     .uk-panel
+//-                         img(src='img/dreams.jpg' alt='')
+//-                         .uk-position-center.uk-panel
+//-                             h1 3
+//-                 li(class="uk-width-1-3")
+//-                     .uk-panel
+//-                         img(src='img/dreams.jpg' alt='')
+//-                         .uk-position-center.uk-panel
+//-                             h1 4
+//-                 li(class="uk-width-1-3")
+//-                     .uk-panel
+//-                         img(src='img/dreams.jpg' alt='')
+//-                         .uk-position-center.uk-panel
+//-                             h1 5
+//-                 li(class="uk-width-1-3")
+//-                     .uk-panel
+//-                         img(src='img/dreams.jpg' alt='')
+//-                         .uk-position-center.uk-panel
+//-                             h1 5
+//-             a.uk-position-center-left.uk-position-small.uk-hidden-hover(href='#' uk-slidenav-previous='' uk-slider-item='previous')
+//-             a.uk-position-center-right.uk-position-small.uk-hidden-hover(href='#' uk-slidenav-next='' uk-slider-item='next')

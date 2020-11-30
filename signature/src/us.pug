@@ -1,0 +1,87 @@
+extends pug/base
+
+append vars
+    //- ...
+
+block content
+    //- ...
+
+    +representation({
+        m: './images/us-representation-m.jpg',
+        d: './images/us-representation.jpg'
+    }).--img-center.--text-block
+
+        include ./pug/search-roles
+
+        +e.wrap-bottom.js-representation-text
+            +e.text-block
+                h1 Part of something better
+                p Signature Senior Lifestyle offers unrivalled elderly care in stunning locations across London and the Home Counties.
+
+        //- .trigger-search-roles-theme.js-trigger-search-roles-theme
+
+    +b('article').us.-article-big
+        .container
+            p We provide award-winning residential, nursing, dementia and respite care, with a person-centred approach. We treat every resident as an individual, each with their own care plan tailored to their needs. 
+
+            h2 Where We Are
+
+            include ./pug/mapbox.pug
+
+            p Every one of our luxury care homes is unique, with its own sense of community. Our homes are beautifully designed with excellent facilities, from our state-of-the-art dementia care units, to cinema rooms, hair salons and restaurants.
+
+            +us-gallery([{
+                img: {
+                    src: 'http://signaturestaging.welove9am.com/imager/images/1922/signature-team-work_413a1edebb15b1a5b3b1ab9a5ce8e4eb.jpg',
+                    alt: ''
+                }
+            }, {
+                img: {
+                    src: 'http://signaturestaging.welove9am.com/imager/images/1921/hospitality-jobs_8270220c25d91cdee903185adae7fe32.jpg',
+                    alt: ''
+                }
+            },
+            {
+                img: {
+                    src: 'http://signaturestaging.welove9am.com/imager/images/1920/care-assistant-jobs_9c5aee5ec0c28c744f97d7ebac18a09a.jpg',
+                    alt: ''
+                }
+            },
+            {
+                img: {
+                    src: 'http://signaturestaging.welove9am.com/imager/images/1922/signature-team-work_413a1edebb15b1a5b3b1ab9a5ce8e4eb.jpg',
+                    alt: ''
+                }
+            }, {
+                img: {
+                    src: 'http://signaturestaging.welove9am.com/imager/images/1921/hospitality-jobs_8270220c25d91cdee903185adae7fe32.jpg',
+                    alt: ''
+                }
+            },
+            {
+                img: {
+                    src: 'http://signaturestaging.welove9am.com/imager/images/1920/care-assistant-jobs_9c5aee5ec0c28c744f97d7ebac18a09a.jpg',
+                    alt: ''
+                }
+            }])
+
+            p Each home has a packed schedule of things to do from a dedicated activities team, so our days are never dull.
+
+            +us-gallery([{
+                img: {
+                    src: './images/us-slider.jpg',
+                    alt: ''
+                }
+            }, {
+                img: {
+                    src: './images/us-slider.jpg',
+                    alt: ''
+                }
+            }])
+
+            p Sound like the kind of place you’d like to work? It’s time to wake up to better at Signature.
+
+            +e.button
+                +button('a', 'See our roles').--gradient-theme
+
+    include ./pug/register

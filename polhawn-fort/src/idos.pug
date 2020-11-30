@@ -1,0 +1,87 @@
+extends ./templates/_base-template
+
+include ./components/menu/menu
+include ./components/special/special
+include ./components/slideshow/slideshow
+include ./components/inspiration/inspiration
+include ./components/section-intro/section-intro
+include ./components/section-mix-content/section-mix-content
+include ./components/section-offers/section-offers
+include ./components/see-more/see-more
+include ./components/events-description/events-description
+
+prepend head
+    - var pageTitle = "I do's";
+
+block content
+    main.main
+        +menu
+        section
+            +slideshow-idos
+
+        +section-intro({
+                src: "img/section-intro-bg.png",
+                alt: "Section intro background image"
+            },
+            "A wedding can be grand and formal or small and simple. It’s up to you. Tie the knot within the Fort’s mighty walls or there’s the summerhouse surrounded by the ocean.", {
+                url: "img/polhawn-icon.png",
+                alt: "Polhawn icon",
+                width: '43',
+                height: '43'
+            }
+        ).section-intro--idos
+
+        +section-mix-content--grand-hall-ceremonies('Grand Hall Ceremonies').js-trigger-hamburger
+
+        +inspiration(
+            'img/ceremony-way-back.jpg',
+            'Your ceremony your way',
+            'Styles & aisles',
+            'It’s totally your call from the decor to the flowers, traditional or a bespoke themed wedding. Whatever direction you want to go it’s your choice and our team are there to inspire and help you along the way.',
+            'cls: fadeInRight slow animated; repeat: true',
+            'img/layer-gray.jpg'
+        ).inspiration--right.inspiration--with-underline
+
+        +section-mix-content--garden-ceremonies('Garden Ceremonies')
+
+        +inspiration(
+            'img/ceremonies-in-our.jpg',
+            'Ceremonies in our',
+            'Summerhouse',
+            'With the sea echoing all around it’s a natural setting to bring all your love ones together for your ceremony. Our sweeping lawn meanders down and is framed against the perfect sea horizon backdrop.',
+            'cls: fadeInRight slow animated; repeat: true',
+            'img/layer-gray.jpg',
+            'js-color-word'
+        ).inspiration--right.inspiration--with-underline
+
+        +section-mix-content-idos-right--space-to-chill().section-mix-content--right-content
+
+        +special(
+            'img/special.png',
+            'As snug as a bug',
+            'Winter weddings',
+            'It’s easy to see why Polhawn Fort makes a fantastic summer wedding venue, but when it snows it becomes a classic winter wonderland. Even without snow, there’s something comforting about wild winter storms lashing the coastline, while you and your guests stay cosy and warm within the Fort’s thick granite walls.'
+        )
+
+        +section-mix-content-idos-right().section-mix-content--right-content
+
+        +events-description(
+            'img/ceremony-thats-back.png',
+            'img/ceremony-thats.png',
+            'A ceremony that’s',
+            'Just for you',
+            'If you want a discreet wedding you’ve found the right place. Far out on the Rame Peninsula the Fort’s hidden away in near total seclusion. It’s definitely not the kind of location you stumble upon or pop into, asking for directions. The only people at your wedding will be the ones you’ve invited tucked away on your very own getaway land, everything an exclusive wedding venue requires.',
+            'img/color-line-light-brown.png'
+        ).events-description--light-brown-theme
+
+        +section-mix-content-idos-right--perfect-match().section-mix-content--right-content
+
+        +section-offers
+
+        +see-more(
+            'img/you-must-see-idos-back.png',
+            'img/you-must-see.png',
+            'You must see',
+            "Gallery",
+            'See more'
+        ).see-more--red-theme

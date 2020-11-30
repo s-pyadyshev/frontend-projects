@@ -1,0 +1,76 @@
+.request-links {
+    .font-size(27);
+    letter-spacing: 2.43px;
+    font-family: 'freightbigprobook-regular', serif;
+    text-align: center;
+
+    @media (min-width: @breakpoint-small) {
+        .font-size(25);
+    }
+
+    a {
+        .link-hover-border();
+        display: inline-block;
+        vertical-align: middle;
+        color: #fff;
+    }
+
+    &--footer {
+
+        .request-links__divider {
+            display: block;
+            width: 80px;
+            height: 1px;
+            margin: 20px auto 15px;
+            letter-spacing: 2px;
+            background-color: #15bb98;
+            font-weight: 300;
+
+            @media (min-width: @breakpoint-small) {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 auto;
+                letter-spacing: 1.75px;
+                width: 1px;
+                height: 24px;
+                margin: 0 32px;
+                background-color: #fff;
+            }
+        }
+    }
+
+    &--modal {
+        margin-top: 30px;
+
+        a {
+            .font-size(18);
+            .link-hover-color-text();
+            letter-spacing: 2.24px;
+
+            @media (min-width: @breakpoint-large) {
+                .font-size(32);
+            }
+        }
+
+        .request-links__divider {
+            background-color: #8c8c8c;
+        }
+    }
+
+    &__divider {
+        display: block;
+        margin: 0 auto;
+        letter-spacing: 1.75px;
+        font-weight: 300;
+        width: 1px;
+        height: 24px;
+        margin: 0 32px;
+        background-color: #fff;
+    
+        @media (min-width: @breakpoint-small) {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 32px;
+        }
+    }
+}

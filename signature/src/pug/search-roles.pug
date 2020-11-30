@@ -1,0 +1,18 @@
++b('form').search-roles
+    +e.wrap
+        +e.text.js-toggle-dropdown
+            span What will you wake up to?
+
+            +e.arrow
+                +svg('triangle')
+
+        +e.content
+            +e.content-wrap
+                +e.fields
+                    +e.field
+                        +input('type-job', 'Type job title here')
+                    +e.field
+                        +input('type-location', 'Type location here')
+
+                +e.button
+                    +button('button', 'See our roles')

@@ -1,0 +1,70 @@
+extends ./templates/_base-template
+
+include ./components/blog/blog
+include ./components/section-signup/section-signup
+include ./components/see-more/see-more
+include ./components/section-intro/section-intro
+include ./components/advantages/advantages
+
+prepend head
+    - var pageTitle = 'Special offers';
+
+block content
+    main.main
+        +menu
+
+        section.section-prices-header(data-uk-scrollspy="cls: fadeInDown animated slow; offset: 250; repeat: false;")
+            .section-prices-header__bg(style='background-image: url(img/special-offers-head.png)')
+                div(data-uk-scrollspy="cls: fadeInUp animated slow; repeat: false;")
+                    h1 Latest Offers
+
+        +section-intro(false,
+            "From time to time special offers arise and bring great opportunity with reduced prices with that same exclusive offering.", {
+                url: "img/polhawn-icon.png",
+                alt: "Polhawn icon",
+                width: '43',
+                height: '43'
+            }
+        ).section-intro--idos.section-intro--special-offers
+
+        section.article-list.article-list--offers
+            img(src="img/article-list-decor.png").article-list__decor
+            img(src="img/article-list-decor-line.png").article-list__decor-line
+            .container
+                .article-list__wrap
+                    h2 Latest offers
+                    ul.article-list__list(data-uk-scrollspy="cls: fadeInUp animated slow; repeat: false;")
+                        li.article-list__item
+                            +blog-offer
+
+                        li.article-list__item
+                            +blog-offer
+
+                        li.article-list__item
+                            +blog-offer
+
+                        li.article-list__item
+                            +blog-offer
+
+                        li.article-list__item
+                            +blog-offer
+
+            img(src="img/article-list-decor-line.png").article-list__decor-line
+
+        +advantages([{
+            text: 'Exclusively yours for your stay'
+        }, {
+            text: 'Reduced pricing, the same experience'
+        }, {
+            text: 'Book your viewing',
+            tag: 'a'
+        }])
+
+        +section-signup
+        +see-more(
+            'img/you-must-see-idos-back.png',
+            'img/you-must-see.png',
+            'You must see',
+            "Gallery",
+            'See more'
+        ).see-more--red-theme

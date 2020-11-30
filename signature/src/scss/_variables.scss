@@ -1,0 +1,30 @@
+// stylelint-disable scss/dollar-variable-empty-line-before
+
+// COLORS
+
+$color-black: #000;
+$color-white: #fff;
+$global-color-background-primary: #4e2f6b;
+$global-color-background-secondary: #ee3b79;
+$global-color-background-light-gray: #dcd5cd;
+$global-color-background-brown: #88776b;
+$global-color-background-field: rgba(255, 255, 255, 0.7);
+
+// COLOR TEXT
+$global-color-text-primary: #4e2f6b;
+$global-color-text-light: #fff;
+$global-color-text-darker-light: #dcd5cd;
+$global-color-text-hover-primary: #ee3b79;
+$global-color-text-brown: #88776b;
+
+// FONTS
+
+// COMMON
+$global-offset-container-mobile: 15px;
+$global-offset-container-tablet: 40px;
+
+$global-header-height-mobile: 60px;
+$global-header-height-desktop: 89px;
+
+$global-animation-time: 0.3s;
+$global-animation-time-double: $global-animation-time * 2;

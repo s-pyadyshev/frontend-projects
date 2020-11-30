@@ -1,0 +1,55 @@
+extends pug/base
+
+append vars
+    //- ...
+
+block content
+    //- ...
+
+    +representation({
+        m: './images/job-listing-m.jpg',
+        d: './images/job-listing.jpg'
+    }).--img-center.--text-block
+
+        include ./pug/search-roles
+
+        +e.wrap-bottom.js-representation-text
+            +e.text-block
+                h1 Job Opportunities
+
+        //- .trigger-search-roles-theme.js-trigger-search-roles-theme
+
+    .container
+        +b.job-listing
+            +e('aside').aside
+                +e.wrap.js-filter-sticky
+                    include ./pug/job-filter
+
+                    +e.register
+                        include ./pug/register
+
+            +e('main').main
+                +e.number-jobs 325 jobs across 12 categories
+
+                +e('ul').list
+                    +e.item
+                        +job()
+
+                    +e.item
+                        +job()
+
+                    +e.item
+                        +job()
+
+                    +e.item
+                        +job()
+
+                +e.see-more
+                    +button('a', 'See more').--light-gray-theme.--large-offset
+
+    +apply-form(
+        'Register your CV',
+        'Not seen a role you’re interested in? Register your CV today.',
+        'Register CV',
+        'gray'
+    ).--text-left

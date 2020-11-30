@@ -1,0 +1,196 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	box-sizing: border-box;
+	height: 100%;
+}
+
+body {
+	font-family: "omnes";
+	font-weight: 300;
+	height: 100%;
+	color: $global-color-text-primary;
+}
+
+select {
+	border: none;
+	border-radius: 0;
+	background-color: $color-white;
+}
+
+.main {
+	flex-grow: 1;
+}
+
+a {
+	transition: color $global-animation-time;
+}
+
+p,
+ul {
+	font-size: 14px;
+	line-height: 1.64;
+	letter-spacing: 0.75px;
+	margin: 0;
+	&:not(:last-child) {
+		margin-bottom: 28px;
+	}
+
+	@include tablet-large {
+		font-size: 16px;
+		line-height: 1.56;
+	}
+}
+
+h1 {
+	font-size: 30px;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: 1.5px;
+	margin: 30px 0;
+
+	@include tablet-large {
+		font-size: 48px;
+		letter-spacing: 3px;
+	}
+}
+
+h2 {
+	font-size: 24px;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: 1.5px;
+	margin: 30px 0;
+
+	@include tablet-large {
+		font-size: 30px;
+	}
+}
+
+section {
+	margin: 17px 0;
+
+	@include tablet {
+		margin: 30px 0;
+	}
+}
+
+blockquote {
+	margin: 0 0 28px;
+	font-size: 15px;
+	line-height: 1.53;
+	letter-spacing: 0.75px;
+	font-weight: 500;
+
+	@include tablet-large {
+		font-size: 18px;
+		line-height: 1.33;
+	}
+
+	p {
+		font-size: inherit;
+		line-height: inherit;
+		letter-spacing: inherit;
+		font-weight: inherit;
+	}
+}
+
+ul {
+	padding-left: 26px;
+}
+
+input {
+	border-radius: 0;
+}
+
+.page-wrapper {
+	overflow: hidden;
+}
+
+.trigger-search-roles-theme {
+	position: absolute;
+	height: 0;
+	width: 0;
+	opacity: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.article-big {
+	p,
+	ul {
+		@include tablet-large {
+			font-size: 20px;
+			line-height: 1.38;
+		}
+
+		&:not(:last-child) {
+			@include tablet-large {
+				margin-bottom: 49px;
+			}
+		}
+	}
+
+	h2 {
+		@include tablet-large {
+			margin: 49px 0;
+			font-size: 36px;
+		}
+	}
+}
+
+.apprenticeships {
+	.container {
+		@include tablet-large {
+			padding: 0 70px;
+		}
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	&__with-image {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+
+		@include tablet {
+			display: block;
+		}
+
+		img {
+			max-width: calc(100% + (#{$global-offset-container-mobile} * 2));
+			display: block;
+			margin: 0 (-$global-offset-container-mobile);
+			margin-bottom: 28px;
+
+			@include tablet {
+				float: left;
+				width: 50%;
+				margin-right: 50px;
+				margin-left: 0;
+				max-width: 540px;
+			}
+		}
+
+		&::after {
+			content: "";
+			width: 0;
+			height: 0;
+			display: block;
+			clear: both;
+			visibility: hidden;
+			opacity: 0;
+		}
+
+		ul {
+			@include tablet {
+				padding-right: 0;
+			}
+		}
+	}
+}

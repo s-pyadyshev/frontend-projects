@@ -1,0 +1,161 @@
+.dropdown {
+    box-shadow: 10px 0 20px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+
+    @media (min-width: @breakpoint-large) {
+        box-shadow: none;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+
+        .dropdown__icon span {
+            color: #4e4f4f !important;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &.is-open {
+
+        .dropdown__icon svg {
+            transform: rotate(180deg);
+            transition-duration: @global-transition-duration * 2;
+        }
+    }
+
+    &__close {
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        background: none;
+        border: 0;
+        color: #fff;
+        transition-duration: @global-transition-duration;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: #4e4f4f;
+            transition-duration: @global-transition-duration;
+        }
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &__content {
+        display: none;
+        padding-top: 45px;
+        padding-right: 30px;
+        padding-bottom: 45px;
+        padding-left: 30px;
+        line-height: 2.69;
+        background-color: #99b0c3;
+        color: #fff;
+
+        @media (min-width: @breakpoint-large) {
+            padding-top: 10px;
+            padding-right: 30px;
+            padding-bottom: 15px;
+            padding-left: 30px;
+            background-color: transparent;
+            color: #4e4f4f;
+        }
+    }
+
+    &__footer {
+        
+        @media (min-width: @breakpoint-large) {
+            display: none;
+        }
+
+        a {
+            .font-size(20);
+            font-family: 'freightbigprobook-regular', sans-serif;
+            display: block;
+            min-width: 193px;
+            padding: 5px 0;
+            text-align: center;
+            background-image: url('../img/dropdown-button.svg');
+            background-repeat: no-repeat;
+            color: #575858;
+            transition-duration: @global-transition-duration;
+
+            &:hover,
+            &:active,
+            &:focus {
+                background-image: url('../img/dropdown-button-active.svg');
+                transition-duration: @global-transition-duration;
+                color: #fff;
+            }
+        }
+
+        p {
+            margin-top: 45px;
+            margin-bottom: 35px;
+            font-weight: 600;
+            color: #fff;
+        }
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        width: 30px;
+        height: 30px;
+        margin-left: auto;
+        border-radius: 50%;
+        background: none;
+        border:0;
+        background-color: #f0f0f0;
+
+        @media (min-width: @breakpoint-large) {
+            display: none;
+        }
+
+        span {
+            color: #b7b7b7 !important;
+        }
+
+        svg {
+            width: 10px;
+            margin-top: 1px;
+            transition-duration: @global-transition-duration * 2;
+        }
+    }
+
+    &__toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 35px 30px;
+        .font-size(16);
+        font-weight: 500;
+        color: #4e4f4f;
+        background: none;
+        border: 0;
+        text-align: left;
+
+        @media (min-width: @breakpoint-large) {
+            padding: 0 30px;
+            .font-size(24);
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        > span > span {
+            color: @global-primary-color;
+        }
+    }
+}

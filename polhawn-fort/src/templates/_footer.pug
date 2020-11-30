@@ -1,0 +1,56 @@
+include ./../components/logo/logo
+include ./../components/modal-video/modal-video
+include ./../components/social/social
+
+footer.footer.uk-cover-container
+    .uk-position-relative
+        .container
+            .footer__top(data-uk-scrollspy="cls: fadeInUp animated slow; delay: 250; repeat: false;")
+                .call-our-team
+                    p Call our team
+                    a(href="tel:01752822864") 01752 822864
+            .footer__center(data-uk-scrollspy="cls: fadeInUp animated slow; delay: 250; repeat: false;")
+                .uk-flex-center(data-uk-grid class="uk-flex-between@s")
+                    div
+                        a(class="uk-button uk-button-default" href="#") About Us
+                    div
+                        a(class="uk-button uk-button-default" href="#") Prices
+                    div
+                        a(class="uk-button uk-button-default" href="#") Talk To Us
+
+                .footer__links.uk-text-center(data-uk-scrollspy="cls: fadeInUp animated slow; delay: 250; repeat: false;")
+                    .request-links.request-links--footer
+                        a(href="#") Request a viewing
+                        .request-links__divider
+                        a(href="#") Brochure request
+
+                .uk-text-center(class="uk-visible@s")
+                    img(src="img/swirl.png" srcset="img/swirl.png, img/swirl@2x.png 2x" alt="Polhawn Fort Icon Logo" width="46" height="45")
+            .footer__social(data-uk-scrollspy="cls: fadeInUp animated slow; delay: 250; repeat: false;")
+                +social
+
+        .footer__bottom(data-uk-scrollspy="cls: fadeInUp animated slow; delay: 250; repeat: false;")
+            .container.uk-flex.uk-flex-center.uk-flex-wrap(class="uk-flex-between@s")
+                .footer__bottom-left Copyright 2019© Polhawn Fort
+                .footer__bottom-center
+                    ul.list-divided.uk-flex.uk-flex-center.uk-flex-wrap
+                        li
+                            a(href="#") Accessibility
+                        li
+                            a(href="#") Privacy Policy
+                        li
+                            a(href="#") Terms & Conditions
+                        li
+                            a(href="#") Copyright
+                        li
+                            a(href="#") Sitemap
+                .footer__bottom-right
+                    ul.list-divided.uk-flex.uk-flex-wrap
+                        li
+                            span Web Design by <a href="https://www.own-design.com" target="_blank" class="link-design">OWN DESIGN</a>
+                        li
+                            a(href="#") Terms
+                        li
+                            a(href="#") Privacy
+
++modal-video

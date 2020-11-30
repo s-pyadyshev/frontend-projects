@@ -1,0 +1,37 @@
+extends ./templates/_base-template
+
+include ./components/menu/menu
+include ./components/slider-reviews/slider-reviews
+include ./components/section-price-info/section-price-info
+include ./components/section-pricing/section-pricing
+include ./components/section-signup/section-signup
+include ./components/section-blog/section-blog
+include ./components/see-more/see-more
+include ./components/modal-prices/modal-prices
+
+prepend head
+    - var pageTitle = 'Prices';
+
+block content
+    main.main
+        +menu
+        section.section-prices-header(data-uk-scrollspy="cls: fadeInDown animated slow; offset: 250; repeat: false;")
+            .section-prices-header__bg(style='background-image: url(img/our-prices-header.jpg)')
+                div(data-uk-scrollspy="cls: fadeInUp animated slow; repeat: false;")
+                    h1 Our prices
+        +slider-reviews
+        +section-price-info
+        section.section-image.js-trigger-hamburger
+            .uk-overflow-hidden
+                .section-image__bg(style='background-image: url(img/section-image.jpg)' data-uk-scrollspy="cls: fadeInUp animated slow; repeat: false;" data-uk-parallax="bgx: -600; easing: 0;")
+        +section-pricing
+        +section-signup
+        +section-blog
+        +see-more(
+            'img/you-must-see-idos-back.png',
+            'img/you-must-see.png',
+            'You must see',
+            "Gallery",
+            'See more'
+        ).see-more--red-theme
+    +modal-prices

@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Polhawn Fort</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="copyright" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="HandheldFriendly" content="True">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link href="css/main.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/ScrollToPlugin.min.js"></script>
+</head>
+
+<body class="js-toggle-menu">
+    <div class="main-container">
+        <button class="float-hamburger" type="button" data-uk-toggle="target: .js-toggle-menu; cls: is-menu-open;"><span data-uk-icon="menu"></span></button>
+        <header class="header">
+            <div>
+                <button class="menu__toggle-open" type="button" data-uk-toggle="target: .js-toggle-menu; cls: is-menu-open;"><span data-uk-icon="menu"></span></button>
+                <button class="menu__toggle-close" type="button" data-uk-toggle="target: .js-toggle-menu; cls: is-menu-open;"><span data-uk-icon="close"></span></button>
+            </div>
+            <div class="header__logo">
+                <a href="/" title="Go to Homepage">
+                    <img src="img/polhawn-fort-logo.svg" alt="Polhawn Fort logo">
+                </a>
+            </div>
+            <div class="header__phone">
+                <a href="tel:1234567890"><span data-uk-icon="phone"></span></a>
+            </div>
+            <div class="header__social" data-uk-scrollspy="cls: slideInDown animated; delay: 250; repeat: false;">
+                <ul class="social social--small">
+                    <li class="social__item">
+                        <a class="social__link" href="#" target="_blank" rel="noopener noreferrer"><span class="social__icon" data-uk-icon="social-fb"></span></a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" target="_blank" rel="noopener noreferrer"><span class="social__icon" data-uk-icon="social-twitter"></span></a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" target="_blank" rel="noopener noreferrer"><span class="social__icon" data-uk-icon="social-inst"></span></a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" target="_blank" rel="noopener noreferrer"><span class="social__icon" data-uk-icon="social-pinterest"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="menu js-toggle-menu">
+                <div class="menu__inner">
+                    <img src="img/menu-bg.jpg" alt="Menu background">
+                    <img src="img/dreams-bg.jpg" alt="Menu background" hidden id="toggle-hover1">
+                    <img src="img/menu-bg.jpg" alt="Menu background" hidden id="toggle-hover2">
+                    <img src="img/dreams-bg.jpg" alt="Menu background" hidden id="toggle-hover3">
+                    <img src="img/menu-bg.jpg" alt="Menu background" hidden id="toggle-hover4">
+                    <img src="img/dreams-bg.jpg" alt="Menu background" hidden id="toggle-hover5">
+                    <img src="img/menu-bg.jpg" alt="Menu background" hidden id="toggle-hover6">
+                    <img src="img/dreams-bg.jpg" alt="Menu background" hidden id="toggle-hover7">
+                    <img src="img/menu-bg.jpg" alt="Menu background" hidden id="toggle-hover8">
+                    <img src="img/dreams-bg.jpg" alt="Menu background" hidden id="toggle-hover9">
+                    <img src="img/menu-bg.jpg" alt="Menu background" hidden id="toggle-hover10">
+                    <div class="menu__header-mobile">
+                        <button class="menu__button-back" type="button" data-uk-toggle="target: .js-toggle-menu; cls: is-menu-open;"><span data-uk-icon="menu-back"></span></button>
+                        <a class="menu__header-phone" href="tel:1234567890"><span data-uk-icon="phone"></span></a>
+                    </div>
+                    <div class="menu__nav-wrap">
+                        <div class="menu__nav">
+                            <nav class="nav">
+                                <ul class="nav__list">
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="dream.html" data-uk-toggle="target: #toggle-hover1; mode: hover; animation: uk-animation-fade, uk-animation-fade uk-animation-reverse; queued: true">The dream</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="dream.html" data-uk-toggle="target: #toggle-hover2; mode: hover; animation: uk-animation-fade, uk-animation-fade uk-animation-reverse; queued: true">The I do’s</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="dream.html" data-uk-toggle="target: #toggle-hover3; mode: hover; animation: uk-animation-fade, uk-animation-fade uk-animation-reverse; queued: true">Plan & prep</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="dream.html" data-uk-toggle="target: #toggle-hover4; mode: hover; animation: uk-animation-fade, uk-animation-fade uk-animation-reverse; queued: true">Eat well</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="dream.html" data-uk-toggle="target: #toggle-hover5; mode: hover; animation: uk-animation-fade, uk-animation-fade uk-animation-reverse; queued: true">Sleep tight</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="dream.html" data-uk-toggle="target: #toggle-hover6; mode: hover; animation: uk-animation-fade, uk-animation-fade uk-animation-reverse; queued: true">Party time</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="dream.html" data-uk-toggle="target: #toggle-hover7; mode: hover; animation: uk-animation-fade, uk-animation-fade uk-animation-reverse; queued: true">Explore & conquer</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="dream.html" data-uk-toggle="target: #toggle-hover8; mode: hover; animation: uk-animation-fade, uk-animation-fade uk-animation-reverse; queued: true">Discover more</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="dream.html" data-uk-toggle="target: #toggle-hover9; mode: hover; animation: uk-animation-fade, uk-animation-fade uk-animation-reverse; queued: true">Gallery</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="dream.html" data-uk-toggle="target: #toggle-hover10; mode: hover; animation: uk-animation-fade, uk-animation-fade uk-animation-reverse; queued: true">Our weddings</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="menu__controls uk-flex uk-flex-wrap uk-flex-between@s">
+                            <div>
+                                <a class="uk-button uk-button-default" href="#">About Us</a>
+                            </div>
+                            <div>
+                                <a class="uk-button uk-button-default" href="#">Prices</a>
+                            </div>
+                            <div>
+                                <a class="uk-button uk-button-default" href="#">Talk To Us</a>
+                            </div>
+                        </div>
+                        <div class="menu__links uk-text-center">
+                            <a href="#">Request a viewing</a>
+                            <div class="menu__links-divider"></div>
+                            <a href="#">Brochure request</a>
+                        </div>
+                        <div class="uk-text-center">
+                            <img src="img/swirl.png" srcset="img/swirl.png, img/swirl@2x.png 2x" alt="Polhawn Fort Icon Logo" width="46" height="45">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-land-sea">
+                <div class="slideshow">
+                    <div class="js-slideshow" id="slideshow-home" data-uk-slideshow="animation: push; min-height: 300; max-height: 945">
+                        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+                            <ul class="uk-slideshow-items">
+                                <li class="vimeo-wrapper">
+                                    <img src="img/land-sea.jpg" srcset="img/land-sea.jpg, img/land-sea@2x.jpg 2x" alt="" /><iframe src="https://player.vimeo.com/video/137296074?background=1" allow="autoplay; fullscreen" allowfullscreen="allowfullscreen"></iframe>
+                                    <div class="slideshow__caption">
+                                        <div class="container">
+                                            <div class="uk-overflow-hidden">
+                                                <div data-uk-scrollspy="cls: slideInLeft animated; delay: 1500; repeat: false;">
+                                                    <div>An exclusive coastal wedding venue in Cornwall</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slideshow__logos">
+                                        <div class="uk-visible@s">
+                                            <img src="img/logo-white.png" srcset="img/logo-white.png, img/logo-white@2x.png 2x" alt="Polhawn Fort Logo" width="262" height="118" />
+                                        </div>
+                                        <div>
+                                            <img src="img/land-meets-sea.svg" alt="Where land meets the sea" width="208" height="261" />
+                                        </div>
+                                        <div>
+                                            <img src="img/swirl.png" srcset="img/swirl.png, img/swirl@2x.png 2x" alt="Polhawn Fort Icon Logo" width="46" height="45" />
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="vimeo-wrapper">
+                                    <img src="img/land-sea.jpg" srcset="img/land-sea.jpg, img/land-sea@2x.jpg 2x" alt="" /><iframe src="https://player.vimeo.com/video/137296074?background=1" allow="autoplay; fullscreen" allowfullscreen="allowfullscreen"></iframe>
+                                    <div class="slideshow__caption">
+                                        <div class="container">
+                                            <div class="uk-overflow-hidden">
+                                                <div data-uk-scrollspy="cls: slideInLeft animated; delay: 1500; repeat: false;">
+                                                    <div>An exclusive coastal wedding venue in Cornwall</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slideshow__logos">
+                                        <div class="uk-visible@s">
+                                            <img src="img/logo-white.png" srcset="img/logo-white.png, img/logo-white@2x.png 2x" alt="Polhawn Fort Logo" width="262" height="118" />
+                                        </div>
+                                        <div>
+                                            <img src="img/land-meets-sea.svg" alt="Where land meets the sea" width="208" height="261" />
+                                        </div>
+                                        <div>
+                                            <img src="img/swirl.png" srcset="img/swirl.png, img/swirl@2x.png 2x" alt="Polhawn Fort Icon Logo" width="46" height="45" />
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="vimeo-wrapper">
+                                    <img src="img/land-sea.jpg" srcset="img/land-sea.jpg, img/land-sea@2x.jpg 2x" alt="" /><iframe src="https://player.vimeo.com/video/137296074?background=1" allow="autoplay; fullscreen" allowfullscreen="allowfullscreen"></iframe>
+                                    <div class="slideshow__caption">
+                                        <div class="container">
+                                            <div class="uk-overflow-hidden">
+                                                <div data-uk-scrollspy="cls: slideInLeft animated; delay: 1500; repeat: false;">
+                                                    <div>An exclusive coastal wedding venue in Cornwall</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slideshow__logos">
+                                        <div class="uk-visible@s">
+                                            <img src="img/logo-white.png" srcset="img/logo-white.png, img/logo-white@2x.png 2x" alt="Polhawn Fort Logo" width="262" height="118" />
+                                        </div>
+                                        <div>
+                                            <img src="img/land-meets-sea.svg" alt="Where land meets the sea" width="208" height="261" />
+                                        </div>
+                                        <div>
+                                            <img src="img/swirl.png" srcset="img/swirl.png, img/swirl@2x.png 2x" alt="Polhawn Fort Icon Logo" width="46" height="45" />
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="vimeo-wrapper">
+                                    <img src="img/land-sea.jpg" srcset="img/land-sea.jpg, img/land-sea@2x.jpg 2x" alt="" /><iframe src="https://player.vimeo.com/video/137296074?background=1" allow="autoplay; fullscreen" allowfullscreen="allowfullscreen"></iframe>
+                                    <div class="slideshow__caption">
+                                        <div class="container">
+                                            <div class="uk-overflow-hidden">
+                                                <div data-uk-scrollspy="cls: slideInLeft animated; delay: 1500; repeat: false;">
+                                                    <div>An exclusive coastal wedding venue in Cornwall</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slideshow__logos">
+                                        <div class="uk-visible@s">
+                                            <img src="img/logo-white.png" srcset="img/logo-white.png, img/logo-white@2x.png 2x" alt="Polhawn Fort Logo" width="262" height="118" />
+                                        </div>
+                                        <div>
+                                            <img src="img/land-meets-sea.svg" alt="Where land meets the sea" width="208" height="261" />
+                                        </div>
+                                        <div>
+                                            <img src="img/swirl.png" srcset="img/swirl.png, img/swirl@2x.png 2x" alt="Polhawn Fort Icon Logo" width="46" height="45" />
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#" data-uk-slidenav-previous="" data-uk-slideshow-item="previous"></a>
+                            <a href="#" data-uk-slidenav-next="" data-uk-slideshow-item="next"></a>
+                            <ol class="uk-slideshow-nav uk-dotnav"></ol>
+                            <div class="slideshow__counter">
+                                <div class="slideshow__current"></div>
+                                <div class="slideshow__counter-divider"></div>
+                                <div class="slideshow__total"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="section-intro">
+                <img src="img/intro-home.jpg" alt="I see the sea" />
+                <div class="section-intro__wrap" data-uk-scrollspy="cls: fadeInUp animated slow; repeat: false; offset-top: -250">
+                    <div class="section-intro__detail">
+                        <h2>Immerse yourselves in the magic of a cliff-top fort in the South West of England, standing tall among sweeping lawns. A secluded beach, <span>Polhawn Cove</span>, sits below, with exclusive access.</h2>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-mix-content js-trigger-hamburger">
+                <div class="container uk-position-relative">
+                    <div class="section-mix-content__title" data-uk-scrollspy="cls: slideInLeft animated slow; repeat: false;">
+                        <h2>I see the Sea...</h2>
+                    </div>
+                    <div class="section-mix-content__media">
+                        <img class="section-mix-content__line" src="img/color-line-green.png" srcset="img/color-line-green.png, img/color-line-green@2x.png 2x" alt="decoration line" width="11" height="575" data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;" />
+                        <div class="section-mix-content__media-wrap" data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;">
+                            <img src="img/i-see-the-sea-media.png" alt="I see the sea media modal" />
+                            <div class="section-mix-content__play-button">
+                                <button class="play-button" data-uk-toggle="target: #modal-media-video" type="button"><span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 151 151">
+                                            <circle cx="75.5" cy="75.5" r="75.5" fill="#fff" opacity=".6" />
+                                            <path d="M88.61 81L72.39 91.56A4.14 4.14 0 0166 88.09V67a4.13 4.13 0 016.39-3.46l16.22 10.54a4.14 4.14 0 010 6.92z" fill="#30b298" />
+                                        </svg>
+                                    </span></button>
+                            </div>
+                        </div>
+                        <div class="section-mix-content__aside">
+                            <div data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;">
+                                <div class="slider-mix-content slider-mix-content--awards">
+                                    <div data-uk-slideshow="min-height: 404">
+                                        <div class="slider-mix-content__title">Our awards & partners</div>
+                                        <div class="uk-position-relative uk-height-1-1" tabindex="-1">
+                                            <ul class="uk-slideshow-items uk-height-1-1">
+                                                <li>
+                                                    <div>
+                                                        <img src="img/guides-for-brides-2019.png" alt="image description" />
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        <img src="img/guides-for-brides-2019.png" alt="image description" />
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        <img src="img/guides-for-brides-2019.png" alt="image description" />
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="uk-slideshow-nav uk-dotnav uk-flex-center"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-uk-scrollspy="cls: slideInUp animated slow; repeat: false;">
+                                <div class="slider-mix-content">
+                                    <div data-uk-slideshow="animation: push; min-height: 514">
+                                        <div class="uk-position-relative uk-height-1-1" tabindex="-1">
+                                            <ul class="uk-slideshow-items uk-height-1-1">
+                                                <li>
+                                                    <img src="img/mix-content-slider-bg1.png" alt="image description" />
+                                                </li>
+                                                <li>
+                                                    <img src="img/mix-content-slider-bg1.png" alt="image description" />
+                                                </li>
+                                                <li>
+                                                    <img src="img/mix-content-slider-bg1.png" alt="image description" />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="uk-slideshow-nav uk-dotnav uk-flex-center"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-mix-content__content">
+                        <div class="read-more">
+                            <div>
+                                <div class="uk-overflow-hidden read-more__text">
+                                    <div data-uk-scrollspy="cls: slideInLeft animated; delay: 250; repeat: false;">
+                                        <p>Imagine a home-from-home vibe (if ‘home’ happens to be a Napoleonic fort, complete with drawbridge)! There’s a set of steps leading from the Fort directly down to our very own beach where you can steal a little private time together, frolic in the waves with your wedding guests and catch some very special memories – the sea views from the beach are surreal.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul data-uk-accordion="">
+                                <li>
+                                    <a class="uk-accordion-title" href="#"><span data-uk-icon="chevron-down"></span><span>Read more</span></a>
+                                    <div class="uk-accordion-content">
+                                        <p>Imagine a home-from-home vibe (if ‘home’ happens to be a Napoleonic fort, complete with drawbridge)! There’s a set of steps leading from the Fort directly down to our very own beach where you can steal a little private time together, frolic in the waves with your wedding guests and catch some very special memories – the sea views from the beach are surreal.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="main__section-advert">
+                <div class="main__section-dots">
+                    <ul class="uk-dotnav uk-dotnav-vertical">
+                        <li>
+                            <a class="js-get-section" href="#expectations" title=""></a>
+                        </li>
+                        <li>
+                            <a class="js-get-section" href="#go-fort" title=""></a>
+                        </li>
+                        <li>
+                            <a class="js-get-section" href="#fort-comforts" title=""></a>
+                        </li>
+                        <li>
+                            <a class="js-get-section" href="#prepare-to-dare" title=""></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <section class="js-section-scroll-trigger section-advert-main" id="expectations">
+                    <div class="section-advert">
+                        <div class="section-advert__image-wrapper">
+                            <img class="section-advert__image" src="img/dreams.jpg" alt="Your expectations and dreams" />
+                        </div>
+                        <div class="section-advert__content">
+                            <div class="container">
+                                <div class="section-detail">
+                                    <div class="section-detail__head">
+                                        <h2>Your expectations</h2>
+                                        <h3>&amp; dreams</h3>
+                                    </div>
+                                    <div class="section-detail__description">
+                                        <p>Immerse yourselves in the magic of a cliff-top fort in the South West of England, standing tall among sweeping lawns. A secluded beach, Polhawn Cove, sits below, with exclusive access.</p>
+                                    </div>
+                                    <div class="section-detail__link">
+                                        <a class="uk-button uk-button--brushed" href="#">Tell me more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="js-section-scroll-trigger section-advert-main" id="go-fort">
+                    <div class="section-advert">
+                        <div class="section-advert__image-wrapper">
+                            <img class="section-advert__image" src="img/fort-conquer.jpg" alt="Go fort &amp; conquer" />
+                        </div>
+                        <div class="section-advert__content">
+                            <div class="container">
+                                <div class="section-detail uk-margin-auto-left">
+                                    <div class="section-detail__head">
+                                        <h2>Go fort</h2>
+                                        <h3>&amp; conquer</h3>
+                                    </div>
+                                    <div class="section-detail__description">
+                                        <p>Immerse yourselves in the magic of a cliff-top fort in the South West of England, standing tall among sweeping lawns. A secluded beach, Polhawn Cove, sits below, with exclusive access.</p>
+                                    </div>
+                                    <div class="section-detail__link">
+                                        <a class="uk-button uk-button--brushed" href="#">Tell me more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="js-section-scroll-trigger section-advert-main" id="fort-comforts">
+                    <div class="section-advert">
+                        <div class="section-advert__image-wrapper">
+                            <img class="section-advert__image" src="img/comforts.jpg" alt="Fort comforts &amp; relax" />
+                        </div>
+                        <div class="section-advert__content">
+                            <div class="container">
+                                <div class="section-detail">
+                                    <div class="section-detail__head">
+                                        <h2>Fort comforts</h2>
+                                        <h3>&amp; relax</h3>
+                                    </div>
+                                    <div class="section-detail__description">
+                                        <p>Take over the fort and its comfortable living space that can sleep your family and friends in a hideaway location. Choose a whole weekend or a midweek break, it’s your call.</p>
+                                    </div>
+                                    <div class="section-detail__link">
+                                        <a class="uk-button uk-button--brushed" href="#">Tell me more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="js-section-scroll-trigger section-advert-main" id="prepare-to-dare">
+                    <div class="section-advert">
+                        <div class="section-advert__image-wrapper">
+                            <img class="section-advert__image" src="img/prepare-to-dare.jpg" alt="Prepare to dare &amp; explore" />
+                        </div>
+                        <div class="section-advert__content">
+                            <div class="container">
+                                <div class="section-detail uk-margin-auto-left">
+                                    <div class="section-detail__head">
+                                        <h2>Prepare to dare</h2>
+                                        <h3>&amp; explore</h3>
+                                    </div>
+                                    <div class="section-detail__description">
+                                        <p>Immerse yourselves in the magic of a cliff-top fort in the South West of England, standing tall among sweeping lawns. A secluded beach, Polhawn Cove, sits below, with exclusive access.</p>
+                                    </div>
+                                    <div class="section-detail__link">
+                                        <a class="uk-button uk-button--brushed" href="#">Tell me more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <section class="section-offers uk-cover-container">
+                <img src="img/offers-bg.png" alt="Offers section background" data-uk-cover="data-uk-cover" />
+                <div class="uk-position-relative">
+                    <div class="uk-flex uk-flex-center" data-uk-scrollspy="cls: fadeInUp animated slow; repeat: false;">
+                        <h2>Latest offers</h2>
+                    </div>
+                    <div class="container">
+                        <div class="section-offers__content" data-uk-slider="" data-uk-scrollspy="cls: fadeInUp animated slow; repeat: false;">
+                            <div class="uk-position-relative">
+                                <ul class="uk-slider-nav uk-dotnav uk-flex-center"></ul>
+                                <div class="uk-slider-container">
+                                    <div class="uk-slider-items uk-grid uk-grid-small uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-4@l">
+                                        <div>
+                                            <div class="blog">
+                                                <div class="blog__top">
+                                                    <div class="blog__header">
+                                                        <div class="blog__icon">
+                                                            <div data-uk-icon="calendar"></div>
+                                                        </div><span>September</span>
+                                                    </div>
+                                                    <div class="blog__content">
+                                                        <p>Autumn 2019 weekend wedding</p>
+                                                        <div class="blog__link">
+                                                            <a class="uk-button uk-button-primary uk-button-small" href="#">View offer</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <img src="img/offer.jpg" alt="Offer image" width="322" height="322" />
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="blog">
+                                                <div class="blog__top">
+                                                    <div class="blog__header">
+                                                        <div class="blog__icon">
+                                                            <div data-uk-icon="calendar"></div>
+                                                        </div><span>September</span>
+                                                    </div>
+                                                    <div class="blog__content">
+                                                        <p>Autumn 2019 weekend wedding</p>
+                                                        <div class="blog__link">
+                                                            <a class="uk-button uk-button-primary uk-button-small" href="#">View offer</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <img src="img/offer.jpg" alt="Offer image" width="322" height="322" />
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="blog">
+                                                <div class="blog__top">
+                                                    <div class="blog__header">
+                                                        <div class="blog__icon">
+                                                            <div data-uk-icon="calendar"></div>
+                                                        </div><span>September</span>
+                                                    </div>
+                                                    <div class="blog__content">
+                                                        <p>Autumn 2019 weekend wedding</p>
+                                                        <div class="blog__link">
+                                                            <a class="uk-button uk-button-primary uk-button-small" href="#">View offer</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <img src="img/offer.jpg" alt="Offer image" width="322" height="322" />
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="blog">
+                                                <div class="blog__top">
+                                                    <div class="blog__header">
+                                                        <div class="blog__icon">
+                                                            <div data-uk-icon="calendar"></div>
+                                                        </div><span>September</span>
+                                                    </div>
+                                                    <div class="blog__content">
+                                                        <p>Autumn 2019 weekend wedding</p>
+                                                        <div class="blog__link">
+                                                            <a class="uk-button uk-button-primary uk-button-small" href="#">View offer</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <img src="img/offer.jpg" alt="Offer image" width="322" height="322" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-hidden@l section-offers__arrows uk-text-center">
+                                    <a class="section-offers__arrow" href="#" data-uk-slider-item="previous"><span data-uk-icon="arrow-left"></span></a>
+                                    <a class="section-offers__arrow" href="#" data-uk-slider-item="next"><span data-uk-icon="arrow-right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-text-center">
+                            <a class="uk-button section-offers__all-offers-link" href="#">View all offers</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-social">
+                <div class="container" data-uk-scrollspy="cls: fadeInUp animated slow; repeat: false;">
+                    <div class="section-detail section-detail--social uk-margin-auto-right uk-margin-auto-left">
+                        <h2>Lets be</h2>
+                        <h3>Social</h3>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer uk-cover-container">
+            <div class="uk-position-relative">
+                <div class="container">
+                    <div class="footer__top" data-uk-scrollspy="cls: fadeInUp animated slow; delay: 250; repeat: false;">
+                        <div class="call-our-team">
+                            <p>Call our team</p>
+                            <a href="tel:01752822864">01752 822864</a>
+                        </div>
+                    </div>
+                    <div class="footer__center" data-uk-scrollspy="cls: fadeInUp animated slow; delay: 250; repeat: false;">
+                        <div class="uk-flex-center uk-flex-between@s" data-uk-grid>
+                            <div>
+                                <a class="uk-button uk-button-default" href="#">About Us</a>
+                            </div>
+                            <div>
+                                <a class="uk-button uk-button-default" href="#">Prices</a>
+                            </div>
+                            <div>
+                                <a class="uk-button uk-button-default" href="#">Talk To Us</a>
+                            </div>
+                        </div>
+                        <div class="footer__links uk-text-center" data-uk-scrollspy="cls: fadeInUp animated slow; delay: 250; repeat: false;">
+                            <div class="request-links request-links--footer">
+                                <a href="#">Request a viewing</a>
+                                <div class="request-links__divider"></div>
+                                <a href="#">Brochure request</a>
+                            </div>
+                        </div>
+                        <div class="uk-text-center uk-visible@s">
+                            <img src="img/swirl.png" srcset="img/swirl.png, img/swirl@2x.png 2x" alt="Polhawn Fort Icon Logo" width="46" height="45">
+                        </div>
+                    </div>
+                    <div class="footer__social" data-uk-scrollspy="cls: fadeInUp animated slow; delay: 250; repeat: false;">
+                        <ul class="social">
+                            <li class="social__item">
+                                <a class="social__link" href="#" target="_blank" rel="noopener noreferrer"><span class="social__icon" data-uk-icon="social-fb"></span></a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link" href="#" target="_blank" rel="noopener noreferrer"><span class="social__icon" data-uk-icon="social-twitter"></span></a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link" href="#" target="_blank" rel="noopener noreferrer"><span class="social__icon" data-uk-icon="social-inst"></span></a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link" href="#" target="_blank" rel="noopener noreferrer"><span class="social__icon" data-uk-icon="social-pinterest"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__bottom" data-uk-scrollspy="cls: fadeInUp animated slow; delay: 250; repeat: false;">
+                    <div class="container uk-flex uk-flex-center uk-flex-wrap uk-flex-between@s">
+                        <div class="footer__bottom-left">Copyright 2019© Polhawn Fort</div>
+                        <div class="footer__bottom-center">
+                            <ul class="list-divided uk-flex uk-flex-center uk-flex-wrap">
+                                <li>
+                                    <a href="#">Accessibility</a>
+                                </li>
+                                <li>
+                                    <a href="#">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="#">Terms & Conditions</a>
+                                </li>
+                                <li>
+                                    <a href="#">Copyright</a>
+                                </li>
+                                <li>
+                                    <a href="#">Sitemap</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__bottom-right">
+                            <ul class="list-divided uk-flex uk-flex-wrap">
+                                <li><span>Web Design by <a href="https://www.own-design.com" target="_blank" class="link-design">OWN DESIGN</a></span></li>
+                                <li>
+                                    <a href="#">Terms</a>
+                                </li>
+                                <li>
+                                    <a href="#">Privacy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="uk-flex-top modal-video" id="modal-media-video" data-uk-modal="">
+            <div class="uk-modal-dialog uk-width-1-1 uk-height-1-1 uk-margin-auto-vertical">
+                <button class="uk-modal-close-outside" type="button" data-uk-close=""></button><iframe class="uk-width-1-1 uk-height-1-1" src="https://www.youtube-nocookie.com/embed/c2pz2mlSfXA" data-uk-video=""></iframe>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit.min.js"></script>
+        <script src="js/app.js"></script>
+    </div>
+</body>
+</html>
