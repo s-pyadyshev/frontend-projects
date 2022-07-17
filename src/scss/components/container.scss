@@ -1,0 +1,18 @@
+.container {
+  max-width: 1366px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+
+  @include tablet {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  @include desktop {
+    padding-left: 213px;
+    padding-right: 213px;
+  }
+}

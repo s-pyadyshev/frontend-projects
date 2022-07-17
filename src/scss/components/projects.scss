@@ -1,0 +1,108 @@
+.project__text-wrap {
+  display: flex;
+  margin-bottom: 50px;
+  flex-direction: column;
+
+  @include laptop {
+    flex-direction: row;
+    margin-bottom: 100px;
+  }
+}
+.project {
+  padding: 20px 0 50px;
+
+  @include laptop {
+    padding: 35px 0 98px;
+  }
+}
+
+.project__text-wrap .section-title {
+  text-align: center;
+  margin-bottom: 25px;
+
+  @include laptop {
+    width: 240px;
+    margin-right: 79px;
+    margin-bottom: 0px;
+    text-align: left;
+  }
+}
+
+.project__text-wrap .section-text {
+  @include laptop {
+    line-height: 26px;
+    margin-top: 3px;
+    width: 518px;
+  }
+}
+
+.project__image-text {
+  position: absolute;
+  top: 11%;
+  right: 5%;
+}
+
+.project__image-wrap {
+  position: relative;
+  margin-bottom: 40px;
+
+  @include desktop {
+    margin-bottom: 88px;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.project-image-title {
+  color: $color-white;
+  font-family: $font-primary;
+  font-size: 28px;
+  line-height: 46px;
+  font-weight: 600;
+  margin-bottom: 7px;
+  font-size: 16px;
+
+  @include laptop {
+    font-size: 28px;
+  }
+}
+
+.project-image-subtitle {
+  color: $color-white;
+  font-family: $font-primary;
+  line-height: 46px;
+  text-align: right;
+  font-size: 12px;
+
+  @include laptop {
+    font-size: 16px;
+  }
+}
+
+.project__cards-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include laptop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.project__cards-text {
+  position: absolute;
+  top: 6%;
+  left: 7%;
+}
+
+.project-card__subtitle {
+  text-align: left;
+}
+
+.project-card__title {
+  margin-bottom: 4px;
+}

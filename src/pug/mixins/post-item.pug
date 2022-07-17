@@ -1,0 +1,8 @@
+mixin post-item(image, title, text)
+  .post-item 
+    img(src= image, alt="image." width="340" height="143").post-item__image
+    .post-item__body
+      h3= title
+      p= text
+      a(href="#")
+        span Lees meer

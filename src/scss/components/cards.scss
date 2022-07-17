@@ -1,0 +1,196 @@
+.card {
+  box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+  border-radius: 10px;
+  width: 310px;
+  height: 430px;
+  padding: 22px 50px;
+
+  @include desktop {
+    padding: 48px 43px 22px;
+    width: 380px;
+    height: 525px;
+  }
+}
+
+.cards {
+  padding: 50px 0 50px;
+  @include laptop {
+    padding: 100px 0 100px;
+  }
+
+  @include desktop {
+    padding: 192px 0 150px;
+  }
+}
+
+.cards h3 {
+  font-family: $font-primary;
+  font-size: 26px;
+  color: $color-blue;
+  line-height: 26px;
+  max-width: 278px;
+  margin-bottom: 60px;
+
+  @include laptop {
+    margin-bottom: 160px;
+    max-width: 361px;
+    font-size: 36px;
+    line-height: 46px;
+  }
+}
+
+.card-1-image {
+  height: 99px;
+  width: 139px;
+  margin-left: 19px;
+  margin-bottom: 25px;
+
+  @include desktop {
+    margin-bottom: 49px;
+    height: 132px;
+    width: 182px;
+  }
+}
+
+.card-2-image {
+  height: 160px;
+  position: absolute;
+  left: 18%;
+  top: -3.5%;
+  width: 200px;
+
+  @include desktop {
+    height: 197px;
+    width: 260px;
+  }
+}
+
+.card-3-image {
+  width: 116px;
+  height: 84px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+
+  @include desktop {
+    margin-bottom: 42px;
+    margin-left: 36px;
+    width: 168px;
+    height: 134px;
+  }
+}
+
+.card-3 {
+  padding: 48px 46px 22px;
+}
+.card__link {
+  color: $color-light-blue;
+  font-family: $font-primary;
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+
+  &:hover,
+  &:focus,
+  &:active {
+    svg {
+      transform: translateX(5px);
+      transition-property: transform;
+      transition-duration: $transition-duration;
+    }
+  }
+}
+
+.card__link svg {
+  width: 24px;
+  height: 24px;
+  transition-property: transform;
+  transition-duration: $transition-duration;
+}
+
+.card__link span {
+  margin-right: 26px;
+}
+
+.card__title {
+  color: $color-dark-blue;
+  font-family: $font-primary;
+  line-height: 18px;
+  font-size: 16px;
+  @include desktop {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.card-2 {
+  position: relative;
+  margin-bottom: 70px;
+  @include desktop {
+    margin-bottom: 103px;
+    padding: 48px 46px 22px;
+  }
+}
+.card-1 .card__title {
+  margin-bottom: 15px;
+}
+.card-2 .card__title {
+  margin-top: 65%;
+  margin-bottom: 18px;
+}
+
+.card-3 .card__title {
+  margin-bottom: 17px;
+}
+
+.card__text {
+  color: $color-dark-blue;
+  font-size: 14px;
+  font-family: $font-primary;
+  line-height: 20px;
+  margin-bottom: 36px;
+
+  @include desktop {
+    line-height: 26px;
+    font-size: 16px;
+  }
+}
+
+.cards-box {
+  display: flex;
+  flex-direction: column;
+
+  @include laptop {
+    flex-direction: row;
+  }
+}
+
+.cards-column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include laptop {
+    width: 50%;
+    display: block;
+  }
+}
+
+.column-1 {
+  @include laptop {
+    margin-right: 80px;
+  }
+  @include desktop {
+    margin-right: 105px;
+  }
+}
+
+.card-1 {
+  margin: 0 auto 70px;
+  @include desktop {
+    margin-left: 78px;
+    padding: 48px 50px 22px;
+  }
+}

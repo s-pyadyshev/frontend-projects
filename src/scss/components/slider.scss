@@ -1,0 +1,19 @@
+.swiper {
+  .project__image-wrap {
+    margin-bottom: 0;
+  }
+
+  .swiper-pagination {
+    margin-top: 20px;
+    position: static;
+  }
+
+  .swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $color-blue;
+  }
+}

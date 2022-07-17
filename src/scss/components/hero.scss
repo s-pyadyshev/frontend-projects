@@ -1,0 +1,64 @@
+.hero {
+  background: linear-gradient(
+    0deg,
+    rgba(205, 223, 238, 1) 0%,
+    rgba(255, 255, 255, 1) 75%
+  );
+  background-repeat: no-repeat;
+  padding-bottom: 48px;
+  padding-top: 14px;
+  background-position: 100% -250%;
+
+  @include laptop {
+    background-position: 90% 50%;
+    background-size: contain;
+  }
+
+  @include desktop {
+    min-height: 637px;
+    background-position: 76% -16%;
+    background-size: auto;
+  }
+}
+
+.hero p {
+  font-family: $font-primary;
+  font-size: 14px;
+  color: $color-dark-blue;
+  line-height: 20px;
+  margin-bottom: 38px;
+
+  @include laptop {
+    max-width: 420px;
+    line-height: 26px;
+    margin-bottom: 75px;
+    font-size: 16px;
+  }
+}
+
+.hero__text {
+  .button {
+    display: block;
+    margin: 0 auto;
+
+    @include laptop {
+      margin: 0;
+    }
+  }
+}
+
+.hero__title {
+  line-height: 30px;
+  font-family: $font-secondary;
+  color: $color-dark-blue;
+  margin-bottom: 37px;
+  font-size: 28px;
+  letter-spacing: 3px;
+
+  @include desktop {
+    font-size: 56px;
+    line-height: 74px;
+    max-width: 523px;
+    font-size: 64px;
+  }
+}

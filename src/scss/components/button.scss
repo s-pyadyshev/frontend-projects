@@ -1,0 +1,27 @@
+.button {
+  height: 56px;
+  box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+  border-radius: 10px;
+  border: none;
+  color: $color-white;
+  font-size: 18px;
+  width: 90%;
+  background-color: $color-light-blue;
+  transition-property: transform, background-color;
+  transition-duration: 0.3s;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    transform: scale(1.1);
+    background-color: rgba(0, 96, 131, 0.5);
+    transition-property: transform, background-color;
+    transition-duration: 0.3s;
+  }
+
+  @include laptop {
+    max-width: 220px;
+    font-size: 16px;
+  }
+}

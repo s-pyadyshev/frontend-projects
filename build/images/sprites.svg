@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<symbol id="arrow-right" viewBox="0 0 24 24">
+	<path fill="#5A98D0" d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/>
+</symbol>
+<symbol id="chevron-down" viewBox="0 0 15 10">
+	<path fill="#fff" d="M1.875.75 7.5 6.5 13.25.75 15 2.5 7.5 10 0 2.5 1.875.75z"/>
+</symbol>
+<symbol id="close" viewBox="0 0 22 22">
+	<path fill="#fff" d="M22 2.2 19.8 0 11 8.8 2.2 0 0 2.2 8.8 11 0 19.8 2.2 22l8.8-8.8 8.8 8.8 2.2-2.2-8.8-8.8L22 2.2z"/>
+</symbol>
+<symbol id="menu" viewBox="0 0 32 32">
+	<path d="M4 24h24v-2.667H4V24zm0-6.667h24v-2.666H4v2.666zM4 8v2.667h24V8H4z"/>
+</symbol>
+</svg>

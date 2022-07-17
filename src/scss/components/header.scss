@@ -1,0 +1,35 @@
+.header {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  min-height: 134px;
+  padding: 48px 0;
+  background-color: $color-white;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include laptop {
+      padding-right: 83px;
+      padding-left: 83px;
+    }
+  }
+}
+
+.header__menu {
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: 0;
+  color: #356ead;
+  cursor: pointer;
+
+  svg {
+    pointer-events: none;
+  }
+}

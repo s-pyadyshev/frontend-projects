@@ -1,0 +1,43 @@
+.clients {
+  border-top-left-radius: 200px;
+  background-color: $color-light-blue;
+
+  h2 {
+    flex-shrink: 0;
+    color: $color-white;
+  }
+}
+
+.clients__header {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 50px;
+  flex-direction: column;
+
+  @include laptop {
+    margin-bottom: 100px;
+    flex-direction: row;
+  }
+}
+
+.clients__header h2 {
+  color: $color-white;
+  margin-right: 9;
+  text-align: center;
+  margin-bottom: 50px;
+
+  @include laptop {
+    max-width: 240px;
+    margin-bottom: 0;
+    margin-right: 78px;
+    text-align: left;
+  }
+}
+
+.clients__header p {
+  color: $color-white;
+
+  @include desktop {
+    max-width: 530px;
+  }
+}

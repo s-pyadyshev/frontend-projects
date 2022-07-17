@@ -1,0 +1,68 @@
+header.header
+  .container
+    .header__logo
+      a(href="/")  
+        img(src="images/logo.png" alt="logo Afrianska." width="48" height="32")
+    button.header__menu(data-toggle="collapse" data-target=".collapse.nav")
+      +svg("menu")
+    .nav.collapse
+      button.nav__close(data-toggle="collapse" data-target=".collapse.nav")
+        +svg("close")
+      ul.nav__list 
+        li
+          .dropdown
+            button.dropdown__toggle
+              span About US
+              +svg('chevron-down')
+            .dropdown__content
+              ul
+                li
+                  a(href="") About
+                li 
+                  a(href="") What We Do
+                li 
+                  a(href="") Project
+                li 
+                  a(href="") How It Work With Us
+        li
+          button.dropdown__toggle
+            span Follow US
+            +svg('chevron-down')
+          .dropdown__content
+            ul
+              li
+                a(href="") About
+              li 
+                a(href="") What We Do
+              li 
+                a(href="") Project
+              li 
+                a(href="") How It Work With Us
+        li
+          button.dropdown__toggle
+            span Follow US
+            +svg('chevron-down')
+          .dropdown__content
+            ul
+              li
+                a(href="") About
+              li 
+                a(href="") What We Do
+              li 
+                a(href="") Project
+              li 
+                a(href="") How It Work With Us
+        li
+          button.dropdown__toggle
+            span Follow US
+            +svg('chevron-down')
+          .dropdown__content
+            ul
+              li
+                a(href="") About
+              li 
+                a(href="") What We Do
+              li 
+                a(href="") Project
+              li 
+                a(href="") How It Work With Us

@@ -1,0 +1,23 @@
+// stylelint-disable scss/dollar-variable-empty-line-before
+
+$color-black: #000;
+$color-white: #fff;
+$color-linear-gradient: #98c3e8;
+$color-blue: #316099;
+$color-dark-blue: #1f3f68;
+$color-light-blue: #5a98d0;
+
+// stylelint-disable-next-line
+$font-primary: "Gilroy", Tahoma, serif;
+$font-secondary: "Galien", Tahoma, serif;
+$font-weight: 400;
+$line-height: 1.4;
+$font-size: 16px;
+
+$transition-duration: 0.3s;
+
+$desktop: 1366;
+$laptop: 1024;
+$tablet: 768;
+$mobile: 320;
+$desktop-vh: 750;
