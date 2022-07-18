@@ -86,3 +86,9 @@ h1 {
   color: #fff;
   padding: 60px 30px;
 }
+
+@media (max-width: 1200px) {
+  .bg-wrap {
+    height: 100vh;
+  }
+}
