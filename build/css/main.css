@@ -85,10 +85,12 @@ h1 {
   font-size: 32px;
   color: #fff;
   padding: 60px 30px;
+  height: 100%;
 }
 
 @media (max-width: 1200px) {
   .bg-wrap {
-    height: 100vh;
+    min-height: 100vh;
+    padding: 60px 0;
   }
 }
