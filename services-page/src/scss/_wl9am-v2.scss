@@ -1,0 +1,340 @@
+// fonts
+@font-face {
+  font-family: GilroyLight;
+  src: url("../fonts/Gilroy-Light.woff") format("woff");
+  src: url("../fonts/Gilroy-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: GilroyRegular;
+  src: url("../fonts/Gilroy-Regular.woff") format("woff");
+  src: url("../fonts/Gilroy-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: GilroyMedium;
+  src: url("../fonts/Gilroy-Medium.woff") format("woff");
+  src: url("../fonts/Gilroy-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: GilroySemibold;
+  src: url("../fonts/Gilroy-Semibold.woff") format("woff");
+  src: url("../fonts/Gilroy-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: GilroyBold;
+  src: url("../fonts/Gilroy-Bold.woff") format("woff");
+  src: url("../fonts/Gilroy-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: GilroyHeavy;
+  src: url("../fonts/Gilroy-Heavy.woff") format("woff");
+  src: url("../fonts/Gilroy-Heavy.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+// typography
+$h1-font-size: 30px;
+$h2-font-size: 30px;
+$h3-font-size: 16px;
+$h4-font-size: 15px;
+$h5-font-size: 10px;
+$h6-font-size: 8px;
+$h1-font-size-desktop: 81px;
+$h2-font-size-desktop: 68px;
+$h3-font-size-desktop: 32px;
+$h4-font-size-desktop: 29px;
+$h5-font-size-desktop: 20px;
+$h6-font-size-desktop: 16px;
+
+html.services-page {
+  min-height: 100vh;
+  height: 100%;
+  min-width: 320px;
+  font-family: $gilroy-medium;
+  color: $color-primary;
+
+  @media (min-width: 1024px) {
+    letter-spacing: -0.29px;
+  }
+}
+
+.services-page {
+  body {
+    background-color: $color-white;
+  }
+
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: var(--vh);
+    height: 100%;
+    background-color: $color-white;
+    padding-top: 78px;
+
+    @media (min-width: 768px) {
+      padding-left: 72px;
+    }
+  }
+
+  .header,
+  .footer {
+    flex-shrink: 0;
+  }
+
+  .main {
+    flex-grow: 1;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 20px;
+    max-width: none;
+
+    @media (min-width: 768px) {
+      padding: 0 30px;
+    }
+
+    @media (min-width: 1260px) {
+      max-width: 2376px;
+      padding: 0 30px 0 70px;
+    }
+  }
+
+  h1 {
+    font-family: $gilroy-heavy;
+    font-size: $h1-font-size;
+    line-height: 39px;
+    margin-bottom: 10px;
+
+    @media (min-width: 768px) {
+      font-size: 60px;
+      line-height: 80px;
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: 1366px) {
+      font-size: $h1-font-size-desktop;
+      line-height: 103px;
+      letter-spacing: -0.81px;
+    }
+  }
+
+  h2 {
+    font-family: $gilroy-heavy;
+    font-size: $h2-font-size;
+    color: $color-secondary;
+    line-height: 39px;
+    margin-bottom: 20px;
+
+    @media (min-width: 768px) {
+      font-size: 40px;
+      line-height: 60px;
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: 1366px) {
+      font-size: $h2-font-size-desktop;
+      line-height: 86px;
+      letter-spacing: 0.34px;
+    }
+  }
+
+  h3 {
+    font-size: $h3-font-size;
+
+    @media (min-width: 1366px) {
+      font-size: $h3-font-size-desktop;
+    }
+  }
+
+  h4 {
+    font-family: $gilroy-semibold;
+    font-size: $h4-font-size;
+    line-height: 18px;
+    color: $color-secondary;
+    margin-bottom: 20px;
+
+    @media (min-width: 1366px) {
+      font-size: $h4-font-size-desktop;
+      line-height: 34px;
+      margin-bottom: 40px;
+    }
+  }
+
+  h5 {
+    font-size: $h5-font-size;
+
+    @media (min-width: 1366px) {
+      font-size: $h5-font-size-desktop;
+    }
+  }
+
+  h6 {
+    font-size: $h6-font-size;
+
+    @media (min-width: 1366px) {
+      font-size: $h6-font-size-desktop;
+    }
+  }
+
+  p,
+  ul li {
+    font-family: $gilroy-medium;
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 20px;
+
+    @media (min-width: 1366px) {
+      font-family: $gilroy-light;
+      font-size: 29px;
+      line-height: 39px;
+      margin-bottom: 40px;
+    }
+  }
+
+  ul {
+    margin-bottom: 20px;
+
+    @media (min-width: 1366px) {
+      margin-bottom: 40px;
+    }
+
+    li {
+      list-style: none;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media (min-width: 1366px) {
+        font-family: $gilroy-regular;
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: -0.22px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .button {
+    height: 42px;
+    padding: 0 10px 0 19px;
+    border: 2px solid $color-secondary;
+    border-radius: 30px;
+    background: transparent;
+    color: $color-primary;
+    font-weight: 900;
+    font-size: 1.2rem;
+    line-height: 2.3;
+    letter-spacing: 0.12rem;
+    cursor: pointer;
+    margin: 0 auto 30px;
+
+    @media (min-width: 768px) {
+      height: 58px;
+      padding: 0 10px 0 25px;
+      font-size: 1.4rem;
+      line-height: 1.29;
+    }
+
+    @media (min-width: 1024px) {
+      margin: 0;
+    }
+
+    @media (min-width: 1280px) {
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      letter-spacing: 0.18rem;
+    }
+
+    &--scroll-to {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      height: auto;
+      padding: 0;
+      border: none;
+      margin-bottom: 0;
+
+      @media (min-width: 768px) {
+        padding: 0;
+        height: auto;
+      }
+
+      @media (min-width: 1024px) {
+        display: none;
+      }
+
+      &.with-arrow {
+        &::before {
+          flex-shrink: 0;
+          background-color: $color-primary;
+          transform: rotate(90deg);
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .button:active,
+  .button:hover {
+    border-color: $color-light-blue;
+    color: $color-light-blue;
+  }
+
+  .button:active,
+  .button:focus {
+    outline: none;
+  }
+
+  .button__text {
+    text-transform: uppercase;
+  }
+
+  .with-arrow::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-left: 40px;
+    border-radius: 30px;
+    background-color: $color-secondary;
+    background-image: url("../images/button-arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    color: currentcolor;
+
+    @media (min-width: 768px) {
+      width: 32px;
+      height: 32px;
+      margin-left: 90px;
+    }
+  }
+
+  .with-arrow:hover::before {
+    background-color: $color-light-blue;
+  }
+}

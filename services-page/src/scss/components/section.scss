@@ -1,0 +1,109 @@
+.services-page {
+  .section {
+    padding: 40px 0;
+
+    @media (min-width: 1024px) {
+      padding: 0;
+    }
+
+    &__wrapper {
+      @media (min-width: 1024px) {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &__content {
+      @media (min-width: 1024px) {
+        padding-right: 30px;
+        padding-left: 0;
+        padding-top: 70px;
+        padding-bottom: 70px;
+      }
+
+      @media (min-width: 1600px) {
+        padding-left: 70px;
+        padding-right: 70px;
+      }
+
+      @media (min-width: 1920px) {
+        padding-right: 130px;
+        padding-left: 130px;
+      }
+
+      @media (min-width: 2048px) {
+        padding-left: 191px;
+        padding-right: 207px;
+      }
+    }
+
+    &--reversed {
+      background-color: $color-light-grey;
+
+      @media (min-width: 1024px) {
+        background-color: $color-white;
+      }
+
+      .section__wrapper {
+        @media (min-width: 1024px) {
+          flex-direction: row-reverse;
+        }
+      }
+
+      .section__content {
+        @media (min-width: 1024px) {
+          padding-left: 30px;
+          padding-right: 0;
+        }
+
+        @media (min-width: 1600px) {
+          padding-right: 70px;
+          padding-left: 70px;
+        }
+
+        @media (min-width: 1920px) {
+          padding-right: 130px;
+          padding-left: 130px;
+        }
+
+        @media (min-width: 2048px) {
+          padding-right: 191px;
+          padding-left: 207px;
+        }
+      }
+    }
+
+    h2 {
+      @media (min-width: 1024px) {
+        margin-bottom: 35px;
+      }
+    }
+
+    &__image {
+      @media (min-width: 1024px) {
+        display: none;
+      }
+
+      &--desk {
+        display: none;
+
+        @media (min-width: 1024px) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: calc(50% - 8px);
+          flex-shrink: 0;
+          background-color: $color-light-grey;
+          height: calc(100vw * 970 / 2488);
+          max-height: 970px;
+        }
+      }
+    }
+
+    &__image-wrap {
+      position: relative;
+    }
+  }
+}
+
+

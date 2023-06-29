@@ -1,0 +1,124 @@
+.friend-app {
+
+  .section__image-wrap {
+    height: calc(100vw * 260 / 393);
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 1024px) {
+      height: calc(100vw * 761 / 2488);
+      align-items: flex-end;
+      width: 100%;
+
+      &:hover {
+        .friend-app {
+          &__icon {
+            opacity: 1;
+
+            &--post {
+              transform: translateX(28%);
+            }
+
+            &--post-2 {
+              transform: translateX(-122%);
+            }
+
+            &--chart {
+              transform: translateX(29%);
+            }
+
+            &--app-store {
+              transform: translateX(-195%);
+            }
+
+            &--google-play {
+              transform: translateX(-117%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    opacity: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (min-width: 1024px) {
+      transition-property: opacity, transform;
+      transition-duration: .7s;
+      transition-timing-function: ease;
+    }
+
+    &--app {
+      position: static;
+      opacity: 1;
+      transform: translateX(0);
+
+      img {
+        width: auto;
+        height: 100%;
+      }
+
+      @media (min-width: 1024px) {
+        height: 90%;
+      }
+    }
+
+    &--post {
+      width: 41%;
+      top: -33px;
+
+      @media (min-width: 1024px) {
+        width: 34%;
+        top: -20px;
+      }
+    }
+
+    &--post-2 {
+      width: 42%;
+      top: 23%;
+
+      @media (min-width: 1024px) {
+        width: 35%;
+        top: 30%;
+      }
+    }
+
+    &--chart {
+      width: 32%;
+      top: 46%;
+
+      @media (min-width: 1024px) {
+        width: 26%;
+        top: 51%;
+      }
+    }
+
+    &--app-store {
+      width: 21%;
+      top: 56%;
+      left: 43%;
+
+      @media (min-width: 1024px) {
+        width: 17%;
+        top: 60%;
+        left: 44%;
+      }
+    }
+
+    &--google-play {
+      width: 21%;
+      top: 68%;
+      left: 43%;
+
+      @media (min-width: 1024px) {
+        width: 17%;
+        top: 71%;
+        left: 44%;
+      }
+    }
+  }
+}

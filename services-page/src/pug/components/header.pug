@@ -1,0 +1,33 @@
+header.header
+  .header__inner
+    a.header__logo(href="/")
+      img.logo(src="images/logo.svg" alt="logo." width="" height="")
+
+    .header__menu
+      button.menu-toggle-close.js-toggle-menu(type="button")
+        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <path fill="none" stroke="#000" stroke-width="2" d="M32,32 L8,8"></path>
+          <path fill="none" stroke="#000" stroke-width="2" d="M32,8 L8,32"></path>
+        </svg>
+
+      +navbar(
+        [
+          {
+            text: "Home",
+            active: true
+          },
+          {
+            text: "Projects"
+          },
+          {
+            text: "About"
+          }
+        ]
+      )
+  .header__menu-toggle
+    button.menu-toggle-open.js-toggle-menu(type="button")
+      <svg class="" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="8" width="32" height="2"></rect>
+        <rect x="4" y="18" width="32" height="2"></rect>
+        <rect x="4" y="28" width="32" height="2"></rect>
+      </svg>

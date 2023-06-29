@@ -1,0 +1,449 @@
+// .animate__animated {
+//   animation-duration: 1s;
+//   animation-fill-mode: both;
+// }
+
+.services-page {
+  .animate__animated {
+    .animate-iphone,
+    .animate-ipad,
+    .animate-drone,
+    .animate-sky-service,
+    .animate-gaucho-ig,
+    .animate-icon,
+    .animate-progress-bar > img {
+      animation-delay: 0.4s;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-timing-function: ease;
+    }
+  }
+
+  .animate-career-sites {
+    @keyframes animate-iphone {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+        transform: translateY(4%);
+      }
+    }
+
+    @keyframes animate-ipad {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+        transform: translateY(-89%);
+      }
+    }
+
+    .animate-iphone {
+      animation-name: animate-iphone;
+    }
+
+    .animate-ipad {
+      animation-name: animate-ipad;
+    }
+  }
+
+  .animate-film-production {
+    @keyframes animate-drone {
+      from {
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        bottom: 86.5%;
+        right: -13%;
+        opacity: 1;
+      }
+    }
+
+    .animate-drone {
+      animation-name: animate-drone;
+    }
+  }
+
+  .animate-social-media {
+    @keyframes animate-gaucho-ig {
+      from {
+        opacity: 0;
+      }
+      to {
+        transform: translateX(47%);
+        opacity: 1;
+      }
+    }
+
+    .animate-gaucho-ig {
+      animation-name: animate-gaucho-ig;
+    }
+
+    @keyframes animate-sky-service {
+      from {
+        opacity: 0;
+      }
+      to {
+        transform: translateX(-122%);
+        opacity: 1;
+      }
+    }
+
+    .animate-sky-service {
+      animation-name: animate-sky-service;
+    }
+
+    @keyframes animate-icon-social-media {
+      from {
+        opacity: 0;
+      }
+      to {
+        transform: translateY(-100%);
+        opacity: 1;
+      }
+    }
+
+    .animate-icon-social-media {
+      animation-name: animate-icon-social-media;
+    }
+  }
+
+  .animate-media-buying {
+    @media (min-width: 1024px) {
+      @keyframes animate-indeed-icon {
+        from {
+          opacity: 0;
+        }
+        to {
+          transform: translateY(-127%);
+          opacity: 1;
+        }
+      }
+
+      @keyframes animate-total-job-icon {
+        from {
+          opacity: 0;
+        }
+        to {
+          transform: translateY(-127%);
+          opacity: 1;
+        }
+      }
+    }
+
+    @keyframes animate-guardian-icon {
+      from {
+        opacity: 0;
+      }
+      to {
+        transform: translateY(-28%);
+        opacity: 1;
+      }
+    }
+
+    .animate-guardian-icon {
+      animation-name: animate-guardian-icon;
+    }
+
+    @keyframes animate-talent-icon {
+      from {
+        opacity: 0;
+      }
+      to {
+        transform: translateY(-115%);
+        opacity: 1;
+      }
+    }
+
+    .animate-talent-icon {
+      animation-name: animate-talent-icon;
+    }
+
+    @keyframes animate-cv-icon {
+      from {
+        opacity: 0;
+      }
+      to {
+        transform: translateY(-280%);
+        opacity: 1;
+      }
+    }
+
+    .animate-cv-icon {
+      animation-name: animate-cv-icon;
+    }
+
+    @keyframes animate-total-job-icon {
+      from {
+        opacity: 0;
+      }
+      to {
+        transform: translateY(-110%);
+        opacity: 1;
+      }
+    }
+
+    .animate-total-job-icon {
+      animation-name: animate-total-job-icon;
+    }
+
+    @keyframes animate-indeed-icon {
+      from {
+        opacity: 0;
+      }
+      to {
+        transform: translateY(-160%);
+        opacity: 1;
+      }
+    }
+
+    .animate-indeed-icon {
+      animation-name: animate-indeed-icon;
+    }
+  }
+
+  .animate-google-partner {
+    @keyframes animate-google-search {
+      to {
+        transform: translate(-50%, -100%);
+      }
+    }
+
+    .animate-google-search {
+      animation-name: animate-google-search;
+    }
+
+    @keyframes animate-we-hiring {
+      from {
+        opacity: 0;
+      }
+      to {
+        transform: translateX(45%);
+        opacity: 1;
+      }
+    }
+
+    .animate-we-hiring {
+      animation-name: animate-we-hiring;
+    }
+
+    @keyframes animate-job-opportunities {
+      from {
+        opacity: 0;
+      }
+      to {
+        transform: translateX(-63%);
+        opacity: 1;
+      }
+    }
+
+    .animate-job-opportunities {
+      animation-name: animate-job-opportunities;
+    }
+
+    @keyframes animate-hiring-today {
+      from {
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0%);
+        opacity: 1;
+      }
+    }
+
+    .animate-hiring-today {
+      animation-name: animate-hiring-today;
+    }
+  }
+
+  .animate-talent-brand {
+    @keyframes animate-polaroid-1 {
+      to {
+        transform: rotate(2deg) scale(1.1);
+      }
+    }
+
+    .animate-polaroid-1 {
+      animation-name: animate-polaroid-1;
+    }
+
+    @keyframes animate-polaroid-2 {
+      to {
+        transform: translate(15%, 9%) rotate(-2deg) scale(1.1);
+      }
+    }
+
+    .animate-polaroid-2 {
+      animation-name: animate-polaroid-2;
+    }
+
+    @keyframes animate-polaroid-3 {
+      to {
+        transform: translate(-115%, -3%) rotate(-2deg) scale(1.1);
+      }
+    }
+
+    .animate-polaroid-3 {
+      animation-name: animate-polaroid-3;
+    }
+  }
+
+  .animate-applicant-tracking {
+    @keyframes animate-great-candidate {
+      to {
+        opacity: 1;
+        transform: translateX(-143%) scale(1);
+      }
+    }
+
+    .animate-great-candidate {
+      animation-name: animate-great-candidate;
+    }
+
+    @keyframes animate-similar-candidates {
+      to {
+        opacity: 1;
+        transform: translateX(29%) scale(1);
+      }
+    }
+
+    .animate-similar-candidates {
+      animation-name: animate-similar-candidates;
+    }
+
+    @keyframes animate-applicant-tracking {
+      from {
+        opacity: 0;
+        transform: translateY(0) scale(0.5);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(-100%) scale(1);
+      }
+    }
+
+    .animate-applicant-tracking {
+      animation-name: animate-applicant-tracking;
+    }
+  }
+
+  .animate-employer-brand {
+    @keyframes animate-meat {
+      to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .animate-meat {
+      animation-name: animate-meat;
+    }
+
+    @keyframes animate-building-society {
+      to {
+        opacity: 1;
+        transform: translateY(-102%);
+      }
+    }
+
+    .animate-building-society {
+      animation-name: animate-building-society;
+    }
+  }
+
+  .animate-radio-play {
+    @keyframes animate-radio-waves {
+      to {
+        opacity: 1;
+        transform: translateY(0%) scaleY(1);
+      }
+    }
+
+    .animate-radio-waves {
+      animation-name: animate-radio-waves;
+    }
+
+    @keyframes animate-progress-bar {
+      to {
+        transform: translateX(0%);
+      }
+    }
+
+    .animate-progress-bar {
+      img {
+        animation-name: animate-progress-bar;
+      }
+    }
+
+    @keyframes animate-radio-icon {
+      to {
+        opacity: 1;
+        transform: translateY(-100%);
+      }
+    }
+
+    .animate-radio-icon {
+      animation-name: animate-radio-icon;
+    }
+  }
+
+  .animate-friend-app {
+    @keyframes animate-friend-app-post {
+      to {
+        opacity: 1;
+        transform: translateX(28%);
+      }
+    }
+
+    .animate-friend-app-post {
+      animation-name: animate-friend-app-post;
+    }
+
+    @keyframes animate-friend-app-post-2 {
+      to {
+        opacity: 1;
+        transform: translateX(-122%);
+      }
+    }
+
+    .animate-friend-app-post-2 {
+      animation-name: animate-friend-app-post-2;
+    }
+
+    @keyframes animate-chart {
+      to {
+        opacity: 1;
+        transform: translateX(29%);
+      }
+    }
+
+    .animate-chart {
+      animation-name: animate-chart;
+    }
+
+    @keyframes animate-app-store {
+      to {
+        opacity: 1;
+        transform: translateX(-195%);
+      }
+    }
+
+    .animate-app-store {
+      animation-name: animate-app-store;
+    }
+
+    @keyframes animate-google-play {
+      to {
+        opacity: 1;
+        transform: translateX(-117%);
+      }
+    }
+
+    .animate-google-play {
+      animation-name: animate-google-play;
+    }
+  }
+}

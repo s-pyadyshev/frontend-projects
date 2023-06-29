@@ -1,0 +1,70 @@
+.fsb-select {
+  position: fixed;
+  top: 76px;
+  left: 0;
+  border: none;
+  border-radius: 0;
+  background-color: #f4f4f4;
+  font-family: $gilroy-bold;
+  font-size: 20px;
+  line-height: 24px;
+  width: 100%;
+  z-index: 10;
+
+  @media (min-width: 768px) {
+    left: 72px;
+    top: 0;
+    right: 0;
+    width: auto;
+  }
+
+  @media (min-width: 1920px) {
+    display: none;
+  }
+
+  .fsb-button {
+    padding: 18px 79px 18px 20px !important;
+    text-transform: uppercase;
+
+    &::after {
+      width: 0;
+      height: 0;
+      border-width: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid $color-primary;
+      transform: translateY(-50%);
+      right: 29px;
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: none
+    }
+  }
+
+  .fsb-button[aria-expanded="true"]:after {
+    transform: translateY(-90%) rotateZ(180deg);
+  }
+  
+  .fsb-button[aria-expanded="true"] + .fsb-list {
+    max-height: none;
+    transition: opacity .5s ease;
+  }
+
+  .fsb-list {
+    border: none;
+    transition: opacity .5s ease;
+    background-color: #f4f4f4;
+  }
+
+  .fsb-option {
+    font-family: $gilroy-medium;
+    padding: 12px 27px 8px 20px;
+    text-transform: uppercase;
+
+    &:first-child {
+      display: none;
+    }
+  }
+}

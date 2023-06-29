@@ -1,0 +1,56 @@
+.career-sites {
+  &.section {
+    padding-top: 0;
+  }
+
+  h2 {
+    margin-bottom: 60px;
+  }
+
+  .section__image-wrap {
+    width: calc(100vw * 332 / 393);
+    margin-bottom: 57px;
+
+    @media (min-width: 1024px) {
+      width: calc(100vw * 944 / 2488);
+      max-width: 944px;
+      margin-bottom: 0;
+
+      &.animate-career-sites {
+        .career-sites__iphone {
+          opacity: 1;
+          transform: translateY(4%);
+        }
+
+        .career-sites__ipad {
+          opacity: 1;
+          transform: translateY(-89%);
+        }
+      }
+    }
+  }
+
+  &__ipad,
+  &__iphone {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+
+    @media (min-width: 1024px) {
+      transition-property: opacity, transform;
+      transition-duration: 0.7s;
+      transition-timing-function: ease;
+    }
+  }
+
+  &__iphone {
+    width: 22%;
+    left: 14%;
+  }
+
+  &__ipad {
+    width: 35%;
+    right: 6%;
+  }
+}

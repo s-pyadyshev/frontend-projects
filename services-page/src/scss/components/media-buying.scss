@@ -1,0 +1,98 @@
+.media-buying {
+
+  h2 {
+    margin-bottom: 0;
+
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+
+  .section__image {
+    height: calc(100vw * 302 / 393);
+
+    @media (min-width: 1024px) {
+      height: calc(100vw * 970 / 2488);
+    }
+  }
+
+  .section__image-wrap {
+
+    @media (min-width: 1024px) {
+      &:hover {
+        .media-buying {
+          &__icon {
+            opacity: 1;
+
+            &--guardian-jobs {
+              transform: translateY(-28%)
+            }
+
+            &--talent {
+              transform: translateY(-115%);
+            }
+
+            &--cv-library {
+              transform: translateY(-280%);
+            }
+
+            &--total-job {
+              transform: translateY(-127%);
+            }
+
+            &--indeed {
+              transform: translateY(-184%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+
+    @media (min-width: 1024px) {
+      transition-property: opacity, transform;
+      transition-duration: 0.7s;
+      transition-timing-function: ease;
+    }
+
+    &--guardian-jobs {
+      left: 51%;
+      width: 22%;
+    }
+
+    &--talent {
+      left: 69%;
+      width: 27%;
+    }
+
+    &--cv-library {
+      left: 62%;
+      width: 18%;
+    }
+
+    &--total-job {
+      left: 26%;
+      width: 27%;
+
+      @media (min-width: 1024px) {
+        left: 28%;
+        width: 27%;
+      }
+    }
+
+    &--indeed {
+      width: 26%;
+      left: 10%;
+
+      @media (min-width: 1024px) {
+        width: 27%;
+        left: 16%;
+      }
+    }
+  }
+}
