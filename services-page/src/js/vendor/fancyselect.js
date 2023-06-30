@@ -227,7 +227,7 @@
    * @return {object} The listbox item, its selected state and its label.
    */
   function getItemFromOption(option, renderer) {
-    var item = document.createElement("span");
+    var item = document.createElement("button");
     var selected = option.selected;
     var itemLabel = getItemLabel(option, renderer);
 
@@ -236,6 +236,10 @@
     item.setAttribute("role", "option");
     item.setAttribute("tabindex", "-1");
     item.setAttribute("aria-selected", selected);
+
+    if (option.dataset.scrollto) {
+      item.setAttribute("data-scrollto", option.dataset.scrollto);
+    }
 
     return { item: item, selected: selected, itemLabel: itemLabel };
   }

@@ -1,11 +1,10 @@
 import scrollToSmooth from "scrolltosmooth/dist/scrolltosmooth.esm";
 
-let smoothScroll = new scrollToSmooth("button", {
+export const smoothScroll = new scrollToSmooth("button", {
   targetAttribute: "data-scrollto",
-  duration: 400,
+  duration: 1000,
   durationRelative: false,
   durationMin: false,
   durationMax: false,
 });
 
-smoothScroll.init();

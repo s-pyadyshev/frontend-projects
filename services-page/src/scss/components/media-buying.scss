@@ -12,53 +12,26 @@
     height: calc(100vw * 302 / 393);
 
     @media (min-width: 1024px) {
-      height: calc(100vw * 970 / 2488);
+      height: auto;
     }
   }
 
   .section__image-wrap {
 
     @media (min-width: 1024px) {
-      &:hover {
-        .media-buying {
-          &__icon {
-            opacity: 1;
-
-            &--guardian-jobs {
-              transform: translateY(-28%)
-            }
-
-            &--talent {
-              transform: translateY(-115%);
-            }
-
-            &--cv-library {
-              transform: translateY(-280%);
-            }
-
-            &--total-job {
-              transform: translateY(-127%);
-            }
-
-            &--indeed {
-              transform: translateY(-184%);
-            }
-          }
-        }
-      }
+      height: 100%;
     }
+  }
+
+  &__bus-stop {
+    height: 100%;
+    object-fit: contain;
   }
 
   &__icon {
     position: absolute;
     bottom: 0;
     opacity: 0;
-
-    @media (min-width: 1024px) {
-      transition-property: opacity, transform;
-      transition-duration: 0.7s;
-      transition-timing-function: ease;
-    }
 
     &--guardian-jobs {
       left: 51%;

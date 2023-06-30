@@ -1,10 +1,10 @@
 .nav-page {
-  padding: 35px 0;
+  padding: 15px 0;
   display: none;
   background-color: $color-grey;
   width: 100%;
 
-  @media (min-width: 1920px) {
+  @media (min-width: 1600px) {
     display: block;
 
     &__wrapper {
@@ -20,7 +20,7 @@
           button {
             position: relative;
             font-family: $gilroy-bold;
-            font-size: 16px;
+            font-size: 13px;
             line-height: 22px;
             text-transform: uppercase;
             padding: 13px 0;
@@ -50,6 +50,20 @@
                 transform: scaleX(1);
               }
             }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1920px) {
+    padding: 35px 0;
+
+    &__wrapper {
+      ul {
+        li {
+          button {
+            font-size: 16px;
           }
         }
       }

@@ -3,8 +3,105 @@
 //   animation-fill-mode: both;
 // }
 
+// @keyframes fadeIn {
+//   from {
+//     opacity: 0;
+//   }
+
+//   to {
+//     opacity: 1;
+//   }
+// }
+
+// .animate__fadeIn {
+//   animation-name: fadeIn;
+// }
+
+// @keyframes fadeInUp {
+//   from {
+//     opacity: 0;
+//     transform: translate3d(0, 75%, 0);
+//   }
+
+//   to {
+//     opacity: 1;
+//     transform: translate3d(0, 0, 0);
+//   }
+// }
+
+// .animate__fadeInUp {
+//   animation-name: fadeInUp;
+// }
+
+// @keyframes fadeInDown {
+//   from {
+//     opacity: 0;
+//     transform: translate3d(0, -25%, 0);
+//   }
+
+//   to {
+//     opacity: 1;
+//     transform: translate3d(0, 0, 0);
+//   }
+// }
+
+// .animate__fadeInDown {
+//   animation-name: fadeInDown;
+// }
+
+// @keyframes fadeInRight {
+//   0% {
+//     opacity: 0;
+//     transform: translate3d(100%, 0, 0);
+//   }
+
+//   to {
+//     opacity: 1;
+//     transform: translateZ(0);
+//   }
+// }
+
+// .animate__fadeInRight {
+//   animation-name: fadeInRight;
+// }
+
+// @keyframes fadeInLeft {
+//   0% {
+//     opacity: 0;
+//     transform: translate3d(-100%, 0, 0);
+//   }
+
+//   to {
+//     opacity: 1;
+//     transform: translateZ(0);
+//   }
+// }
+
+// .animate__fadeInLeft {
+//   animation-name: fadeInLeft;
+// }
+
+// @keyframes displayIn {
+//   from {
+//     display: none;
+//     opacity: 0;
+//   }
+
+//   to {
+//     display: block;
+//     opacity: 1;
+//   }
+// }
+
+// .animate__displayIn {
+//   animation-name: displayIn;
+//   animation-duration: 0s;
+// }
+
 .services-page {
+
   .animate__animated {
+
     .animate-iphone,
     .animate-ipad,
     .animate-drone,
@@ -12,7 +109,7 @@
     .animate-gaucho-ig,
     .animate-icon,
     .animate-progress-bar > img {
-      animation-delay: 0.4s;
+      animation-delay: .4s;
       animation-duration: 1s;
       animation-fill-mode: both;
       animation-timing-function: ease;
@@ -20,10 +117,8 @@
   }
 
   .animate-career-sites {
+
     @keyframes animate-iphone {
-      from {
-        opacity: 0;
-      }
       to {
         opacity: 1;
         transform: translateY(4%);
@@ -31,12 +126,26 @@
     }
 
     @keyframes animate-ipad {
-      from {
-        opacity: 0;
-      }
       to {
         opacity: 1;
         transform: translateY(-89%);
+      }
+    }
+
+    @media (min-width: 560px) {
+      @keyframes animate-iphone {
+        to {
+          opacity: 1;
+          transform: translateY(-13%);
+        }
+      }
+    }
+    @media (min-width: 1024px) {
+      @keyframes animate-iphone {
+        to {
+          opacity: 1;
+          transform: translateY(4%);
+        }
       }
     }
 
@@ -69,9 +178,6 @@
 
   .animate-social-media {
     @keyframes animate-gaucho-ig {
-      from {
-        opacity: 0;
-      }
       to {
         transform: translateX(47%);
         opacity: 1;
@@ -83,9 +189,6 @@
     }
 
     @keyframes animate-sky-service {
-      from {
-        opacity: 0;
-      }
       to {
         transform: translateX(-122%);
         opacity: 1;
@@ -97,9 +200,6 @@
     }
 
     @keyframes animate-icon-social-media {
-      from {
-        opacity: 0;
-      }
       to {
         transform: translateY(-100%);
         opacity: 1;
@@ -109,35 +209,27 @@
     .animate-icon-social-media {
       animation-name: animate-icon-social-media;
     }
-  }
 
-  .animate-media-buying {
     @media (min-width: 1024px) {
-      @keyframes animate-indeed-icon {
-        from {
-          opacity: 0;
-        }
+      @keyframes animate-gaucho-ig {
         to {
-          transform: translateY(-127%);
+          transform: translateX(33%);
           opacity: 1;
         }
       }
 
-      @keyframes animate-total-job-icon {
-        from {
-          opacity: 0;
-        }
+      @keyframes animate-sky-service {
         to {
-          transform: translateY(-127%);
+          transform: translateX(-139%);
           opacity: 1;
         }
       }
     }
+  }
+
+  .animate-media-buying {
 
     @keyframes animate-guardian-icon {
-      from {
-        opacity: 0;
-      }
       to {
         transform: translateY(-28%);
         opacity: 1;
@@ -149,9 +241,6 @@
     }
 
     @keyframes animate-talent-icon {
-      from {
-        opacity: 0;
-      }
       to {
         transform: translateY(-115%);
         opacity: 1;
@@ -163,9 +252,6 @@
     }
 
     @keyframes animate-cv-icon {
-      from {
-        opacity: 0;
-      }
       to {
         transform: translateY(-280%);
         opacity: 1;
@@ -177,23 +263,17 @@
     }
 
     @keyframes animate-total-job-icon {
-      from {
-        opacity: 0;
-      }
       to {
         transform: translateY(-110%);
         opacity: 1;
       }
     }
 
-    .animate-total-job-icon {
+    .animate-total-job-icon{
       animation-name: animate-total-job-icon;
     }
 
     @keyframes animate-indeed-icon {
-      from {
-        opacity: 0;
-      }
       to {
         transform: translateY(-160%);
         opacity: 1;
@@ -203,10 +283,28 @@
     .animate-indeed-icon {
       animation-name: animate-indeed-icon;
     }
+
+    @media (min-width: 1024px) {
+      @keyframes animate-indeed-icon {
+        to {
+          transform: translateY(-184%);
+          opacity: 1;
+        }
+      }
+
+      @keyframes animate-total-job-icon {
+        to {
+          transform: translateY(-127%);
+          opacity: 1;
+        }
+      }
+    }
   }
 
   .animate-google-partner {
+
     @keyframes animate-google-search {
+
       to {
         transform: translate(-50%, -100%);
       }
@@ -221,7 +319,7 @@
         opacity: 0;
       }
       to {
-        transform: translateX(45%);
+        transform: translateX(47%);
         opacity: 1;
       }
     }
@@ -235,7 +333,7 @@
         opacity: 0;
       }
       to {
-        transform: translateX(-63%);
+        transform: translateX(-64%);
         opacity: 1;
       }
     }
@@ -260,6 +358,7 @@
   }
 
   .animate-talent-brand {
+
     @keyframes animate-polaroid-1 {
       to {
         transform: rotate(2deg) scale(1.1);
@@ -292,11 +391,13 @@
   }
 
   .animate-applicant-tracking {
+
     @keyframes animate-great-candidate {
       to {
         opacity: 1;
-        transform: translateX(-143%) scale(1);
+        transform: translate(-139%, 0) scale(1);
       }
+
     }
 
     .animate-great-candidate {
@@ -306,8 +407,9 @@
     @keyframes animate-similar-candidates {
       to {
         opacity: 1;
-        transform: translateX(29%) scale(1);
+        transform: translate(28%, 0) scale(1);
       }
+
     }
 
     .animate-similar-candidates {
@@ -323,6 +425,7 @@
         opacity: 1;
         transform: translateY(-100%) scale(1);
       }
+
     }
 
     .animate-applicant-tracking {
@@ -331,11 +434,13 @@
   }
 
   .animate-employer-brand {
+
     @keyframes animate-meat {
       to {
         opacity: 1;
         transform: translate(-50%, -50%);
       }
+
     }
 
     .animate-meat {
@@ -355,6 +460,7 @@
   }
 
   .animate-radio-play {
+
     @keyframes animate-radio-waves {
       to {
         opacity: 1;
@@ -391,6 +497,7 @@
   }
 
   .animate-friend-app {
+
     @keyframes animate-friend-app-post {
       to {
         opacity: 1;

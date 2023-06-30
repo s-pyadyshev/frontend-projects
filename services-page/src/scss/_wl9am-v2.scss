@@ -105,10 +105,16 @@ html.services-page {
 
   .main {
     flex-grow: 1;
+    padding-top: 78px;
+
+    @media (min-width: 768px) {
+      padding-top: 0;
+    }
   }
 
   .container {
     width: 100%;
+    margin: 0 auto;
     padding: 0 20px;
     max-width: none;
 
@@ -116,9 +122,17 @@ html.services-page {
       padding: 0 30px;
     }
 
-    @media (min-width: 1260px) {
-      max-width: 2376px;
-      padding: 0 30px 0 70px;
+    @media (min-width: 1440px) {
+      max-width: 2488px;
+      padding: 0 50px 0 50px;
+    }
+
+    @media (min-width: 1920px) {
+      padding: 0 70px 0 70px;
+    }
+
+    @media (min-width: 2560px) {
+      padding: 0 142px 0 70px;
     }
   }
 
@@ -150,7 +164,7 @@ html.services-page {
 
     @media (min-width: 768px) {
       font-size: 40px;
-      line-height: 60px;
+      line-height: 50px;
       margin-bottom: 30px;
     }
 
@@ -255,7 +269,7 @@ html.services-page {
 
     @media (min-width: 768px) {
       height: 58px;
-      padding: 0 10px 0 25px;
+      padding: 0 25px 0 25px;
       font-size: 1.4rem;
       line-height: 1.29;
     }
@@ -319,7 +333,7 @@ html.services-page {
     display: block;
     width: 24px;
     height: 24px;
-    margin-left: 40px;
+    margin-left: 34px;
     border-radius: 30px;
     background-color: $color-secondary;
     background-image: url("../images/button-arrow.svg");
@@ -330,7 +344,6 @@ html.services-page {
     @media (min-width: 768px) {
       width: 32px;
       height: 32px;
-      margin-left: 90px;
     }
   }
 

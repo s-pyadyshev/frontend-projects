@@ -5,8 +5,9 @@
     margin-bottom: 35px;
 
     @media (min-width: 1024px) {
-      height: calc(100vw * 970 / 2488);
+      height: auto;
       margin-bottom: 0;
+      padding: calc(12% + 6px) 0;
     }
   }
 
@@ -21,27 +22,6 @@
       width: 100%;
       height: calc(100vw * 688 / 2488);
       max-height: 688px;
-
-      &:hover {
-        .applicant-tracking {
-          &__icon {
-            transform: translateY(-100%) scale(1);
-            opacity: 1;
-
-            &--candidates {
-              transform: translateY(0%);
-            }
-
-            &--great-candidate {
-              transform: translate(-137%, 0);
-            }
-
-            &--similar-candidates {
-              transform: translate(27%, 0);
-            }
-          }
-        }
-      }
     }
   }
 
@@ -52,12 +32,6 @@
     z-index: 2;
     transform: scale(0.5);
     transform-origin: bottom;
-
-    @media (min-width: 1024px) {
-      transition-property: opacity, transform;
-      transition-duration: 0.7s;
-      transition-timing-function: ease;
-    }
 
     &--candidates {
       height: calc(100vw * 241 / 393);

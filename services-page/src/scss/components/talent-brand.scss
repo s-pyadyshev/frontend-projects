@@ -10,8 +10,9 @@
     align-items: center;
     justify-content: center;
 
-    &--desk {
-      display: none;
+    @media (min-width: 1024px) {
+      padding: calc(21% + 5px) 0;
+      height: auto;
     }
   }
 
@@ -20,26 +21,6 @@
     align-items: center;
     justify-content: center;
     z-index: 1;
-
-    @media (min-width: 1024px) {
-
-      &:hover {
-        .talent-brand__icon {
-
-          &--polaroid-1 {
-            transform: rotate(2deg) scale(1.1);
-          }
-
-          &--polaroid-2 {
-            transform: translate(15%, 9%) rotate(-2deg) scale(1.1);
-          }
-
-          &--polaroid-3 {
-            transform: translate(-115%, -3%) rotate(-2deg) scale(1.1);
-          }
-        }
-      }
-    }
   }
 
   &__icon {
@@ -53,7 +34,6 @@
     @media (min-width: 1024px) {
       width: calc(100vw * 404 / 2488);
       max-width: 404px;
-      transition: transform .7s ease;
     }
 
     img {

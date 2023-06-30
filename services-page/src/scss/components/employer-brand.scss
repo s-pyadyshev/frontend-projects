@@ -7,21 +7,7 @@
   .section__image-wrap {
 
     @media (min-width: 1024px) {
-      &:hover {
-        .employer-brand {
-          &__icon {
-            opacity: 1;
-
-            &--meat {
-              transform: translate(-50%, -50%);
-            }
-
-            &--building-society {
-              transform: translateY(-102%);
-            }
-          }
-        }
-      }
+      height: 100%;
     }
   }
 
@@ -31,11 +17,12 @@
       top: 50%;
       opacity: 0;
       transform: translateY(-50%);
+    }
 
-      @media (min-width: 1024px) {
-        transition-property: transform, opacity;
-        transition-duration: .7s;
-        transition-timing-function: ease;
+    &--magazine {
+      img {
+        height: 100%;
+        object-fit: contain;
       }
     }
 
