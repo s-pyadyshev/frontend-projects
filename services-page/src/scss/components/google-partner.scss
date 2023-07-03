@@ -4,7 +4,8 @@
     height: calc(100vw * 267 / 393);
 
     @media (min-width: 1024px) {
-      height: calc(100vw * 970 / 2488);
+      height: auto;
+      padding: calc(12% + 5px) 0;
     }
   }
 
@@ -24,41 +25,12 @@
     @media (min-width: 1024px) {
       height: calc(100vw * 690 / 2488);
       max-height: 690px;
-
-      &:hover {
-        .google-partner {
-          &__icon {
-            opacity: 1;
-            &--google-search {
-              transform: translate(-50%, -104%);
-            }
-
-            &--we-hiring {
-              transform: translateX(49%);
-            }
-
-            &--job-opportunities {
-              transform: translate(-66%);
-            }
-
-            &--hiring-today {
-              transform: translate(0%);
-            }
-          }
-        }
-      }
     }
   }
 
   &__icon {
     position: absolute;
     opacity: 0;
-
-    @media (min-width: 1024px) {
-      transition-property: opacity, transform;
-      transition-duration: 0.7s;
-      transition-timing-function: ease;
-    }
 
     &--google-search {
       opacity: 1;

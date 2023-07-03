@@ -1,5 +1,12 @@
 .friend-app {
 
+  .section__image {
+
+    @media (min-width: 1024px) {
+      padding: calc(9% + 3px) 0;
+    }
+  }
+
   .section__image-wrap {
     height: calc(100vw * 260 / 393);
     display: flex;
@@ -9,34 +16,6 @@
       height: calc(100vw * 761 / 2488);
       align-items: flex-end;
       width: 100%;
-
-      &:hover {
-        .friend-app {
-          &__icon {
-            opacity: 1;
-
-            &--post {
-              transform: translateX(28%);
-            }
-
-            &--post-2 {
-              transform: translateX(-122%);
-            }
-
-            &--chart {
-              transform: translateX(29%);
-            }
-
-            &--app-store {
-              transform: translateX(-195%);
-            }
-
-            &--google-play {
-              transform: translateX(-117%);
-            }
-          }
-        }
-      }
     }
   }
 
@@ -45,12 +24,6 @@
     opacity: 0;
     left: 50%;
     transform: translateX(-50%);
-
-    @media (min-width: 1024px) {
-      transition-property: opacity, transform;
-      transition-duration: .7s;
-      transition-timing-function: ease;
-    }
 
     &--app {
       position: static;

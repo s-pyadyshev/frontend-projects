@@ -1,71 +1,15 @@
-// fonts
-@font-face {
-  font-family: GilroyLight;
-  src: url("../fonts/Gilroy-Light.woff") format("woff");
-  src: url("../fonts/Gilroy-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: GilroyRegular;
-  src: url("../fonts/Gilroy-Regular.woff") format("woff");
-  src: url("../fonts/Gilroy-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: GilroyMedium;
-  src: url("../fonts/Gilroy-Medium.woff") format("woff");
-  src: url("../fonts/Gilroy-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: GilroySemibold;
-  src: url("../fonts/Gilroy-Semibold.woff") format("woff");
-  src: url("../fonts/Gilroy-Semibold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: GilroyBold;
-  src: url("../fonts/Gilroy-Bold.woff") format("woff");
-  src: url("../fonts/Gilroy-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: GilroyHeavy;
-  src: url("../fonts/Gilroy-Heavy.woff") format("woff");
-  src: url("../fonts/Gilroy-Heavy.woff2") format("woff2");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-// typography
-$h1-font-size: 30px;
-$h2-font-size: 30px;
-$h3-font-size: 16px;
-$h4-font-size: 15px;
-$h5-font-size: 10px;
-$h6-font-size: 8px;
-$h1-font-size-desktop: 81px;
-$h2-font-size-desktop: 68px;
-$h3-font-size-desktop: 32px;
-$h4-font-size-desktop: 29px;
-$h5-font-size-desktop: 20px;
-$h6-font-size-desktop: 16px;
+$services-h1-font-size: 30px;
+$services-h2-font-size: 30px;
+$services-h3-font-size: 16px;
+$services-h4-font-size: 15px;
+$services-h5-font-size: 10px;
+$services-h6-font-size: 8px;
+$services-h1-font-size-desktop: 81px;
+$services-h2-font-size-desktop: 68px;
+$services-h3-font-size-desktop: 32px;
+$services-h4-font-size-desktop: 29px;
+$services-h5-font-size-desktop: 20px;
+$services-h6-font-size-desktop: 16px;
 
 html.services-page {
   min-height: 100vh;
@@ -105,10 +49,16 @@ html.services-page {
 
   .main {
     flex-grow: 1;
+    padding-top: 78px;
+
+    @media (min-width: 768px) {
+      padding-top: 0;
+    }
   }
 
   .container {
     width: 100%;
+    margin: 0 auto;
     padding: 0 20px;
     max-width: none;
 
@@ -116,15 +66,23 @@ html.services-page {
       padding: 0 30px;
     }
 
-    @media (min-width: 1260px) {
-      max-width: 2376px;
-      padding: 0 30px 0 70px;
+    @media (min-width: 1440px) {
+      max-width: 2488px;
+      padding: 0 50px 0 50px;
+    }
+
+    @media (min-width: 1920px) {
+      padding: 0 70px 0 70px;
+    }
+
+    @media (min-width: 2560px) {
+      padding: 0 142px 0 70px;
     }
   }
 
   h1 {
     font-family: $gilroy-heavy;
-    font-size: $h1-font-size;
+    font-size: $services-h1-font-size;
     line-height: 39px;
     margin-bottom: 10px;
 
@@ -135,7 +93,7 @@ html.services-page {
     }
 
     @media (min-width: 1366px) {
-      font-size: $h1-font-size-desktop;
+      font-size: $services-h1-font-size-desktop;
       line-height: 103px;
       letter-spacing: -0.81px;
     }
@@ -143,59 +101,59 @@ html.services-page {
 
   h2 {
     font-family: $gilroy-heavy;
-    font-size: $h2-font-size;
+    font-size: $services-h2-font-size;
     color: $color-secondary;
     line-height: 39px;
     margin-bottom: 20px;
 
     @media (min-width: 768px) {
       font-size: 40px;
-      line-height: 60px;
+      line-height: 50px;
       margin-bottom: 30px;
     }
 
     @media (min-width: 1366px) {
-      font-size: $h2-font-size-desktop;
+      font-size: $services-h2-font-size-desktop;
       line-height: 86px;
       letter-spacing: 0.34px;
     }
   }
 
   h3 {
-    font-size: $h3-font-size;
+    font-size: $services-h3-font-size;
 
     @media (min-width: 1366px) {
-      font-size: $h3-font-size-desktop;
+      font-size: $services-h3-font-size-desktop;
     }
   }
 
   h4 {
     font-family: $gilroy-semibold;
-    font-size: $h4-font-size;
+    font-size: $services-h4-font-size;
     line-height: 18px;
     color: $color-secondary;
     margin-bottom: 20px;
 
     @media (min-width: 1366px) {
-      font-size: $h4-font-size-desktop;
+      font-size: $services-h4-font-size-desktop;
       line-height: 34px;
       margin-bottom: 40px;
     }
   }
 
   h5 {
-    font-size: $h5-font-size;
+    font-size: $services-h5-font-size;
 
     @media (min-width: 1366px) {
-      font-size: $h5-font-size-desktop;
+      font-size: $services-h5-font-size-desktop;
     }
   }
 
   h6 {
-    font-size: $h6-font-size;
+    font-size: $services-h6-font-size;
 
     @media (min-width: 1366px) {
-      font-size: $h6-font-size-desktop;
+      font-size: $services-h6-font-size-desktop;
     }
   }
 
@@ -242,10 +200,6 @@ html.services-page {
   .button {
     height: 42px;
     padding: 0 10px 0 19px;
-    border: 2px solid $color-secondary;
-    border-radius: 30px;
-    background: transparent;
-    color: $color-primary;
     font-weight: 900;
     font-size: 1.2rem;
     line-height: 2.3;
@@ -255,7 +209,7 @@ html.services-page {
 
     @media (min-width: 768px) {
       height: 58px;
-      padding: 0 10px 0 25px;
+      padding: 0 25px 0 25px;
       font-size: 1.4rem;
       line-height: 1.29;
     }
@@ -299,27 +253,12 @@ html.services-page {
     }
   }
 
-  .button:active,
-  .button:hover {
-    border-color: $color-light-blue;
-    color: $color-light-blue;
-  }
-
-  .button:active,
-  .button:focus {
-    outline: none;
-  }
-
-  .button__text {
-    text-transform: uppercase;
-  }
-
   .with-arrow::before {
     content: "";
     display: block;
     width: 24px;
     height: 24px;
-    margin-left: 40px;
+    margin-left: 34px;
     border-radius: 30px;
     background-color: $color-secondary;
     background-image: url("../images/button-arrow.svg");
@@ -330,7 +269,6 @@ html.services-page {
     @media (min-width: 768px) {
       width: 32px;
       height: 32px;
-      margin-left: 90px;
     }
   }
 

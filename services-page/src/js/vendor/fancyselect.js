@@ -237,6 +237,10 @@
     item.setAttribute("tabindex", "-1");
     item.setAttribute("aria-selected", selected);
 
+    if (option.dataset.scrollto) {
+      item.setAttribute("data-scrollto", option.dataset.scrollto);
+    }
+
     return { item: item, selected: selected, itemLabel: itemLabel };
   }
 
@@ -343,6 +347,16 @@
     originalSelect.selectedIndex = itemIndex;
     originalSelect.dispatchEvent(new Event("input", { bubbles: true }));
     originalSelect.dispatchEvent(new Event("change", { bubbles: true }));
+
+    if (item.dataset.scrollto) {
+      var scrollToSection = document.getElementById(item.dataset.scrollto);
+      var scrollToSectionOffset = scrollToSection.offsetTop;
+
+      window.scrollTo({
+        top: scrollToSectionOffset - 135,
+        behavior: "smooth",
+      });
+    }
   }
 
   /**
