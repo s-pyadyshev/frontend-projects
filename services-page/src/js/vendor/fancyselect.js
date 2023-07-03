@@ -227,7 +227,7 @@
    * @return {object} The listbox item, its selected state and its label.
    */
   function getItemFromOption(option, renderer) {
-    var item = document.createElement("span");
+    var item = document.createElement("button");
     var selected = option.selected;
     var itemLabel = getItemLabel(option, renderer);
 

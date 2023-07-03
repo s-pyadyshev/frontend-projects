@@ -547,7 +547,7 @@ __webpack_require__(/*! ./vendor/fancyselect */ "./src/js/vendor/fancyselect.js"
 
 
   function getItemFromOption(option, renderer) {
-    var item = document.createElement("span");
+    var item = document.createElement("button");
     var selected = option.selected;
     var itemLabel = getItemLabel(option, renderer);
     item.className = "fsb-option";
