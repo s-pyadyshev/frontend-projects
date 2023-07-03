@@ -155,79 +155,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/js/components/accordion.js":
-/*!****************************************!*\
-  !*** ./src/js/components/accordion.js ***!
-  \****************************************/
-/*! exports provided: accordion */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "accordion", function() { return accordion; });
-var accordion = function () {
-  var init = function init() {
-    var accordionList = document.querySelectorAll(".accordion-list");
-
-    if (!accordionList.length) {
-      return;
-    }
-
-    accordionList.forEach(function (list) {
-      list.addEventListener("click", function (event) {
-        toggleAccordion(event);
-      });
-    });
-
-    function toggleAccordion(event) {
-      var accordionButton = event.target.closest(".accordion__toggle");
-      var isExpanded = accordionButton.getAttribute("aria-expanded") === "true";
-      var target = accordionButton.parentElement.nextElementSibling;
-      accordionButton.setAttribute("aria-expanded", !isExpanded);
-      target.classList.toggle("is-open");
-    }
-  };
-
-  return {
-    init: init
-  };
-}();
-
-/***/ }),
-
-/***/ "./src/js/components/mobile-menu.js":
-/*!******************************************!*\
-  !*** ./src/js/components/mobile-menu.js ***!
-  \******************************************/
-/*! exports provided: mobileMenu */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mobileMenu", function() { return mobileMenu; });
-var mobileMenu = function () {
-  var init = function init() {
-    var $mobileMenuToggle = $(".js-toggle-menu");
-    var $mobileMenuClose = $(".menu-toggle-close ");
-
-    if (!$mobileMenuToggle.length) {
-      return;
-    }
-
-    var $body = $("body");
-    $mobileMenuToggle.on("click", function () {
-      $body.toggleClass("mobile-menu-active");
-      $mobileMenuClose.focus();
-    });
-  };
-
-  return {
-    init: init
-  };
-}();
-
-/***/ }),
-
 /***/ "./src/js/components/scrollspy.js":
 /*!****************************************!*\
   !*** ./src/js/components/scrollspy.js ***!
@@ -280,59 +207,21 @@ var scrollspy = function () {
 /*!***************************************!*\
   !*** ./src/js/components/scrollto.js ***!
   \***************************************/
-/*! no exports provided */
+/*! exports provided: smoothScroll */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "smoothScroll", function() { return smoothScroll; });
 /* harmony import */ var scrolltosmooth_dist_scrolltosmooth_esm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! scrolltosmooth/dist/scrolltosmooth.esm */ "./node_modules/scrolltosmooth/dist/scrolltosmooth.esm.js");
 
 var smoothScroll = new scrolltosmooth_dist_scrolltosmooth_esm__WEBPACK_IMPORTED_MODULE_0__["default"]("button", {
   targetAttribute: "data-scrollto",
-  duration: 400,
+  duration: 1000,
   durationRelative: false,
   durationMin: false,
   durationMax: false
 });
-smoothScroll.init();
-
-/***/ }),
-
-/***/ "./src/js/components/toggle.js":
-/*!*************************************!*\
-  !*** ./src/js/components/toggle.js ***!
-  \*************************************/
-/*! exports provided: toggle */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toggle", function() { return toggle; });
-var toggle = function () {
-  var init = function init() {
-    var collapseLinks = document.querySelectorAll("[data-collapse-target]");
-
-    if (!collapseLinks.length) {
-      return;
-    }
-
-    collapseLinks.forEach(function (link) {
-      link.addEventListener("click", function (event) {
-        var collapseTarget = event.target.dataset.collapseTarget;
-        var collapseTargets = document.querySelectorAll("[data-collapse-target=\"".concat(collapseTarget, "\"]"));
-        var target = document.querySelector("[data-collapse-content=\"".concat(collapseTarget, "\"]"));
-        target.classList.toggle("active");
-        collapseTargets.forEach(function (target) {
-          return target.classList.toggle("active");
-        });
-      });
-    });
-  };
-
-  return {
-    init: init
-  };
-}();
 
 /***/ }),
 
@@ -424,23 +313,14 @@ function isElementCompletelyInViewport(element) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendor */ "./src/js/vendor.js");
 /* harmony import */ var _vendor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/accordion */ "./src/js/components/accordion.js");
-/* harmony import */ var _components_mobile_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/mobile-menu */ "./src/js/components/mobile-menu.js");
-/* harmony import */ var _components_toggle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/toggle */ "./src/js/components/toggle.js");
-/* harmony import */ var _components_scrollspy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/scrollspy */ "./src/js/components/scrollspy.js");
-/* harmony import */ var _components_scrollto__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/scrollto */ "./src/js/components/scrollto.js");
- // import { vhFix } from "./vendor/vh-fix";
-
-
-
+/* harmony import */ var _components_scrollspy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/scrollspy */ "./src/js/components/scrollspy.js");
+/* harmony import */ var _components_scrollto__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/scrollto */ "./src/js/components/scrollto.js");
 
 
 
 window.addEventListener("load", function () {
-  _components_accordion__WEBPACK_IMPORTED_MODULE_1__["accordion"].init();
-  _components_mobile_menu__WEBPACK_IMPORTED_MODULE_2__["mobileMenu"].init();
-  _components_toggle__WEBPACK_IMPORTED_MODULE_3__["toggle"].init();
-  _components_scrollspy__WEBPACK_IMPORTED_MODULE_4__["scrollspy"].init();
+  _components_scrollspy__WEBPACK_IMPORTED_MODULE_1__["scrollspy"].init();
+  _components_scrollto__WEBPACK_IMPORTED_MODULE_2__["smoothScroll"].init();
   document.querySelector("body").classList.add("page-loaded");
 }, false);
 
@@ -675,6 +555,11 @@ __webpack_require__(/*! ./vendor/fancyselect */ "./src/js/vendor/fancyselect.js"
     item.setAttribute("role", "option");
     item.setAttribute("tabindex", "-1");
     item.setAttribute("aria-selected", selected);
+
+    if (option.dataset.scrollto) {
+      item.setAttribute("data-scrollto", option.dataset.scrollto);
+    }
+
     return {
       item: item,
       selected: selected,
@@ -781,6 +666,15 @@ __webpack_require__(/*! ./vendor/fancyselect */ "./src/js/vendor/fancyselect.js"
     originalSelect.dispatchEvent(new Event("change", {
       bubbles: true
     }));
+
+    if (item.dataset.scrollto) {
+      var scrollToSection = document.getElementById(item.dataset.scrollto);
+      var scrollToSectionOffset = scrollToSection.offsetTop;
+      window.scrollTo({
+        top: scrollToSectionOffset - 135,
+        behavior: "smooth"
+      });
+    }
   }
   /**
    * Get the next item that matches a string.
