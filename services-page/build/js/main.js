@@ -252,13 +252,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "smoothScroll", function() { return smoothScroll; });
 /* harmony import */ var scrolltosmooth_dist_scrolltosmooth_esm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! scrolltosmooth/dist/scrolltosmooth.esm */ "./node_modules/scrolltosmooth/dist/scrolltosmooth.esm.js");
 
-var smoothScroll = new scrolltosmooth_dist_scrolltosmooth_esm__WEBPACK_IMPORTED_MODULE_0__["default"]('button', {
-  targetAttribute: 'data-scrollto',
+var smoothScroll = new scrolltosmooth_dist_scrolltosmooth_esm__WEBPACK_IMPORTED_MODULE_0__["default"]("button", {
+  targetAttribute: "data-scrollto",
   duration: 1000,
   durationRelative: false,
   durationMin: false,
   durationMax: false,
-  offset: '135'
+  offset: "135"
 });
 
 /***/ }),
@@ -438,6 +438,12 @@ window.addEventListener("load", function () {
   _components_scrollto__WEBPACK_IMPORTED_MODULE_3__["smoothScroll"].init();
   _components_page_nav__WEBPACK_IMPORTED_MODULE_4__["pageNavFixed"].init();
   document.querySelector("body").classList.add("page-loaded");
+
+  if (navigator.getAutoplayPolicy("mediaelement") === "allowed") {// The video element will autoplay with audio.
+  } else if (navigator.getAutoplayPolicy("mediaelement") === "allowed-muted") {
+    // Mute audio on video
+    video.muted = true;
+  }
 }, false);
 
 /***/ }),

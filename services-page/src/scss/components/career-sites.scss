@@ -1,6 +1,10 @@
 .career-sites {
   &.section {
-    padding-top: 0;
+    padding-top: 20px;
+
+    @media (min-width: 1024px) {
+      padding-top: 0;
+    }
   }
 
   h2 {

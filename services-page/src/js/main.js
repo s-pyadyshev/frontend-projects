@@ -12,6 +12,15 @@ window.addEventListener(
     smoothScroll.init();
     pageNavFixed.init();
     document.querySelector("body").classList.add("page-loaded");
+
+    if (navigator.getAutoplayPolicy("mediaelement") === "allowed") {
+      // The video element will autoplay with audio.
+    } else if (
+      navigator.getAutoplayPolicy("mediaelement") === "allowed-muted"
+    ) {
+      // Mute audio on video
+      video.muted = true;
+    }
   },
   false
 );

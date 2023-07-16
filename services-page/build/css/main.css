@@ -10091,7 +10091,7 @@ html.services-page {
 }
 
 .services-head {
-  padding: 0px 0 40px;
+  padding: 20px 0 40px;
 }
 
 .services-head__text {
@@ -10108,6 +10108,7 @@ html.services-page {
 }
 
 .services-head__video {
+  display: none;
   height: 78.3715012723vw;
   -o-object-fit: cover;
   object-fit: cover;
@@ -10115,6 +10116,10 @@ html.services-page {
 
 .services-head__video source {
   width: 100%;
+}
+
+.services-head__video-mobile {
+  margin: 0 auto;
 }
 
 .services-page .section {
@@ -10134,7 +10139,7 @@ html.services-page {
 }
 
 .career-sites.section {
-  padding-top: 0;
+  padding-top: 20px;
 }
 
 .career-sites h2 {
@@ -13578,6 +13583,10 @@ html.services-page {
     height: auto;
   }
 
+  .services-head__video-mobile {
+    display: none;
+  }
+
   .services-head .button {
     margin-top: 20px;
   }
@@ -13912,6 +13921,10 @@ html.services-page {
     opacity: 1;
   }
 
+  .services-head {
+    padding: 0 0 40px;
+  }
+
   .services-page .section {
     padding: 0;
   }
@@ -14049,6 +14062,10 @@ html.services-page {
 
   .services-page .section--reversed .section__btn-wrap {
     padding-left: 50px;
+  }
+
+  .career-sites.section {
+    padding-top: 0;
   }
 
   .career-sites .section__image {
@@ -15857,6 +15874,7 @@ html.services-page {
     -ms-flex-pack: justify;
     justify-content: space-between;
     margin-bottom: 0;
+    gap: 6px;
   }
 
   .page-nav__wrapper ul li {
