@@ -155,6 +155,44 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/js/components/page-nav.js":
+/*!***************************************!*\
+  !*** ./src/js/components/page-nav.js ***!
+  \***************************************/
+/*! exports provided: pageNavFixed */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageNavFixed", function() { return pageNavFixed; });
+var pageNavFixed = function () {
+  var init = function init() {
+    var servicesHead = document.querySelector('.services-head'),
+        sectionNav = document.querySelector('.page-nav');
+
+    function fixedPageNav() {
+      if (sectionNav.getBoundingClientRect().top <= 0) {
+        sectionNav.style.position = 'fixed';
+      }
+
+      if (servicesHead.offsetTop + servicesHead.clientHeight >= window.scrollY) {
+        sectionNav.style.position = 'absolute';
+      }
+    }
+
+    fixedPageNav();
+    window.addEventListener('scroll', function () {
+      fixedPageNav();
+    });
+  };
+
+  return {
+    init: init
+  };
+}();
+
+/***/ }),
+
 /***/ "./src/js/components/scrollspy.js":
 /*!****************************************!*\
   !*** ./src/js/components/scrollspy.js ***!
@@ -172,11 +210,10 @@ var applyScrollspyClasses = function applyScrollspyClasses(elements) {
   elements.forEach(function (element) {
     if (Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["isElementCompletelyInViewport"])(element)) {
       var animationClass = element.dataset.scrollspy;
-      element.classList.add("animate__animated");
+      element.classList.add('animate__animated');
       element.classList.add(animationClass);
     } else {
       var _animationClass = element.dataset.scrollspy;
-      element.classList.remove("animate__animated");
       element.classList.remove(_animationClass);
     }
   });
@@ -184,14 +221,14 @@ var applyScrollspyClasses = function applyScrollspyClasses(elements) {
 
 var scrollspy = function () {
   var init = function init() {
-    var scrollspyElements = document.querySelectorAll("[data-scrollspy]");
+    var scrollspyElements = document.querySelectorAll('[data-scrollspy]');
 
     if (!scrollspyElements.length) {
       return;
     }
 
     applyScrollspyClasses(scrollspyElements);
-    document.addEventListener("scroll", Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["throttle"])(function () {
+    document.addEventListener('scroll', Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["throttle"])(function () {
       applyScrollspyClasses(scrollspyElements);
     }, 100));
   };
@@ -215,13 +252,86 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "smoothScroll", function() { return smoothScroll; });
 /* harmony import */ var scrolltosmooth_dist_scrolltosmooth_esm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! scrolltosmooth/dist/scrolltosmooth.esm */ "./node_modules/scrolltosmooth/dist/scrolltosmooth.esm.js");
 
-var smoothScroll = new scrolltosmooth_dist_scrolltosmooth_esm__WEBPACK_IMPORTED_MODULE_0__["default"]("button", {
-  targetAttribute: "data-scrollto",
+var smoothScroll = new scrolltosmooth_dist_scrolltosmooth_esm__WEBPACK_IMPORTED_MODULE_0__["default"]('button', {
+  targetAttribute: 'data-scrollto',
   duration: 1000,
   durationRelative: false,
   durationMin: false,
-  durationMax: false
+  durationMax: false,
+  offset: '135'
 });
+
+/***/ }),
+
+/***/ "./src/js/components/sectionOverlap.js":
+/*!*********************************************!*\
+  !*** ./src/js/components/sectionOverlap.js ***!
+  \*********************************************/
+/*! exports provided: sectionOverlap */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sectionOverlap", function() { return sectionOverlap; });
+// export { throttle } from "../helpers";
+function throttle(func, wait) {
+  var waiting = false;
+  return function () {
+    var _arguments = arguments,
+        _this = this;
+
+    if (waiting) {
+      return;
+    }
+
+    waiting = true;
+    setTimeout(function () {
+      func.apply(_this, _arguments);
+      waiting = false;
+    }, wait);
+  };
+}
+
+var sectionOverlap = function () {
+  var init = function init() {
+    var overlapElements = document.querySelectorAll(".section-overlap");
+
+    if (!overlapElements.length) {
+      return;
+    }
+
+    function applySectionOverlap() {
+      for (var i = 0; i < overlapElements.length; i++) {
+        var overlapElement = overlapElements[i];
+        var overlapHeight = overlapElement.offsetHeight;
+        var halfHeight = overlapHeight / 2;
+        overlapElement.style.marginBottom = "-".concat(halfHeight, "px");
+        overlapElement.style.marginTop = "-".concat(halfHeight, "px");
+        var previousElement = overlapElement.previousElementSibling;
+
+        if (previousElement) {
+          var previousPaddingBottom = parseFloat(getComputedStyle(previousElement).paddingBottom);
+          previousElement.style.paddingBottom = previousPaddingBottom + halfHeight + "px";
+        }
+
+        var nextElement = overlapElement.nextElementSibling;
+
+        if (nextElement) {
+          var nextPaddingTop = parseFloat(getComputedStyle(nextElement).paddingTop);
+          nextElement.style.paddingTop = nextPaddingTop + halfHeight + "px";
+        }
+      }
+    }
+
+    applySectionOverlap();
+    var applySectionOverlapThrottle = throttle(function () {}, 200);
+    window.addEventListener("resize", applySectionOverlapThrottle);
+  };
+
+  return {
+    init: init
+  };
+}();
 
 /***/ }),
 
@@ -313,14 +423,20 @@ function isElementCompletelyInViewport(element) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendor */ "./src/js/vendor.js");
 /* harmony import */ var _vendor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_scrollspy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/scrollspy */ "./src/js/components/scrollspy.js");
-/* harmony import */ var _components_scrollto__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/scrollto */ "./src/js/components/scrollto.js");
+/* harmony import */ var _components_sectionOverlap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/sectionOverlap */ "./src/js/components/sectionOverlap.js");
+/* harmony import */ var _components_scrollspy__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/scrollspy */ "./src/js/components/scrollspy.js");
+/* harmony import */ var _components_scrollto__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/scrollto */ "./src/js/components/scrollto.js");
+/* harmony import */ var _components_page_nav__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/page-nav */ "./src/js/components/page-nav.js");
+
+
 
 
 
 window.addEventListener("load", function () {
-  _components_scrollspy__WEBPACK_IMPORTED_MODULE_1__["scrollspy"].init();
-  _components_scrollto__WEBPACK_IMPORTED_MODULE_2__["smoothScroll"].init();
+  _components_scrollspy__WEBPACK_IMPORTED_MODULE_2__["scrollspy"].init();
+  _components_sectionOverlap__WEBPACK_IMPORTED_MODULE_1__["sectionOverlap"].init();
+  _components_scrollto__WEBPACK_IMPORTED_MODULE_3__["smoothScroll"].init();
+  _components_page_nav__WEBPACK_IMPORTED_MODULE_4__["pageNavFixed"].init();
   document.querySelector("body").classList.add("page-loaded");
 }, false);
 
@@ -547,7 +663,7 @@ __webpack_require__(/*! ./vendor/fancyselect */ "./src/js/vendor/fancyselect.js"
 
 
   function getItemFromOption(option, renderer) {
-    var item = document.createElement("button");
+    var item = document.createElement("span");
     var selected = option.selected;
     var itemLabel = getItemLabel(option, renderer);
     item.className = "fsb-option";
@@ -670,10 +786,19 @@ __webpack_require__(/*! ./vendor/fancyselect */ "./src/js/vendor/fancyselect.js"
     if (item.dataset.scrollto) {
       var scrollToSection = document.getElementById(item.dataset.scrollto);
       var scrollToSectionOffset = scrollToSection.offsetTop;
+      var headerOffsetTop = document.querySelector('.header').clientHeight;
+      var selectOffsetTop = document.querySelector('.select-nav').clientHeight;
       window.scrollTo({
-        top: scrollToSectionOffset - 135,
+        top: scrollToSectionOffset - (headerOffsetTop + selectOffsetTop),
         behavior: "smooth"
       });
+
+      if (window.innerWidth >= 768) {
+        window.scrollTo({
+          top: scrollToSectionOffset - selectOffsetTop,
+          behavior: "smooth"
+        });
+      }
     }
   }
   /**

@@ -1,15 +1,9 @@
-.fsb-select {
+.select-nav {
   position: fixed;
   top: 76px;
   left: 0;
-  border: none;
-  border-radius: 0;
-  background-color: #f4f4f4;
-  font-family: $gilroy-bold;
-  font-size: 20px;
-  line-height: 24px;
   width: 100%;
-  z-index: 10;
+  z-index: 4;
 
   @media (min-width: 768px) {
     left: 72px;
@@ -21,6 +15,16 @@
   @media (min-width: 1600px) {
     display: none;
   }
+}
+
+.fsb-select {
+  border: none;
+  border-radius: 0;
+  background-color: #f4f4f4;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  width: 100%;
 
   .fsb-button {
     padding: 18px 79px 18px 20px !important;
@@ -43,13 +47,17 @@
     }
   }
 
-  .fsb-button[aria-expanded="true"]:after {
+  .fsb-button[aria-expanded="true"]::after {
     transform: translateY(-90%) rotateZ(180deg);
   }
 
   .fsb-button[aria-expanded="true"] + .fsb-list {
-    max-height: none;
     transition: opacity 0.5s ease;
+    max-height: 70vh;
+
+    @media (min-height: 960px) {
+      max-height: 90vh;
+    }
   }
 
   .fsb-list {
@@ -59,7 +67,7 @@
   }
 
   .fsb-option {
-    font-family: $gilroy-medium;
+    font-weight: 500;
     padding: 12px 27px 8px 20px;
     text-transform: uppercase;
     width: 100%;

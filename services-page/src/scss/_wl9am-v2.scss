@@ -15,7 +15,6 @@ html.services-page {
   min-height: 100vh;
   height: 100%;
   min-width: 320px;
-  font-family: $gilroy-medium;
   color: $color-primary;
 
   @media (min-width: 1024px) {
@@ -28,6 +27,17 @@ html.services-page {
     background-color: $color-white;
   }
 
+  #main-container {
+    padding-top: 157px;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    #main-container {
+      padding-top: 76px;
+    }
+  }
+
   .page-wrapper {
     display: flex;
     flex-direction: column;
@@ -35,7 +45,6 @@ html.services-page {
     min-height: var(--vh);
     height: 100%;
     background-color: $color-white;
-    padding-top: 78px;
 
     @media (min-width: 768px) {
       padding-left: 72px;
@@ -49,11 +58,6 @@ html.services-page {
 
   .main {
     flex-grow: 1;
-    padding-top: 78px;
-
-    @media (min-width: 768px) {
-      padding-top: 0;
-    }
   }
 
   .container {
@@ -68,11 +72,11 @@ html.services-page {
 
     @media (min-width: 1440px) {
       max-width: 2488px;
-      padding: 0 50px 0 50px;
+      padding: 0 50px;
     }
 
     @media (min-width: 1920px) {
-      padding: 0 70px 0 70px;
+      padding: 0 70px;
     }
 
     @media (min-width: 2560px) {
@@ -81,41 +85,21 @@ html.services-page {
   }
 
   h1 {
-    font-family: $gilroy-heavy;
-    font-size: $services-h1-font-size;
-    line-height: 39px;
+    font-weight: 900;
     margin-bottom: 10px;
 
     @media (min-width: 768px) {
-      font-size: 60px;
-      line-height: 80px;
       margin-bottom: 20px;
-    }
-
-    @media (min-width: 1366px) {
-      font-size: $services-h1-font-size-desktop;
-      line-height: 103px;
-      letter-spacing: -0.81px;
     }
   }
 
   h2 {
-    font-family: $gilroy-heavy;
-    font-size: $services-h2-font-size;
+    font-weight: 900;
     color: $color-secondary;
-    line-height: 39px;
     margin-bottom: 20px;
 
     @media (min-width: 768px) {
-      font-size: 40px;
-      line-height: 50px;
       margin-bottom: 30px;
-    }
-
-    @media (min-width: 1366px) {
-      font-size: $services-h2-font-size-desktop;
-      line-height: 86px;
-      letter-spacing: 0.34px;
     }
   }
 
@@ -128,15 +112,15 @@ html.services-page {
   }
 
   h4 {
-    font-family: $gilroy-semibold;
-    font-size: $services-h4-font-size;
-    line-height: 18px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.22;
     color: $color-secondary;
     margin-bottom: 20px;
 
-    @media (min-width: 1366px) {
-      font-size: $services-h4-font-size-desktop;
-      line-height: 34px;
+    @media (min-width: 768px) {
+      font-size: 2.2rem;
+      line-height: 1.36;
       margin-bottom: 40px;
     }
   }
@@ -159,40 +143,25 @@ html.services-page {
 
   p,
   ul li {
-    font-family: $gilroy-medium;
-    font-size: 15px;
-    line-height: 22px;
-    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.47;
+    margin-bottom: 1em;
 
-    @media (min-width: 1366px) {
-      font-family: $gilroy-light;
-      font-size: 29px;
-      line-height: 39px;
-      margin-bottom: 40px;
+    @media (min-width: 960px) {
+      font-weight: 300;
+      font-size: 1.8rem;
+      line-height: 1.65;
     }
   }
 
   ul {
-    margin-bottom: 20px;
-
-    @media (min-width: 1366px) {
-      margin-bottom: 40px;
-    }
-
     li {
       list-style: none;
-      margin-bottom: 10px;
+      margin-bottom: 0.5rem;
 
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      @media (min-width: 1366px) {
-        font-family: $gilroy-regular;
-        font-size: 22px;
-        line-height: 28px;
-        letter-spacing: -0.22px;
-        margin-bottom: 10px;
+      @media (min-width: 960px) {
+        font-weight: 400;
       }
     }
   }
@@ -209,19 +178,13 @@ html.services-page {
 
     @media (min-width: 768px) {
       height: 58px;
-      padding: 0 25px 0 25px;
+      padding: 0 25px;
       font-size: 1.4rem;
       line-height: 1.29;
     }
 
     @media (min-width: 1024px) {
       margin: 0;
-    }
-
-    @media (min-width: 1280px) {
-      font-size: 1.8rem;
-      line-height: 2.2rem;
-      letter-spacing: 0.18rem;
     }
 
     &--scroll-to {
@@ -274,5 +237,10 @@ html.services-page {
 
   .with-arrow:hover::before {
     background-color: $color-light-blue;
+  }
+
+  .fsb-select.fsb-top .fsb-list {
+    top: 60px;
+    bottom: auto;
   }
 }

@@ -4803,8 +4803,8 @@ iframe.uk-cover {
   font-style: normal;
   font-family: Gilroy;
   src: local("Gilroy Light"), local("Gilroy-Light"),
-    url(../fonts/Gilroy-Light.woff2) format("woff2"),
-    url(../fonts/Gilroy-Light.woff) format("woff");
+    url(./../fonts/Gilroy-Light.woff2) format("woff2"),
+    url(./../fonts/Gilroy-Light.woff) format("woff");
   font-display: block;
 }
 @font-face {
@@ -4812,8 +4812,8 @@ iframe.uk-cover {
   font-style: normal;
   font-family: Gilroy;
   src: local("Gilroy Regular"), local("Gilroy-Regular"),
-    url(../fonts/Gilroy-Regular.woff2) format("woff2"),
-    url(../fonts/Gilroy-Regular.woff) format("woff");
+    url(./../fonts/Gilroy-Regular.woff2) format("woff2"),
+    url(./../fonts/Gilroy-Regular.woff) format("woff");
   font-display: block;
 }
 @font-face {
@@ -4821,8 +4821,8 @@ iframe.uk-cover {
   font-style: normal;
   font-family: Gilroy;
   src: local("Gilroy Semibold"), local("Gilroy-Semibold"),
-    url(../fonts/Gilroy-Semibold.woff2) format("woff2"),
-    url(../fonts/Gilroy-Semibold.woff) format("woff");
+    url(./../fonts/Gilroy-Semibold.woff2) format("woff2"),
+    url(./../fonts/Gilroy-Semibold.woff) format("woff");
   font-display: block;
 }
 @font-face {
@@ -4830,8 +4830,8 @@ iframe.uk-cover {
   font-style: normal;
   font-family: Gilroy;
   src: local("Gilroy Bold"), local("Gilroy-Bold"),
-    url(../fonts/Gilroy-Bold.woff2) format("woff2"),
-    url(../fonts/Gilroy-Bold.woff) format("woff");
+    url(./../fonts/Gilroy-Bold.woff2) format("woff2"),
+    url(./../fonts/Gilroy-Bold.woff) format("woff");
   font-display: block;
 }
 @font-face {
@@ -4839,8 +4839,8 @@ iframe.uk-cover {
   font-style: normal;
   font-family: Gilroy;
   src: local("Gilroy Extra Bold"), local("Gilroy-Extra-Bold"),
-    url(../fonts/Gilroy-Extra-Bold.woff2) format("woff2"),
-    url(../fonts/Gilroy-Extra-Bold.woff) format("woff");
+    url(./../fonts/Gilroy-Extra-Bold.woff2) format("woff2"),
+    url(./../fonts/Gilroy-Extra-Bold.woff) format("woff");
   font-display: block;
 }
 @font-face {
@@ -4848,8 +4848,8 @@ iframe.uk-cover {
   font-style: normal;
   font-family: Gilroy;
   src: local("Gilroy Heavy"), local("Gilroy-Heavy"),
-    url(../fonts/Gilroy-Heavy.woff2) format("woff2"),
-    url(../fonts/Gilroy-Heavy.woff) format("woff");
+    url(./../fonts/Gilroy-Heavy.woff2) format("woff2"),
+    url(./../fonts/Gilroy-Heavy.woff) format("woff");
   font-display: block;
 }
 @-webkit-keyframes fadeIn {
@@ -5717,7 +5717,7 @@ address {
   margin-left: 40px;
   border-radius: 30px;
   background-color: #e5167a;
-  background-image: url(/assets/images/button-arrow.svg);
+  background-image: url(../images/button-arrow.svg);
   background-repeat: no-repeat;
   color: currentColor;
   -webkit-transition: 0.3s;
@@ -6229,7 +6229,7 @@ address {
 }
 @media (min-width: 280px) and (max-width: 767px) {
   .temp-home.scrolled #head-content .head-content__logo .logo img {
-    content: url("/assets/images/logo.svg");
+    content: url("../images/logo.svg");
   }
 }
 .arrow-banner figure,
@@ -10251,7 +10251,7 @@ form[data-freeform] label.required:after {
 }
 .section-quote q:before {
   margin: 0 auto 29px;
-  background: url(/assets/images/quote-up.svg) no-repeat;
+  background: url(../images/quote-up.svg) no-repeat;
 }
 .section-quote q:after,
 .section-quote q:before {
@@ -10262,7 +10262,7 @@ form[data-freeform] label.required:after {
 }
 .section-quote q:after {
   margin: 29px auto 0;
-  background: url(/assets/images/quote-down.svg) no-repeat;
+  background: url(../images/quote-down.svg) no-repeat;
 }
 .section-quote q span {
   display: block;
@@ -11747,58 +11747,4 @@ figure.biggerscreen {
 }
 .temp--candidates-detail .uk-checkbox {
   border: 1px solid #e5167a !important;
-}
-
-@font-face {
-  font-family: GilroyLight;
-  src: url("../fonts/Gilroy-Light.woff") format("woff");
-  src: url("../fonts/Gilroy-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: GilroyRegular;
-  src: url("../fonts/Gilroy-Regular.woff") format("woff");
-  src: url("../fonts/Gilroy-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: GilroyMedium;
-  src: url("../fonts/Gilroy-Medium.woff") format("woff");
-  src: url("../fonts/Gilroy-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: GilroySemibold;
-  src: url("../fonts/Gilroy-Semibold.woff") format("woff");
-  src: url("../fonts/Gilroy-Semibold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: GilroyBold;
-  src: url("../fonts/Gilroy-Bold.woff") format("woff");
-  src: url("../fonts/Gilroy-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: GilroyHeavy;
-  src: url("../fonts/Gilroy-Heavy.woff") format("woff");
-  src: url("../fonts/Gilroy-Heavy.woff2") format("woff2");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
 }

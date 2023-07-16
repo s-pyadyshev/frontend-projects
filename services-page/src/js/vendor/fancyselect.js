@@ -227,7 +227,7 @@
    * @return {object} The listbox item, its selected state and its label.
    */
   function getItemFromOption(option, renderer) {
-    var item = document.createElement("button");
+    var item = document.createElement("span");
     var selected = option.selected;
     var itemLabel = getItemLabel(option, renderer);
 
@@ -351,11 +351,20 @@
     if (item.dataset.scrollto) {
       var scrollToSection = document.getElementById(item.dataset.scrollto);
       var scrollToSectionOffset = scrollToSection.offsetTop;
+      var headerOffsetTop = document.querySelector('.header').clientHeight;
+      var selectOffsetTop = document.querySelector('.select-nav').clientHeight;
 
       window.scrollTo({
-        top: scrollToSectionOffset - 135,
+        top: scrollToSectionOffset - (headerOffsetTop + selectOffsetTop),
         behavior: "smooth",
       });
+
+      if (window.innerWidth >= 768) {
+        window.scrollTo({
+          top: scrollToSectionOffset - selectOffsetTop,
+          behavior: "smooth",
+        });
+      }
     }
   }
 

@@ -37,6 +37,7 @@
     }
 
     &__description {
+      margin-bottom: 3rem;
       @media (min-width: 1024px) {
         grid-area: desc;
         grid-row: 3;
@@ -63,7 +64,6 @@
     }
 
     &__image {
-
       @media (min-width: 1024px) {
         display: flex;
         align-items: center;

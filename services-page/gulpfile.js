@@ -4,7 +4,7 @@ let yargs = require("yargs");
 let path = require("path");
 let del = require("del");
 let webpackConfig = require("./webpack.config");
-let sass = require("gulp-sass")(require("node-sass"));
+let sass = require("gulp-sass")(require("sass"));
 let gcmq = require("gulp-group-css-media-queries");
 
 let emittyPug;

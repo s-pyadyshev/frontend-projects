@@ -1,5 +1,5 @@
 .services-head {
-  padding: 20px 0 40px;
+  padding: 0px 0 40px;
 
   &__content {
     @media (min-width: 960px) {
@@ -28,45 +28,30 @@
   }
 
   &__description {
-    p {
-      margin: 0;
-    }
-
-    @media (min-width: 768px) {
-      p {
-        margin-bottom: 30px;
-      }
-    }
-
-    @media (min-width: 1366px) {
-      p {
-        margin-bottom: 30px;
-      }
-    }
-
     &--small {
       display: none;
 
       p {
-        font-family: $gilroy-regular;
-        font-size: 14px;
-        line-height: 21px;
+        font-weight: 400;
       }
 
       @media (min-width: 768px) {
         display: block;
 
         p {
+          font-size: 1.4rem;
+          line-height: 1.5;
+
           &:last-child {
             margin-bottom: 0;
           }
         }
       }
 
-      @media (min-width: 1366px) {
+      @media (min-width: 960px) {
         p {
-          font-size: 22px;
-          line-height: 39px;
+          font-size: 1.6rem;
+          line-height: 1.5;
         }
       }
     }

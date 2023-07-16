@@ -100,7 +100,7 @@ select[disabled] + .fsb-select {
   height: 100% !important;
   padding: 8px 22px 8px 8px !important;
   padding: var(--fsb-padding) !important;
-  padding-right: calc( var(--fsb-arrow-size) + var(--fsb-arrow-padding) + var(--fsb-padding-right)) !important;
+  padding-right: calc(var(--fsb-arrow-size) + var(--fsb-arrow-padding) + var(--fsb-padding-right)) !important;
   border: 0 !important;
   border-radius: inherit !important;
   color: inherit !important;
@@ -132,7 +132,7 @@ select[disabled] + .fsb-select .fsb-button {
 }
 
 .fsb-button:after,
-select[disabled] + .fsb-select .fsb-button[aria-expanded="true"]:after {
+select[disabled] + .fsb-select .fsb-button[aria-expanded=true]:after {
   content: "";
   display: block;
   position: absolute;
@@ -159,7 +159,7 @@ select[disabled] + .fsb-select .fsb-button[aria-expanded="true"]:after {
   pointer-events: none;
 }
 
-.fsb-button[aria-expanded="true"]:after {
+.fsb-button[aria-expanded=true]:after {
   -webkit-transform: translateY(-35%) rotateZ(225deg);
   -ms-transform: translateY(-35%) rotate(225deg);
   transform: translateY(-35%) rotateZ(225deg);
@@ -199,7 +199,7 @@ select[disabled] + .fsb-select .fsb-list {
   bottom: 100%;
 }
 
-.fsb-button[aria-expanded="true"] + .fsb-list {
+.fsb-button[aria-expanded=true] + .fsb-list {
   height: auto;
   max-height: var(--fsb-list-height);
   visibility: visible;
@@ -230,7 +230,7 @@ select[disabled] + .fsb-select .fsb-list {
   display: block;
   height: 0;
   padding-right: 14px;
-  padding-right: calc( var(--fsb-arrow-padding) * 2 + var(--fsb-arrow-size) - var(--fsb-padding-right));
+  padding-right: calc(var(--fsb-arrow-padding) * 2 + var(--fsb-arrow-size) - var(--fsb-padding-right));
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -241,16 +241,16 @@ select[disabled] + .fsb-select .fsb-list {
 
 .container,
 .container-fluid,
-.container-sm,
-.container-md,
-.container-lg,
+.container-xxl,
 .container-xl,
-.container-xxl {
+.container-lg,
+.container-md,
+.container-sm {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * .5);
-  padding-left: calc(var(--bs-gutter-x) * .5);
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-right: auto;
   margin-left: auto;
 }
@@ -264,8 +264,8 @@ select[disabled] + .fsb-select .fsb-list {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--bs-gutter-y));
-  margin-right: calc(-.5 * var(--bs-gutter-x));
-  margin-left: calc(-.5 * var(--bs-gutter-x));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
 
 .row > * {
@@ -273,8 +273,8 @@ select[disabled] + .fsb-select .fsb-list {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * .5);
-  padding-left: calc(var(--bs-gutter-x) * .5);
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
 
@@ -309,7 +309,7 @@ select[disabled] + .fsb-select .fsb-list {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  width: 33.33333%;
+  width: 33.3333333333%;
 }
 
 .row-cols-4 > * {
@@ -330,7 +330,7 @@ select[disabled] + .fsb-select .fsb-list {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  width: 16.66667%;
+  width: 16.6666666667%;
 }
 
 .col-auto {
@@ -344,14 +344,14 @@ select[disabled] + .fsb-select .fsb-list {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  width: 8.33333%;
+  width: 8.33333333%;
 }
 
 .col-2 {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  width: 16.66667%;
+  width: 16.66666667%;
 }
 
 .col-3 {
@@ -365,14 +365,14 @@ select[disabled] + .fsb-select .fsb-list {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  width: 33.33333%;
+  width: 33.33333333%;
 }
 
 .col-5 {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  width: 41.66667%;
+  width: 41.66666667%;
 }
 
 .col-6 {
@@ -386,14 +386,14 @@ select[disabled] + .fsb-select .fsb-list {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  width: 58.33333%;
+  width: 58.33333333%;
 }
 
 .col-8 {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  width: 66.66667%;
+  width: 66.66666667%;
 }
 
 .col-9 {
@@ -407,14 +407,14 @@ select[disabled] + .fsb-select .fsb-list {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  width: 83.33333%;
+  width: 83.33333333%;
 }
 
 .col-11 {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  width: 91.66667%;
+  width: 91.66666667%;
 }
 
 .col-12 {
@@ -425,11 +425,11 @@ select[disabled] + .fsb-select .fsb-list {
 }
 
 .offset-1 {
-  margin-left: 8.33333%;
+  margin-left: 8.33333333%;
 }
 
 .offset-2 {
-  margin-left: 16.66667%;
+  margin-left: 16.66666667%;
 }
 
 .offset-3 {
@@ -437,11 +437,11 @@ select[disabled] + .fsb-select .fsb-list {
 }
 
 .offset-4 {
-  margin-left: 33.33333%;
+  margin-left: 33.33333333%;
 }
 
 .offset-5 {
-  margin-left: 41.66667%;
+  margin-left: 41.66666667%;
 }
 
 .offset-6 {
@@ -449,11 +449,11 @@ select[disabled] + .fsb-select .fsb-list {
 }
 
 .offset-7 {
-  margin-left: 58.33333%;
+  margin-left: 58.33333333%;
 }
 
 .offset-8 {
-  margin-left: 66.66667%;
+  margin-left: 66.66666667%;
 }
 
 .offset-9 {
@@ -461,11 +461,11 @@ select[disabled] + .fsb-select .fsb-list {
 }
 
 .offset-10 {
-  margin-left: 83.33333%;
+  margin-left: 83.33333333%;
 }
 
 .offset-11 {
-  margin-left: 91.66667%;
+  margin-left: 91.66666667%;
 }
 
 .g-0,
@@ -541,7 +541,7 @@ select[disabled] + .fsb-select .fsb-list {
  */
 
 @font-face {
-  font-family: 'swiper-icons';
+  font-family: "swiper-icons";
   src: url("data:application/font-woff;charset=utf-8;base64, d09GRgABAAAAAAZgABAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAGRAAAABoAAAAci6qHkUdERUYAAAWgAAAAIwAAACQAYABXR1BPUwAABhQAAAAuAAAANuAY7+xHU1VCAAAFxAAAAFAAAABm2fPczU9TLzIAAAHcAAAASgAAAGBP9V5RY21hcAAAAkQAAACIAAABYt6F0cBjdnQgAAACzAAAAAQAAAAEABEBRGdhc3AAAAWYAAAACAAAAAj//wADZ2x5ZgAAAywAAADMAAAD2MHtryVoZWFkAAABbAAAADAAAAA2E2+eoWhoZWEAAAGcAAAAHwAAACQC9gDzaG10eAAAAigAAAAZAAAArgJkABFsb2NhAAAC0AAAAFoAAABaFQAUGG1heHAAAAG8AAAAHwAAACAAcABAbmFtZQAAA/gAAAE5AAACXvFdBwlwb3N0AAAFNAAAAGIAAACE5s74hXjaY2BkYGAAYpf5Hu/j+W2+MnAzMYDAzaX6QjD6/4//Bxj5GA8AuRwMYGkAPywL13jaY2BkYGA88P8Agx4j+/8fQDYfA1AEBWgDAIB2BOoAeNpjYGRgYNBh4GdgYgABEMnIABJzYNADCQAACWgAsQB42mNgYfzCOIGBlYGB0YcxjYGBwR1Kf2WQZGhhYGBiYGVmgAFGBiQQkOaawtDAoMBQxXjg/wEGPcYDDA4wNUA2CCgwsAAAO4EL6gAAeNpj2M0gyAACqxgGNWBkZ2D4/wMA+xkDdgAAAHjaY2BgYGaAYBkGRgYQiAHyGMF8FgYHIM3DwMHABGQrMOgyWDLEM1T9/w8UBfEMgLzE////P/5//f/V/xv+r4eaAAeMbAxwIUYmIMHEgKYAYjUcsDAwsLKxc3BycfPw8jEQA/gZBASFhEVExcQlJKWkZWTl5BUUlZRVVNXUNTQZBgMAAMR+E+gAEQFEAAAAKgAqACoANAA+AEgAUgBcAGYAcAB6AIQAjgCYAKIArAC2AMAAygDUAN4A6ADyAPwBBgEQARoBJAEuATgBQgFMAVYBYAFqAXQBfgGIAZIBnAGmAbIBzgHsAAB42u2NMQ6CUAyGW568x9AneYYgm4MJbhKFaExIOAVX8ApewSt4Bic4AfeAid3VOBixDxfPYEza5O+Xfi04YADggiUIULCuEJK8VhO4bSvpdnktHI5QCYtdi2sl8ZnXaHlqUrNKzdKcT8cjlq+rwZSvIVczNiezsfnP/uznmfPFBNODM2K7MTQ45YEAZqGP81AmGGcF3iPqOop0r1SPTaTbVkfUe4HXj97wYE+yNwWYxwWu4v1ugWHgo3S1XdZEVqWM7ET0cfnLGxWfkgR42o2PvWrDMBSFj/IHLaF0zKjRgdiVMwScNRAoWUoH78Y2icB/yIY09An6AH2Bdu/UB+yxopYshQiEvnvu0dURgDt8QeC8PDw7Fpji3fEA4z/PEJ6YOB5hKh4dj3EvXhxPqH/SKUY3rJ7srZ4FZnh1PMAtPhwP6fl2PMJMPDgeQ4rY8YT6Gzao0eAEA409DuggmTnFnOcSCiEiLMgxCiTI6Cq5DZUd3Qmp10vO0LaLTd2cjN4fOumlc7lUYbSQcZFkutRG7g6JKZKy0RmdLY680CDnEJ+UMkpFFe1RN7nxdVpXrC4aTtnaurOnYercZg2YVmLN/d/gczfEimrE/fs/bOuq29Zmn8tloORaXgZgGa78yO9/cnXm2BpaGvq25Dv9S4E9+5SIc9PqupJKhYFSSl47+Qcr1mYNAAAAeNptw0cKwkAAAMDZJA8Q7OUJvkLsPfZ6zFVERPy8qHh2YER+3i/BP83vIBLLySsoKimrqKqpa2hp6+jq6RsYGhmbmJqZSy0sraxtbO3sHRydnEMU4uR6yx7JJXveP7WrDycAAAAAAAH//wACeNpjYGRgYOABYhkgZgJCZgZNBkYGLQZtIJsFLMYAAAw3ALgAeNolizEKgDAQBCchRbC2sFER0YD6qVQiBCv/H9ezGI6Z5XBAw8CBK/m5iQQVauVbXLnOrMZv2oLdKFa8Pjuru2hJzGabmOSLzNMzvutpB3N42mNgZGBg4GKQYzBhYMxJLMlj4GBgAYow/P/PAJJhLM6sSoWKfWCAAwDAjgbRAAB42mNgYGBkAIIbCZo5IPrmUn0hGA0AO8EFTQAA") format("woff");
   font-weight: 400;
   font-style: normal;
@@ -735,7 +735,7 @@ select[disabled] + .fsb-select .fsb-list {
 }
 
 .swiper-centered > .swiper-wrapper::before {
-  content: '';
+  content: "";
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-box-ordinal-group: 10000;
@@ -780,7 +780,7 @@ select[disabled] + .fsb-select .fsb-list {
   top: 50%;
   width: calc(var(--swiper-navigation-size) / 44 * 27);
   height: var(--swiper-navigation-size);
-  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+  margin-top: calc(0px - var(--swiper-navigation-size) / 2);
   z-index: 10;
   cursor: pointer;
   display: -webkit-box;
@@ -810,8 +810,7 @@ select[disabled] + .fsb-select .fsb-list {
 }
 
 .swiper-navigation-disabled .swiper-button-prev,
-.swiper-navigation-disabled
-  .swiper-button-next {
+.swiper-navigation-disabled .swiper-button-next {
   display: none !important;
 }
 
@@ -833,7 +832,7 @@ select[disabled] + .fsb-select .fsb-list {
 
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after {
-  content: 'prev';
+  content: "prev";
 }
 
 .swiper-button-next,
@@ -844,7 +843,7 @@ select[disabled] + .fsb-select .fsb-list {
 
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
-  content: 'next';
+  content: "next";
 }
 
 .swiper-button-lock {
@@ -1311,24 +1310,24 @@ select {
   text-transform: none;
 }
 
-[type="button"],
-[type="reset"],
-[type="submit"],
+[type=button],
+[type=reset],
+[type=submit],
 button {
   -webkit-appearance: button;
 }
 
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner,
 button::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring,
 button:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
@@ -1345,24 +1344,24 @@ textarea {
   overflow: auto;
 }
 
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
 
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -1482,7 +1481,7 @@ textarea::placeholder {
   color: #a0aec0;
 }
 
-[role="button"],
+[role=button],
 button {
   cursor: pointer;
 }
@@ -2692,13 +2691,13 @@ button.uk-icon:not(:disabled) {
   overflow: auto;
 }
 
-.uk-input[type="search"]::-webkit-search-cancel-button,
-.uk-input[type="search"]::-webkit-search-decoration {
+.uk-input[type=search]::-webkit-search-cancel-button,
+.uk-input[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-.uk-input[type="number"]::-webkit-inner-spin-button,
-.uk-input[type="number"]::-webkit-outer-spin-button {
+.uk-input[type=number]::-webkit-inner-spin-button,
+.uk-input[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -2987,7 +2986,7 @@ select.uk-form-width-xsmall {
   vertical-align: middle;
 }
 
-.uk-form-custom input[type="file"],
+.uk-form-custom input[type=file],
 .uk-form-custom select {
   position: absolute;
   top: 0;
@@ -3000,7 +2999,7 @@ select.uk-form-width-xsmall {
   cursor: pointer;
 }
 
-.uk-form-custom input[type="file"] {
+.uk-form-custom input[type=file] {
   font-size: 500px;
   overflow: hidden;
 }
@@ -3573,8 +3572,8 @@ select.uk-form-width-xsmall {
   flex-wrap: wrap;
 }
 
-.uk-grid-item-match > :not([class*="uk-width"]),
-.uk-grid-match > * > :not([class*="uk-width"]) {
+.uk-grid-item-match > :not([class*=uk-width]),
+.uk-grid-match > * > :not([class*=uk-width]) {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
@@ -3623,8 +3622,7 @@ select.uk-form-width-xsmall {
 }
 
 .uk-card-default,
-.uk-card-hover:not(.uk-card-default):not(.uk-card-primary):not(
-.uk-card-secondary):hover {
+.uk-card-hover:not(.uk-card-default):not(.uk-card-primary):not(.uk-card-secondary):hover {
   background: #f4f4f4;
 }
 
@@ -3815,7 +3813,7 @@ ul.uk-nav-sub {
   list-style: none;
 }
 
-.uk-accordion > :nth-child(n + 2) {
+.uk-accordion > :nth-child(n+2) {
   margin-top: 20px;
 }
 
@@ -3956,7 +3954,7 @@ ul.uk-nav-sub {
   outline: none;
 }
 
-[class*="uk-child-width"] > * {
+[class*=uk-child-width] > * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
@@ -3986,14 +3984,14 @@ ul.uk-nav-sub {
   width: auto;
 }
 
-.uk-child-width-expand > :not([class*="uk-width"]) {
+.uk-child-width-expand > :not([class*=uk-width]) {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
   min-width: 1px;
 }
 
-[class*="uk-width"] {
+[class*=uk-width] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
@@ -4419,31 +4417,31 @@ ul.uk-nav-sub {
 }
 
 .uk-card-primary.uk-card-body .uk-icon-link,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-icon-link,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-icon-link,
 .uk-card-secondary.uk-card-body .uk-icon-link,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-icon-link,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-icon-link,
 .uk-light .uk-icon-link,
 .uk-section-primary:not(.uk-preserve-color) .uk-icon-link,
 .uk-section-secondary:not(.uk-preserve-color) .uk-icon-link {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-active > .uk-icon-link,
 .uk-card-primary.uk-card-body .uk-icon-link:active,
 .uk-card-primary.uk-card-body .uk-icon-link:focus,
 .uk-card-primary.uk-card-body .uk-icon-link:hover,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-active > .uk-icon-link,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-icon-link:active,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-icon-link:focus,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-icon-link:hover,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-active > .uk-icon-link,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-icon-link:active,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-icon-link:focus,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-icon-link:hover,
 .uk-card-secondary.uk-card-body .uk-active > .uk-icon-link,
 .uk-card-secondary.uk-card-body .uk-icon-link:active,
 .uk-card-secondary.uk-card-body .uk-icon-link:focus,
 .uk-card-secondary.uk-card-body .uk-icon-link:hover,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-active > .uk-icon-link,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-icon-link:active,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-icon-link:focus,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-icon-link:hover,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-active > .uk-icon-link,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-icon-link:active,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-icon-link:focus,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-icon-link:hover,
 .uk-light .uk-active > .uk-icon-link,
 .uk-light .uk-icon-link:active,
 .uk-light .uk-icon-link:focus,
@@ -4460,57 +4458,57 @@ ul.uk-nav-sub {
 }
 
 .uk-card-primary.uk-card-body .uk-icon-button,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-icon-button,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-icon-button,
 .uk-card-secondary.uk-card-body .uk-icon-button,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-icon-button,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-icon-button,
 .uk-light .uk-icon-button,
 .uk-section-primary:not(.uk-preserve-color) .uk-icon-button,
 .uk-section-secondary:not(.uk-preserve-color) .uk-icon-button {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.5);
+  background-color: hsla(0, 0%, 100%, 0.1);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-icon-button:focus,
 .uk-card-primary.uk-card-body .uk-icon-button:hover,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-icon-button:focus,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-icon-button:hover,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-icon-button:focus,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-icon-button:hover,
 .uk-card-secondary.uk-card-body .uk-icon-button:focus,
 .uk-card-secondary.uk-card-body .uk-icon-button:hover,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-icon-button:focus,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-icon-button:hover,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-icon-button:focus,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-icon-button:hover,
 .uk-light .uk-icon-button:focus,
 .uk-light .uk-icon-button:hover,
 .uk-section-primary:not(.uk-preserve-color) .uk-icon-button:focus,
 .uk-section-primary:not(.uk-preserve-color) .uk-icon-button:hover,
 .uk-section-secondary:not(.uk-preserve-color) .uk-icon-button:focus,
 .uk-section-secondary:not(.uk-preserve-color) .uk-icon-button:hover {
-  background-color: rgba(242, 242, 242, 0.1);
+  background-color: hsla(0, 0%, 94.9%, 0.1);
   color: #fff;
 }
 
 .uk-card-primary.uk-card-body .uk-icon-button:active,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-icon-button:active,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-icon-button:active,
 .uk-card-secondary.uk-card-body .uk-icon-button:active,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-icon-button:active,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-icon-button:active,
 .uk-light .uk-icon-button:active,
 .uk-section-primary:not(.uk-preserve-color) .uk-icon-button:active,
 .uk-section-secondary:not(.uk-preserve-color) .uk-icon-button:active {
-  background-color: rgba(230, 230, 230, 0.1);
+  background-color: hsla(0, 0%, 90.2%, 0.1);
   color: #fff;
 }
 
 .uk-card-primary.uk-card-body .uk-input,
 .uk-card-primary.uk-card-body .uk-select,
 .uk-card-primary.uk-card-body .uk-textarea,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-input,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-select,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-textarea,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-input,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-select,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-textarea,
 .uk-card-secondary.uk-card-body .uk-input,
 .uk-card-secondary.uk-card-body .uk-select,
 .uk-card-secondary.uk-card-body .uk-textarea,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-input,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-select,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-textarea,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-input,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-select,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-textarea,
 .uk-light .uk-input,
 .uk-light .uk-select,
 .uk-light .uk-textarea,
@@ -4520,7 +4518,7 @@ ul.uk-nav-sub {
 .uk-section-secondary:not(.uk-preserve-color) .uk-input,
 .uk-section-secondary:not(.uk-preserve-color) .uk-select,
 .uk-section-secondary:not(.uk-preserve-color) .uk-textarea {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: hsla(0, 0%, 100%, 0.1);
   color: #fff;
   background-clip: padding-box;
 }
@@ -4528,15 +4526,15 @@ ul.uk-nav-sub {
 .uk-card-primary.uk-card-body .uk-input:focus,
 .uk-card-primary.uk-card-body .uk-select:focus,
 .uk-card-primary.uk-card-body .uk-textarea:focus,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-input:focus,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-select:focus,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-textarea:focus,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-input:focus,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-select:focus,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-textarea:focus,
 .uk-card-secondary.uk-card-body .uk-input:focus,
 .uk-card-secondary.uk-card-body .uk-select:focus,
 .uk-card-secondary.uk-card-body .uk-textarea:focus,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-input:focus,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-select:focus,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-textarea:focus,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-input:focus,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-select:focus,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-textarea:focus,
 .uk-light .uk-input:focus,
 .uk-light .uk-select:focus,
 .uk-light .uk-textarea:focus,
@@ -4546,214 +4544,214 @@ ul.uk-nav-sub {
 .uk-section-secondary:not(.uk-preserve-color) .uk-input:focus,
 .uk-section-secondary:not(.uk-preserve-color) .uk-select:focus,
 .uk-section-secondary:not(.uk-preserve-color) .uk-textarea:focus {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: hsla(0, 0%, 100%, 0.1);
   color: #fff;
 }
 
 .uk-card-primary.uk-card-body .uk-input::-ms-input-placeholder,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-input::-ms-input-placeholder,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-input::-ms-input-placeholder,
 .uk-card-secondary.uk-card-body .uk-input::-ms-input-placeholder,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-input::-ms-input-placeholder,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-input::-ms-input-placeholder,
 .uk-light .uk-input::-ms-input-placeholder,
 .uk-section-primary:not(.uk-preserve-color) .uk-input::-ms-input-placeholder,
 .uk-section-secondary:not(.uk-preserve-color) .uk-input::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.5) !important;
+  color: hsla(0, 0%, 100%, 0.5) !important;
 }
 
 .uk-card-primary.uk-card-body .uk-input::-webkit-input-placeholder,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-input::-webkit-input-placeholder,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-input::-webkit-input-placeholder,
 .uk-card-secondary.uk-card-body .uk-input::-webkit-input-placeholder,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-input::-webkit-input-placeholder,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-input::-webkit-input-placeholder,
 .uk-light .uk-input::-webkit-input-placeholder,
 .uk-section-primary:not(.uk-preserve-color) .uk-input::-webkit-input-placeholder,
 .uk-section-secondary:not(.uk-preserve-color) .uk-input::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-input::-moz-placeholder,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-input::-moz-placeholder,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-input::-moz-placeholder,
 .uk-card-secondary.uk-card-body .uk-input::-moz-placeholder,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-input::-moz-placeholder,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-input::-moz-placeholder,
 .uk-light .uk-input::-moz-placeholder,
 .uk-section-primary:not(.uk-preserve-color) .uk-input::-moz-placeholder,
 .uk-section-secondary:not(.uk-preserve-color) .uk-input::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-input:-ms-input-placeholder,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-input:-ms-input-placeholder,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-input:-ms-input-placeholder,
 .uk-card-secondary.uk-card-body .uk-input:-ms-input-placeholder,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-input:-ms-input-placeholder,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-input:-ms-input-placeholder,
 .uk-light .uk-input:-ms-input-placeholder,
 .uk-section-primary:not(.uk-preserve-color) .uk-input:-ms-input-placeholder,
 .uk-section-secondary:not(.uk-preserve-color) .uk-input:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-input::-ms-input-placeholder,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-input::-ms-input-placeholder,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-input::-ms-input-placeholder,
 .uk-card-secondary.uk-card-body .uk-input::-ms-input-placeholder,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-input::-ms-input-placeholder,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-input::-ms-input-placeholder,
 .uk-light .uk-input::-ms-input-placeholder,
 .uk-section-primary:not(.uk-preserve-color) .uk-input::-ms-input-placeholder,
 .uk-section-secondary:not(.uk-preserve-color) .uk-input::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-input::-webkit-input-placeholder,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-input::-webkit-input-placeholder,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-input::-webkit-input-placeholder,
 .uk-card-secondary.uk-card-body .uk-input::-webkit-input-placeholder,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-input::-webkit-input-placeholder,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-input::-webkit-input-placeholder,
 .uk-light .uk-input::-webkit-input-placeholder,
 .uk-section-primary:not(.uk-preserve-color) .uk-input::-webkit-input-placeholder,
 .uk-section-secondary:not(.uk-preserve-color) .uk-input::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-input::-moz-placeholder,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-input::-moz-placeholder,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-input::-moz-placeholder,
 .uk-card-secondary.uk-card-body .uk-input::-moz-placeholder,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-input::-moz-placeholder,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-input::-moz-placeholder,
 .uk-light .uk-input::-moz-placeholder,
 .uk-section-primary:not(.uk-preserve-color) .uk-input::-moz-placeholder,
 .uk-section-secondary:not(.uk-preserve-color) .uk-input::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-input:-ms-input-placeholder,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-input:-ms-input-placeholder,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-input:-ms-input-placeholder,
 .uk-card-secondary.uk-card-body .uk-input:-ms-input-placeholder,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-input:-ms-input-placeholder,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-input:-ms-input-placeholder,
 .uk-light .uk-input:-ms-input-placeholder,
 .uk-section-primary:not(.uk-preserve-color) .uk-input:-ms-input-placeholder,
 .uk-section-secondary:not(.uk-preserve-color) .uk-input:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-input::-ms-input-placeholder,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-input::-ms-input-placeholder,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-input::-ms-input-placeholder,
 .uk-card-secondary.uk-card-body .uk-input::-ms-input-placeholder,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-input::-ms-input-placeholder,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-input::-ms-input-placeholder,
 .uk-light .uk-input::-ms-input-placeholder,
 .uk-section-primary:not(.uk-preserve-color) .uk-input::-ms-input-placeholder,
 .uk-section-secondary:not(.uk-preserve-color) .uk-input::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-input::placeholder,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-input::placeholder,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-input::placeholder,
 .uk-card-secondary.uk-card-body .uk-input::placeholder,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-input::placeholder,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-input::placeholder,
 .uk-light .uk-input::placeholder,
 .uk-section-primary:not(.uk-preserve-color) .uk-input::placeholder,
 .uk-section-secondary:not(.uk-preserve-color) .uk-input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-textarea::-ms-input-placeholder,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-textarea::-ms-input-placeholder,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-textarea::-ms-input-placeholder,
 .uk-card-secondary.uk-card-body .uk-textarea::-ms-input-placeholder,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-textarea::-ms-input-placeholder,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-textarea::-ms-input-placeholder,
 .uk-light .uk-textarea::-ms-input-placeholder,
 .uk-section-primary:not(.uk-preserve-color) .uk-textarea::-ms-input-placeholder,
 .uk-section-secondary:not(.uk-preserve-color) .uk-textarea::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.5) !important;
+  color: hsla(0, 0%, 100%, 0.5) !important;
 }
 
 .uk-card-primary.uk-card-body .uk-textarea::-webkit-input-placeholder,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-textarea::-webkit-input-placeholder,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-textarea::-webkit-input-placeholder,
 .uk-card-secondary.uk-card-body .uk-textarea::-webkit-input-placeholder,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-textarea::-webkit-input-placeholder,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-textarea::-webkit-input-placeholder,
 .uk-light .uk-textarea::-webkit-input-placeholder,
 .uk-section-primary:not(.uk-preserve-color) .uk-textarea::-webkit-input-placeholder,
 .uk-section-secondary:not(.uk-preserve-color) .uk-textarea::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-textarea::-moz-placeholder,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-textarea::-moz-placeholder,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-textarea::-moz-placeholder,
 .uk-card-secondary.uk-card-body .uk-textarea::-moz-placeholder,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-textarea::-moz-placeholder,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-textarea::-moz-placeholder,
 .uk-light .uk-textarea::-moz-placeholder,
 .uk-section-primary:not(.uk-preserve-color) .uk-textarea::-moz-placeholder,
 .uk-section-secondary:not(.uk-preserve-color) .uk-textarea::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-textarea:-ms-input-placeholder,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-textarea:-ms-input-placeholder,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-textarea:-ms-input-placeholder,
 .uk-card-secondary.uk-card-body .uk-textarea:-ms-input-placeholder,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-textarea:-ms-input-placeholder,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-textarea:-ms-input-placeholder,
 .uk-light .uk-textarea:-ms-input-placeholder,
 .uk-section-primary:not(.uk-preserve-color) .uk-textarea:-ms-input-placeholder,
 .uk-section-secondary:not(.uk-preserve-color) .uk-textarea:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-textarea::-ms-input-placeholder,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-textarea::-ms-input-placeholder,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-textarea::-ms-input-placeholder,
 .uk-card-secondary.uk-card-body .uk-textarea::-ms-input-placeholder,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-textarea::-ms-input-placeholder,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-textarea::-ms-input-placeholder,
 .uk-light .uk-textarea::-ms-input-placeholder,
 .uk-section-primary:not(.uk-preserve-color) .uk-textarea::-ms-input-placeholder,
 .uk-section-secondary:not(.uk-preserve-color) .uk-textarea::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-textarea::-webkit-input-placeholder,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-textarea::-webkit-input-placeholder,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-textarea::-webkit-input-placeholder,
 .uk-card-secondary.uk-card-body .uk-textarea::-webkit-input-placeholder,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-textarea::-webkit-input-placeholder,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-textarea::-webkit-input-placeholder,
 .uk-light .uk-textarea::-webkit-input-placeholder,
 .uk-section-primary:not(.uk-preserve-color) .uk-textarea::-webkit-input-placeholder,
 .uk-section-secondary:not(.uk-preserve-color) .uk-textarea::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-textarea::-moz-placeholder,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-textarea::-moz-placeholder,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-textarea::-moz-placeholder,
 .uk-card-secondary.uk-card-body .uk-textarea::-moz-placeholder,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-textarea::-moz-placeholder,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-textarea::-moz-placeholder,
 .uk-light .uk-textarea::-moz-placeholder,
 .uk-section-primary:not(.uk-preserve-color) .uk-textarea::-moz-placeholder,
 .uk-section-secondary:not(.uk-preserve-color) .uk-textarea::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-textarea:-ms-input-placeholder,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-textarea:-ms-input-placeholder,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-textarea:-ms-input-placeholder,
 .uk-card-secondary.uk-card-body .uk-textarea:-ms-input-placeholder,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-textarea:-ms-input-placeholder,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-textarea:-ms-input-placeholder,
 .uk-light .uk-textarea:-ms-input-placeholder,
 .uk-section-primary:not(.uk-preserve-color) .uk-textarea:-ms-input-placeholder,
 .uk-section-secondary:not(.uk-preserve-color) .uk-textarea:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-textarea::-ms-input-placeholder,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-textarea::-ms-input-placeholder,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-textarea::-ms-input-placeholder,
 .uk-card-secondary.uk-card-body .uk-textarea::-ms-input-placeholder,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-textarea::-ms-input-placeholder,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-textarea::-ms-input-placeholder,
 .uk-light .uk-textarea::-ms-input-placeholder,
 .uk-section-primary:not(.uk-preserve-color) .uk-textarea::-ms-input-placeholder,
 .uk-section-secondary:not(.uk-preserve-color) .uk-textarea::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-textarea::placeholder,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-textarea::placeholder,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-textarea::placeholder,
 .uk-card-secondary.uk-card-body .uk-textarea::placeholder,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-textarea::placeholder,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-textarea::placeholder,
 .uk-light .uk-textarea::placeholder,
 .uk-section-primary:not(.uk-preserve-color) .uk-textarea::placeholder,
 .uk-section-secondary:not(.uk-preserve-color) .uk-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-select:not([multiple]):not([size]),
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-select:not([multiple]):not([size]),
+.uk-card-primary > :not([class*=uk-card-media]) .uk-select:not([multiple]):not([size]),
 .uk-card-secondary.uk-card-body .uk-select:not([multiple]):not([size]),
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-select:not([multiple]):not([size]),
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-select:not([multiple]):not([size]),
 .uk-light .uk-select:not([multiple]):not([size]),
 .uk-section-primary:not(.uk-preserve-color) .uk-select:not([multiple]):not([size]),
 .uk-section-secondary:not(.uk-preserve-color) .uk-select:not([multiple]):not([size]) {
@@ -4762,12 +4760,12 @@ ul.uk-nav-sub {
 
 .uk-card-primary.uk-card-body .uk-input[list]:focus,
 .uk-card-primary.uk-card-body .uk-input[list]:hover,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-input[list]:focus,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-input[list]:hover,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-input[list]:focus,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-input[list]:hover,
 .uk-card-secondary.uk-card-body .uk-input[list]:focus,
 .uk-card-secondary.uk-card-body .uk-input[list]:hover,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-input[list]:focus,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-input[list]:hover,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-input[list]:focus,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-input[list]:hover,
 .uk-light .uk-input[list]:focus,
 .uk-light .uk-input[list]:hover,
 .uk-section-primary:not(.uk-preserve-color) .uk-input[list]:focus,
@@ -4779,33 +4777,33 @@ ul.uk-nav-sub {
 
 .uk-card-primary.uk-card-body .uk-checkbox,
 .uk-card-primary.uk-card-body .uk-radio,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-checkbox,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-radio,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-checkbox,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-radio,
 .uk-card-secondary.uk-card-body .uk-checkbox,
 .uk-card-secondary.uk-card-body .uk-radio,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-checkbox,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-radio,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-checkbox,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-radio,
 .uk-light .uk-checkbox,
 .uk-light .uk-radio,
 .uk-section-primary:not(.uk-preserve-color) .uk-checkbox,
 .uk-section-primary:not(.uk-preserve-color) .uk-radio,
 .uk-section-secondary:not(.uk-preserve-color) .uk-checkbox,
 .uk-section-secondary:not(.uk-preserve-color) .uk-radio {
-  background-color: rgba(242, 242, 242, 0.1);
+  background-color: hsla(0, 0%, 94.9%, 0.1);
 }
 
 .uk-card-primary.uk-card-body .uk-checkbox:checked,
 .uk-card-primary.uk-card-body .uk-checkbox:indeterminate,
 .uk-card-primary.uk-card-body .uk-radio:checked,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-checkbox:checked,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-checkbox:indeterminate,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-radio:checked,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-checkbox:checked,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-checkbox:indeterminate,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-radio:checked,
 .uk-card-secondary.uk-card-body .uk-checkbox:checked,
 .uk-card-secondary.uk-card-body .uk-checkbox:indeterminate,
 .uk-card-secondary.uk-card-body .uk-radio:checked,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-checkbox:checked,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-checkbox:indeterminate,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-radio:checked,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-checkbox:checked,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-checkbox:indeterminate,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-radio:checked,
 .uk-light .uk-checkbox:checked,
 .uk-light .uk-checkbox:indeterminate,
 .uk-light .uk-radio:checked,
@@ -4821,15 +4819,15 @@ ul.uk-nav-sub {
 .uk-card-primary.uk-card-body .uk-checkbox:checked:focus,
 .uk-card-primary.uk-card-body .uk-checkbox:indeterminate:focus,
 .uk-card-primary.uk-card-body .uk-radio:checked:focus,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-checkbox:checked:focus,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-checkbox:indeterminate:focus,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-radio:checked:focus,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-checkbox:checked:focus,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-checkbox:indeterminate:focus,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-radio:checked:focus,
 .uk-card-secondary.uk-card-body .uk-checkbox:checked:focus,
 .uk-card-secondary.uk-card-body .uk-checkbox:indeterminate:focus,
 .uk-card-secondary.uk-card-body .uk-radio:checked:focus,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-checkbox:checked:focus,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-checkbox:indeterminate:focus,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-radio:checked:focus,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-checkbox:checked:focus,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-checkbox:indeterminate:focus,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-radio:checked:focus,
 .uk-light .uk-checkbox:checked:focus,
 .uk-light .uk-checkbox:indeterminate:focus,
 .uk-light .uk-radio:checked:focus,
@@ -4843,9 +4841,9 @@ ul.uk-nav-sub {
 }
 
 .uk-card-primary.uk-card-body .uk-radio:checked,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-radio:checked,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-radio:checked,
 .uk-card-secondary.uk-card-body .uk-radio:checked,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-radio:checked,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-radio:checked,
 .uk-light .uk-radio:checked,
 .uk-section-primary:not(.uk-preserve-color) .uk-radio:checked,
 .uk-section-secondary:not(.uk-preserve-color) .uk-radio:checked {
@@ -4853,9 +4851,9 @@ ul.uk-nav-sub {
 }
 
 .uk-card-primary.uk-card-body .uk-checkbox:checked,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-checkbox:checked,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-checkbox:checked,
 .uk-card-secondary.uk-card-body .uk-checkbox:checked,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-checkbox:checked,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-checkbox:checked,
 .uk-light .uk-checkbox:checked,
 .uk-section-primary:not(.uk-preserve-color) .uk-checkbox:checked,
 .uk-section-secondary:not(.uk-preserve-color) .uk-checkbox:checked {
@@ -4863,9 +4861,9 @@ ul.uk-nav-sub {
 }
 
 .uk-card-primary.uk-card-body .uk-checkbox:indeterminate,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-checkbox:indeterminate,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-checkbox:indeterminate,
 .uk-card-secondary.uk-card-body .uk-checkbox:indeterminate,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-checkbox:indeterminate,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-checkbox:indeterminate,
 .uk-light .uk-checkbox:indeterminate,
 .uk-section-primary:not(.uk-preserve-color) .uk-checkbox:indeterminate,
 .uk-section-secondary:not(.uk-preserve-color) .uk-checkbox:indeterminate {
@@ -4873,19 +4871,19 @@ ul.uk-nav-sub {
 }
 
 .uk-card-primary.uk-card-body .uk-form-icon,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-form-icon,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-form-icon,
 .uk-card-secondary.uk-card-body .uk-form-icon,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-form-icon,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-form-icon,
 .uk-light .uk-form-icon,
 .uk-section-primary:not(.uk-preserve-color) .uk-form-icon,
 .uk-section-secondary:not(.uk-preserve-color) .uk-form-icon {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-form-icon:hover,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-form-icon:hover,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-form-icon:hover,
 .uk-card-secondary.uk-card-body .uk-form-icon:hover,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-form-icon:hover,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-form-icon:hover,
 .uk-light .uk-form-icon:hover,
 .uk-section-primary:not(.uk-preserve-color) .uk-form-icon:hover,
 .uk-section-secondary:not(.uk-preserve-color) .uk-form-icon:hover {
@@ -4893,9 +4891,9 @@ ul.uk-nav-sub {
 }
 
 .uk-card-primary.uk-card-body .uk-button-default,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-button-default,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-button-default,
 .uk-card-secondary.uk-card-body .uk-button-default,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-button-default,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-button-default,
 .uk-light .uk-button-default,
 .uk-section-primary:not(.uk-preserve-color) .uk-button-default,
 .uk-section-secondary:not(.uk-preserve-color) .uk-button-default {
@@ -4905,12 +4903,12 @@ ul.uk-nav-sub {
 
 .uk-card-primary.uk-card-body .uk-button-default:focus,
 .uk-card-primary.uk-card-body .uk-button-default:hover,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-button-default:focus,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-button-default:hover,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-button-default:focus,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-button-default:hover,
 .uk-card-secondary.uk-card-body .uk-button-default:focus,
 .uk-card-secondary.uk-card-body .uk-button-default:hover,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-button-default:focus,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-button-default:hover,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-button-default:focus,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-button-default:hover,
 .uk-light .uk-button-default:focus,
 .uk-light .uk-button-default:hover,
 .uk-section-primary:not(.uk-preserve-color) .uk-button-default:focus,
@@ -4923,12 +4921,12 @@ ul.uk-nav-sub {
 
 .uk-card-primary.uk-card-body .uk-button-default.uk-active,
 .uk-card-primary.uk-card-body .uk-button-default:active,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-button-default.uk-active,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-button-default:active,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-button-default.uk-active,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-button-default:active,
 .uk-card-secondary.uk-card-body .uk-button-default.uk-active,
 .uk-card-secondary.uk-card-body .uk-button-default:active,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-button-default.uk-active,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-button-default:active,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-button-default.uk-active,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-button-default:active,
 .uk-light .uk-button-default.uk-active,
 .uk-light .uk-button-default:active,
 .uk-section-primary:not(.uk-preserve-color) .uk-button-default.uk-active,
@@ -4940,9 +4938,9 @@ ul.uk-nav-sub {
 }
 
 .uk-card-primary.uk-card-body .uk-button-primary,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-button-primary,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-button-primary,
 .uk-card-secondary.uk-card-body .uk-button-primary,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-button-primary,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-button-primary,
 .uk-light .uk-button-primary,
 .uk-section-primary:not(.uk-preserve-color) .uk-button-primary,
 .uk-section-secondary:not(.uk-preserve-color) .uk-button-primary {
@@ -4952,12 +4950,12 @@ ul.uk-nav-sub {
 
 .uk-card-primary.uk-card-body .uk-button-primary:focus,
 .uk-card-primary.uk-card-body .uk-button-primary:hover,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-button-primary:focus,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-button-primary:hover,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-button-primary:focus,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-button-primary:hover,
 .uk-card-secondary.uk-card-body .uk-button-primary:focus,
 .uk-card-secondary.uk-card-body .uk-button-primary:hover,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-button-primary:focus,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-button-primary:hover,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-button-primary:focus,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-button-primary:hover,
 .uk-light .uk-button-primary:focus,
 .uk-light .uk-button-primary:hover,
 .uk-section-primary:not(.uk-preserve-color) .uk-button-primary:focus,
@@ -4970,12 +4968,12 @@ ul.uk-nav-sub {
 
 .uk-card-primary.uk-card-body .uk-button-primary.uk-active,
 .uk-card-primary.uk-card-body .uk-button-primary:active,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-button-primary.uk-active,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-button-primary:active,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-button-primary.uk-active,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-button-primary:active,
 .uk-card-secondary.uk-card-body .uk-button-primary.uk-active,
 .uk-card-secondary.uk-card-body .uk-button-primary:active,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-button-primary.uk-active,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-button-primary:active,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-button-primary.uk-active,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-button-primary:active,
 .uk-light .uk-button-primary.uk-active,
 .uk-light .uk-button-primary:active,
 .uk-section-primary:not(.uk-preserve-color) .uk-button-primary.uk-active,
@@ -4987,9 +4985,9 @@ ul.uk-nav-sub {
 }
 
 .uk-card-primary.uk-card-body .uk-button-secondary,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-button-secondary,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-button-secondary,
 .uk-card-secondary.uk-card-body .uk-button-secondary,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-button-secondary,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-button-secondary,
 .uk-light .uk-button-secondary,
 .uk-section-primary:not(.uk-preserve-color) .uk-button-secondary,
 .uk-section-secondary:not(.uk-preserve-color) .uk-button-secondary {
@@ -4999,12 +4997,12 @@ ul.uk-nav-sub {
 
 .uk-card-primary.uk-card-body .uk-button-secondary:focus,
 .uk-card-primary.uk-card-body .uk-button-secondary:hover,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-button-secondary:focus,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-button-secondary:hover,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-button-secondary:focus,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-button-secondary:hover,
 .uk-card-secondary.uk-card-body .uk-button-secondary:focus,
 .uk-card-secondary.uk-card-body .uk-button-secondary:hover,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-button-secondary:focus,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-button-secondary:hover,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-button-secondary:focus,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-button-secondary:hover,
 .uk-light .uk-button-secondary:focus,
 .uk-light .uk-button-secondary:hover,
 .uk-section-primary:not(.uk-preserve-color) .uk-button-secondary:focus,
@@ -5017,12 +5015,12 @@ ul.uk-nav-sub {
 
 .uk-card-primary.uk-card-body .uk-button-secondary.uk-active,
 .uk-card-primary.uk-card-body .uk-button-secondary:active,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-button-secondary.uk-active,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-button-secondary:active,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-button-secondary.uk-active,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-button-secondary:active,
 .uk-card-secondary.uk-card-body .uk-button-secondary.uk-active,
 .uk-card-secondary.uk-card-body .uk-button-secondary:active,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-button-secondary.uk-active,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-button-secondary:active,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-button-secondary.uk-active,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-button-secondary:active,
 .uk-light .uk-button-secondary.uk-active,
 .uk-light .uk-button-secondary:active,
 .uk-section-primary:not(.uk-preserve-color) .uk-button-secondary.uk-active,
@@ -5034,23 +5032,23 @@ ul.uk-nav-sub {
 }
 
 .uk-card-primary.uk-card-body .uk-button-text,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-button-text,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-button-text,
 .uk-card-secondary.uk-card-body .uk-button-text,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-button-text,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-button-text,
 .uk-light .uk-button-text,
 .uk-section-primary:not(.uk-preserve-color) .uk-button-text,
 .uk-section-secondary:not(.uk-preserve-color) .uk-button-text {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-button-text:focus,
 .uk-card-primary.uk-card-body .uk-button-text:hover,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-button-text:focus,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-button-text:hover,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-button-text:focus,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-button-text:hover,
 .uk-card-secondary.uk-card-body .uk-button-text:focus,
 .uk-card-secondary.uk-card-body .uk-button-text:hover,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-button-text:focus,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-button-text:hover,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-button-text:focus,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-button-text:hover,
 .uk-light .uk-button-text:focus,
 .uk-light .uk-button-text:hover,
 .uk-section-primary:not(.uk-preserve-color) .uk-button-text:focus,
@@ -5062,29 +5060,29 @@ ul.uk-nav-sub {
 
 .uk-card-primary.uk-card-body .uk-button-link,
 .uk-card-primary.uk-card-body .uk-button-text:disabled,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-button-link,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-button-text:disabled,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-button-link,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-button-text:disabled,
 .uk-card-secondary.uk-card-body .uk-button-link,
 .uk-card-secondary.uk-card-body .uk-button-text:disabled,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-button-link,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-button-text:disabled,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-button-link,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-button-text:disabled,
 .uk-light .uk-button-link,
 .uk-light .uk-button-text:disabled,
 .uk-section-primary:not(.uk-preserve-color) .uk-button-link,
 .uk-section-primary:not(.uk-preserve-color) .uk-button-text:disabled,
 .uk-section-secondary:not(.uk-preserve-color) .uk-button-link,
 .uk-section-secondary:not(.uk-preserve-color) .uk-button-text:disabled {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-button-link:focus,
 .uk-card-primary.uk-card-body .uk-button-link:hover,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-button-link:focus,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-button-link:hover,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-button-link:focus,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-button-link:hover,
 .uk-card-secondary.uk-card-body .uk-button-link:focus,
 .uk-card-secondary.uk-card-body .uk-button-link:hover,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-button-link:focus,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-button-link:hover,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-button-link:focus,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-button-link:hover,
 .uk-light .uk-button-link:focus,
 .uk-light .uk-button-link:hover,
 .uk-section-primary:not(.uk-preserve-color) .uk-button-link:focus,
@@ -5095,29 +5093,29 @@ ul.uk-nav-sub {
 }
 
 .uk-card-primary.uk-card-body .uk-grid-divider > :not(.uk-first-column):before,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-grid-divider > :not(.uk-first-column):before,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-grid-divider > :not(.uk-first-column):before,
 .uk-card-secondary.uk-card-body .uk-grid-divider > :not(.uk-first-column):before,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-grid-divider > :not(.uk-first-column):before,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-grid-divider > :not(.uk-first-column):before,
 .uk-light .uk-grid-divider > :not(.uk-first-column):before,
 .uk-section-primary:not(.uk-preserve-color) .uk-grid-divider > :not(.uk-first-column):before,
 .uk-section-secondary:not(.uk-preserve-color) .uk-grid-divider > :not(.uk-first-column):before {
-  border-left-color: rgba(255, 255, 255, 0.2);
+  border-left-color: hsla(0, 0%, 100%, 0.2);
 }
 
 .uk-card-primary.uk-card-body .uk-grid-divider.uk-grid-stack > .uk-grid-margin:before,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-grid-divider.uk-grid-stack > .uk-grid-margin:before,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-grid-divider.uk-grid-stack > .uk-grid-margin:before,
 .uk-card-secondary.uk-card-body .uk-grid-divider.uk-grid-stack > .uk-grid-margin:before,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-grid-divider.uk-grid-stack > .uk-grid-margin:before,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-grid-divider.uk-grid-stack > .uk-grid-margin:before,
 .uk-light .uk-grid-divider.uk-grid-stack > .uk-grid-margin:before,
 .uk-section-primary:not(.uk-preserve-color) .uk-grid-divider.uk-grid-stack > .uk-grid-margin:before,
 .uk-section-secondary:not(.uk-preserve-color) .uk-grid-divider.uk-grid-stack > .uk-grid-margin:before {
-  border-top-color: rgba(255, 255, 255, 0.2);
+  border-top-color: hsla(0, 0%, 100%, 0.2);
 }
 
 .uk-card-primary.uk-card-body .uk-nav-parent-icon > .uk-parent > a:after,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-nav-parent-icon > .uk-parent > a:after,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-nav-parent-icon > .uk-parent > a:after,
 .uk-card-secondary.uk-card-body .uk-nav-parent-icon > .uk-parent > a:after,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-nav-parent-icon > .uk-parent > a:after,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-parent-icon > .uk-parent > a:after,
 .uk-light .uk-nav-parent-icon > .uk-parent > a:after,
 .uk-section-primary:not(.uk-preserve-color) .uk-nav-parent-icon > .uk-parent > a:after,
 .uk-section-secondary:not(.uk-preserve-color) .uk-nav-parent-icon > .uk-parent > a:after {
@@ -5125,9 +5123,9 @@ ul.uk-nav-sub {
 }
 
 .uk-card-primary.uk-card-body .uk-nav-parent-icon > .uk-parent.uk-open > a:after,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-nav-parent-icon > .uk-parent.uk-open > a:after,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-nav-parent-icon > .uk-parent.uk-open > a:after,
 .uk-card-secondary.uk-card-body .uk-nav-parent-icon > .uk-parent.uk-open > a:after,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-nav-parent-icon > .uk-parent.uk-open > a:after,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-parent-icon > .uk-parent.uk-open > a:after,
 .uk-light .uk-nav-parent-icon > .uk-parent.uk-open > a:after,
 .uk-section-primary:not(.uk-preserve-color) .uk-nav-parent-icon > .uk-parent.uk-open > a:after,
 .uk-section-secondary:not(.uk-preserve-color) .uk-nav-parent-icon > .uk-parent.uk-open > a:after {
@@ -5135,31 +5133,31 @@ ul.uk-nav-sub {
 }
 
 .uk-card-primary.uk-card-body .uk-nav-default > li > a,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-nav-default > li > a,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-nav-default > li > a,
 .uk-card-secondary.uk-card-body .uk-nav-default > li > a,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-nav-default > li > a,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-default > li > a,
 .uk-light .uk-nav-default > li > a,
 .uk-section-primary:not(.uk-preserve-color) .uk-nav-default > li > a,
 .uk-section-secondary:not(.uk-preserve-color) .uk-nav-default > li > a {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-nav-default .uk-nav-header,
 .uk-card-primary.uk-card-body .uk-nav-default > li.uk-active > a,
 .uk-card-primary.uk-card-body .uk-nav-default > li > a:focus,
 .uk-card-primary.uk-card-body .uk-nav-default > li > a:hover,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-nav-default .uk-nav-header,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-nav-default > li.uk-active > a,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-nav-default > li > a:focus,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-nav-default > li > a:hover,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-nav-default .uk-nav-header,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-nav-default > li.uk-active > a,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-nav-default > li > a:focus,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-nav-default > li > a:hover,
 .uk-card-secondary.uk-card-body .uk-nav-default .uk-nav-header,
 .uk-card-secondary.uk-card-body .uk-nav-default > li.uk-active > a,
 .uk-card-secondary.uk-card-body .uk-nav-default > li > a:focus,
 .uk-card-secondary.uk-card-body .uk-nav-default > li > a:hover,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-nav-default .uk-nav-header,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-nav-default > li.uk-active > a,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-nav-default > li > a:focus,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-nav-default > li > a:hover,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-default .uk-nav-header,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-default > li.uk-active > a,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-default > li > a:focus,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-default > li > a:hover,
 .uk-light .uk-nav-default .uk-nav-header,
 .uk-light .uk-nav-default > li.uk-active > a,
 .uk-light .uk-nav-default > li > a:focus,
@@ -5176,37 +5174,37 @@ ul.uk-nav-sub {
 }
 
 .uk-card-primary.uk-card-body .uk-nav-default .uk-nav-divider,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-nav-default .uk-nav-divider,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-nav-default .uk-nav-divider,
 .uk-card-secondary.uk-card-body .uk-nav-default .uk-nav-divider,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-nav-default .uk-nav-divider,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-default .uk-nav-divider,
 .uk-light .uk-nav-default .uk-nav-divider,
 .uk-section-primary:not(.uk-preserve-color) .uk-nav-default .uk-nav-divider,
 .uk-section-secondary:not(.uk-preserve-color) .uk-nav-default .uk-nav-divider {
-  border-top-color: rgba(255, 255, 255, 0.2);
+  border-top-color: hsla(0, 0%, 100%, 0.2);
 }
 
 .uk-card-primary.uk-card-body .uk-nav-default .uk-nav-sub a,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-nav-default .uk-nav-sub a,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-nav-default .uk-nav-sub a,
 .uk-card-secondary.uk-card-body .uk-nav-default .uk-nav-sub a,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-nav-default .uk-nav-sub a,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-default .uk-nav-sub a,
 .uk-light .uk-nav-default .uk-nav-sub a,
 .uk-section-primary:not(.uk-preserve-color) .uk-nav-default .uk-nav-sub a,
 .uk-section-secondary:not(.uk-preserve-color) .uk-nav-default .uk-nav-sub a {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-nav-default .uk-nav-sub a:focus,
 .uk-card-primary.uk-card-body .uk-nav-default .uk-nav-sub a:hover,
 .uk-card-primary.uk-card-body .uk-nav-default .uk-nav-sub li.uk-active > a,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-nav-default .uk-nav-sub a:focus,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-nav-default .uk-nav-sub a:hover,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-nav-default .uk-nav-sub li.uk-active > a,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-nav-default .uk-nav-sub a:focus,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-nav-default .uk-nav-sub a:hover,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-nav-default .uk-nav-sub li.uk-active > a,
 .uk-card-secondary.uk-card-body .uk-nav-default .uk-nav-sub a:focus,
 .uk-card-secondary.uk-card-body .uk-nav-default .uk-nav-sub a:hover,
 .uk-card-secondary.uk-card-body .uk-nav-default .uk-nav-sub li.uk-active > a,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-nav-default .uk-nav-sub a:focus,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-nav-default .uk-nav-sub a:hover,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-nav-default .uk-nav-sub li.uk-active > a,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-default .uk-nav-sub a:focus,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-default .uk-nav-sub a:hover,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-default .uk-nav-sub li.uk-active > a,
 .uk-light .uk-nav-default .uk-nav-sub a:focus,
 .uk-light .uk-nav-default .uk-nav-sub a:hover,
 .uk-light .uk-nav-default .uk-nav-sub li.uk-active > a,
@@ -5220,31 +5218,31 @@ ul.uk-nav-sub {
 }
 
 .uk-card-primary.uk-card-body .uk-nav-primary > li > a,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-nav-primary > li > a,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-nav-primary > li > a,
 .uk-card-secondary.uk-card-body .uk-nav-primary > li > a,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-nav-primary > li > a,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-primary > li > a,
 .uk-light .uk-nav-primary > li > a,
 .uk-section-primary:not(.uk-preserve-color) .uk-nav-primary > li > a,
 .uk-section-secondary:not(.uk-preserve-color) .uk-nav-primary > li > a {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-nav-primary .uk-nav-header,
 .uk-card-primary.uk-card-body .uk-nav-primary > li.uk-active > a,
 .uk-card-primary.uk-card-body .uk-nav-primary > li > a:focus,
 .uk-card-primary.uk-card-body .uk-nav-primary > li > a:hover,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-nav-primary .uk-nav-header,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-nav-primary > li.uk-active > a,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-nav-primary > li > a:focus,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-nav-primary > li > a:hover,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-nav-primary .uk-nav-header,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-nav-primary > li.uk-active > a,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-nav-primary > li > a:focus,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-nav-primary > li > a:hover,
 .uk-card-secondary.uk-card-body .uk-nav-primary .uk-nav-header,
 .uk-card-secondary.uk-card-body .uk-nav-primary > li.uk-active > a,
 .uk-card-secondary.uk-card-body .uk-nav-primary > li > a:focus,
 .uk-card-secondary.uk-card-body .uk-nav-primary > li > a:hover,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-nav-primary .uk-nav-header,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-nav-primary > li.uk-active > a,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-nav-primary > li > a:focus,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-nav-primary > li > a:hover,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-primary .uk-nav-header,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-primary > li.uk-active > a,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-primary > li > a:focus,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-primary > li > a:hover,
 .uk-light .uk-nav-primary .uk-nav-header,
 .uk-light .uk-nav-primary > li.uk-active > a,
 .uk-light .uk-nav-primary > li > a:focus,
@@ -5261,23 +5259,23 @@ ul.uk-nav-sub {
 }
 
 .uk-card-primary.uk-card-body .uk-nav-primary .uk-nav-divider,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-nav-primary .uk-nav-divider,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-nav-primary .uk-nav-divider,
 .uk-card-secondary.uk-card-body .uk-nav-primary .uk-nav-divider,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-nav-primary .uk-nav-divider,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-primary .uk-nav-divider,
 .uk-light .uk-nav-primary .uk-nav-divider,
 .uk-section-primary:not(.uk-preserve-color) .uk-nav-primary .uk-nav-divider,
 .uk-section-secondary:not(.uk-preserve-color) .uk-nav-primary .uk-nav-divider {
-  border-top-color: rgba(255, 255, 255, 0.2);
+  border-top-color: hsla(0, 0%, 100%, 0.2);
 }
 
 .uk-card-primary.uk-card-body .uk-nav-primary .uk-nav-sub a,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-nav-primary .uk-nav-sub a,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-nav-primary .uk-nav-sub a,
 .uk-card-secondary.uk-card-body .uk-nav-primary .uk-nav-sub a,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-nav-primary .uk-nav-sub a,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-primary .uk-nav-sub a,
 .uk-light .uk-nav-primary .uk-nav-sub a,
 .uk-section-primary:not(.uk-preserve-color) .uk-nav-primary .uk-nav-sub a,
 .uk-section-secondary:not(.uk-preserve-color) .uk-nav-primary .uk-nav-sub a {
-  color: rgba(255, 255, 255, 0.5);
+  color: hsla(0, 0%, 100%, 0.5);
 }
 
 .uk-card-primary.uk-card-body .uk-accordion-title,
@@ -5286,24 +5284,24 @@ ul.uk-nav-sub {
 .uk-card-primary.uk-card-body .uk-nav-primary .uk-nav-sub a:focus,
 .uk-card-primary.uk-card-body .uk-nav-primary .uk-nav-sub a:hover,
 .uk-card-primary.uk-card-body .uk-nav-primary .uk-nav-sub li.uk-active > a,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-accordion-title,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-accordion-title:focus,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-accordion-title:hover,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-nav-primary .uk-nav-sub a:focus,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-nav-primary .uk-nav-sub a:hover,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-nav-primary .uk-nav-sub li.uk-active > a,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-accordion-title,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-accordion-title:focus,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-accordion-title:hover,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-nav-primary .uk-nav-sub a:focus,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-nav-primary .uk-nav-sub a:hover,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-nav-primary .uk-nav-sub li.uk-active > a,
 .uk-card-secondary.uk-card-body .uk-accordion-title,
 .uk-card-secondary.uk-card-body .uk-accordion-title:focus,
 .uk-card-secondary.uk-card-body .uk-accordion-title:hover,
 .uk-card-secondary.uk-card-body .uk-nav-primary .uk-nav-sub a:focus,
 .uk-card-secondary.uk-card-body .uk-nav-primary .uk-nav-sub a:hover,
 .uk-card-secondary.uk-card-body .uk-nav-primary .uk-nav-sub li.uk-active > a,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-accordion-title,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-accordion-title:focus,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-accordion-title:hover,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-nav-primary .uk-nav-sub a:focus,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-nav-primary .uk-nav-sub a:hover,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-nav-primary .uk-nav-sub li.uk-active > a,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-accordion-title,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-accordion-title:focus,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-accordion-title:hover,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-primary .uk-nav-sub a:focus,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-primary .uk-nav-sub a:hover,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-nav-primary .uk-nav-sub li.uk-active > a,
 .uk-light .uk-accordion-title,
 .uk-light .uk-accordion-title:focus,
 .uk-light .uk-accordion-title:hover,
@@ -5326,9 +5324,9 @@ ul.uk-nav-sub {
 }
 
 .uk-card-primary.uk-card-body .uk-accordion-title:before,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-accordion-title:before,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-accordion-title:before,
 .uk-card-secondary.uk-card-body .uk-accordion-title:before,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-accordion-title:before,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-accordion-title:before,
 .uk-light .uk-accordion-title:before,
 .uk-section-primary:not(.uk-preserve-color) .uk-accordion-title:before,
 .uk-section-secondary:not(.uk-preserve-color) .uk-accordion-title:before {
@@ -5336,9 +5334,9 @@ ul.uk-nav-sub {
 }
 
 .uk-card-primary.uk-card-body .uk-open > .uk-accordion-title:before,
-.uk-card-primary > :not([class*="uk-card-media"]) .uk-open > .uk-accordion-title:before,
+.uk-card-primary > :not([class*=uk-card-media]) .uk-open > .uk-accordion-title:before,
 .uk-card-secondary.uk-card-body .uk-open > .uk-accordion-title:before,
-.uk-card-secondary > :not([class*="uk-card-media"]) .uk-open > .uk-accordion-title:before,
+.uk-card-secondary > :not([class*=uk-card-media]) .uk-open > .uk-accordion-title:before,
 .uk-light .uk-open > .uk-accordion-title:before,
 .uk-section-primary:not(.uk-preserve-color) .uk-open > .uk-accordion-title:before,
 .uk-section-secondary:not(.uk-preserve-color) .uk-open > .uk-accordion-title:before {
@@ -5368,7 +5366,7 @@ iframe.uk-cover {
   font-weight: 300;
   font-style: normal;
   font-family: Gilroy;
-  src: local("Gilroy Light"), local("Gilroy-Light"), url(../fonts/Gilroy-Light.woff2) format("woff2"), url(../fonts/Gilroy-Light.woff) format("woff");
+  src: local("Gilroy Light"), local("Gilroy-Light"), url(./../fonts/Gilroy-Light.woff2) format("woff2"), url(./../fonts/Gilroy-Light.woff) format("woff");
   font-display: block;
 }
 
@@ -5376,7 +5374,7 @@ iframe.uk-cover {
   font-weight: 400;
   font-style: normal;
   font-family: Gilroy;
-  src: local("Gilroy Regular"), local("Gilroy-Regular"), url(../fonts/Gilroy-Regular.woff2) format("woff2"), url(../fonts/Gilroy-Regular.woff) format("woff");
+  src: local("Gilroy Regular"), local("Gilroy-Regular"), url(./../fonts/Gilroy-Regular.woff2) format("woff2"), url(./../fonts/Gilroy-Regular.woff) format("woff");
   font-display: block;
 }
 
@@ -5384,7 +5382,7 @@ iframe.uk-cover {
   font-weight: 600;
   font-style: normal;
   font-family: Gilroy;
-  src: local("Gilroy Semibold"), local("Gilroy-Semibold"), url(../fonts/Gilroy-Semibold.woff2) format("woff2"), url(../fonts/Gilroy-Semibold.woff) format("woff");
+  src: local("Gilroy Semibold"), local("Gilroy-Semibold"), url(./../fonts/Gilroy-Semibold.woff2) format("woff2"), url(./../fonts/Gilroy-Semibold.woff) format("woff");
   font-display: block;
 }
 
@@ -5392,7 +5390,7 @@ iframe.uk-cover {
   font-weight: 700;
   font-style: normal;
   font-family: Gilroy;
-  src: local("Gilroy Bold"), local("Gilroy-Bold"), url(../fonts/Gilroy-Bold.woff2) format("woff2"), url(../fonts/Gilroy-Bold.woff) format("woff");
+  src: local("Gilroy Bold"), local("Gilroy-Bold"), url(./../fonts/Gilroy-Bold.woff2) format("woff2"), url(./../fonts/Gilroy-Bold.woff) format("woff");
   font-display: block;
 }
 
@@ -5400,7 +5398,7 @@ iframe.uk-cover {
   font-weight: 800;
   font-style: normal;
   font-family: Gilroy;
-  src: local("Gilroy Extra Bold"), local("Gilroy-Extra-Bold"), url(../fonts/Gilroy-Extra-Bold.woff2) format("woff2"), url(../fonts/Gilroy-Extra-Bold.woff) format("woff");
+  src: local("Gilroy Extra Bold"), local("Gilroy-Extra-Bold"), url(./../fonts/Gilroy-Extra-Bold.woff2) format("woff2"), url(./../fonts/Gilroy-Extra-Bold.woff) format("woff");
   font-display: block;
 }
 
@@ -5408,7 +5406,7 @@ iframe.uk-cover {
   font-weight: 900;
   font-style: normal;
   font-family: Gilroy;
-  src: local("Gilroy Heavy"), local("Gilroy-Heavy"), url(../fonts/Gilroy-Heavy.woff2) format("woff2"), url(../fonts/Gilroy-Heavy.woff) format("woff");
+  src: local("Gilroy Heavy"), local("Gilroy-Heavy"), url(./../fonts/Gilroy-Heavy.woff2) format("woff2"), url(./../fonts/Gilroy-Heavy.woff) format("woff");
   font-display: block;
 }
 
@@ -6133,7 +6131,7 @@ address {
   margin-left: 40px;
   border-radius: 30px;
   background-color: #e5167a;
-  background-image: url(/assets/images/button-arrow.svg);
+  background-image: url(../images/button-arrow.svg);
   background-repeat: no-repeat;
   color: currentColor;
   -webkit-transition: 0.3s;
@@ -6671,7 +6669,7 @@ address {
   border-right: 0;
 }
 
-.benefits-list .uk-grid > div:nth-child(4n + 1) {
+.benefits-list .uk-grid > div:nth-child(4n+1) {
   border-left: 0;
 }
 
@@ -7003,8 +7001,8 @@ address {
   display: block;
   width: 100%;
   height: 100%;
-  background-image: -o-linear-gradient(326deg, rgba(5, 5, 5, 0.44), rgba(244, 244, 244, 0));
-  background-image: linear-gradient(124deg, rgba(5, 5, 5, 0.44), rgba(244, 244, 244, 0));
+  background-image: -o-linear-gradient(326deg, rgba(5, 5, 5, 0.44), hsla(0, 0%, 95.7%, 0));
+  background-image: linear-gradient(124deg, rgba(5, 5, 5, 0.44), hsla(0, 0%, 95.7%, 0));
 }
 
 .client__image__related {
@@ -8691,7 +8689,7 @@ form[data-freeform] label.required:after {
 
 .section-quote q:before {
   margin: 0 auto 29px;
-  background: url(/assets/images/quote-up.svg) no-repeat;
+  background: url(../images/quote-up.svg) no-repeat;
 }
 
 .section-quote q:after,
@@ -8704,7 +8702,7 @@ form[data-freeform] label.required:after {
 
 .section-quote q:after {
   margin: 29px auto 0;
-  background: url(/assets/images/quote-down.svg) no-repeat;
+  background: url(../images/quote-down.svg) no-repeat;
 }
 
 .section-quote q span {
@@ -9657,70 +9655,20 @@ figure.biggerscreen {
   border: 1px solid #e5167a !important;
 }
 
-@font-face {
-  font-family: GilroyLight;
-  src: url("../fonts/Gilroy-Light.woff") format("woff");
-  src: url("../fonts/Gilroy-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: GilroyRegular;
-  src: url("../fonts/Gilroy-Regular.woff") format("woff");
-  src: url("../fonts/Gilroy-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: GilroyMedium;
-  src: url("../fonts/Gilroy-Medium.woff") format("woff");
-  src: url("../fonts/Gilroy-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: GilroySemibold;
-  src: url("../fonts/Gilroy-Semibold.woff") format("woff");
-  src: url("../fonts/Gilroy-Semibold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: GilroyBold;
-  src: url("../fonts/Gilroy-Bold.woff") format("woff");
-  src: url("../fonts/Gilroy-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: GilroyHeavy;
-  src: url("../fonts/Gilroy-Heavy.woff") format("woff");
-  src: url("../fonts/Gilroy-Heavy.woff2") format("woff2");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
 html.services-page {
   min-height: 100vh;
   height: 100%;
   min-width: 320px;
-  font-family: "GilroyMedium";
   color: #353538;
 }
 
 .services-page body {
   background-color: #fff;
+}
+
+.services-page #main-container {
+  padding-top: 157px;
+  width: 100%;
 }
 
 .services-page .page-wrapper {
@@ -9735,7 +9683,6 @@ html.services-page {
   min-height: var(--vh);
   height: 100%;
   background-color: #fff;
-  padding-top: 78px;
 }
 
 .services-page .header,
@@ -9748,7 +9695,6 @@ html.services-page {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  padding-top: 78px;
 }
 
 .services-page .container {
@@ -9759,17 +9705,13 @@ html.services-page {
 }
 
 .services-page h1 {
-  font-family: "GilroyHeavy";
-  font-size: 30px;
-  line-height: 39px;
+  font-weight: 900;
   margin-bottom: 10px;
 }
 
 .services-page h2 {
-  font-family: "GilroyHeavy";
-  font-size: 30px;
+  font-weight: 900;
   color: #e5167a;
-  line-height: 39px;
   margin-bottom: 20px;
 }
 
@@ -9778,9 +9720,9 @@ html.services-page {
 }
 
 .services-page h4 {
-  font-family: "GilroySemibold";
-  font-size: 15px;
-  line-height: 18px;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.22;
   color: #e5167a;
   margin-bottom: 20px;
 }
@@ -9795,23 +9737,15 @@ html.services-page {
 
 .services-page p,
 .services-page ul li {
-  font-family: "GilroyMedium";
-  font-size: 15px;
-  line-height: 22px;
-  margin-bottom: 20px;
-}
-
-.services-page ul {
-  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.47;
+  margin-bottom: 1em;
 }
 
 .services-page ul li {
   list-style: none;
-  margin-bottom: 10px;
-}
-
-.services-page ul li:last-child {
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
 }
 
 .services-page .button {
@@ -9868,6 +9802,11 @@ html.services-page {
   background-color: #2dacc2;
 }
 
+.services-page .fsb-select.fsb-top .fsb-list {
+  top: 60px;
+  bottom: auto;
+}
+
 .services-page .animate__animated .animate-iphone,
 .services-page .animate__animated .animate-ipad,
 .services-page .animate__animated .animate-drone,
@@ -9875,707 +9814,284 @@ html.services-page {
 .services-page .animate__animated .animate-gaucho-ig,
 .services-page .animate__animated .animate-icon,
 .services-page .animate__animated .animate-progress-bar > img {
-  -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-timing-function: ease;
-  animation-timing-function: ease;
-}
-
-@-webkit-keyframes animate-iphone {
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(4%);
-    transform: translateY(4%);
-  }
-}
-
-@keyframes animate-iphone {
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(4%);
-    transform: translateY(4%);
-  }
-}
-
-@-webkit-keyframes animate-ipad {
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(-89%);
-    transform: translateY(-89%);
-  }
-}
-
-@keyframes animate-ipad {
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(-89%);
-    transform: translateY(-89%);
-  }
+  -webkit-transition-property: opacity, bottom, right, -webkit-transform;
+  transition-property: opacity, bottom, right, -webkit-transform;
+  -o-transition-property: opacity, transform, bottom, right;
+  transition-property: opacity, transform, bottom, right;
+  transition-property: opacity, transform, bottom, right, -webkit-transform;
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
 }
 
 .services-page .animate-career-sites .animate-iphone {
-  -webkit-animation-name: animate-iphone;
-  animation-name: animate-iphone;
+  opacity: 1;
+  -webkit-transform: translateY(4%);
+  -ms-transform: translateY(4%);
+  transform: translateY(4%);
 }
 
 .services-page .animate-career-sites .animate-ipad {
-  -webkit-animation-name: animate-ipad;
-  animation-name: animate-ipad;
-}
-
-@-webkit-keyframes animate-drone {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    bottom: 86.5%;
-    right: -13%;
-    opacity: 1;
-  }
-}
-
-@keyframes animate-drone {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    bottom: 86.5%;
-    right: -13%;
-    opacity: 1;
-  }
+  opacity: 1;
+  -webkit-transform: translateY(-89%);
+  -ms-transform: translateY(-89%);
+  transform: translateY(-89%);
 }
 
 .services-page .animate-film-production .animate-drone {
-  -webkit-animation-name: animate-drone;
-  animation-name: animate-drone;
-}
-
-@-webkit-keyframes animate-gaucho-ig {
-  to {
-    -webkit-transform: translateX(47%);
-    transform: translateX(47%);
-    opacity: 1;
-  }
-}
-
-@keyframes animate-gaucho-ig {
-  to {
-    -webkit-transform: translateX(47%);
-    transform: translateX(47%);
-    opacity: 1;
-  }
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  bottom: 86.5%;
+  right: -13%;
+  opacity: 1;
 }
 
 .services-page .animate-social-media .animate-gaucho-ig {
-  -webkit-animation-name: animate-gaucho-ig;
-  animation-name: animate-gaucho-ig;
-}
-
-@-webkit-keyframes animate-sky-service {
-  to {
-    -webkit-transform: translateX(-122%);
-    transform: translateX(-122%);
-    opacity: 1;
-  }
-}
-
-@keyframes animate-sky-service {
-  to {
-    -webkit-transform: translateX(-122%);
-    transform: translateX(-122%);
-    opacity: 1;
-  }
+  -webkit-transform: translateX(47%);
+  -ms-transform: translateX(47%);
+  transform: translateX(47%);
+  opacity: 1;
 }
 
 .services-page .animate-social-media .animate-sky-service {
-  -webkit-animation-name: animate-sky-service;
-  animation-name: animate-sky-service;
-}
-
-@-webkit-keyframes animate-icon-social-media {
-  to {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-    opacity: 1;
-  }
-}
-
-@keyframes animate-icon-social-media {
-  to {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-    opacity: 1;
-  }
+  -webkit-transform: translateX(-122%);
+  -ms-transform: translateX(-122%);
+  transform: translateX(-122%);
+  opacity: 1;
 }
 
 .services-page .animate-social-media .animate-icon-social-media {
-  -webkit-animation-name: animate-icon-social-media;
-  animation-name: animate-icon-social-media;
-}
-
-@-webkit-keyframes animate-guardian-icon {
-  to {
-    -webkit-transform: translateY(-28%);
-    transform: translateY(-28%);
-    opacity: 1;
-  }
-}
-
-@keyframes animate-guardian-icon {
-  to {
-    -webkit-transform: translateY(-28%);
-    transform: translateY(-28%);
-    opacity: 1;
-  }
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  opacity: 1;
 }
 
 .services-page .animate-media-buying .animate-guardian-icon {
-  -webkit-animation-name: animate-guardian-icon;
-  animation-name: animate-guardian-icon;
-}
-
-@-webkit-keyframes animate-talent-icon {
-  to {
-    -webkit-transform: translateY(-115%);
-    transform: translateY(-115%);
-    opacity: 1;
-  }
-}
-
-@keyframes animate-talent-icon {
-  to {
-    -webkit-transform: translateY(-115%);
-    transform: translateY(-115%);
-    opacity: 1;
-  }
+  -webkit-transform: translateY(-28%);
+  -ms-transform: translateY(-28%);
+  transform: translateY(-28%);
+  opacity: 1;
 }
 
 .services-page .animate-media-buying .animate-talent-icon {
-  -webkit-animation-name: animate-talent-icon;
-  animation-name: animate-talent-icon;
-}
-
-@-webkit-keyframes animate-cv-icon {
-  to {
-    -webkit-transform: translateY(-280%);
-    transform: translateY(-280%);
-    opacity: 1;
-  }
-}
-
-@keyframes animate-cv-icon {
-  to {
-    -webkit-transform: translateY(-280%);
-    transform: translateY(-280%);
-    opacity: 1;
-  }
+  -webkit-transform: translateY(-115%);
+  -ms-transform: translateY(-115%);
+  transform: translateY(-115%);
+  opacity: 1;
 }
 
 .services-page .animate-media-buying .animate-cv-icon {
-  -webkit-animation-name: animate-cv-icon;
-  animation-name: animate-cv-icon;
-}
-
-@-webkit-keyframes animate-total-job-icon {
-  to {
-    -webkit-transform: translateY(-110%);
-    transform: translateY(-110%);
-    opacity: 1;
-  }
-}
-
-@keyframes animate-total-job-icon {
-  to {
-    -webkit-transform: translateY(-110%);
-    transform: translateY(-110%);
-    opacity: 1;
-  }
+  -webkit-transform: translateY(-280%);
+  -ms-transform: translateY(-280%);
+  transform: translateY(-280%);
+  opacity: 1;
 }
 
 .services-page .animate-media-buying .animate-total-job-icon {
-  -webkit-animation-name: animate-total-job-icon;
-  animation-name: animate-total-job-icon;
-}
-
-@-webkit-keyframes animate-indeed-icon {
-  to {
-    -webkit-transform: translateY(-160%);
-    transform: translateY(-160%);
-    opacity: 1;
-  }
-}
-
-@keyframes animate-indeed-icon {
-  to {
-    -webkit-transform: translateY(-160%);
-    transform: translateY(-160%);
-    opacity: 1;
-  }
+  -webkit-transform: translateY(-110%);
+  -ms-transform: translateY(-110%);
+  transform: translateY(-110%);
+  opacity: 1;
 }
 
 .services-page .animate-media-buying .animate-indeed-icon {
-  -webkit-animation-name: animate-indeed-icon;
-  animation-name: animate-indeed-icon;
-}
-
-@-webkit-keyframes animate-google-search {
-  to {
-    -webkit-transform: translate(-50%, -100%);
-    transform: translate(-50%, -100%);
-  }
-}
-
-@keyframes animate-google-search {
-  to {
-    -webkit-transform: translate(-50%, -100%);
-    transform: translate(-50%, -100%);
-  }
+  -webkit-transform: translateY(-160%);
+  -ms-transform: translateY(-160%);
+  transform: translateY(-160%);
+  opacity: 1;
 }
 
 .services-page .animate-google-partner .animate-google-search {
-  -webkit-animation-name: animate-google-search;
-  animation-name: animate-google-search;
-}
-
-@-webkit-keyframes animate-we-hiring {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    -webkit-transform: translateX(47%);
-    transform: translateX(47%);
-    opacity: 1;
-  }
-}
-
-@keyframes animate-we-hiring {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    -webkit-transform: translateX(47%);
-    transform: translateX(47%);
-    opacity: 1;
-  }
+  -webkit-transform: translate(-50%, -100%);
+  -ms-transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%);
 }
 
 .services-page .animate-google-partner .animate-we-hiring {
-  -webkit-animation-name: animate-we-hiring;
-  animation-name: animate-we-hiring;
-}
-
-@-webkit-keyframes animate-job-opportunities {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    -webkit-transform: translateX(-64%);
-    transform: translateX(-64%);
-    opacity: 1;
-  }
-}
-
-@keyframes animate-job-opportunities {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    -webkit-transform: translateX(-64%);
-    transform: translateX(-64%);
-    opacity: 1;
-  }
+  -webkit-transform: translateX(47%);
+  -ms-transform: translateX(47%);
+  transform: translateX(47%);
+  opacity: 1;
 }
 
 .services-page .animate-google-partner .animate-job-opportunities {
-  -webkit-animation-name: animate-job-opportunities;
-  animation-name: animate-job-opportunities;
-}
-
-@-webkit-keyframes animate-hiring-today {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes animate-hiring-today {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-    opacity: 1;
-  }
+  -webkit-transform: translateX(-64%);
+  -ms-transform: translateX(-64%);
+  transform: translateX(-64%);
+  opacity: 1;
 }
 
 .services-page .animate-google-partner .animate-hiring-today {
-  -webkit-animation-name: animate-hiring-today;
-  animation-name: animate-hiring-today;
-}
-
-@-webkit-keyframes animate-polaroid-1 {
-  to {
-    -webkit-transform: rotate(2deg) scale(1.1);
-    transform: rotate(2deg) scale(1.1);
-  }
-}
-
-@keyframes animate-polaroid-1 {
-  to {
-    -webkit-transform: rotate(2deg) scale(1.1);
-    transform: rotate(2deg) scale(1.1);
-  }
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  opacity: 1;
 }
 
 .services-page .animate-talent-brand .animate-polaroid-1 {
-  -webkit-animation-name: animate-polaroid-1;
-  animation-name: animate-polaroid-1;
-}
-
-@-webkit-keyframes animate-polaroid-2 {
-  to {
-    -webkit-transform: translate(15%, 9%) rotate(-2deg) scale(1.1);
-    transform: translate(15%, 9%) rotate(-2deg) scale(1.1);
-  }
-}
-
-@keyframes animate-polaroid-2 {
-  to {
-    -webkit-transform: translate(15%, 9%) rotate(-2deg) scale(1.1);
-    transform: translate(15%, 9%) rotate(-2deg) scale(1.1);
-  }
+  -webkit-transform: rotate(2deg) scale(1.1);
+  -ms-transform: rotate(2deg) scale(1.1);
+  transform: rotate(2deg) scale(1.1);
 }
 
 .services-page .animate-talent-brand .animate-polaroid-2 {
-  -webkit-animation-name: animate-polaroid-2;
-  animation-name: animate-polaroid-2;
-}
-
-@-webkit-keyframes animate-polaroid-3 {
-  to {
-    -webkit-transform: translate(-115%, -3%) rotate(-2deg) scale(1.1);
-    transform: translate(-115%, -3%) rotate(-2deg) scale(1.1);
-  }
-}
-
-@keyframes animate-polaroid-3 {
-  to {
-    -webkit-transform: translate(-115%, -3%) rotate(-2deg) scale(1.1);
-    transform: translate(-115%, -3%) rotate(-2deg) scale(1.1);
-  }
+  -webkit-transform: translate(15%, 9%) rotate(-2deg) scale(1.1);
+  -ms-transform: translate(15%, 9%) rotate(-2deg) scale(1.1);
+  transform: translate(15%, 9%) rotate(-2deg) scale(1.1);
 }
 
 .services-page .animate-talent-brand .animate-polaroid-3 {
-  -webkit-animation-name: animate-polaroid-3;
-  animation-name: animate-polaroid-3;
-}
-
-@-webkit-keyframes animate-great-candidate {
-  to {
-    opacity: 1;
-    -webkit-transform: translate(-139%, 0) scale(1);
-    transform: translate(-139%, 0) scale(1);
-  }
-}
-
-@keyframes animate-great-candidate {
-  to {
-    opacity: 1;
-    -webkit-transform: translate(-139%, 0) scale(1);
-    transform: translate(-139%, 0) scale(1);
-  }
+  -webkit-transform: translate(-115%, -3%) rotate(-2deg) scale(1.1);
+  -ms-transform: translate(-115%, -3%) rotate(-2deg) scale(1.1);
+  transform: translate(-115%, -3%) rotate(-2deg) scale(1.1);
 }
 
 .services-page .animate-applicant-tracking .animate-great-candidate {
-  -webkit-animation-name: animate-great-candidate;
-  animation-name: animate-great-candidate;
-}
-
-@-webkit-keyframes animate-similar-candidates {
-  to {
-    opacity: 1;
-    -webkit-transform: translate(28%, 0) scale(1);
-    transform: translate(28%, 0) scale(1);
-  }
-}
-
-@keyframes animate-similar-candidates {
-  to {
-    opacity: 1;
-    -webkit-transform: translate(28%, 0) scale(1);
-    transform: translate(28%, 0) scale(1);
-  }
+  opacity: 1;
+  -webkit-transform: translate(-139%, 0) scale(1);
+  -ms-transform: translate(-139%, 0) scale(1);
+  transform: translate(-139%, 0) scale(1);
 }
 
 .services-page .animate-applicant-tracking .animate-similar-candidates {
-  -webkit-animation-name: animate-similar-candidates;
-  animation-name: animate-similar-candidates;
-}
-
-@-webkit-keyframes animate-applicant-tracking {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(0) scale(0.5);
-    transform: translateY(0) scale(0.5);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(-100%) scale(1);
-    transform: translateY(-100%) scale(1);
-  }
-}
-
-@keyframes animate-applicant-tracking {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(0) scale(0.5);
-    transform: translateY(0) scale(0.5);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(-100%) scale(1);
-    transform: translateY(-100%) scale(1);
-  }
+  opacity: 1;
+  -webkit-transform: translate(28%, 0) scale(1);
+  -ms-transform: translate(28%, 0) scale(1);
+  transform: translate(28%, 0) scale(1);
 }
 
 .services-page .animate-applicant-tracking .animate-applicant-tracking {
-  -webkit-animation-name: animate-applicant-tracking;
-  animation-name: animate-applicant-tracking;
-}
-
-@-webkit-keyframes animate-meat {
-  to {
-    opacity: 1;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-}
-
-@keyframes animate-meat {
-  to {
-    opacity: 1;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
+  opacity: 1;
+  -webkit-transform: translateY(-100%) scale(1);
+  -ms-transform: translateY(-100%) scale(1);
+  transform: translateY(-100%) scale(1);
 }
 
 .services-page .animate-employer-brand .animate-meat {
-  -webkit-animation-name: animate-meat;
-  animation-name: animate-meat;
-}
-
-@-webkit-keyframes animate-building-society {
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(-102%);
-    transform: translateY(-102%);
-  }
-}
-
-@keyframes animate-building-society {
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(-102%);
-    transform: translateY(-102%);
-  }
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .services-page .animate-employer-brand .animate-building-society {
-  -webkit-animation-name: animate-building-society;
-  animation-name: animate-building-society;
-}
-
-@-webkit-keyframes animate-radio-waves {
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0%) scaleY(1);
-    transform: translateY(0%) scaleY(1);
-  }
-}
-
-@keyframes animate-radio-waves {
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0%) scaleY(1);
-    transform: translateY(0%) scaleY(1);
-  }
+  opacity: 1;
+  -webkit-transform: translateY(-102%);
+  -ms-transform: translateY(-102%);
+  transform: translateY(-102%);
 }
 
 .services-page .animate-radio-play .animate-radio-waves {
-  -webkit-animation-name: animate-radio-waves;
-  animation-name: animate-radio-waves;
-}
-
-@-webkit-keyframes animate-progress-bar {
-  to {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-  }
-}
-
-@keyframes animate-progress-bar {
-  to {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-  }
+  opacity: 1;
+  -webkit-transform: translateY(0%) scaleY(1);
+  -ms-transform: translateY(0%) scaleY(1);
+  transform: translateY(0%) scaleY(1);
 }
 
 .services-page .animate-radio-play .animate-progress-bar img {
-  -webkit-animation-name: animate-progress-bar;
-  animation-name: animate-progress-bar;
-}
-
-@-webkit-keyframes animate-radio-icon {
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-}
-
-@keyframes animate-radio-icon {
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
 }
 
 .services-page .animate-radio-play .animate-radio-icon {
-  -webkit-animation-name: animate-radio-icon;
-  animation-name: animate-radio-icon;
-}
-
-@-webkit-keyframes animate-friend-app-post {
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(28%);
-    transform: translateX(28%);
-  }
-}
-
-@keyframes animate-friend-app-post {
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(28%);
-    transform: translateX(28%);
-  }
+  opacity: 1;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 
 .services-page .animate-friend-app .animate-friend-app-post {
-  -webkit-animation-name: animate-friend-app-post;
-  animation-name: animate-friend-app-post;
-}
-
-@-webkit-keyframes animate-friend-app-post-2 {
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(-122%);
-    transform: translateX(-122%);
-  }
-}
-
-@keyframes animate-friend-app-post-2 {
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(-122%);
-    transform: translateX(-122%);
-  }
+  opacity: 1;
+  -webkit-transform: translateX(28%);
+  -ms-transform: translateX(28%);
+  transform: translateX(28%);
 }
 
 .services-page .animate-friend-app .animate-friend-app-post-2 {
-  -webkit-animation-name: animate-friend-app-post-2;
-  animation-name: animate-friend-app-post-2;
-}
-
-@-webkit-keyframes animate-chart {
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(29%);
-    transform: translateX(29%);
-  }
-}
-
-@keyframes animate-chart {
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(29%);
-    transform: translateX(29%);
-  }
+  opacity: 1;
+  -webkit-transform: translateX(-122%);
+  -ms-transform: translateX(-122%);
+  transform: translateX(-122%);
 }
 
 .services-page .animate-friend-app .animate-chart {
-  -webkit-animation-name: animate-chart;
-  animation-name: animate-chart;
-}
-
-@-webkit-keyframes animate-app-store {
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(-195%);
-    transform: translateX(-195%);
-  }
-}
-
-@keyframes animate-app-store {
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(-195%);
-    transform: translateX(-195%);
-  }
+  opacity: 1;
+  -webkit-transform: translateX(29%);
+  -ms-transform: translateX(29%);
+  transform: translateX(29%);
 }
 
 .services-page .animate-friend-app .animate-app-store {
-  -webkit-animation-name: animate-app-store;
-  animation-name: animate-app-store;
-}
-
-@-webkit-keyframes animate-google-play {
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(-117%);
-    transform: translateX(-117%);
-  }
-}
-
-@keyframes animate-google-play {
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(-117%);
-    transform: translateX(-117%);
-  }
+  opacity: 1;
+  -webkit-transform: translateX(-195%);
+  -ms-transform: translateX(-195%);
+  transform: translateX(-195%);
 }
 
 .services-page .animate-friend-app .animate-google-play {
-  -webkit-animation-name: animate-google-play;
-  animation-name: animate-google-play;
+  opacity: 1;
+  -webkit-transform: translateX(-117%);
+  -ms-transform: translateX(-117%);
+  transform: translateX(-117%);
+}
+
+.services-page .animate-talent-comms .animate-knauf {
+  -webkit-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+
+.services-page .animate-talent-comms .animate-coffee-cup {
+  -webkit-transform: translateX(7%);
+  -ms-transform: translateX(7%);
+  transform: translateX(7%);
+}
+
+.services-page .animate-talent-comms .animate-coffee-cup-lid {
+  -webkit-transform: translateX(30%);
+  -ms-transform: translateX(30%);
+  transform: translateX(30%);
+}
+
+.services-page .animate-diversity .animate-diversity-iphone {
+  opacity: 1;
+  -webkit-transform: translateY(25%);
+  -ms-transform: translateY(25%);
+  transform: translateY(25%);
+}
+
+.services-page .animate-diversity .animate-diversity-iphone-2 {
+  opacity: 1;
+  -webkit-transform: translateY(-30%);
+  -ms-transform: translateY(-30%);
+  transform: translateY(-30%);
+}
+
+.services-page .animate-evp .animate-evp-postcard {
+  opacity: 1;
+  -webkit-transform: rotate(19deg) scale(1.1) translateX(-3%);
+  -ms-transform: rotate(19deg) scale(1.1) translateX(-3%);
+  transform: rotate(19deg) scale(1.1) translateX(-3%);
+}
+
+.services-page .animate-evp .animate-evp-polaroid {
+  opacity: 1;
+  -webkit-transform: translateY(26%);
+  -ms-transform: translateY(26%);
+  transform: translateY(26%);
 }
 
 .services-head {
-  padding: 20px 0 40px;
+  padding: 0px 0 40px;
 }
 
 .services-head__text {
@@ -10583,22 +10099,16 @@ html.services-page {
   max-width: 939px;
 }
 
-.services-head__description p {
-  margin: 0;
-}
-
 .services-head__description--small {
   display: none;
 }
 
 .services-head__description--small p {
-  font-family: "GilroyRegular";
-  font-size: 14px;
-  line-height: 21px;
+  font-weight: 400;
 }
 
 .services-head__video {
-  height: calc(100vw * 308 / 393);
+  height: 78.3715012723vw;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -10609,6 +10119,10 @@ html.services-page {
 
 .services-page .section {
   padding: 40px 0;
+}
+
+.services-page .section__description {
+  margin-bottom: 3rem;
 }
 
 .services-page .section__image-wrap {
@@ -10632,7 +10146,7 @@ html.services-page {
 }
 
 .career-sites .section__image-wrap {
-  width: calc(100vw * 332 / 393);
+  width: 84.4783715013vw;
 }
 
 .career-sites__ipad,
@@ -10660,7 +10174,7 @@ html.services-page {
 }
 
 .film-production .section__image-wrap {
-  width: calc(100vw * 292 / 393);
+  width: 74.3002544529vw;
   margin: 0 auto 43px;
 }
 
@@ -10680,7 +10194,7 @@ html.services-page {
 }
 
 .social-media .section__image {
-  height: calc(100vw * 267 / 393);
+  height: 67.9389312977vw;
   margin-bottom: 36px;
 }
 
@@ -10816,7 +10330,7 @@ html.services-page {
 }
 
 .social-media__iphone {
-  height: calc(100vw * 229 / 393);
+  height: 58.2697201018vw;
   width: auto;
 }
 
@@ -10825,7 +10339,7 @@ html.services-page {
 }
 
 .media-buying .section__image {
-  height: calc(100vw * 302 / 393);
+  height: 76.844783715vw;
 }
 
 .media-buying__bus-stop {
@@ -10866,11 +10380,11 @@ html.services-page {
 }
 
 .google-partner .section__image {
-  height: calc(100vw * 267 / 393);
+  height: 67.9389312977vw;
 }
 
 .google-partner__google-iphone {
-  height: calc(100vw * 229 / 393);
+  height: 58.2697201018vw;
   width: auto;
 }
 
@@ -10896,6 +10410,7 @@ html.services-page {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+  z-index: 1;
 }
 
 .google-partner__icon--we-hiring {
@@ -10924,7 +10439,7 @@ html.services-page {
 }
 
 .talent-brand .section__image {
-  height: calc(100vw * 300 / 393);
+  height: 76.3358778626vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10950,13 +10465,13 @@ html.services-page {
 }
 
 .talent-brand__icon {
-  height: 100%;
-  width: calc(100vw * 150 / 393);
+  height: auto;
+  width: 38.1679389313vw;
 }
 
 .talent-brand__icon img {
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .talent-brand__icon--polaroid-3,
@@ -10971,7 +10486,7 @@ html.services-page {
 }
 
 .applicant-tracking .section__image {
-  height: calc(100vw * 260 / 393);
+  height: 66.1577608142vw;
   margin-bottom: 35px;
 }
 
@@ -11002,7 +10517,7 @@ html.services-page {
 }
 
 .applicant-tracking__icon--candidates {
-  height: calc(100vw * 241 / 393);
+  height: 61.3231552163vw;
   position: static;
   opacity: 1;
   z-index: 1;
@@ -11039,7 +10554,7 @@ html.services-page {
 .applicant-tracking__icon--smart-recruiters {
   width: 16%;
   left: 8%;
-  z-index: 10;
+  z-index: 2;
 }
 
 .applicant-tracking__icon--smart-recruiters img {
@@ -11049,7 +10564,7 @@ html.services-page {
 .applicant-tracking__icon--teamtailor {
   width: 15%;
   left: 16%;
-  z-index: 8;
+  z-index: 2;
 }
 
 .applicant-tracking__icon--teamtailor img {
@@ -11059,7 +10574,7 @@ html.services-page {
 .applicant-tracking__icon--at {
   width: 20%;
   left: 17%;
-  z-index: 9;
+  z-index: 1;
 }
 
 .applicant-tracking__icon--at img {
@@ -11069,6 +10584,7 @@ html.services-page {
 .applicant-tracking__icon--vacancy-poster {
   width: 17%;
   left: 22%;
+  z-index: 1;
 }
 
 .applicant-tracking__icon--vacancy-poster img {
@@ -11078,7 +10594,7 @@ html.services-page {
 .applicant-tracking__icon--jobvite {
   width: 13%;
   left: 51%;
-  z-index: 7;
+  z-index: 2;
 }
 
 .applicant-tracking__icon--jobvite img {
@@ -11146,7 +10662,7 @@ html.services-page {
 }
 
 .radio-play .section__image-wrap {
-  width: calc(100vw * 280 / 393);
+  width: 71.2468193384vw;
   margin: 0 auto;
   z-index: 1;
 }
@@ -11235,7 +10751,7 @@ html.services-page {
 }
 
 .friend-app .section__image-wrap {
-  height: calc(100vw * 260 / 393);
+  height: 66.1577608142vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11259,6 +10775,16 @@ html.services-page {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
+  width: auto;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .friend-app__icon--app img {
@@ -11293,18 +10819,221 @@ html.services-page {
   left: 43%;
 }
 
-.fsb-select {
+.page-nav-container {
+  position: relative;
+  width: calc(100% + 72px);
+  padding-bottom: 78px;
+  margin-left: -72px;
+  display: none;
+}
+
+.page-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 72px;
+  padding: 15px 0;
+  background-color: #e2e2e2;
+  z-index: 11;
+}
+
+.talent-comms .section__image {
+  height: 66.1577608142vw;
+  margin-bottom: 35px;
+}
+
+.talent-comms .section__image-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.talent-comms__icon {
+  position: absolute;
+  bottom: 0;
+}
+
+.talent-comms__icon--social-iphone-2 {
+  position: static;
+  height: 61.3231552163vw;
+  z-index: 2;
+}
+
+.talent-comms__icon--social-iphone-2 img {
+  height: 100%;
+  width: auto;
+}
+
+.talent-comms__icon--knauf {
+  width: 100%;
+  left: -17%;
+  bottom: -25%;
+  z-index: 1;
+  -webkit-transform-origin: 60% 63%;
+  -ms-transform-origin: 60% 63%;
+  transform-origin: 60% 63%;
+}
+
+.talent-comms__icon--knauf img {
+  width: 100%;
+  height: 100%;
+}
+
+.talent-comms__icon--coffee-cup {
+  width: 28%;
+  right: 13%;
+  z-index: 2;
+}
+
+.talent-comms__icon--coffee-cup img {
+  width: 100%;
+  height: 100%;
+}
+
+.talent-comms__icon--coffee-cup-lid {
+  width: 26%;
+  bottom: 10%;
+  right: 5%;
+}
+
+.talent-comms__icon--coffee-cup-lid img {
+  width: 100%;
+  height: 100%;
+}
+
+.diversity .section__image {
+  margin-bottom: 35px;
+}
+
+.diversity .section__image-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.diversity__icon {
+  position: absolute;
+  opacity: 0;
+}
+
+.diversity__icon--diversity-desktop {
+  height: 71.2468193384vw;
+  position: static;
+  opacity: 1;
+}
+
+.diversity__icon--diversity-desktop img {
+  height: 100%;
+  width: auto;
+}
+
+.diversity__icon--diversity-iphone,
+.diversity__icon--diversity-iphone-2 {
+  width: 27%;
+  top: 20%;
+}
+
+.diversity__icon--diversity-iphone {
+  left: 7%;
+}
+
+.diversity__icon--diversity-iphone-2 {
+  right: 6%;
+}
+
+.evp .section__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 35px;
+  padding-top: 50px;
+}
+
+.evp .section__image-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.evp__icon {
+  position: absolute;
+}
+
+.evp__icon--evp-magazine {
+  position: relative;
+  height: 58.524173028vw;
+  max-height: 410px;
+}
+
+.evp__icon--evp-magazine img {
+  height: 100%;
+  width: auto;
+}
+
+.evp__icon--evp-postcard {
+  z-index: 2;
+  top: -27%;
+  left: -35%;
+  width: 90%;
+}
+
+.evp__icon--evp-polaroid {
+  width: 51%;
+  right: -9%;
+  bottom: 8%;
+  z-index: 2;
+}
+
+.evp img.evp__magazine-list {
+  position: absolute;
+  width: 54.5%;
+  height: 77%;
+  top: 14.6%;
+  left: 3.5%;
+  z-index: 3;
+}
+
+.select-nav {
   position: fixed;
   top: 76px;
   left: 0;
+  width: 100%;
+  z-index: 4;
+}
+
+.fsb-select {
   border: none;
   border-radius: 0;
   background-color: #f4f4f4;
-  font-family: "GilroyBold";
+  font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   width: 100%;
-  z-index: 10;
 }
 
 .fsb-select .fsb-button {
@@ -11330,17 +11059,17 @@ html.services-page {
   outline: none;
 }
 
-.fsb-select .fsb-button[aria-expanded="true"]:after {
+.fsb-select .fsb-button[aria-expanded=true]::after {
   -webkit-transform: translateY(-90%) rotateZ(180deg);
   -ms-transform: translateY(-90%) rotate(180deg);
   transform: translateY(-90%) rotateZ(180deg);
 }
 
-.fsb-select .fsb-button[aria-expanded="true"] + .fsb-list {
-  max-height: none;
+.fsb-select .fsb-button[aria-expanded=true] + .fsb-list {
   -webkit-transition: opacity 0.5s ease;
   -o-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
+  max-height: 70vh;
 }
 
 .fsb-select .fsb-list {
@@ -11352,16 +11081,9 @@ html.services-page {
 }
 
 .fsb-select .fsb-option {
-  font-family: "GilroyMedium";
+  font-weight: 500;
   padding: 12px 27px 8px 20px;
   text-transform: uppercase;
-  width: 100%;
-}
-
-.nav-page {
-  padding: 15px 0;
-  display: none;
-  background-color: #e2e2e2;
   width: 100%;
 }
 
@@ -11372,26 +11094,17 @@ html.services-page {
 }
 
 @media (min-width: 560px) {
-@-webkit-keyframes animate-iphone {
-    to {
-      opacity: 1;
-      -webkit-transform: translateY(-13%);
-      transform: translateY(-13%);
-    }
-}
-
-@keyframes animate-iphone {
-    to {
-      opacity: 1;
-      -webkit-transform: translateY(-13%);
-      transform: translateY(-13%);
-    }
-}
+  .services-page .animate-career-sites .animate-iphone {
+    opacity: 1;
+    -webkit-transform: translateY(-13%);
+    -ms-transform: translateY(-13%);
+    transform: translateY(-13%);
+  }
 }
 
 @media (min-width: 576px) {
-  .container,
-  .container-sm {
+  .container-sm,
+  .container {
     max-width: 540px;
   }
 
@@ -11426,7 +11139,7 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 33.33333%;
+    width: 33.3333333333%;
   }
 
   .row-cols-sm-4 > * {
@@ -11447,7 +11160,7 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 16.66667%;
+    width: 16.6666666667%;
   }
 
   .col-sm-auto {
@@ -11461,14 +11174,14 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 8.33333%;
+    width: 8.33333333%;
   }
 
   .col-sm-2 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 16.66667%;
+    width: 16.66666667%;
   }
 
   .col-sm-3 {
@@ -11482,14 +11195,14 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 33.33333%;
+    width: 33.33333333%;
   }
 
   .col-sm-5 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 41.66667%;
+    width: 41.66666667%;
   }
 
   .col-sm-6 {
@@ -11503,14 +11216,14 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 58.33333%;
+    width: 58.33333333%;
   }
 
   .col-sm-8 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 66.66667%;
+    width: 66.66666667%;
   }
 
   .col-sm-9 {
@@ -11524,14 +11237,14 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 83.33333%;
+    width: 83.33333333%;
   }
 
   .col-sm-11 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 91.66667%;
+    width: 91.66666667%;
   }
 
   .col-sm-12 {
@@ -11546,11 +11259,11 @@ html.services-page {
   }
 
   .offset-sm-1 {
-    margin-left: 8.33333%;
+    margin-left: 8.33333333%;
   }
 
   .offset-sm-2 {
-    margin-left: 16.66667%;
+    margin-left: 16.66666667%;
   }
 
   .offset-sm-3 {
@@ -11558,11 +11271,11 @@ html.services-page {
   }
 
   .offset-sm-4 {
-    margin-left: 33.33333%;
+    margin-left: 33.33333333%;
   }
 
   .offset-sm-5 {
-    margin-left: 41.66667%;
+    margin-left: 41.66666667%;
   }
 
   .offset-sm-6 {
@@ -11570,11 +11283,11 @@ html.services-page {
   }
 
   .offset-sm-7 {
-    margin-left: 58.33333%;
+    margin-left: 58.33333333%;
   }
 
   .offset-sm-8 {
-    margin-left: 66.66667%;
+    margin-left: 66.66666667%;
   }
 
   .offset-sm-9 {
@@ -11582,11 +11295,11 @@ html.services-page {
   }
 
   .offset-sm-10 {
-    margin-left: 83.33333%;
+    margin-left: 83.33333333%;
   }
 
   .offset-sm-11 {
-    margin-left: 91.66667%;
+    margin-left: 91.66666667%;
   }
 
   .g-sm-0,
@@ -11659,9 +11372,9 @@ html.services-page {
 }
 
 @media (min-width: 768px) {
-  .container,
+  .container-md,
   .container-sm,
-  .container-md {
+  .container {
     max-width: 720px;
   }
 
@@ -11696,7 +11409,7 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 33.33333%;
+    width: 33.3333333333%;
   }
 
   .row-cols-md-4 > * {
@@ -11717,7 +11430,7 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 16.66667%;
+    width: 16.6666666667%;
   }
 
   .col-md-auto {
@@ -11731,14 +11444,14 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 8.33333%;
+    width: 8.33333333%;
   }
 
   .col-md-2 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 16.66667%;
+    width: 16.66666667%;
   }
 
   .col-md-3 {
@@ -11752,14 +11465,14 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 33.33333%;
+    width: 33.33333333%;
   }
 
   .col-md-5 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 41.66667%;
+    width: 41.66666667%;
   }
 
   .col-md-6 {
@@ -11773,14 +11486,14 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 58.33333%;
+    width: 58.33333333%;
   }
 
   .col-md-8 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 66.66667%;
+    width: 66.66666667%;
   }
 
   .col-md-9 {
@@ -11794,14 +11507,14 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 83.33333%;
+    width: 83.33333333%;
   }
 
   .col-md-11 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 91.66667%;
+    width: 91.66666667%;
   }
 
   .col-md-12 {
@@ -11816,11 +11529,11 @@ html.services-page {
   }
 
   .offset-md-1 {
-    margin-left: 8.33333%;
+    margin-left: 8.33333333%;
   }
 
   .offset-md-2 {
-    margin-left: 16.66667%;
+    margin-left: 16.66666667%;
   }
 
   .offset-md-3 {
@@ -11828,11 +11541,11 @@ html.services-page {
   }
 
   .offset-md-4 {
-    margin-left: 33.33333%;
+    margin-left: 33.33333333%;
   }
 
   .offset-md-5 {
-    margin-left: 41.66667%;
+    margin-left: 41.66666667%;
   }
 
   .offset-md-6 {
@@ -11840,11 +11553,11 @@ html.services-page {
   }
 
   .offset-md-7 {
-    margin-left: 58.33333%;
+    margin-left: 58.33333333%;
   }
 
   .offset-md-8 {
-    margin-left: 66.66667%;
+    margin-left: 66.66666667%;
   }
 
   .offset-md-9 {
@@ -11852,11 +11565,11 @@ html.services-page {
   }
 
   .offset-md-10 {
-    margin-left: 83.33333%;
+    margin-left: 83.33333333%;
   }
 
   .offset-md-11 {
-    margin-left: 91.66667%;
+    margin-left: 91.66666667%;
   }
 
   .g-md-0,
@@ -12198,7 +11911,7 @@ html.services-page {
     width: auto;
   }
 
-  .uk-child-width-expand\@s > :not([class*="uk-width"]) {
+  .uk-child-width-expand\@s > :not([class*=uk-width]) {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -13233,12 +12946,12 @@ html.services-page {
     padding-left: 3rem;
   }
 
-  .services-page .page-wrapper {
-    padding-left: 72px;
+  .services-page #main-container {
+    padding-top: 76px;
   }
 
-  .services-page .main {
-    padding-top: 0;
+  .services-page .page-wrapper {
+    padding-left: 72px;
   }
 
   .services-page .container {
@@ -13246,20 +12959,22 @@ html.services-page {
   }
 
   .services-page h1 {
-    font-size: 60px;
-    line-height: 80px;
     margin-bottom: 20px;
   }
 
   .services-page h2 {
-    font-size: 40px;
-    line-height: 50px;
     margin-bottom: 30px;
+  }
+
+  .services-page h4 {
+    font-size: 2.2rem;
+    line-height: 1.36;
+    margin-bottom: 40px;
   }
 
   .services-page .button {
     height: 58px;
-    padding: 0 25px 0 25px;
+    padding: 0 25px;
     font-size: 1.4rem;
     line-height: 1.29;
   }
@@ -13274,12 +12989,27 @@ html.services-page {
     height: 32px;
   }
 
-  .services-head__description p {
-    margin-bottom: 30px;
+  .services-page .animate-diversity .animate-diversity-iphone {
+    opacity: 1;
+    -webkit-transform: translateY(35%);
+    -ms-transform: translateY(35%);
+    transform: translateY(35%);
+  }
+
+  .services-page .animate-diversity .animate-diversity-iphone-2 {
+    opacity: 1;
+    -webkit-transform: translateY(-35%);
+    -ms-transform: translateY(-35%);
+    transform: translateY(-35%);
   }
 
   .services-head__description--small {
     display: block;
+  }
+
+  .services-head__description--small p {
+    font-size: 1.4rem;
+    line-height: 1.5;
   }
 
   .services-head__description--small p:last-child {
@@ -13291,7 +13021,7 @@ html.services-page {
   }
 
   .film-production .section__image-wrap {
-    width: calc(100vw * 550 / 768);
+    width: 71.6145833333vw;
   }
 
   .media-buying h2 {
@@ -13299,10 +13029,15 @@ html.services-page {
   }
 
   .talent-brand__icon {
-    width: calc(100vw * 270 / 768);
+    width: 35.15625vw;
   }
 
-  .fsb-select {
+  .talent-comms__icon--knauf {
+    width: 110%;
+    left: -25%;
+  }
+
+  .select-nav {
     left: 72px;
     top: 0;
     right: 0;
@@ -13526,7 +13261,7 @@ html.services-page {
     width: auto;
   }
 
-  .uk-child-width-expand\@m > :not([class*="uk-width"]) {
+  .uk-child-width-expand\@m > :not([class*=uk-width]) {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -13801,6 +13536,17 @@ html.services-page {
     right: 3rem;
   }
 
+  .services-page p,
+  .services-page ul li {
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 1.65;
+  }
+
+  .services-page ul li {
+    font-weight: 400;
+  }
+
   .services-head__content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -13814,6 +13560,11 @@ html.services-page {
   .services-head__text {
     padding: 0 30px 0 0;
     margin-left: -80px;
+  }
+
+  .services-head__description--small p {
+    font-size: 1.6rem;
+    line-height: 1.5;
   }
 
   .services-head__video {
@@ -13833,10 +13584,10 @@ html.services-page {
 }
 
 @media (min-width: 992px) {
-  .container,
-  .container-sm,
+  .container-lg,
   .container-md,
-  .container-lg {
+  .container-sm,
+  .container {
     max-width: 960px;
   }
 
@@ -13871,7 +13622,7 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 33.33333%;
+    width: 33.3333333333%;
   }
 
   .row-cols-lg-4 > * {
@@ -13892,7 +13643,7 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 16.66667%;
+    width: 16.6666666667%;
   }
 
   .col-lg-auto {
@@ -13906,14 +13657,14 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 8.33333%;
+    width: 8.33333333%;
   }
 
   .col-lg-2 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 16.66667%;
+    width: 16.66666667%;
   }
 
   .col-lg-3 {
@@ -13927,14 +13678,14 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 33.33333%;
+    width: 33.33333333%;
   }
 
   .col-lg-5 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 41.66667%;
+    width: 41.66666667%;
   }
 
   .col-lg-6 {
@@ -13948,14 +13699,14 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 58.33333%;
+    width: 58.33333333%;
   }
 
   .col-lg-8 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 66.66667%;
+    width: 66.66666667%;
   }
 
   .col-lg-9 {
@@ -13969,14 +13720,14 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 83.33333%;
+    width: 83.33333333%;
   }
 
   .col-lg-11 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 91.66667%;
+    width: 91.66666667%;
   }
 
   .col-lg-12 {
@@ -13991,11 +13742,11 @@ html.services-page {
   }
 
   .offset-lg-1 {
-    margin-left: 8.33333%;
+    margin-left: 8.33333333%;
   }
 
   .offset-lg-2 {
-    margin-left: 16.66667%;
+    margin-left: 16.66666667%;
   }
 
   .offset-lg-3 {
@@ -14003,11 +13754,11 @@ html.services-page {
   }
 
   .offset-lg-4 {
-    margin-left: 33.33333%;
+    margin-left: 33.33333333%;
   }
 
   .offset-lg-5 {
-    margin-left: 41.66667%;
+    margin-left: 41.66666667%;
   }
 
   .offset-lg-6 {
@@ -14015,11 +13766,11 @@ html.services-page {
   }
 
   .offset-lg-7 {
-    margin-left: 58.33333%;
+    margin-left: 58.33333333%;
   }
 
   .offset-lg-8 {
-    margin-left: 66.66667%;
+    margin-left: 66.66666667%;
   }
 
   .offset-lg-9 {
@@ -14027,11 +13778,11 @@ html.services-page {
   }
 
   .offset-lg-10 {
-    margin-left: 83.33333%;
+    margin-left: 83.33333333%;
   }
 
   .offset-lg-11 {
-    margin-left: 91.66667%;
+    margin-left: 91.66666667%;
   }
 
   .g-lg-0,
@@ -14126,85 +13877,40 @@ html.services-page {
     display: none;
   }
 
-@-webkit-keyframes animate-iphone {
-    to {
-      opacity: 1;
-      -webkit-transform: translateY(4%);
-      transform: translateY(4%);
-    }
-}
+  .services-page .animate-career-sites .animate-iphone {
+    opacity: 1;
+    -webkit-transform: translateY(4%);
+    -ms-transform: translateY(4%);
+    transform: translateY(4%);
+  }
 
-@keyframes animate-iphone {
-    to {
-      opacity: 1;
-      -webkit-transform: translateY(4%);
-      transform: translateY(4%);
-    }
-}
+  .services-page .animate-social-media .animate-gaucho-ig {
+    -webkit-transform: translateX(33%);
+    -ms-transform: translateX(33%);
+    transform: translateX(33%);
+    opacity: 1;
+  }
 
-@-webkit-keyframes animate-gaucho-ig {
-    to {
-      -webkit-transform: translateX(33%);
-      transform: translateX(33%);
-      opacity: 1;
-    }
-}
+  .services-page .animate-social-media .animate-sky-service {
+    -webkit-transform: translateX(-139%);
+    -ms-transform: translateX(-139%);
+    transform: translateX(-139%);
+    opacity: 1;
+  }
 
-@keyframes animate-gaucho-ig {
-    to {
-      -webkit-transform: translateX(33%);
-      transform: translateX(33%);
-      opacity: 1;
-    }
-}
+  .services-page .animate-media-buying .animate-total-job-icon {
+    -webkit-transform: translateY(-127%);
+    -ms-transform: translateY(-127%);
+    transform: translateY(-127%);
+    opacity: 1;
+  }
 
-@-webkit-keyframes animate-sky-service {
-    to {
-      -webkit-transform: translateX(-139%);
-      transform: translateX(-139%);
-      opacity: 1;
-    }
-}
-
-@keyframes animate-sky-service {
-    to {
-      -webkit-transform: translateX(-139%);
-      transform: translateX(-139%);
-      opacity: 1;
-    }
-}
-
-@-webkit-keyframes animate-indeed-icon {
-    to {
-      -webkit-transform: translateY(-184%);
-      transform: translateY(-184%);
-      opacity: 1;
-    }
-}
-
-@keyframes animate-indeed-icon {
-    to {
-      -webkit-transform: translateY(-184%);
-      transform: translateY(-184%);
-      opacity: 1;
-    }
-}
-
-@-webkit-keyframes animate-total-job-icon {
-    to {
-      -webkit-transform: translateY(-127%);
-      transform: translateY(-127%);
-      opacity: 1;
-    }
-}
-
-@keyframes animate-total-job-icon {
-    to {
-      -webkit-transform: translateY(-127%);
-      transform: translateY(-127%);
-      opacity: 1;
-    }
-}
+  .services-page .animate-media-buying .animate-indeed-icon {
+    -webkit-transform: translateY(-184%);
+    -ms-transform: translateY(-184%);
+    transform: translateY(-184%);
+    opacity: 1;
+  }
 
   .services-page .section {
     padding: 0;
@@ -14226,7 +13932,7 @@ html.services-page {
   .services-page .section__content {
     display: -ms-grid;
     display: grid;
-    grid-template-areas: "title image" "desc image" "button image";
+    grid-template-areas: "title image" "desc image" "button image";
     -ms-grid-columns: 1fr calc(50% - 8px);
     grid-template-columns: 1fr calc(50% - 8px);
     justify-items: flex-start;
@@ -14276,7 +13982,7 @@ html.services-page {
     grid-area: image;
     -ms-grid-row: 1;
     -ms-grid-row-span: 5;
-    grid-row: 1 / 6;
+    grid-row: 1/6;
     width: 100%;
     margin-bottom: 0;
   }
@@ -14304,7 +14010,7 @@ html.services-page {
   .services-page .section--reversed .section__content {
     display: -ms-grid;
     display: grid;
-    grid-template-areas: "image title" "image desc" "image button";
+    grid-template-areas: "image title" "image desc" "image button";
     -ms-grid-columns: calc(50% - 8px) 1fr;
     grid-template-columns: calc(50% - 8px) 1fr;
     justify-items: flex-start;
@@ -14351,7 +14057,7 @@ html.services-page {
   }
 
   .career-sites .section__image-wrap {
-    width: calc(100vw * 944 / 2488);
+    width: 37.9421221865vw;
     max-width: 944px;
   }
 
@@ -14360,7 +14066,7 @@ html.services-page {
   }
 
   .film-production .section__image-wrap {
-    width: calc(100vw * 944 / 2488);
+    width: 37.9421221865vw;
     max-width: 944px;
     margin: 0;
   }
@@ -14458,7 +14164,7 @@ html.services-page {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    height: calc(100vw * 802 / 2488);
+    height: 32.2347266881vw;
     max-height: 802px;
     width: 100%;
   }
@@ -14495,7 +14201,7 @@ html.services-page {
   }
 
   .google-partner .section__image-wrap {
-    height: calc(100vw * 690 / 2488);
+    height: 27.7331189711vw;
     max-height: 690px;
   }
 
@@ -14527,7 +14233,7 @@ html.services-page {
   }
 
   .talent-brand__icon {
-    width: calc(100vw * 404 / 2488);
+    width: 16.2379421222vw;
     max-width: 404px;
   }
 
@@ -14542,7 +14248,7 @@ html.services-page {
     -ms-flex-align: center;
     align-items: center;
     width: 100%;
-    height: calc(100vw * 688 / 2488);
+    height: 27.652733119vw;
     max-height: 688px;
   }
 
@@ -14635,8 +14341,8 @@ html.services-page {
   }
 
   .radio-play .section__image-wrap {
-    height: calc(100vw * 688 / 2488);
-    width: calc(100vw * 826 / 2488);
+    height: 27.652733119vw;
+    width: 33.1993569132vw;
     max-height: 688px;
     max-width: 826px;
   }
@@ -14648,11 +14354,12 @@ html.services-page {
   }
 
   .friend-app .section__image {
-    padding: calc(9% + 3px) 0;
+    padding: calc(6% + 1px) 0 calc(12% + 5px);
   }
 
   .friend-app .section__image-wrap {
-    height: calc(100vw * 761 / 2488);
+    height: 30.5868167203vw;
+    max-height: 761px;
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
@@ -14689,6 +14396,86 @@ html.services-page {
     top: 71%;
     left: 44%;
   }
+
+  .talent-comms .section__image {
+    height: auto;
+    margin-bottom: 0;
+    padding: calc(12% + 6px) 0;
+  }
+
+  .talent-comms .section__image-wrap {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 27.652733119vw;
+    max-height: 688px;
+  }
+
+  .talent-comms__icon--social-iphone-2 {
+    height: 100%;
+  }
+
+  .talent-comms__icon--knauf {
+    width: 43.7890625vw;
+    max-width: 1121px;
+    bottom: -28%;
+    left: calc(-86px + -105 * (100vw - 1024px) / 1536);
+  }
+
+  .talent-comms__icon--coffee-cup {
+    width: 25%;
+    right: calc(69px + 122 * (100vw - 1024px) / 1536);
+  }
+
+  .talent-comms__icon--coffee-cup-lid {
+    width: 23%;
+    bottom: 12%;
+    right: 9%;
+  }
+
+  .diversity .section__image {
+    margin-bottom: 0;
+    padding: calc(13% + 4px) 0;
+  }
+
+  .diversity__icon--diversity-desktop {
+    height: 26.1328125vw;
+  }
+
+  .evp .section__image {
+    margin-bottom: 0;
+    padding: calc(13% + 4px) 0;
+  }
+
+  .evp .section__image-wrap {
+    padding-top: 3%;
+    padding-left: 5%;
+  }
+
+  .evp__icon--evp-magazine {
+    height: 24.1015625vw;
+    max-height: 617px;
+  }
+
+  .evp__icon--evp-postcard {
+    top: -42%;
+    left: -42%;
+    width: 120%;
+  }
+
+  .evp__icon--evp-polaroid {
+    width: 50%;
+    right: -10%;
+    bottom: 7%;
+  }
+
+  .evp img.evp__magazine-list {
+    width: 54%;
+    height: 77%;
+    top: 14%;
+    left: 3%;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -14723,11 +14510,11 @@ html.services-page {
 }
 
 @media (min-width: 1200px) {
-  .container,
-  .container-sm,
-  .container-md,
+  .container-xl,
   .container-lg,
-  .container-xl {
+  .container-md,
+  .container-sm,
+  .container {
     max-width: 1140px;
   }
 
@@ -14762,7 +14549,7 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 33.33333%;
+    width: 33.3333333333%;
   }
 
   .row-cols-xl-4 > * {
@@ -14783,7 +14570,7 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 16.66667%;
+    width: 16.6666666667%;
   }
 
   .col-xl-auto {
@@ -14797,14 +14584,14 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 8.33333%;
+    width: 8.33333333%;
   }
 
   .col-xl-2 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 16.66667%;
+    width: 16.66666667%;
   }
 
   .col-xl-3 {
@@ -14818,14 +14605,14 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 33.33333%;
+    width: 33.33333333%;
   }
 
   .col-xl-5 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 41.66667%;
+    width: 41.66666667%;
   }
 
   .col-xl-6 {
@@ -14839,14 +14626,14 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 58.33333%;
+    width: 58.33333333%;
   }
 
   .col-xl-8 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 66.66667%;
+    width: 66.66666667%;
   }
 
   .col-xl-9 {
@@ -14860,14 +14647,14 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 83.33333%;
+    width: 83.33333333%;
   }
 
   .col-xl-11 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 91.66667%;
+    width: 91.66666667%;
   }
 
   .col-xl-12 {
@@ -14882,11 +14669,11 @@ html.services-page {
   }
 
   .offset-xl-1 {
-    margin-left: 8.33333%;
+    margin-left: 8.33333333%;
   }
 
   .offset-xl-2 {
-    margin-left: 16.66667%;
+    margin-left: 16.66666667%;
   }
 
   .offset-xl-3 {
@@ -14894,11 +14681,11 @@ html.services-page {
   }
 
   .offset-xl-4 {
-    margin-left: 33.33333%;
+    margin-left: 33.33333333%;
   }
 
   .offset-xl-5 {
-    margin-left: 41.66667%;
+    margin-left: 41.66666667%;
   }
 
   .offset-xl-6 {
@@ -14906,11 +14693,11 @@ html.services-page {
   }
 
   .offset-xl-7 {
-    margin-left: 58.33333%;
+    margin-left: 58.33333333%;
   }
 
   .offset-xl-8 {
-    margin-left: 66.66667%;
+    margin-left: 66.66666667%;
   }
 
   .offset-xl-9 {
@@ -14918,11 +14705,11 @@ html.services-page {
   }
 
   .offset-xl-10 {
-    margin-left: 83.33333%;
+    margin-left: 83.33333333%;
   }
 
   .offset-xl-11 {
-    margin-left: 91.66667%;
+    margin-left: 91.66666667%;
   }
 
   .g-xl-0,
@@ -15149,7 +14936,7 @@ html.services-page {
     width: auto;
   }
 
-  .uk-child-width-expand\@l > :not([class*="uk-width"]) {
+  .uk-child-width-expand\@l > :not([class*=uk-width]) {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -15523,12 +15310,6 @@ html.services-page {
   .temp-home #main-container > .container.px-8 {
     padding: 0 !important;
   }
-
-  .services-page .button {
-    font-size: 1.8rem;
-    line-height: 2.2rem;
-    letter-spacing: 0.18rem;
-  }
 }
 
 @media (min-width: 1300px) {
@@ -15570,26 +15351,8 @@ html.services-page {
 }
 
 @media (min-width: 1366px) {
-  .services-page h1 {
-    font-size: 81px;
-    line-height: 103px;
-    letter-spacing: -0.81px;
-  }
-
-  .services-page h2 {
-    font-size: 68px;
-    line-height: 86px;
-    letter-spacing: 0.34px;
-  }
-
   .services-page h3 {
     font-size: 32px;
-  }
-
-  .services-page h4 {
-    font-size: 29px;
-    line-height: 34px;
-    margin-bottom: 40px;
   }
 
   .services-page h5 {
@@ -15600,47 +15363,18 @@ html.services-page {
     font-size: 16px;
   }
 
-  .services-page p,
-  .services-page ul li {
-    font-family: "GilroyLight";
-    font-size: 29px;
-    line-height: 39px;
-    margin-bottom: 40px;
-  }
-
-  .services-page ul {
-    margin-bottom: 40px;
-  }
-
-  .services-page ul li {
-    font-family: "GilroyRegular";
-    font-size: 22px;
-    line-height: 28px;
-    letter-spacing: -0.22px;
-    margin-bottom: 10px;
-  }
-
   .services-head__text {
     margin-left: -110px;
-  }
-
-  .services-head__description p {
-    margin-bottom: 30px;
-  }
-
-  .services-head__description--small p {
-    font-size: 22px;
-    line-height: 39px;
   }
 }
 
 @media (min-width: 1400px) {
-  .container,
-  .container-sm,
-  .container-md,
-  .container-lg,
+  .container-xxl,
   .container-xl,
-  .container-xxl {
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
     max-width: 1320px;
   }
 
@@ -15675,7 +15409,7 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 33.33333%;
+    width: 33.3333333333%;
   }
 
   .row-cols-xxl-4 > * {
@@ -15696,7 +15430,7 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 16.66667%;
+    width: 16.6666666667%;
   }
 
   .col-xxl-auto {
@@ -15710,14 +15444,14 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 8.33333%;
+    width: 8.33333333%;
   }
 
   .col-xxl-2 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 16.66667%;
+    width: 16.66666667%;
   }
 
   .col-xxl-3 {
@@ -15731,14 +15465,14 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 33.33333%;
+    width: 33.33333333%;
   }
 
   .col-xxl-5 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 41.66667%;
+    width: 41.66666667%;
   }
 
   .col-xxl-6 {
@@ -15752,14 +15486,14 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 58.33333%;
+    width: 58.33333333%;
   }
 
   .col-xxl-8 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 66.66667%;
+    width: 66.66666667%;
   }
 
   .col-xxl-9 {
@@ -15773,14 +15507,14 @@ html.services-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 83.33333%;
+    width: 83.33333333%;
   }
 
   .col-xxl-11 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 91.66667%;
+    width: 91.66666667%;
   }
 
   .col-xxl-12 {
@@ -15795,11 +15529,11 @@ html.services-page {
   }
 
   .offset-xxl-1 {
-    margin-left: 8.33333%;
+    margin-left: 8.33333333%;
   }
 
   .offset-xxl-2 {
-    margin-left: 16.66667%;
+    margin-left: 16.66666667%;
   }
 
   .offset-xxl-3 {
@@ -15807,11 +15541,11 @@ html.services-page {
   }
 
   .offset-xxl-4 {
-    margin-left: 33.33333%;
+    margin-left: 33.33333333%;
   }
 
   .offset-xxl-5 {
-    margin-left: 41.66667%;
+    margin-left: 41.66666667%;
   }
 
   .offset-xxl-6 {
@@ -15819,11 +15553,11 @@ html.services-page {
   }
 
   .offset-xxl-7 {
-    margin-left: 58.33333%;
+    margin-left: 58.33333333%;
   }
 
   .offset-xxl-8 {
-    margin-left: 66.66667%;
+    margin-left: 66.66666667%;
   }
 
   .offset-xxl-9 {
@@ -15831,11 +15565,11 @@ html.services-page {
   }
 
   .offset-xxl-10 {
-    margin-left: 83.33333%;
+    margin-left: 83.33333333%;
   }
 
   .offset-xxl-11 {
-    margin-left: 91.66667%;
+    margin-left: 91.66666667%;
   }
 
   .g-xxl-0,
@@ -15928,7 +15662,7 @@ html.services-page {
     width: auto;
   }
 
-  .uk-child-width-expand\@xl > :not([class*="uk-width"]) {
+  .uk-child-width-expand\@xl > :not([class*=uk-width]) {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -16072,7 +15806,7 @@ html.services-page {
 
   .services-page .container {
     max-width: 2488px;
-    padding: 0 50px 0 50px;
+    padding: 0 50px;
   }
 }
 
@@ -16102,7 +15836,7 @@ html.services-page {
 
 @media (min-width: 1491px) {
   .temp-home #main-container > .container {
-    max-width: calc(1200px);
+    max-width: 1200px;
   }
 }
 
@@ -16111,15 +15845,11 @@ html.services-page {
     margin-right: 44px;
   }
 
-  .fsb-select {
-    display: none;
-  }
-
-  .nav-page {
+  .page-nav-container {
     display: block;
   }
 
-  .nav-page__wrapper ul {
+  .page-nav__wrapper ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -16129,29 +15859,29 @@ html.services-page {
     margin-bottom: 0;
   }
 
-  .nav-page__wrapper ul li {
+  .page-nav__wrapper ul li {
     margin-bottom: 0;
     line-height: 22px;
   }
 
-  .nav-page__wrapper ul li button {
+  .page-nav__wrapper ul li button {
     position: relative;
-    font-family: "GilroyBold";
+    font-weight: 700;
     font-size: 13px;
     line-height: 22px;
     text-transform: uppercase;
     padding: 13px 0;
-    -webkit-transition: text-shadow .4s ease;
-    -o-transition: text-shadow .4s ease;
-    transition: text-shadow .4s ease;
+    -webkit-transition: text-shadow 0.4s ease;
+    -o-transition: text-shadow 0.4s ease;
+    transition: text-shadow 0.4s ease;
   }
 
-  .nav-page__wrapper ul li button:focus-visible,
-  .nav-page__wrapper ul li button:focus {
+  .page-nav__wrapper ul li button:focus-visible,
+  .page-nav__wrapper ul li button:focus {
     outline: none;
   }
 
-  .nav-page__wrapper ul li button::after {
+  .page-nav__wrapper ul li button::after {
     content: "";
     position: absolute;
     bottom: 0px;
@@ -16172,14 +15902,18 @@ html.services-page {
     transition: transform 0.4s ease, -webkit-transform 0.4s ease;
   }
 
-  .nav-page__wrapper ul li button:hover {
+  .page-nav__wrapper ul li button:hover {
     text-shadow: 0px 0px 1px #353538;
   }
 
-  .nav-page__wrapper ul li button:hover::after {
+  .page-nav__wrapper ul li button:hover::after {
     -webkit-transform: scaleX(1);
     -ms-transform: scaleX(1);
     transform: scaleX(1);
+  }
+
+  .select-nav {
+    display: none;
   }
 }
 
@@ -16193,7 +15927,7 @@ html.services-page {
 
 @media (min-width: 1920px) {
   .services-page .container {
-    padding: 0 70px 0 70px;
+    padding: 0 70px;
   }
 
   .services-head__text {
@@ -16221,17 +15955,21 @@ html.services-page {
     padding-left: 0;
   }
 
-  .nav-page {
+  .page-nav-container {
+    padding-bottom: 118px;
+  }
+
+  .page-nav {
     padding: 35px 0;
   }
 
-  .nav-page__wrapper ul li button {
+  .page-nav__wrapper ul li button {
     font-size: 16px;
   }
 }
 
 @media (min-width: 2488px) {
-  .nav-page__wrapper ul li button {
+  .page-nav__wrapper ul li button {
     font-size: 18px;
   }
 }
@@ -16239,6 +15977,14 @@ html.services-page {
 @media (min-width: 2560px) {
   .services-page .container {
     padding: 0 142px 0 70px;
+  }
+
+  .talent-comms__icon--knauf {
+    left: -191px;
+  }
+
+  .talent-comms__icon--coffee-cup {
+    right: 191px;
   }
 }
 
@@ -17325,7 +17071,7 @@ html.services-page {
 
 @media (min-width: 280px) and (max-width: 767px) {
   .temp-home.scrolled #head-content .head-content__logo .logo img {
-    content: url("/assets/images/logo.svg");
+    content: url("../images/logo.svg");
   }
 }
 
@@ -17377,6 +17123,12 @@ html.services-page {
     transition: none !important;
     -webkit-animation: unset !important;
     animation: unset !important;
+  }
+}
+
+@media (min-height: 960px) {
+  .fsb-select .fsb-button[aria-expanded=true] + .fsb-list {
+    max-height: 90vh;
   }
 }
 /*# sourceMappingURL=main.css.map */
