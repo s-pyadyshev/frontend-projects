@@ -1,0 +1,41 @@
+.fly-button {
+  width: auto;
+  border: 0;
+  padding: 0 19px !important;
+  position: fixed;
+  right: 0;
+  top: 100px;
+  color: #fff;
+  font-size: 14px;
+  z-index: 2;
+  box-shadow: -2px 2px 7px -3px rgba(0, 0, 0, 0.75);
+  text-align: left;
+  width: 236px;
+  height: 44px;
+
+  @include tablet {
+    top: 131px;
+    bottom: auto;
+    color: #fff;
+    padding: 0;
+  }
+
+  .button__text {
+    text-align: left;
+    text-transform: capitalize;
+    font-weight: 900 !important;
+
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+}
+
+.page-header__button .button__text {
+  text-transform: capitalize;
+  font-weight: 900;
+
+  @include tablet {
+    font-size: 18px;
+  }
+}

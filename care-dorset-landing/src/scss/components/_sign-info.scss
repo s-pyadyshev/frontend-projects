@@ -1,0 +1,103 @@
+.sign-info {
+  margin: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 149, 73, 1) 0%,
+    rgba(255, 72, 112, 1) 100%
+  );
+  color: #fff;
+
+  h2 {
+    margin: 0 auto;
+    max-width: 290px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  &__list-star {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 32px 0 0;
+  }
+
+  &__star-item {
+    padding: 0 20px;
+    width: 50%;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 16px;
+
+    span {
+      display: block;
+      font-weight: 600;
+      font-size: 27px;
+    }
+
+    p {
+      margin-top: 16px;
+      margin-bottom: 16px;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    svg {
+      fill: $global-color-background-light-gray;
+      width: 68px;
+      height: 68px;
+    }
+  }
+
+  @include tablet {
+    &__star-item {
+      svg {
+        margin-bottom: 0;
+        width: 140px;
+        height: 140px;
+      }
+
+      span {
+        margin-bottom: 20px;
+        font-size: 32px;
+        line-height: 32px;
+      }
+
+      p {
+        margin-bottom: 36px;
+        font-size: 32px;
+        line-height: 32px;
+        letter-spacing: 0;
+        font-weight: 300;
+      }
+    }
+
+    &__list-star {
+      padding-top: 66px;
+    }
+  }
+
+  @include desktop {
+    padding-bottom: 48px;
+    &__star-item {
+      width: 25%;
+    }
+  }
+
+  @include desktop-lg {
+    padding-top: 40px;
+
+    &__star-item {
+      p {
+        padding: 0;
+      }
+    }
+  }
+}
+
+p.star-item__text {
+  font-size: 18px;
+  color: $global-color-background-light-gray;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.3px;
+}

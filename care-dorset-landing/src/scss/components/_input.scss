@@ -1,0 +1,51 @@
+.input {
+  box-sizing: border-box;
+
+  &__field {
+    width: 100%;
+    height: 40px;
+    padding: 12px 12px 8px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    color: $global-color-text-primary;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.75px;
+    transition: border $global-animation-time;
+
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
+
+    &::placeholder {
+      font-weight: 300;
+      color: $global-color-text-brown;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $global-color-background-brown;
+    }
+
+    .input--error & {
+      border-color: #ff0000;
+    }
+  }
+
+  &__label-wrap {
+    margin-bottom: 5px;
+  }
+
+  &__label {
+    color: $global-color-background-orange;
+    font-size: 14px;
+    line-height: normal;
+    letter-spacing: 0.75px;
+  }
+}
+
+.page-header__wrap-input label {
+  padding-top: 5px;
+  background-color: $global-color-background-light-gray !important;
+  color: $global-color-background-orange !important;
+}

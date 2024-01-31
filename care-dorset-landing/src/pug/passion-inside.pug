@@ -1,0 +1,58 @@
++b('section').passion-inside
+    .container
+        .swiper-container.js-passion-inside-slider
+            .swiper-wrapper
+                +e.slide.-swiper-slide
+                    +e.media
+                        +e.play.js-play-video
+                            +svg('play')
+                        video(poster="./images/wake-up-to-passion-video.jpg")
+                            source(src="./experience-better/videoplayback.mp4", type="video/mp4")
+
+                    +e.content
+                        +e.head
+                            +compile-text(
+                                'Wake up to the',
+                                'passion',
+                                'inside you'
+                            ).--border-theme
+
+                        blockquote
+                            p
+                                | “I am so passionate about good food. I love the fact that I get to cook delicious dishes, using the very best ingredients, all in a well-equipped kitchen.”
+
+                        p
+                            | Anne-Marie is a Sous Chef at Signature Reigate Grange.
+
+                        +e.button
+                            +button('a', 'See our hospitality roles').--gradient-theme
+
+                +e.slide.-swiper-slide
+                    +e.media
+                        +e.play.js-play-video
+                            +svg('play')
+                        video(poster="./images/wake-up-to-passion-video.jpg")
+                            source(src="./experience-better/videoplayback.mp4", type="video/mp4")
+
+                    +e.content
+                        +e.head
+                            +compile-text(
+                                'Wake up to the',
+                                'passion',
+                                'inside you'
+                            ).--border-theme
+
+                        blockquote
+                            p
+                                | “I am so passionate about good food. I love the fact that I get to cook delicious dishes, using the very best ingredients, all in a well-equipped kitchen.”
+
+                        p
+                            | Anne-Marie is a Sous Chef at Signature Reigate Grange.
+
+                        +e.button
+                            +button('a', 'See our hospitality roles').--gradient-theme
+
+            +e.pagination
+                .swiper-pagination
+        .swiper-button-prev
+        .swiper-button-next

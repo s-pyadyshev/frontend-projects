@@ -1,0 +1,17 @@
+mixin info-place(title, text, button)
+    +b('section').info-place&attributes(attributes)
+        +e.media
+            block
+
+        +e.content
+            h4 #{title}
+
+            each item in text
+                p #{item}
+
+            +e.button
+                if(button.style == 'gradient')
+                    +button('a', button.text).--gradient-theme
+
+                if(button.style == 'gray')
+                    +button('a', button.text).--light-gray-theme

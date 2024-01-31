@@ -1,0 +1,27 @@
+.select {
+	width: 100%;
+	border: 1px solid transparent;
+	font-size: 14px;
+	letter-spacing: 0.75px;
+	color: $global-color-text-brown;
+	padding: 12px 17px 11px 12px;
+	cursor: pointer;
+	transition: border-color $global-animation-time;
+
+	@media (max-width: 767px) {
+		font-size: 16px;
+	}
+
+	&:focus {
+		border-color: #88776b;
+		outline: none;
+	}
+
+	option {
+		color: $global-color-text-primary;
+
+		&:disabled {
+			color: $global-color-text-brown;
+		}
+	}
+}

@@ -1,0 +1,90 @@
+.social {
+    margin: 0 -15px;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    line-height: 1;
+
+    @include tablet-large {
+        margin: 0 -10px;
+    }
+
+    &--footer {
+        margin: 0 -10px;
+    }
+
+    &__item {
+        list-style: none;
+        padding: 0 15px;
+
+        @include tablet-large {
+            padding: 0 10px;
+        }
+
+        svg {
+            height: 23px;
+            max-width: 28px;
+            text-align: center;
+            fill: $global-color-text-darker-light;
+            transition: fill $global-animation-time;
+
+            @include tablet-large {
+                fill: $global-color-text-light;
+                height: 15px;
+                max-width: 18px;
+            }
+
+            @include hover {
+                fill: $global-color-text-hover-primary;
+            }
+        }
+    }
+
+    &__link {
+        display: inline-block;
+    }
+
+    .scroll-scene &--header & {
+
+        &__item svg {
+            @include tablet-large {
+                fill: $global-color-text-primary;
+            }
+
+            @include hover {
+                fill: $global-color-text-hover-primary;
+            }
+        }
+    }
+
+    &--footer & {
+
+        &__item {
+            padding: 0 10px;
+
+            svg {
+                fill: #fff;
+                height: 15px;
+                max-width: 18px;
+            }
+        }
+    }
+
+    &--job & {
+
+        &__item {
+
+            svg {
+                fill: $global-color-text-primary;
+                height: 21px;
+                max-width: 21px;
+
+                @include tablet-large {
+                    height: 24px;
+                    max-width: 24px;
+                }
+            }
+        }
+    }
+}

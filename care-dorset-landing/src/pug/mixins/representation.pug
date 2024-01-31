@@ -1,0 +1,11 @@
+mixin representation(src)
+    +b('section').representation&attributes(attributes)
+        +e.image.--m(style={"background-image": `url(${src.m})`})
+        +e.image.--d(style={"background-image": `url(${src.d})`} data-uk-parallax)
+        //- picture
+        //-     source(media="(max-width: 750px)" srcset=src.m)
+        //-     source(media="(min-width: 751px)" srcset=src.d)
+        //-     +e('img').image(src=src.d, alt="")
+
+        +e.content.-container
+            block

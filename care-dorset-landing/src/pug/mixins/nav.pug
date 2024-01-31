@@ -1,0 +1,12 @@
+mixin nav(data)
+    +b('nav').nav(class!=attributes.class)
+        +e('ul').list
+            each item in data
+                +e.item
+                    +e('a').link(href=item.href ? item.href : 'javascript:void(0);', title=item.text, class=item.class ? item.class : '') #{item.text}
+
+//- data = [{
+//-     text: '',
+//-     href: '',
+//-     class: ''
+//- }]

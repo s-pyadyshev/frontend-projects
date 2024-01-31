@@ -1,0 +1,11 @@
+.roles-map {
+    margin: 0;
+    padding: 0 46px 0 20px;
+
+    &__item {
+        list-style-type: none;
+        border-bottom: 1px solid $global-color-background-light-gray;
+        padding-bottom: 9px;
+        margin-bottom: 20px;
+    }
+}

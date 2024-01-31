@@ -1,0 +1,152 @@
+extends pug/base
+
+append vars
+  //- ...
+
+block content
+  main.main
+    header.page-header.image-1
+      .container
+        .page-header__title(data-uk-scrollspy="cls: animate__fadeInLeft animate__animated; repeat: false;")
+          img.page-header__text-image(src="images/text-image.png" alt="it's the little things." width="374" height="119")
+        button.button.button--gradient-theme.fly-button.js-scroll(data-href="#apply-now" data-uk-scrollspy="cls: animate__fadeInRight animate__animated; repeat: false;")
+          span.button__text Apply now
+        .page-header__info
+          .page-header__info-wrap(data-uk-scrollspy="cls: animate__fadeInLeft animate__animated; delay: 250; repeat: false;")
+            p.page-header__info-subtitle Like showing Sandra how to shop online, so while she’s a little less mobile she can have her groceries delivered.
+            p.page-header__text At Care Dorset, little things make a big difference. Enter your details to request a callback with our friendly team.
+            form(action="").page-header__form
+              .page-header__wrap-input
+                label(for="name1") Name
+                input(type="text")#name1
+              .page-header__wrap-input
+                label(for="phone1") Phone
+                input(type="phone")#phone1
+              button(type="submit" name="submit").page-header__button.button.button--gradient-theme.form-button
+                span.button__text Get in touch
+        .page-header__buttons 
+          button.page-header__button.active(data-image="image-1") 1
+          button.page-header__button(data-image="image-2") 2
+    section.info
+      .container
+        .info__intro 
+          .info__intro__image-wrap(data-uk-scrollspy="cls: animate__fadeInLeft animate__animated; repeat: false;")
+            img(src="images/man.jpg" alt="smiling man." width="560" height-="577")
+          .info__intro__text-wrap(data-uk-scrollspy="cls: animate__fadeInRight animate__animated; repeat: false;")
+            h2.info-title We’re looking for exceptional people to join our reablement team.
+            p.info-text Sometimes when people come out of hospital it doesn’t always mean they are ready to go back to their previous life straight away. Sometimes people might need a bit of extra support at home to stop them being admitted to hospital or needing long-term care.
+            p.info-text  This care is called intermediate care, or reablement. It’s about ‘doing with’, rather than ‘doing for’ - working together on a person’s path back to independence. 
+            p.info-text Could you be the difference the people we support need to live full, independent lives? 
+            p.info-text.info-text-accent We’re looking for people like you to join us on our journey to becoming the number one care provider in the region.
+            
+    section.sign-info
+      .sign-info__wrap-list.container.container--lg
+        ul.sign-info__list-star
+          li.sign-info__star-item(data-uk-scrollspy="cls: animate__fadeInDown animate__animated; delay: 250; repeat: false;")
+            +svg('stat-one')
+            p Stat One
+            p.star-item__text Lorem ipsum dolor sit consectetur adipiscing
+          li.sign-info__star-item(data-uk-scrollspy="cls: animate__fadeInDown animate__animated; delay: 500; repeat: false;")
+            +svg('people')
+            <p class="counter-value" data-count="1910">Up to £32,020</p>
+            p.star-item__text Annual salary plus company pension scheme
+
+          li.sign-info__star-item(data-uk-scrollspy="cls: animate__fadeInDown animate__animated; delay: 750; repeat: false;")
+            +svg('gift')
+            <p class="counter-value" data-count="5000">37 hrs p/w</p>
+            p.star-item__text Shifts between 7am-10:30pm. Weekend working required
+          li.sign-info__star-item(data-uk-scrollspy="cls: animate__fadeInDown animate__animated; delay: 1000; repeat: false;")
+            +svg('stat four')
+            <p class="counter-value" data-count="120">Stat Four</p>
+            p.star-item__text Lorem ipsum dolor sit consectetur adipiscing
+
+
+    section.slider-signature(data-uk-scrollspy="cls: animate__fadeInLeft animate__animated; delay: 500; repeat: false;")
+      .container.container--lg
+        h3 Our values
+        .swiper.js-signature-slider
+          .swiper-wrapper
+            .swiper-slide
+              .slider-signature__slide
+                img(src="images/card-our-values.jpg" alt="our values." width="393" height="398")
+                .swiper-slide__text
+                  span Our values
+                  p Every organisation has its own way of doing things
+                p.slider-signature__show-info Our values
+            .swiper-slide
+              .slider-signature__slide
+                img(src="images/card-focused.jpg" alt="we are people focused." width="393" height="398")
+                .swiper-slide__text
+                  span We are people focused
+                  ul 
+                    li We are people focused We are people focused We are people focused
+                    li We are people focused
+                    li We are people focused
+                    li We are people focused
+                p.slider-signature__show-info We are people focused
+            .swiper-slide
+              .slider-signature__slide
+                img(src="images/card-integrity.jpg" alt="our values." width="393" height="398")
+                .swiper-slide__text
+                  span We have integrity
+                  p Our homes are beautifully designed with excellent facilities, from our  state-of-the-art dementia care floors, to cinema rooms and lots more!
+                p.slider-signature__show-info We have integrity
+            .swiper-slide
+              .slider-signature__slide
+                img(src="images/card-develop.jpg" alt="our values." width="393" height="398")
+                .swiper-slide__text
+                  span We will develop
+                  p Our homes are beautifully designed with excellent facilities, from our  state-of-the-art dementia care floors, to cinema rooms and lots more!
+                p.slider-signature__show-info We will develop
+            .swiper-slide
+              .slider-signature__slide
+                img(src="images/card-genuine.jpg" alt="our values." width="393" height="398")
+                .swiper-slide__text
+                  span We are genuine
+                  p Our homes are beautifully designed with excellent facilities, from our  state-of-the-art dementia care floors, to cinema rooms and lots more!
+                p.slider-signature__show-info We are genuine
+            .swiper-slide
+              .slider-signature__slide
+                img(src="images/card-team.jpg" alt="our values." width="393" height="398")
+                .swiper-slide__text
+                  span We are team
+                  p Our homes are beautifully designed with excellent facilities, from our  state-of-the-art dementia care floors, to cinema rooms and lots more!
+                p.slider-signature__show-info We are team
+          .swiper-pagination
+          //- .swiper-button-prev.swiper-button-signature-prev
+          //-   +svg('arrow')
+          //- .swiper-button-next.swiper-button-signature-next
+          //-   +svg('arrow')
+    section.forms#apply-now
+      .container 
+        .forms__inner 
+          .forms__inner-forms-wrap(data-uk-scrollspy="cls: animate__fadeInLeft animate__animated; repeat: false;")
+            h3.forms-title It’s easy to apply.
+            p.forms-text If you’re enthusiastic about making a positive difference in people’s lives we’d love to hear from you.
+            form(action="").form-fields
+              .page-header__wrap-input
+                label(for="name2").uk-form-label Name
+                input(type="text" name="name")#name2
+              .page-header__wrap-input
+                label(for="phone2").uk-form-label Phone
+                input(type="phone" name="phone")#phone2
+              .page-header__wrap-input
+                label(for="email1").uk-form-label Email
+                input(type="email" name="email")#email1
+              p Optional. No CV? No problem
+              .page-header__wrap-input
+                label(for="file").uk-form-label Choose file
+                input(type="file" name="email" )#file
+            .form-terms.uk-margin-top
+              .field
+                label.label-terms
+                  input(type="checkbox" name="checkbox1" required).uk-checkbox
+                  | By choosing to continue you will register your CV with Signature. We will use your contact information to send you relevant jobs that match your criteria. All CVs will be viewable across the Signature network.
+              .field
+                label.label-terms
+                  input(type="checkbox" name="checkbox2" required).uk-checkbox
+                  span ​I acknowledge and give permission for my data to be held by Care Dorset in accordance with the <a href="/">General Data Protection Regulation</a>. 
+            button(type="submit" name="submit").page-header__button.button.button--gradient-theme.form-button
+                span.button__text Apply 
+          .forms__inner-image-wrap(data-uk-scrollspy="cls: animate__fadeInRight animate__animated; repeat: false;")
+            img(src="images/man-2.png" alt="smiling man." width="586" height="567")

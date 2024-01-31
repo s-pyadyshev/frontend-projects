@@ -1,0 +1,81 @@
+.checkbox {
+  display: flex;
+
+  &__input {
+    flex-shrink: 0;
+    margin: 0;
+    background-color: #fff;
+
+    &:checked {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2211%22%20viewBox%3D%220%200%2014%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23fff%22%20points%3D%2212%201%205%207.5%202%205%201%205.5%205%2010%2013%201.5%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: normal;
+    letter-spacing: 0.75px;
+    color: $global-color-text-brown;
+    display: inline-block;
+    padding-left: 14px;
+
+    a {
+      color: inherit;
+      font-size: inherit;
+    }
+  }
+}
+
+.uk-checkbox,
+.uk-radio {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  overflow: hidden;
+  margin-top: 3px;
+  vertical-align: middle;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.uk-checkbox:focus,
+.uk-radio:focus {
+  outline: none;
+}
+.uk-checkbox:checked,
+.uk-checkbox:indeterminate,
+.uk-radio:checked {
+  background-color: $global-color-background-orange;
+}
+.uk-checkbox:checked:focus,
+.uk-checkbox:indeterminate:focus,
+.uk-radio:checked:focus {
+  background-color: $global-color-background-orange;
+}
+
+.uk-checkbox:disabled,
+.uk-radio:disabled {
+  background-color: #f8f8f8;
+}
+
+.uk-checkbox:checked {
+  background-color: $global-color-background-orange !important;
+  border: 1px solid #ffffff !important;
+  color: #ffffff;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2211%22%20viewBox%3D%220%200%2014%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23fff%22%20points%3D%2212%201%205%207.5%202%205%201%205.5%205%2010%2013%201.5%22%2F%3E%0A%3C%2Fsvg%3E") !important;
+}
+.uk-checkbox:required:invalid {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.uk-checkbox:required:focus:invalid {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background-color: $global-color-background-orange !important;
+  border: 1px solid $global-color-background-bordeaux !important;
+}

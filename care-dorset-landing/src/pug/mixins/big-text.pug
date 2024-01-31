@@ -1,0 +1,6 @@
+mixin big-text(textArr)
+    +b('section').big-text
+        .container
+            +e.wrapper
+                each item in textArr
+                    p !{item}

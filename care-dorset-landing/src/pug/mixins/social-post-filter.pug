@@ -1,0 +1,10 @@
+mixin social-post-filter(data)
+    +b('ul').social-post-filter
+        each item, index in data
+            - var active = ''
+            if index === 0
+                - active = 'active'
+
+            +e.item
+                +e('a').link(href="#", title=item, class=active)
+                    | #{item}

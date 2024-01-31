@@ -1,0 +1,89 @@
+.mapbox {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    // @include tablet {
+    //     height: 538px;
+    //     display: flex;
+    //     flex-direction: row;
+    // }
+
+    @include tablet-large {
+        height: 538px;
+        display: flex;
+        flex-direction: row;
+        margin-top: 49px;
+        margin-bottom: 49px;
+        margin-left: (-$global-offset-container-tablet);
+        margin-right: (-$global-offset-container-tablet);
+        padding-left: $global-offset-container-tablet;
+        padding-right: $global-offset-container-tablet;
+        background-image: url('../images/pattern-bar.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    @media (min-width: 1250px) {
+        margin-left: calc((-100vw + 1170px) / 2);
+        margin-right: calc((-100vw + 1170px) / 2);
+        padding-left: calc((100vw - 1170px) / 2);
+        padding-right: calc((100vw - 1170px) / 2);
+    }
+
+    &__map {
+        background-color: #4e2f6b;
+        width: 100%;
+        height: 240px;
+
+        @include tablet-large {
+            height: 100%;
+        }
+    }
+
+    &__list {
+        max-height: 300px;
+        position: relative;
+        overflow: hidden;
+        padding-top: 24px;
+        border-width: 3px;
+        border-style: solid;
+        border-image: linear-gradient( #ee3b79, #4e2f6b ) 50;
+        background-color: #fff;
+
+        @include tablet-large {
+            max-height: none;
+            height: 100%;
+            width: 50%;
+            max-width: 368px;
+            flex-shrink: 0;
+        }
+    }
+}
+
+.ps {
+
+    &__rail-x {
+        display: none;
+    }
+
+    &__rail-y {
+        height: calc(100% - 48px);
+        margin: 24px 0;
+        right: 16px !important;
+        left: auto !important;
+        width: 6px;
+        position: absolute;
+        border-radius: 3px;
+        background: linear-gradient(to bottom, #ee3b79 0%, #4e2f6b 50%);
+    }
+
+    &__thumb-y {
+        width: 20px;
+        background-color: #dcd5cd;
+        border: 3px solid #4e2f6b;
+        border-radius: 50%;
+        overflow: hidden;
+        position: absolute;
+        left: -7px;
+        z-index: 1;
+    }
+}

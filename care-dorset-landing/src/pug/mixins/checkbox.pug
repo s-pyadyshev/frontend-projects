@@ -1,0 +1,5 @@
+mixin checkbox(text, id)
+    +b.checkbox
+        +e('input').input.-uk-checkbox(type="checkbox", id=id)
+        if (text)
+            +e('label').text(for=id) !{text}

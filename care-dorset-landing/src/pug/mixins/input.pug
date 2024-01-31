@@ -1,0 +1,7 @@
+mixin input(id, placeholder, type="text", label, tag='input')
+    +b.input&attributes(attributes)
+        if(label)
+            +e.label-wrap
+                +e('label')(for=id).label #{label}
+
+        +e(tag)(id=id, name=id, type=type, placeholder=placeholder ? placeholder : '').field

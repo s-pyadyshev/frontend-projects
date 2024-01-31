@@ -1,0 +1,14 @@
+@import "../../node_modules/normalize.css/normalize";
+@import "vendor/animate-css";
+
+// Uikit
+@import "../../node_modules/uikit/src/scss/variables";
+@import "../../node_modules/uikit/src/scss/mixins";
+@import "../../node_modules/uikit/src/scss/components/animation.scss";
+@import "../../node_modules/uikit/src/scss/components/form.scss";
+
+// Swiper
+@import "../../node_modules/swiper/swiper.scss";
+@import "../../node_modules/swiper/modules/pagination.scss";
+@import "../../node_modules/swiper/modules/effect-fade.scss";
+@import "../../node_modules/swiper/modules/grid.scss";

@@ -1,0 +1,25 @@
+.big-text {
+
+    &__wrapper {
+        @include tablet-large {
+            padding: 0 30px;
+        }
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.75;
+        letter-spacing: 0.71px;
+
+        @include tablet-large {
+            font-size: 29px;
+            line-height: 1.38;
+            letter-spacing: 1.25px;
+        }
+    }
+
+    strong,
+    b {
+        font-weight: 500;
+    }
+}

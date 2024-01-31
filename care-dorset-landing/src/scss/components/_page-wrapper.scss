@@ -1,0 +1,14 @@
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+    & > * {
+        flex-shrink: 0;
+    }
+
+    .menu-open & {
+        height: 100%;
+        overflow: hidden;
+    }
+}

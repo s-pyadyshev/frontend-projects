@@ -1,0 +1,17 @@
+mixin us-gallery(data)
+    +b('section').us-gallery
+        .swiper-container.js-us-gallery
+            .swiper-wrapper
+                each item in data
+                    +e.slide.-swiper-slide
+                        +e('img')(src=item.img.src, alt=item.img.alt).img
+
+            +e.pagination
+                .swiper-pagination
+
+//- data = [{
+//-     img: {
+//-         src: '',
+//-         alt: ''
+//-     }
+//- }]

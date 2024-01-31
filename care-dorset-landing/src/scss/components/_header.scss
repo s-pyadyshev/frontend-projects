@@ -1,0 +1,40 @@
+.header {
+  background-color: $global-color-background-white;
+  height: 100px;
+
+  .container {
+    position: relative;
+
+    @include tablet {
+      position: static;
+    }
+
+    @media (min-width: 1921px) {
+      position: relative;
+    }
+  }
+}
+
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0;
+  align-items: center;
+}
+
+.header-text {
+  font-weight: 900;
+  color: $global-color-background-orange;
+  font-size: 18px;
+  position: absolute;
+  top: 40px;
+  right: 25px;
+
+  @include tablet {
+    right: 125px;
+  }
+
+  @media (min-width: 1921px) {
+    right: 50px;
+  }
+}

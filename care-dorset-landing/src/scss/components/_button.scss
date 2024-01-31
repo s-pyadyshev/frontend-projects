@@ -1,0 +1,78 @@
+.button {
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  padding: 7px 10px 6px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  display: inline-block;
+  overflow: hidden;
+  cursor: pointer;
+  transition-property: color, background-color;
+  transition-duration: $global-animation-time;
+  line-height: normal;
+
+  @include tablet-large {
+    padding: 13px 20px 12px;
+  }
+
+  &__text {
+    position: relative;
+    z-index: 2;
+  }
+
+  &--gradient-theme {
+    position: relative;
+    background: transparent;
+    color: #fff;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -35%;
+      width: 170%;
+      height: 100%;
+      z-index: 1;
+      background-image: linear-gradient(
+        to right,
+        $global-color-background-orange 50%,
+        $global-color-background-bordeaux 80%
+      );
+      transition-property: left, right;
+      transition-duration: $global-animation-time;
+    }
+
+    @include hover {
+      &::before {
+        left: -70%;
+      }
+    }
+  }
+
+  &--light-gray-theme {
+    background-color: $global-color-background-light-gray;
+    color: $global-color-text-primary;
+
+    @include hover {
+      background-color: #fff;
+    }
+  }
+
+  &--gray-theme {
+    background-color: $global-color-background-brown;
+    color: #fff;
+
+    @include hover {
+      background-color: #fff;
+      color: $global-color-text-primary;
+    }
+  }
+
+  &--large-offset {
+    padding-top: 13px;
+    padding-bottom: 12px;
+  }
+}

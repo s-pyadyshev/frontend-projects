@@ -1,0 +1,269 @@
+.search-roles {
+	max-width: 1250px;
+	width: 100%;
+	position: relative;
+	z-index: 5;
+	margin: 0 (-$global-offset-container-mobile);
+
+	@include tablet {
+		margin: 0;
+		width: calc(100% + 60px) !important;
+	}
+
+	&__wrap {
+		background-color: $global-color-background-field;
+		position: relative;
+		transition-property: background-color;
+		transition-duration: $global-animation-time;
+		z-index: 5;
+		width: 100%;
+
+		@include tablet {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 15px;
+			margin-right: -30px;
+			margin-left: -30px;
+		}
+
+		@include tablet-large {
+			padding: 15px 30px;
+		}
+	}
+
+	&::before {
+		content: "";
+		height: 100%;
+		width: 100vw;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: (-$global-offset-container-mobile);
+		transition: background-color $global-animation-time;
+		background-color: transparent;
+
+		@include tablet {
+			left: (-$global-offset-container-tablet);
+		}
+
+		@media (min-width: 1250px) {
+			left: calc((-100vw + 1250px) / 2);
+		}
+	}
+
+	&::after {
+		content: "";
+		touch-action: none;
+		pointer-events: none;
+		width: 100vw;
+		height: 50px;
+		background-image: linear-gradient(
+			to bottom,
+			white 0%,
+			transparent 100%
+		);
+		opacity: 0;
+		transition: opacity $global-animation-time;
+		position: absolute;
+		top: 100%;
+		left: (-$global-offset-container-mobile);
+
+		@include tablet {
+			height: 170px;
+			left: (-$global-offset-container-tablet);
+		}
+
+		@media (min-width: 1250px) {
+			left: calc((-100vw + 1240px) / 2);
+		}
+	}
+
+	&.fixed {
+		right: 0 !important;
+		left: 0 !important;
+
+		@include tablet {
+			width: calc(100% + 20px) !important;
+		}
+
+		.search-roles__wrap {
+			background-color: $global-color-background-primary;
+			margin-right: auto;
+			margin-left: auto;
+
+			@include tablet {
+				padding-right: 40px;
+				padding-left: 40px;
+			}
+		}
+
+		&::after {
+			opacity: 0.6;
+		}
+
+		&::before {
+			background-color: $global-color-background-primary;
+		}
+	}
+
+	&.no-gradient {
+		&::after {
+			display: none;
+		}
+	}
+
+	&__text {
+		font-size: 14px;
+		font-weight: 500;
+		letter-spacing: 1.25px;
+		text-transform: uppercase;
+		padding: 18px 15px 17px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include tablet {
+			padding: 0 10px 0 0;
+			display: block;
+		}
+
+		@include desktop {
+			font-size: 16px;
+			margin-right: 30px;
+			padding-right: 0;
+		}
+
+		.fixed & {
+			color: #fff;
+		}
+	}
+
+	&__content {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 2;
+		width: 100%;
+
+		@include tablet {
+			flex-grow: 1;
+			position: static;
+			width: auto;
+		}
+	}
+
+	&__content-wrap {
+		padding: 15px $global-offset-container-mobile 18px;
+		background-color: $global-color-background-primary;
+
+		@include tablet {
+			background-color: transparent;
+			padding: 0;
+			display: flex;
+		}
+	}
+
+	&__fields {
+		@include tablet {
+			display: flex;
+			flex-grow: 1;
+		}
+	}
+
+	&__field {
+		margin-bottom: 15px;
+
+		@include tablet {
+			margin-bottom: 0;
+			margin-right: 10px;
+			width: 100%;
+		}
+
+		@include desktop {
+			margin-right: 30px;
+		}
+	}
+
+	&__button {
+		@include tablet {
+			flex-shrink: 0;
+		}
+
+		.button {
+			min-height: 40px;
+			background-color: $global-color-background-light-gray;
+			color: $global-color-text-primary;
+
+			@include tablet {
+				position: relative;
+				background: transparent;
+				color: #fff;
+				min-height: 100%;
+
+				&::before {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: -35%;
+					width: 170%;
+					height: 100%;
+					z-index: 1;
+					background-image: linear-gradient(
+						to right,
+						$global-color-background-primary 50%,
+						$global-color-background-secondary 80%
+					);
+					transition: left $global-animation-time;
+				}
+
+				@include hover {
+					&::before {
+						left: -70%;
+					}
+				}
+			}
+
+			@include hover {
+				background-color: #fff;
+			}
+
+			.fixed & {
+				background: $global-color-text-darker-light;
+				color: $global-color-background-primary;
+
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&__arrow {
+		line-height: 0;
+		transition: transform $global-animation-time;
+
+		@include tablet {
+			display: none;
+		}
+
+		svg {
+			width: 24px;
+			height: 14px;
+			fill: $global-color-background-primary;
+
+			.fixed & {
+				fill: rgba(255, 255, 255, 0.7);
+			}
+		}
+
+		.open-dropdown & {
+			transform: rotate(-180deg);
+		}
+	}
+}
+
+.scrollmagic-pin-spacer {
+	min-width: auto !important;
+	width: auto !important;
+}

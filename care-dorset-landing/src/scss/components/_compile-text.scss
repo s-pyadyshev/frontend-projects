@@ -1,0 +1,193 @@
+.compile-text {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    &__top,
+    &__gradient {
+        padding: 9px 0;
+        margin-top: -2px;
+    }
+
+    &__top {
+        line-height: 10px;
+        font-size: 16px;
+        letter-spacing: 1.8px;
+    }
+
+    &__bottom {
+        padding: 12px 10px 13px;
+        background-color: $global-color-background-primary;
+        color: #fff;
+        margin-top: -2px;
+        line-height: 10px;
+        font-size: 16px;
+        letter-spacing: 1.9px;
+        margin-top: 6px;
+        animation-delay: 1.2s;
+    }
+
+    &__gradient {
+        line-height: 0;
+
+        span {
+            background-image: linear-gradient(to bottom, #ee3b79 0%, #4e2f6b 42%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 40px;
+            animation-delay: 0.6s;
+            letter-spacing: 4.7px;
+            line-height: 25px;
+        }
+
+        &--animation {
+            height: 46px;
+            display: flex;
+            align-items: flex-end;
+
+            @include tablet {
+                height: 82px;
+            }
+
+            @include tablet-large {
+                height: 115px;
+            }
+        }
+    }
+
+    &__gradient-wrap {
+        height: 0px;
+        display: flex;
+        overflow: hidden;
+        align-items: flex-end;
+        animation-name: move_eye;
+        animation-duration: 0.8s;
+        animation-delay: 0.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+
+        span {
+            display: block;
+            height: 28px;
+
+            @include tablet {
+                height: 42px;
+            }
+
+            @include tablet-large {
+                height: 74px;
+            }
+        }
+    }
+
+    &--border-theme & {
+
+        &__top,
+        &__gradient,
+        &__bottom {
+            border: 2px solid $global-color-background-primary;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        &__top {
+            background-color: #bfb5ae;
+        }
+
+        &__bottom {
+            margin-top: 0;
+        }
+
+        &__gradient {
+            position: relative;
+
+            span {
+                position: relative;
+                z-index: 2;
+                background-image: linear-gradient(to bottom, #ee3b79 0%, #4e2f6b 72%);
+            }
+
+            &::before {
+                content: '';
+                background-color: #fff;
+                position: absolute;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+
+    &--big-size-text & {
+
+        &__top {
+
+            @include tablet {
+                line-height: 28px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                font-size: 30px;
+                letter-spacing: 5.5px;
+            }
+
+            @include tablet-large {
+                font-size: 40px;
+                letter-spacing: 7.5px;
+            }
+        }
+
+        &__bottom {
+
+            @include tablet {
+                line-height: 20px;
+                letter-spacing: 4.5px;
+                font-size: 20px;
+                margin-top: 20px;
+                // padding: 27px 15px 25px;
+            }
+
+            @include tablet-large {
+                font-size: 40px;
+                letter-spacing: 7.5px;
+                padding: 37px 25px 35px;
+            }
+        }
+
+        &__gradient {
+
+            @include tablet {
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
+            span {
+                @include tablet {
+                    line-height: 40px;
+                    font-size: 60px;
+                    letter-spacing: 7.5px;
+                }
+
+                @include tablet-large {
+                    line-height: 71px;
+                    font-size: 110px;
+                    letter-spacing: 14.1px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes move_eye {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 100%;
+    }
+}

@@ -1,0 +1,58 @@
+.job-short-info {
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(#ee3b79, #4e2f6b) 50;
+    padding: 30px 40px;
+
+    &:not(:last-child) {
+        margin: 0 0 24px;
+
+        @include tablet-large {
+            margin-bottom: 41px;
+        }
+    }
+
+    &__item {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+
+            @include tablet-large {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        line-height: 0;
+        margin-right: 18px;
+
+        svg {
+            width: 18px;
+            height: 20px;
+        }
+    }
+
+    &__text {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.75px;
+        color: $global-color-text-primary;
+        text-decoration: none;
+
+        @include tablet-large {
+            font-size: 18px;
+        }
+    }
+}
+
+a.job-short-info__text {
+    @include hover {
+        color: $global-color-text-hover-primary;
+    }
+}

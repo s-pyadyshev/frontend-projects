@@ -1,0 +1,241 @@
+.experience-better {
+  margin-bottom: 26px;
+
+  @include tablet-large {
+    margin-bottom: 57px;
+  }
+
+  & > p {
+    @include tablet-large {
+      font-size: 19px;
+      line-height: 1.38;
+      letter-spacing: 0.75px;
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+        padding: 0 30px;
+      }
+    }
+  }
+
+  &__video {
+    position: relative;
+    line-height: 0;
+    margin-bottom: 26px;
+
+    @include tablet-large {
+      margin-bottom: 59px;
+      margin-left: (-$global-offset-container-tablet);
+      margin-right: (-$global-offset-container-tablet);
+      padding-left: $global-offset-container-tablet;
+      padding-right: $global-offset-container-tablet;
+
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    @media (min-width: 1250px) {
+      margin-left: calc((-100vw + 1170px) / 2);
+      margin-right: calc((-100vw + 1170px) / 2);
+      padding-left: calc((100vw - 1170px) / 2);
+      padding-right: calc((100vw - 1170px) / 2);
+    }
+
+    iframe {
+      width: 100%;
+
+      @include tablet-large {
+        height: 668px;
+        max-height: calc(100vh - 250px);
+      }
+
+      @media (max-width: 1280px) {
+        display: block;
+        max-width: 1000px;
+        margin-right: auto;
+        margin-left: auto;
+        max-height: 100%;
+        height: 530px;
+      }
+
+      @media (max-width: 767px) {
+        height: 240px;
+      }
+    }
+  }
+
+  &__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+
+    svg {
+      width: 50px;
+      height: 50px;
+
+      @include tablet-large {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+
+  &__slider {
+    @include tablet-large {
+      padding: 0 30px;
+    }
+  }
+
+  &__photo-grid {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      display: grid;
+      grid-template-areas:
+        "left topRight topRight"
+        "left topRight topRight"
+        "left bottomRight bottomRight"
+        "leftText bottomRight bottomRight";
+      grid-gap: 25px;
+      margin-bottom: 28px;
+    }
+
+    @include tablet-large {
+      grid-gap: 35px;
+      margin-bottom: 57px;
+    }
+
+    div {
+      margin-bottom: 26px;
+      margin-left: (-$global-offset-container-mobile);
+      margin-right: (-$global-offset-container-mobile);
+
+      @include tablet {
+        margin: 0;
+        height: 100%;
+      }
+
+      &:first-child {
+        @include tablet {
+          grid-area: left;
+        }
+      }
+
+      &:nth-child(2) {
+        order: 1;
+
+        @include tablet {
+          grid-area: leftText;
+          order: 0;
+        }
+      }
+
+      &:nth-child(3) {
+        @include tablet {
+          grid-area: topRight;
+        }
+      }
+
+      &:nth-child(4) {
+        @include tablet {
+          grid-area: bottomRight;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    blockquote {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.46;
+      letter-spacing: 0.75px;
+      margin: 0;
+      padding: 0 $global-offset-container-mobile;
+
+      @include tablet {
+        padding: 0 35px;
+        max-width: 415px;
+        margin-bottom: 20px;
+      }
+
+      @include tablet-large {
+        font-size: 36px;
+        line-height: 1.28;
+        letter-spacing: 1.25px;
+      }
+    }
+
+    &--right {
+      @include tablet {
+        grid-template-areas:
+          "topRight topRight left"
+          "topRight topRight left"
+          "bottomRight bottomRight left"
+          "bottomRight bottomRight leftText";
+      }
+    }
+
+    &--double {
+      @include tablet {
+        grid-template-areas:
+          "topRight topRight left"
+          "topRight topRight left"
+          "bottomRight bottomRight2 left"
+          "bottomRight bottomRight2 leftText";
+      }
+
+      div:last-child {
+        @include tablet {
+          grid-area: bottomRight2;
+        }
+      }
+
+      div:nth-child(4),
+      div:last-child {
+        @include tablet {
+          min-height: 358px;
+        }
+      }
+    }
+  }
+
+  &__button {
+    @include tablet-large {
+      padding: 0 30px;
+    }
+  }
+}
+
+article.experience-better.container ul li {
+  font-size: 1.2em;
+}
+article.experience-better.container ul {
+  padding-left: 85px;
+}
+
+article.experience-better p strong {
+  font-weight: 600;
+}
+
+article.experience-better.container a {
+  text-decoration: none;
+  color: #e63a78;
+}
+
+article.experience-better .button {
+  color: white !important;
+}
+
+article.experience-better.container a:hover {
+  color: #e63a78;
+  text-decoration: underline;
+}

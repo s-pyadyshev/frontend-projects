@@ -1,0 +1,21 @@
+mixin roles-map(data)
+    +b('ul').roles-map
+        each item in data
+            +e.item
+                +role-map-item(item.name, item.location, item.quantity)
+
+//- data = [{
+//-     name: '',
+//-     location: '',
+//-     quantity: ''
+//- }]
+
+mixin role-map-item(name, location, quantity)
+    +b.role-map-item
+        +e.content
+            +e.name #{name}
+            +e.location #{location}
+            +e.available-quantity #{quantity}
+
+        +e.button
+            +button('a', 'View roles').--light-gray-theme

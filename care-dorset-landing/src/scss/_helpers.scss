@@ -1,0 +1,38 @@
+.is-hidden {
+	// stylelint-disable-next-line declaration-no-important
+	display: none !important;
+}
+
+.for-desktop {
+	@include mobile-device {
+		// stylelint-disable-next-line declaration-no-important
+		display: none !important;
+	}
+}
+
+.for-mobile {
+	@include desktop-device {
+		// stylelint-disable-next-line declaration-no-important
+		display: none !important;
+	}
+}
+
+.clearfix {
+	overflow: auto;
+
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+.link {
+	color: $global-color-text-primary;
+
+	&:focus,
+	&:hover,
+	&:active {
+		color: $global-color-text-hover-primary;
+	}
+}

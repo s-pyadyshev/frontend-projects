@@ -1,0 +1,66 @@
+.social-post-filter {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -3px;
+
+    @include tablet-large {
+        margin: 0;
+    }
+
+    &__item {
+        list-style: none;
+        padding: 0 5px;
+        line-height: 1;
+
+        @include tablet-large {
+            line-height: 0.8;
+            padding: 0 8px;
+        }
+
+        &:not(:last-child) {
+            border-right: 2px solid $global-color-background-primary;
+        }
+    }
+
+    &__link {
+        font-size: 16px;
+        color: $global-color-text-primary;
+        letter-spacing: 0.75px;
+        text-decoration: none;
+        transition-duration: 0.3s;
+        transition-property: font-weight;
+
+        @include tablet-large {
+            font-size: 21px;
+            letter-spacing: 1.25px;
+        }
+
+        @include hover {
+            font-weight: 500;
+        }
+
+        &:focus,
+        &:hover,
+        &:active {
+            transition-duration: 0.3s;
+            transition-property: font-weight;
+        }
+
+        &::before {
+            display: block;
+            content: attr(title);
+            font-weight: 500;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+        }
+
+        &.active {
+            font-weight: 500;
+            cursor: default;
+            touch-action: none;
+            pointer-events: none;
+        }
+    }
+}

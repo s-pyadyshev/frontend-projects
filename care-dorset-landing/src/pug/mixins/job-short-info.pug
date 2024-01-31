@@ -1,0 +1,8 @@
+mixin job-short-info(data)
+    +b('ul').job-short-info
+        each item in data
+            +e.item
+                +e('span').icon
+                    +svg(item.icon)
+
+                +e(item.tag)(href=(item.tag === 'a' ? '#' : false)).text #{item.text}

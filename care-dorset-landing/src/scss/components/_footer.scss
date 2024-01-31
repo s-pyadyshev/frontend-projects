@@ -1,0 +1,17 @@
+.footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: linear-gradient(
+    90deg,
+    rgba(243, 115, 33, 1) 0%,
+    rgba(229, 27, 78, 1) 100%
+  );
+
+  .container {
+    text-align: center;
+
+    @include tablet {
+      text-align: left;
+    }
+  }
+}
