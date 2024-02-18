@@ -10000,7 +10000,7 @@ html.services-page {
 
 .section-video__inner {
   position: relative;
-  height: 100dvh;
+  height: 80dvh;
 }
 
 .section-video__inner-title {
@@ -10037,16 +10037,16 @@ html.services-page {
 }
 
 .section-video .section-video__inner-title h1:first-child {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .section-video .section-video__inner-title h1:nth-child(2) {
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .section-video .section-video__inner-title h1:last-child {
   padding: 5px 12px 5px 12px;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .section-video .section-video__inner-video {
@@ -10645,7 +10645,6 @@ html.services-page {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   padding-top: 20px;
-  overflow-y: auto;
 }
 
 .contact-form:hover {
@@ -10654,6 +10653,7 @@ html.services-page {
 
 .contact-form.is-active {
   height: 100dvh;
+  overflow-y: auto;
 }
 
 .contact-form.is-active .contact-form__header svg:first-child {
