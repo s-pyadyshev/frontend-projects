@@ -53,3 +53,14 @@ function toggleActive() {
 }
 
 setInterval(toggleActive, 7000);
+
+const scrollToLinks = document.querySelectorAll(".scrollto-link");
+
+scrollToLinks.forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const target = document.querySelector(this.getAttribute("href"));
+    target.scrollIntoView({ behavior: "smooth" });
+  });
+});

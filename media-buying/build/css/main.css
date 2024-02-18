@@ -1,237 +1,3 @@
-:root {
-  --fsb-border: 1px solid #ccc;
-  --fsb-radius: 5px;
-  --fsb-color: inherit;
-  --fsb-background: #fff;
-  --fsb-font-size: 1em;
-  --fsb-padding: 8px;
-  --fsb-padding-right: var(--fsb-padding);
-  --fsb-arrow-size: 6px;
-  --fsb-arrow-padding: var(--fsb-padding);
-  --fsb-arrow-color: currentColor;
-  --fsb-icon-color: currentColor;
-  --fsb-list-height: 300px;
-  --fsb-list-border: var(--fsb-border);
-  --fsb-list-radius: 3px;
-  --fsb-list-color: var(--fsb-color);
-  --fsb-list-background: var(--fsb-background);
-  --fsb-hover-color: var(--fsb-color);
-  --fsb-hover-background: #ddd;
-}
-
-.fsb-original-select {
-  display: inline-block;
-  margin: 0;
-  padding: 8px 22px 8px 8px;
-  padding: var(--fsb-padding);
-  padding-right: calc(var(--fsb-arrow-padding) * 2 + var(--fsb-arrow-size));
-  font-family: inherit;
-  line-height: inherit;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-select::-ms-expand {
-  display: none;
-}
-
-.fsb-original-select[disabled] {
-  color: rgba(0, 0, 0, 0.3);
-  cursor: not-allowed;
-}
-
-.fsb-select {
-  display: inline-block;
-  position: relative;
-}
-
-select[disabled] + .fsb-select {
-  cursor: not-allowed;
-}
-
-.fsb-select,
-.fsb-original-select {
-  min-width: 0;
-  border: 1px solid #ccc;
-  border: var(--fsb-border);
-  border-radius: 5px;
-  border-radius: var(--fsb-radius);
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  color: inherit;
-  color: var(--fsb-color);
-  background-color: #fff;
-  background-color: var(--fsb-background);
-  font-size: 1em;
-  font-size: var(--fsb-font-size);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.fsb-select svg {
-  width: 1em;
-  height: 1em;
-  margin-right: 8px;
-  margin-right: var(--fsb-padding-right);
-  fill: currentColor;
-  fill: var(--fsb-icon-color);
-  pointer-events: none;
-}
-
-.fsb-label {
-  display: none;
-}
-
-/* While it's common sense to avoid using !important as much as possible, it is used
- * here to prevent inheriting style from other rules that may target buttons. */
-
-.fsb-button {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative !important;
-  width: 100% !important;
-  height: 100% !important;
-  padding: 8px 22px 8px 8px !important;
-  padding: var(--fsb-padding) !important;
-  padding-right: calc(var(--fsb-arrow-size) + var(--fsb-arrow-padding) + var(--fsb-padding-right)) !important;
-  border: 0 !important;
-  border-radius: inherit !important;
-  color: inherit !important;
-  background-color: inherit !important;
-  font-size: 1em !important;
-  font-family: inherit !important;
-  text-align: inherit !important;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.fsb-button > span {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.fsb-button > span,
-.fsb-option > span {
-  pointer-events: none;
-}
-
-select[disabled] + .fsb-select .fsb-button {
-  opacity: 0.4;
-  pointer-events: none;
-}
-
-.fsb-button:after,
-select[disabled] + .fsb-select .fsb-button[aria-expanded=true]:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 6px;
-  width: var(--fsb-arrow-size);
-  height: 6px;
-  height: var(--fsb-arrow-size);
-  right: 8px;
-  right: var(--fsb-arrow-padding);
-  top: 50%;
-  -webkit-transform: translateY(-65%) rotateZ(45deg);
-  -ms-transform: translateY(-65%) rotate(45deg);
-  transform: translateY(-65%) rotateZ(45deg);
-  border: solid currentColor;
-  border: solid var(--fsb-arrow-color);
-  border-width: 0 1.5px 1.5px 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  pointer-events: none;
-}
-
-.fsb-button[aria-expanded=true]:after {
-  -webkit-transform: translateY(-35%) rotateZ(225deg);
-  -ms-transform: translateY(-35%) rotate(225deg);
-  transform: translateY(-35%) rotateZ(225deg);
-}
-
-.fsb-list,
-select[disabled] + .fsb-select .fsb-list {
-  display: block;
-  visibility: hidden;
-  position: absolute;
-  min-width: 100%;
-  height: 0;
-  margin: 0;
-  left: 0;
-  top: 100%;
-  z-index: 1;
-  padding: 0;
-  border: inherit;
-  border: var(--fsb-list-border);
-  border-radius: inherit;
-  border-radius: var(--fsb-list-radius);
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  color: inherit;
-  color: var(--fsb-list-color);
-  background-color: inherit;
-  background-color: var(--fsb-list-background);
-  opacity: 0;
-  -webkit-transition: opacity 0.2s ease-in-out;
-  transition: opacity 0.2s ease-in-out;
-  overflow: auto;
-}
-
-.fsb-top .fsb-list {
-  top: auto;
-  bottom: 100%;
-}
-
-.fsb-button[aria-expanded=true] + .fsb-list {
-  height: auto;
-  max-height: var(--fsb-list-height);
-  visibility: visible;
-  opacity: 1;
-}
-
-.fsb-option {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: var(--fsb-padding);
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.fsb-option:focus {
-  outline: none;
-  color: var(--fsb-hover-color);
-  background-color: var(--fsb-hover-background);
-}
-
-.fsb-resize {
-  display: block;
-  height: 0;
-  padding-right: 14px;
-  padding-right: calc(var(--fsb-arrow-padding) * 2 + var(--fsb-arrow-size) - var(--fsb-padding-right));
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.fsb-resize > * {
-  display: block;
-}
-
 .container,
 .container-fluid,
 .container-xxl,
@@ -10000,7 +9766,7 @@ html.services-page {
 
 .section-video__inner {
   position: relative;
-  height: 80dvh;
+  height: 50dvh;
 }
 
 .section-video__inner-title {
@@ -10094,12 +9860,18 @@ html.services-page {
   height: 20px;
 }
 
+.section-video__inner-button:focus,
+.section-video__inner-button:hover,
+.section-video__inner-button:active {
+  outline: none;
+}
+
 .section-services h2 {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  font-size: 24px;
+  font-size: 32px;
   letter-spacing: 0.32px;
 }
 
@@ -10683,7 +10455,7 @@ html.services-page {
 }
 
 .contact-form .input {
-  width: 80%;
+  width: 100%;
 }
 
 .contact-form__text {
@@ -12851,6 +12623,20 @@ html.services-page {
     transform: translateY(-35%);
   }
 
+  .section-video .section-video__inner-title h1:first-child {
+    font-size: 32px;
+    padding: 12px 12px 6px 12px;
+  }
+
+  .section-video .section-video__inner-title h1:nth-child(2) {
+    font-size: 32px;
+    padding: 0px 12px 6px 12px;
+  }
+
+  .section-video .section-video__inner-title h1:last-child {
+    font-size: 32px;
+  }
+
   .section-services p {
     line-height: 35px !important;
     font-size: 19px !important;
@@ -12877,14 +12663,47 @@ html.services-page {
     margin-right: -140px;
   }
 
+  .section-value-text h2 {
+    font-size: 30px;
+  }
+
+  .section-value-text h2:first-child {
+    width: 69%;
+  }
+
+  .section-value-text h2:nth-child(2) {
+    max-width: 47%;
+    margin-bottom: 25px;
+  }
+
   .section-value-text {
     width: 40%;
   }
 
   .section-details__item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+  }
+
+  .item-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+
+  .section-details__item img {
+    max-width: 50%;
+    margin-right: 30px;
+  }
+
+  .section-details__item-text h2 {
+    font-size: 30px;
   }
 
   .section-details__campaigns-card {
@@ -14621,7 +14440,7 @@ html.services-page {
   }
 
   .section-video__inner {
-    height: 50dvh;
+    height: 70dvh;
   }
 
   .section-video__inner-title {
@@ -14630,11 +14449,9 @@ html.services-page {
 
   .section-video .section-video__inner-title h1:first-child {
     font-size: 50px;
-    padding: 12px 12px 6px 12px;
   }
 
   .section-video .section-video__inner-title h1:nth-child(2) {
-    padding: 0px 12px 6px 12px;
     font-size: 50px;
   }
 
@@ -14682,7 +14499,7 @@ html.services-page {
 
   .services-cards {
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
   }
 
   .services-card {
@@ -14701,37 +14518,10 @@ html.services-page {
     padding-bottom: 60px;
   }
 
-  .section-value-text h2 {
-    font-size: 30px;
-  }
-
-  .section-value-text h2:first-child {
-    width: 69%;
-  }
-
-  .section-value-text h2:nth-child(2) {
-    max-width: 47%;
-    margin-bottom: 25px;
-  }
-
   .section-value-text p {
     line-height: 25px;
     padding: 0;
     width: 60%;
-  }
-
-  .section-details__item {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-  }
-
-  .item-reverse {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
   }
 
   .section-details__item img {
@@ -15316,7 +15106,7 @@ html.services-page {
   }
 
   .section-video__inner {
-    height: 864px;
+    height: calc(100vh - 270px);
   }
 
   .section-video .section-video__inner-title h1:first-child {
