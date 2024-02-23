@@ -35,12 +35,47 @@ buttons.forEach((button) => {
   });
 });
 
+cards.forEach((card) => {
+  card.addEventListener("click", () => {
+    const targetButtonId = card.getAttribute("data-content");
+
+    cards.forEach((btn, index) => {
+      if (btn !== card) {
+        btn.classList.remove("is-active");
+      }
+      if (index === 0 && btn === card) {
+        buttonsWrap.classList.remove("right");
+        buttonsWrap.classList.add("left");
+      }
+      if (index === 1 && btn === card) {
+        buttonsWrap.classList.remove("left");
+        buttonsWrap.classList.add("right");
+      }
+    });
+    card.classList.add("is-active");
+
+    buttons.forEach((button) => {
+      const buttonId = button.getAttribute("data-target");
+      if (buttonId === targetButtonId) {
+        buttons.forEach((item) => {
+          if (item !== button) {
+            item.classList.remove("is-active");
+          }
+        });
+        button.classList.add("is-active");
+      }
+    });
+  });
+});
+
 const contactForm = document.querySelector(".contact-form");
 const contactFormHeader = document.querySelector(".contact-form__header");
 
-contactFormHeader.addEventListener("click", () => {
-  contactForm.classList.toggle("is-active");
-});
+if (contactFormHeader) {
+  contactFormHeader.addEventListener("click", () => {
+    contactForm.classList.toggle("is-active");
+  });
+}
 
 const videoTitles = document.querySelectorAll(".section-video__inner-title");
 
@@ -54,13 +89,12 @@ function toggleActive() {
 
 setInterval(toggleActive, 7000);
 
-const scrollToLinks = document.querySelectorAll(".scrollto-link");
-
-scrollToLinks.forEach((link) => {
-  link.addEventListener("click", function (e) {
+document.querySelectorAll(".scrollto-link").forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
     e.preventDefault();
 
-    const target = document.querySelector(this.getAttribute("href"));
-    target.scrollIntoView({ behavior: "smooth" });
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
   });
 });

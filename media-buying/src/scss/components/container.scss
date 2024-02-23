@@ -1,0 +1,20 @@
+// $container-padding: 24px;
+// $container-padding-desktop: 70px;
+
+// @mixin makeContainer() {
+//   margin-right: auto;
+//   margin-left: auto;
+//   width: 100%;
+//   padding-right: $container-padding;
+//   padding-left: $container-padding;
+
+//   @include desktop {
+//     max-width: $desktop * 1px;
+//     padding-right: $container-padding-desktop;
+//     padding-left: $container-padding-desktop;
+//   }
+// }
+
+// .container {
+//   @include makeContainer;
+// }

@@ -1,0 +1,77 @@
+.section-services h2 {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: -0.68px;
+
+  @include laptop {
+    max-width: 59%;
+    margin-bottom: 42px;
+    font-size: 34px;
+  }
+
+  @include desktop {
+    line-height: 70px;
+    font-size: 64px;
+  }
+}
+
+.section-services {
+  padding-top: 30px;
+  padding-bottom: 40px;
+
+  @include laptop {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include desktop {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.section-services h6 {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 16px;
+  color: $color-text-black;
+  margin-bottom: 10px;
+
+  @include laptop {
+    margin-bottom: 29px;
+    font-weight: 300;
+    font-size: 27px !important;
+  }
+}
+
+.section-services p {
+  width: 100%;
+  color: $color-dark-text;
+  text-align: center;
+  letter-spacing: -0.1px;
+
+  @include tablet {
+    line-height: 35px !important;
+    font-size: 19px !important;
+    text-align: left;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include desktop {
+    max-width: 41%;
+  
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.section-services__button {
+
+}

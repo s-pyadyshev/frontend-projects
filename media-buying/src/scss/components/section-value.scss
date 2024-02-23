@@ -1,0 +1,138 @@
+.section-value {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  max-width: 1920px;
+  margin: 0 auto;
+  background-image: linear-gradient(
+      120deg,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0.75) 25%,
+      rgba(0, 0, 0, 0.75) 0%,
+      transparent 50%,
+      transparent 50%,
+      transparent 100%
+    ),
+    url(../images/banner-street-mobile.jpg);
+  background-position: center;
+  height: 856px;
+  display: flex;
+  align-items: end;
+
+  @include tablet {
+    display: block;
+    height: auto;
+    background-image: linear-gradient(
+        120deg,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.75) 25%,
+        rgba(0, 0, 0, 0.75) 0%,
+        transparent 50%,
+        transparent 50%,
+        transparent 100%
+      ),
+      url(../images/banner-street.jpg);
+  }
+
+  @include laptop {
+    padding-left: 15%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include desktop {
+    padding-top: 120px;
+    padding-bottom: 100px;
+    max-width: 2560px;
+  }
+}
+
+.section-value-text h2 {
+  font-size: 30px;
+  background-color: $color-primary;
+  color: $color-white;
+  margin-bottom: 0;
+  padding: 15px;
+
+  @include tablet {
+    font-size: 30px;
+  }
+
+  @include desktop {
+    font-size: 48px;
+  }
+
+  &:first-child {
+    padding-bottom: 5px;
+  }
+
+  &:last-child {
+    padding-bottom: 20px;
+    line-height: 0.5;
+  }
+}
+
+.section-value-text h2:first-child {
+  padding-top: 10px;
+
+  @include tablet {
+    width: 69%;
+  }
+}
+
+.section-value-text h2:nth-child(2) {
+  padding-bottom: 10px;
+  padding-top: 0;
+
+  @include tablet {
+    max-width: 64%;
+    margin-bottom: 25px;
+  }
+}
+
+.section-value-text p {
+  color: $color-white;
+  font-size: 15px !important;
+  line-height: 22px;
+  padding: 11px;
+  margin-bottom: 10px;
+
+  @include laptop {
+    line-height: 25px;
+    padding: 0;
+    width: 60%;
+    margin-bottom: 30px;
+  }
+}
+
+.section-value-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 4%;
+  @include tablet {
+    width: 40%;
+    margin: 0 0 0 4%;
+  }
+}
+
+.section-value-text p:nth-child(2) {
+  font-size: 18px;
+}
+
+.section-value__mobile-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+
+  @include tablet {
+    display: none;
+  }
+}

@@ -1,0 +1,265 @@
+.services-page {
+  .animate__animated {
+    .animate-iphone,
+    .animate-ipad,
+    .animate-drone,
+    .animate-sky-service,
+    .animate-gaucho-ig,
+    .animate-icon,
+    .animate-progress-bar > img {
+      transition-property: opacity, transform, bottom, right;
+      transition-duration: 1s;
+      transition-delay: 0.2s;
+      transition-timing-function: ease;
+    }
+  }
+
+  .animate-career-sites {
+    .animate-iphone {
+      opacity: 1;
+      transform: translateY(4%);
+
+      @media (min-width: 560px) {
+        opacity: 1;
+        transform: translateY(-13%);
+      }
+
+      @media (min-width: 1024px) {
+        opacity: 1;
+        transform: translateY(4%);
+      }
+   }
+   .animate-ipad {
+    opacity: 1;
+    transform: translateY(-89%);
+  }
+}
+
+  .animate-film-production {
+    .animate-drone {
+      transform: scale(1);
+      bottom: 86.5%;
+      right: -13%;
+      opacity: 1;
+    }
+  }
+
+  .animate-social-media {
+    .animate-gaucho-ig {
+      transform: translateX(47%);
+      opacity: 1;
+
+      @media (min-width: 1024px) {
+        transform: translateX(33%);
+        opacity: 1;
+      }
+    }
+
+    .animate-sky-service {
+      transform: translateX(-122%);
+      opacity: 1;
+
+      @media (min-width: 1024px) {
+        transform: translateX(-139%);
+        opacity: 1;
+      }
+    }
+
+    .animate-icon-social-media {
+      transform: translateY(-100%);
+      opacity: 1;
+    }
+  }
+
+  .animate-media-buying {
+    .animate-guardian-icon {
+      transform: translateY(-28%);
+      opacity: 1;
+    }
+
+    .animate-talent-icon {
+      transform: translateY(-115%);
+      opacity: 1;
+    }
+
+    .animate-cv-icon {
+      transform: translateY(-280%);
+      opacity: 1;
+    }
+
+    .animate-total-job-icon {
+      transform: translateY(-110%);
+      opacity: 1;
+
+      @media (min-width: 1024px) {
+        transform: translateY(-127%);
+        opacity: 1;
+      }
+    }
+
+    .animate-indeed-icon {
+      transform: translateY(-160%);
+      opacity: 1;
+
+      @media (min-width: 1024px) {
+        transform: translateY(-184%);
+        opacity: 1;
+      }
+    }
+  }
+
+  .animate-google-partner {
+    .animate-google-search  {
+      transform: translate(-50%, -100%);
+    }
+
+    .animate-we-hiring {
+      transform: translateX(47%);
+      opacity: 1;
+    }
+
+    .animate-job-opportunities {
+      transform: translateX(-64%);
+      opacity: 1;
+    }
+
+    .animate-hiring-today {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
+  .animate-talent-brand {
+    .animate-polaroid-1 {
+      transform: rotate(2deg) scale(1.1);
+    }
+
+    .animate-polaroid-2 {
+      transform: translate(15%, 9%) rotate(-2deg) scale(1.1);
+    }
+
+    .animate-polaroid-3 {
+      transform: translate(-115%, -3%) rotate(-2deg) scale(1.1);
+    }
+  }
+
+  .animate-applicant-tracking {
+    .animate-great-candidate  {
+      opacity: 1;
+      transform: translate(-139%, 0) scale(1);
+    }
+
+    .animate-similar-candidates {
+      opacity: 1;
+      transform: translate(28%, 0) scale(1);
+    }
+
+    .animate-applicant-tracking {
+      opacity: 1;
+      transform: translateY(-100%) scale(1);
+    }
+  }
+
+  .animate-employer-brand {
+    .animate-meat {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+    .animate-building-society {
+      opacity: 1;
+      transform: translateY(-102%);
+    }
+  }
+
+  .animate-radio-play {
+    .animate-radio-waves {
+      opacity: 1;
+      transform: translateY(0%) scaleY(1);
+    }
+
+    .animate-progress-bar {
+      img {
+        transform: translateX(0%);
+      }
+    }
+
+    .animate-radio-icon {
+      opacity: 1;
+      transform: translateY(-100%);
+    }
+  }
+
+  .animate-friend-app {
+    .animate-friend-app-post {
+      opacity: 1;
+      transform: translateX(28%);
+    }
+    .animate-friend-app-post-2 {
+      opacity: 1;
+      transform: translateX(-122%);
+    }
+
+    .animate-chart {
+      opacity: 1;
+      transform: translateX(29%);
+    }
+
+    .animate-app-store {
+      opacity: 1;
+      transform: translateX(-195%);
+    }
+
+    .animate-google-play {
+      opacity: 1;
+      transform: translateX(-117%);
+    }
+  }
+
+  .animate-talent-comms {
+    .animate-knauf {
+      transform: rotate(-10deg);
+    }
+
+    .animate-coffee-cup {
+      transform: translateX(7%);
+    }
+
+    .animate-coffee-cup-lid {
+      transform: translateX(30%);
+    }
+  }
+
+  .animate-diversity {
+    .animate-diversity-iphone {
+      opacity: 1;
+      transform: translateY(25%);
+
+      @media (min-width: 768px) {
+        opacity: 1;
+        transform: translateY(35%);
+      }
+    }
+
+    .animate-diversity-iphone-2 {
+      opacity: 1;
+      transform: translateY(-30%);
+
+      @media (min-width: 768px) {
+        opacity: 1;
+        transform: translateY(-35%);
+      }
+    }
+  }
+
+  .animate-evp {
+    .animate-evp-postcard {
+      opacity: 1;
+      transform: rotate(19deg) scale(1.1) translateX(-3%);
+    }
+
+    .animate-evp-polaroid {
+      opacity: 1;
+      transform: translateY(26%);
+    }
+  }
+}

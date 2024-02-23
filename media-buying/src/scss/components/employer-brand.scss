@@ -1,0 +1,39 @@
+.employer-brand {
+
+  .section__image {
+    margin-bottom: 35px;
+  }
+
+  .section__image-wrap {
+
+    @media (min-width: 1024px) {
+      height: 100%;
+    }
+  }
+
+  &__icon {
+    &.animate-icon {
+      position: absolute;
+      top: 50%;
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+
+    &--magazine {
+      img {
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &--meat {
+      width: 26%;
+      left: 20%;
+    }
+
+    &--building-society {
+      width: 25%;
+      left: 55%;
+    }
+  }
+}

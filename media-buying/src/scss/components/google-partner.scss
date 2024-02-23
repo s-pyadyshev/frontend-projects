@@ -1,0 +1,85 @@
+.google-partner {
+
+  .section__image {
+    height: calc(100vw * 267 / 393);
+
+    @media (min-width: 1024px) {
+      height: auto;
+      padding: calc(12% + 5px) 0;
+    }
+  }
+
+  &__google-iphone {
+    height: calc(100vw * 229 / 393);
+    width: auto;
+
+    @media (min-width: 1024px) {
+      height: 100%;
+    }
+  }
+
+  .section__image-wrap {
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 1024px) {
+      height: calc(100vw * 690 / 2488);
+      max-height: 690px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    opacity: 0;
+
+    &--google-search {
+      opacity: 1;
+      width: 23%;
+      bottom: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+
+      @media (min-width: 1024px) {
+        width: 67%;
+        bottom: 50%;
+      }
+    }
+
+    &--we-hiring {
+        width: 41%;
+        left: 24%;
+        bottom: 39%;
+
+        @media (min-width: 1024px) {
+          width: 120%;
+          bottom: 40%;
+          left: -30%;
+        }
+    }
+
+    &--job-opportunities {
+      width: 42%;
+      left: 35%;
+      bottom: -4%;
+
+      @media (min-width: 1024px) {
+        width: 119%;
+        bottom: -2%;
+        left: 10%;
+      }
+    }
+
+    &--hiring-today {
+      width: 21%;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -10%;
+
+      @media (min-width: 1024px) {
+        width: 62%;
+        bottom: -9%;
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+.radio-play {
+
+  .section__image {
+    margin-bottom: 35px;
+
+    @media (min-width: 1024px) {
+      padding: calc(12% + 6px) 0;
+    }
+  }
+
+  .section__image-wrap {
+    width: calc(100vw * 280 / 393);
+    margin: 0 auto;
+    z-index: 1;
+
+    @media (min-width: 1024px) {
+      height: calc(100vw * 688 / 2488);
+      width: calc(100vw * 826 / 2488);
+      max-height: 688px;
+      max-width: 826px;
+    }
+  }
+
+  &__icon {
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+
+    &--media-player {
+      position: static;
+      opacity: 1;
+
+      @media (min-width: 1024px) {
+        img {
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+    &--radio-waves {
+      top: 25%;
+      bottom: auto;
+      transform: translateY(0%) scaleY(0);
+      z-index: -1;
+    }
+
+    &--progress-bar {
+      opacity: 1;
+      left: 50%;
+      top: 68%;
+      width: 18%;
+      transform: translate(-58%, 20%);
+      overflow: hidden;
+      bottom: auto;
+
+      img {
+        transform: translateX(-65%);
+      }
+    }
+
+    &--play-music {
+      width: 14%;
+      left: 20%;
+
+      img {
+        margin-top: 96%;
+      }
+    }
+
+    &--apple-music {
+      width: 16%;
+      left: 24%;
+
+      img {
+        margin-top: 352%;
+      }
+    }
+
+    &--audible {
+      width: 15%;
+      left: 56%;
+
+      img {
+        margin-top: 377%;
+      }
+    }
+
+    &--espn-radio {
+      width: 16%;
+      left: 62%;
+
+      img {
+        margin-top: 203%;
+      }
+    }
+
+    &--spotify {
+      width: 15%;
+      left: 70%;
+
+      img {
+        margin-top: 26%;
+      }
+    }
+  }
+}

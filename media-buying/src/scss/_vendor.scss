@@ -1,0 +1,22 @@
+// FancySelect
+// @import "../scss/vendor/fancyselect";
+
+// Bootstrap
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+
+// Swiper
+@import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/modules/navigation/navigation";
+@import "../../node_modules/swiper/modules/pagination/pagination";
+@import "../../node_modules/swiper/modules/thumbs/thumbs";
+
+.swiper-button-prev,
+.swiper-button-next {
+  background: none;
+  border: 0;
+}

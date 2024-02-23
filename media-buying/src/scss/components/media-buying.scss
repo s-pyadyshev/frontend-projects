@@ -1,0 +1,71 @@
+.media-buying {
+
+  h2 {
+    margin-bottom: 0;
+
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+
+  .section__image {
+    height: calc(100vw * 302 / 393);
+
+    @media (min-width: 1024px) {
+      height: auto;
+    }
+  }
+
+  .section__image-wrap {
+
+    @media (min-width: 1024px) {
+      height: 100%;
+    }
+  }
+
+  &__bus-stop {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+
+    &--guardian-jobs {
+      left: 51%;
+      width: 22%;
+    }
+
+    &--talent {
+      left: 69%;
+      width: 27%;
+    }
+
+    &--cv-library {
+      left: 62%;
+      width: 18%;
+    }
+
+    &--total-job {
+      left: 26%;
+      width: 27%;
+
+      @media (min-width: 1024px) {
+        left: 28%;
+        width: 27%;
+      }
+    }
+
+    &--indeed {
+      width: 26%;
+      left: 10%;
+
+      @media (min-width: 1024px) {
+        width: 27%;
+        left: 16%;
+      }
+    }
+  }
+}

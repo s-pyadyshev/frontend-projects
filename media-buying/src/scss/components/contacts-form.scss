@@ -1,0 +1,297 @@
+.contact-form {
+  width: 100%;
+  border-radius: 20px;
+  position: fixed;
+  backdrop-filter: blur(10px);
+  right: 0;
+  top: auto;
+  bottom: 0;
+  z-index: 10;
+  animation-duration: 0.5s;
+  transition-property: transform, top, height;
+  animation-name: bounce;
+  animation-fill-mode: both;
+  transform-origin: center;
+  transition-duration: 0.5s;
+  max-width: 430px;
+  height: 70px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-top: 20px;
+
+  @include tablet {
+    padding-top: 0;
+    right: 120px;
+    overflow: visible;
+  }
+
+  &:hover {
+    height: 90px;
+  }
+
+  &.is-active {
+    height: 100dvh;
+    overflow-y: auto;
+
+    @media (min-width: 420px) {
+      height: 800px;
+      overflow: visible;
+    }
+
+    .contact-form__header {
+      svg:first-child {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+        animation-name: bounce;
+        transform-origin: center;
+        animation-duration: 0.5s;
+        animation-fill-mode: both;
+
+        .rocket-flame {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.contact-form .contact-form__header h3 {
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+
+  @media (min-width: 375px) {
+    font-size: 12px;
+  }
+
+  @include tablet {
+    font-size: 14px;
+  }
+}
+
+.contact-form .input {
+  width: 100%;
+}
+
+.contact-form__text {
+  padding: 40px 20px 20px 20px;
+  box-shadow: 0 -1px 1px #ccc;
+
+  @include tablet {
+    max-width: 430px;
+    right: 120px;
+    padding: 30px;
+  }
+
+  @include desktop {
+    padding: 20px 40px;
+  }
+}
+
+.contact-form__text h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+
+  @include tablet {
+    font-size: 40px;
+  }
+
+  @include desktop {
+    font-size: 50px;
+  }
+}
+
+.contact-form__text b {
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 32px;
+
+  @include tablet {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+}
+
+.form-input {
+  height: 52px;
+  width: 96%;
+  border: 2px solid $color-primary;
+  border-radius: 35px;
+  margin-bottom: 12px;
+  display: flex;
+  background-color: $color-white;
+  color: $color-dark-text;
+}
+
+.form-input input {
+  padding-left: 20px;
+  border-radius: 35px;
+}
+
+.form-input input::placeholder {
+  font-size: 12px;
+
+  @include tablet {
+    font-size: 16px;
+  }
+}
+
+.checkbox a {
+  color: $color-primary;
+  text-decoration: underline;
+
+  &:hover,
+  &:visited,
+  &:active {
+    color: $color-primary;
+    text-decoration: underline;
+  }
+}
+
+.checkbox label {
+  color: $color-text-black;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.checkbox input {
+  width: 17px;
+  height: 17px;
+  margin-bottom: 11px;
+}
+
+.checkbox {
+  margin-bottom: 15px;
+}
+
+.button-submit {
+  display: flex;
+  height: 56px;
+  width: 62%;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 18px;
+  padding-left: 30px;
+  padding-right: 30px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 35px;
+  background-color: $color-primary;
+  color: $color-white;
+  text-transform: uppercase;
+  transition: all 0.2s;
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: $color-light-blue;
+
+    svg {
+      stroke: $color-light-blue;
+    }
+  }
+}
+
+.button-submit svg {
+  transform: rotate(177deg);
+  color: $color-primary;
+  fill: $color-white;
+  stroke: $color-primary;
+  transition: all 0.2s;
+}
+
+.contact-form__header {
+  display: flex;
+  align-items: center;
+  background-color: $color-primary;
+  color: $color-white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 0 40px;
+  gap: 15px;
+  cursor: pointer;
+
+  &:hover {
+    svg:first-child {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+      animation-name: bounce;
+      transform-origin: center;
+      animation-duration: 0.5s;
+      animation-fill-mode: both;
+
+      .rocket-flame {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.contact-form__header-icon {
+  background-color: $color-white;
+  border-radius: 50%;
+  padding: 1px 5px;
+  width: 75px;
+  height: 75px;
+  margin: -17px 0;
+  border: 7px solid $color-primary;
+}
+
+.contact-form__header svg {
+  transition-property: all;
+  transition-duration: 0.5s;
+  width: 62px;
+  height: 62px;
+  transform: rotate(-30deg) translate3d(-6px, 1px, 0);
+}
+
+.rocket-flame {
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  opacity: 0;
+}
+
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  40%,
+  43% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(-5px, -5px, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(-5px, -3px, 0);
+  }
+
+  80% {
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(-5px, -5px, 0);
+  }
+
+  90% {
+    transform: translate3d(-5px, -2px, 0);
+  }
+}
+
+.contact-form .uk-form-label {
+  color: $color-dark-text;
+  padding: 10px 20px 20px 20px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+
+  a {
+    text-decoration: underline;
+    color: $color-primary;
+  }
+}

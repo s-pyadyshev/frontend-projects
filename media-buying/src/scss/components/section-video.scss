@@ -1,0 +1,169 @@
+.section-video {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.responsive-iframe {
+  max-width: 100%;
+  padding-top: 52.71%;
+  position: relative;
+  width: 100%;
+}
+
+.responsive-iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.section-video__inner {
+  position: relative;
+}
+
+.section-video__inner-title {
+  position: absolute;
+  top: auto;
+  bottom: auto;
+  left: 9%;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  transition-duration: 0.5s;
+  transition-property: opacity;
+  margin-top: -20px;
+
+  @include tablet {
+    bottom: 30%;
+    margin-top: 0;
+  }
+
+  @include laptop {
+    left: 280px;
+  }
+
+  &.is-active {
+    opacity: 1;
+  }
+}
+
+.section-video__inner-title h1 {
+  margin-bottom: 0 !important;
+}
+
+.section-video .section-video__inner-title h1:first-child {
+  font-size: 25px;
+  padding: 6px 12px 6px 12px;
+
+  @media (min-width: 420px) {
+    font-size: 30px;
+  }
+
+  @include tablet {
+    font-size: 32px;
+    padding: 12px 12px 6px 12px;
+  }
+
+  @include laptop {
+    font-size: 50px;
+  }
+
+  @include desktop {
+    font-size: 58px;
+  }
+}
+
+.section-video .section-video__inner-title h1:nth-child(2) {
+  font-size: 26px;
+  padding: 0px 12px 6px 12px;
+
+  @include tablet {
+    font-size: 32px;
+  }
+
+  @include laptop {
+    font-size: 50px;
+  }
+}
+
+.section-video .section-video__inner-title h1:last-child {
+  padding: 5px 12px 5px 12px;
+  font-size: 26px;
+
+  @include tablet {
+    font-size: 32px;
+  }
+
+  @include laptop {
+    font-size: 50px;
+  }
+}
+
+.section-video .section-video__inner-video {
+  width: 100%;
+  height: 100%;
+
+  iframe {
+    height: 100%;
+  }
+}
+
+.section-video__inner-title .text-dark {
+  font-size: 50px;
+}
+
+.section-video__inner-button {
+  text-transform: uppercase;
+  color: $color-white;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0px;
+  font-size: 12px;
+  max-width: 200px;
+  margin: 0 auto;
+  display: none;
+
+  @include laptop {
+    bottom: 9%;
+    font-size: 18px;
+    display: inline-flex;
+  }
+
+  span {
+    @include laptop {
+      margin-bottom: 20px;
+    }
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+
+    @include laptop {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    outline: none;
+  }
+}
+
+.section-video {
+  margin-bottom: 23%;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+}

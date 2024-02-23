@@ -1,0 +1,48 @@
+.career-sites {
+  &.section {
+    padding-top: 20px;
+
+    @media (min-width: 1024px) {
+      padding-top: 0;
+    }
+  }
+
+  h2 {
+    margin-bottom: 60px;
+  }
+
+  .section__image {
+    margin-bottom: 57px;
+    @media (min-width: 1024px) {
+      margin-bottom: 0;
+      padding: calc(17% + 1px) 0;
+    }
+  }
+
+  .section__image-wrap {
+    width: calc(100vw * 332 / 393);
+
+    @media (min-width: 1024px) {
+      width: calc(100vw * 944 / 2488);
+      max-width: 944px;
+    }
+  }
+
+  &__ipad,
+  &__iphone {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+
+  &__iphone {
+    width: 22%;
+    left: 14%;
+  }
+
+  &__ipad {
+    width: 35%;
+    right: 6%;
+  }
+}

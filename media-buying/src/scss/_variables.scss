@@ -1,0 +1,38 @@
+// stylelint-disable scss/dollar-variable-empty-line-before
+
+// Fonts
+// stylelint-disable-next-line
+$font-primary: "opensans", -apple-system, blinkmacsystemfont, "segoe ui", roboto,
+  oxygen-sans, ubuntu, cantarell, "helvetica neue", sans-serif;
+$font-secondary: "montserrat", -apple-system, blinkmacsystemfont, "segoe ui",
+  roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", sans-serif;
+$font-weight: 300;
+$line-height: 1.4;
+$font-size: 14px;
+$font-size-desktop: 16px;
+
+// fonts
+$gilroy-light: "GilroyLight";
+$gilroy-regular: "GilroyRegular";
+$gilroy-medium: "GilroyMedium";
+$gilroy-semibold: "GilroySemibold";
+$gilroy-bold: "GilroyBold";
+$gilroy-heavy: "GilroyHeavy";
+
+// Colors
+$color-grey: #e2e2e2;
+$color-light-grey: #f6f6f6;
+$color-light-blue: #2dacc2;
+$color-white: #fff;
+
+// Primary - Secondary
+$color-primary: #E5167A;
+$color-secondary: #274052;
+$color-text-black: #020000;
+$color-dark-text: #363537;
+
+
+// Settings
+$desktop: 1366;
+$laptop: 1025;
+$tablet: 768;
