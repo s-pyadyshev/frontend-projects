@@ -1,3 +1,17 @@
+.section-services {
+  padding-top: 30px;
+  padding-bottom: 40px;
+
+  @include laptop {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include desktop {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
 .section-services h2 {
   max-width: 100%;
   margin-left: auto;
@@ -15,33 +29,21 @@
   @include desktop {
     line-height: 70px;
     font-size: 64px;
+    max-width: 964px;
   }
 }
 
-.section-services {
-  padding-top: 30px;
-  padding-bottom: 40px;
-
-  @include laptop {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-  @include desktop {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-}
-
-.section-services h6 {
+.section-services h3 {
+  font-weight: 300;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   font-size: 16px;
   color: $color-text-black;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 
   @include laptop {
-    margin-bottom: 29px;
+    margin-bottom: 30px;
     font-weight: 300;
     font-size: 27px !important;
   }
@@ -52,10 +54,10 @@
   color: $color-dark-text;
   text-align: center;
   letter-spacing: -0.1px;
+  font-size: 15px;
 
   @include tablet {
     line-height: 35px !important;
-    font-size: 19px !important;
     text-align: left;
     max-width: 60%;
     margin-left: auto;
@@ -64,7 +66,7 @@
 
   @include desktop {
     max-width: 41%;
-  
+    font-size: 19px !important;
   }
 
   &:last-of-type {
@@ -72,6 +74,6 @@
   }
 }
 
-.section-services__button {
-
+.section-services-cards__scrollto {
+  text-align: center;
 }

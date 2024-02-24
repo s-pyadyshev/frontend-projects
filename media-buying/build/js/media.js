@@ -98,3 +98,53 @@ document.querySelectorAll(".scrollto-link").forEach((anchor) => {
     });
   });
 });
+
+function throttle(func, wait) {
+  let waiting = false;
+  return function () {
+    if (waiting) {
+      return;
+    }
+
+    waiting = true;
+    setTimeout(() => {
+      func.apply(this, arguments);
+      waiting = false;
+    }, wait);
+  };
+}
+
+function isElementCompletelyInViewport(element) {
+  let coordinates = element.getBoundingClientRect();
+
+  if (
+    coordinates.right > window.innerWidth ||
+    coordinates.bottom > window.innerHeight
+  ) {
+    return false;
+  }
+
+  if (coordinates.top < 0 || coordinates.left < 0) {
+    return false;
+  }
+
+  return true;
+}
+
+function extendApplyScrollspyClasses() {
+  const scrollspyElements = document.querySelectorAll("[data-scrollspy]");
+
+  scrollspyElements.forEach((element) => {
+    if (isElementCompletelyInViewport(element)) {
+      const animationClass = `${element.dataset.scrollspy}-stop`;
+      element.classList.add(animationClass);
+    }
+  });
+}
+
+document.addEventListener(
+  "scroll",
+  throttle(() => {
+    extendApplyScrollspyClasses();
+  }, 100)
+);

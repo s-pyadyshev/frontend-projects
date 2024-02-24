@@ -4,6 +4,7 @@
   text-align: center;
   color: #363537;
   margin-bottom: 40px;
+  font-size: 0;
 
   @include tablet {
     margin-bottom: 80px;
@@ -127,50 +128,50 @@
 }
 
 .services-cards {
-  display: flex;
-  justify-content: center;
   margin: 0 auto;
-  padding-bottom: 300px;
 
-  @media (min-width: 500px) {
-    padding-bottom: 200px;
-  }
-
-  @include tablet {
-    padding-bottom: 250px;
-  }
-
-  @include laptop {
-    position: relative;
+  @media (min-width: 375px) {
+    padding: 0 20px;
   }
 
   @include desktop {
-    max-width: 1260px;
-    padding-bottom: 100px;
+    max-width: 1430px;
   }
 }
 
 .services-card {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
   width: 100%;
   opacity: 0.3;
   border-radius: 10px;
   cursor: pointer;
 
   @include laptop {
-    max-width: 46%;
+    width: 50%;
+    margin-bottom: 350px;
   }
 
-  @include desktop {
-    max-width: 60%;
+  @media (min-width: 1920px) {
+    margin-bottom: 0;
   }
 
   &.is-active {
     z-index: 1;
     opacity: 1;
+
+    .services-card__rates {
+      display: flex;
+    }
   }
 
   .services-card__img {
-    height: 47%;
+    height: 353px;
+
+    @include desktop {
+      height: 47%;
+    }
   }
 
   .services-card__img > img {
@@ -178,6 +179,10 @@
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
     object-fit: cover;
     height: 100%;
+
+    @include tablet {
+      margin: 0 auto;
+    }
   }
 
   .services-card__text {
@@ -188,8 +193,12 @@
     z-index: 10;
     width: 91%;
     margin: -17px auto 0 auto;
+
     @include tablet {
       padding: 38px 48px;
+      max-width: 680px;
+      margin-right: auto;
+      margin-left: auto;
     }
 
     @include laptop {
@@ -239,7 +248,7 @@
   }
 
   .services-card__rates {
-    display: flex;
+    display: none;
     align-items: center;
 
     + .services-card__rates {
@@ -255,6 +264,7 @@
     margin-right: 15px;
     width: 30px;
     height: 30px;
+
     @include tablet {
       width: 35px;
       height: 35px;
@@ -263,13 +273,13 @@
 }
 
 .services-card:first-child {
-  margin-right: -70%;
   transition-property: transform, opacity;
   transition-duration: 0.5s;
-  transform: translateY(100px);
+  transform: translateY(80px);
 
-  @include tablet {
-    margin-right: -140px;
+  @include laptop {
+    right: -110px;
+    transform: translateY(130px);
   }
 
   &.is-active {
@@ -278,13 +288,23 @@
 }
 
 .services-card:last-child {
-  margin-left: -60px;
   transition-property: transform, opacity;
   transition-duration: 0.5s;
-  transform: translateY(75px);
+  transform: translateY(-80%);
+  right: -20px;
+
+  @include laptop {
+    transform: translateY(75px);
+    left: -110px;
+    margin-bottom: 50px;
+  }
 
   &.is-active {
-    transform: translateY(50px);
+    transform: translateY(-85%);
+
+    @include laptop {
+      transform: translateY(60px);
+    }
   }
 }
 
@@ -324,15 +344,18 @@
 }
 
 .section-services-cards .button-arrow {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-
   max-width: 162px;
-  margin: 0 auto;
+  margin-top: 250px;
 
-  @include tablet {
-    margin: 0 auto;
+  @media (min-width: 420px) {
+    margin-top: 170px;
+  }
+
+  @media (min-width: 500px) {
+    margin-top: 100px;
+  }
+
+  @include desktop {
+    top: calc(100% - 30px);
   }
 }
