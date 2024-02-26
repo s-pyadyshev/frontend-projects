@@ -627,9 +627,17 @@
   .button-arrow {
     @include laptop {
       position: absolute;
-      top: -240px;
-      right: 270px;
+      top: -110px;
+      right: 20%;
       z-index: 10;
+    }
+
+    @media (min-width: 1700px) {
+      right: 23%;
+    }
+
+    @media (min-width: 1920px) {
+      right: 26%;
     }
   }
 

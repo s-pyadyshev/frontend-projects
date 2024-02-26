@@ -1,13 +1,28 @@
+.services-page #main-container {
+  padding-top: 76px !important;
+
+  @include tablet {
+    padding-top: 0 !important;
+  }
+}
+
+#head-content {
+  @include tablet {
+    height: 215px !important;
+  }
+}
+
 .section-video {
   max-width: 1920px;
-  margin: 0 auto;
+  margin: 0 auto; 
 }
 
 .responsive-iframe {
   max-width: 100%;
-  padding-top: 52.71%;
+  padding: 46.14% 0 0 0;
   position: relative;
   width: 100%;
+  height: 100%;
 }
 
 .responsive-iframe iframe {
@@ -42,7 +57,7 @@
   }
 
   @include laptop {
-    left: 330px;
+    left: 215px;
   }
 
   &.is-active {
@@ -116,6 +131,7 @@
 }
 
 .section-video__inner-button {
+  font-weight: 600;
   text-transform: uppercase;
   color: $color-white;
   display: block;
@@ -135,6 +151,10 @@
     bottom: 9%;
     font-size: 18px;
     display: inline-flex;
+  }
+
+  @media (min-width: 1920px) {
+    bottom: 11%;
   }
 
   span {
