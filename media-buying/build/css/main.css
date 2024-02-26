@@ -9769,7 +9769,7 @@ html.services-page {
 }
 
 .section-video {
-  max-width: 1920px;
+  max-width: 2560px;
   margin: 0 auto;
 }
 
@@ -15713,7 +15713,7 @@ html.services-page {
 
 @media (min-width: 1700px) {
   .view-all-services-button .button-arrow {
-    right: 23%;
+    right: 24%;
   }
 }
 
@@ -15847,6 +15847,12 @@ html.services-page {
 
   .contact-form__text h2 {
     font-size: 50px;
+  }
+}
+
+@media (min-width: 2500px) {
+  .view-all-services-button .button-arrow {
+    right: 30%;
   }
 }
 
