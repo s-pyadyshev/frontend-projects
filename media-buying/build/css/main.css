@@ -5072,7 +5072,7 @@ iframe.uk-cover {
   font-weight: 300;
   font-style: normal;
   font-family: Gilroy;
-  src: local("Gilroy Light"), local("Gilroy-Light"), url(../fonts/Gilroy-Light.woff2) format("woff2"), url(../fonts/Gilroy-Light.woff) format("woff");
+  src: local("Gilroy Light"), local("Gilroy-Light"), url(/fonts/Gilroy-Light.woff2) format("woff2"), url(/fonts/Gilroy-Light.woff) format("woff");
   font-display: block;
 }
 
@@ -5080,7 +5080,7 @@ iframe.uk-cover {
   font-weight: 400;
   font-style: normal;
   font-family: Gilroy;
-  src: local("Gilroy Regular"), local("Gilroy-Regular"), url(../fonts/Gilroy-Regular.woff2) format("woff2"), url(../fonts/Gilroy-Regular.woff) format("woff");
+  src: local("Gilroy Regular"), local("Gilroy-Regular"), url(/fonts/Gilroy-Regular.woff2) format("woff2"), url(/fonts/Gilroy-Regular.woff) format("woff");
   font-display: block;
 }
 
@@ -5088,7 +5088,7 @@ iframe.uk-cover {
   font-weight: 600;
   font-style: normal;
   font-family: Gilroy;
-  src: local("Gilroy Semibold"), local("Gilroy-Semibold"), url(../fonts/Gilroy-Semibold.woff2) format("woff2"), url(../fonts/Gilroy-Semibold.woff) format("woff");
+  src: local("Gilroy Semibold"), local("Gilroy-Semibold"), url(/fonts/Gilroy-Semibold.woff2) format("woff2"), url(/fonts/Gilroy-Semibold.woff) format("woff");
   font-display: block;
 }
 
@@ -5096,7 +5096,7 @@ iframe.uk-cover {
   font-weight: 700;
   font-style: normal;
   font-family: Gilroy;
-  src: local("Gilroy Bold"), local("Gilroy-Bold"), url(../fonts/Gilroy-Bold.woff2) format("woff2"), url(../fonts/Gilroy-Bold.woff) format("woff");
+  src: local("Gilroy Bold"), local("Gilroy-Bold"), url(/fonts/Gilroy-Bold.woff2) format("woff2"), url(/fonts/Gilroy-Bold.woff) format("woff");
   font-display: block;
 }
 
@@ -5104,7 +5104,7 @@ iframe.uk-cover {
   font-weight: 800;
   font-style: normal;
   font-family: Gilroy;
-  src: local("Gilroy Extra Bold"), local("Gilroy-Extra-Bold"), url(../fonts/Gilroy-Extra-Bold.woff2) format("woff2"), url(../fonts/Gilroy-Extra-Bold.woff) format("woff");
+  src: local("Gilroy Extra Bold"), local("Gilroy-Extra-Bold"), url(/fonts/Gilroy-Extra-Bold.woff2) format("woff2"), url(/fonts/Gilroy-Extra-Bold.woff) format("woff");
   font-display: block;
 }
 
@@ -5112,7 +5112,7 @@ iframe.uk-cover {
   font-weight: 900;
   font-style: normal;
   font-family: Gilroy;
-  src: local("Gilroy Heavy"), local("Gilroy-Heavy"), url(../fonts/Gilroy-Heavy.woff2) format("woff2"), url(../fonts/Gilroy-Heavy.woff) format("woff");
+  src: local("Gilroy Heavy"), local("Gilroy-Heavy"), url(/fonts/Gilroy-Heavy.woff2) format("woff2"), url(/fonts/Gilroy-Heavy.woff) format("woff");
   font-display: block;
 }
 
@@ -9793,11 +9793,19 @@ html.services-page {
   position: relative;
 }
 
-.section-video__inner-title {
+.section-video__inner-title-wrap {
+  max-width: 1400px;
+  width: 100%;
   position: absolute;
   top: auto;
-  bottom: auto;
+  bottom: -90px;
   left: 9%;
+  margin: -20px auto 0;
+}
+
+.section-video__inner-title {
+  position: absolute;
+  bottom: 0;
   opacity: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9816,7 +9824,6 @@ html.services-page {
   transition-duration: 0.5s;
   -webkit-transition-property: opacity;
   transition-property: opacity;
-  margin-top: -20px;
 }
 
 .section-video__inner-title.is-active {
@@ -13062,9 +13069,16 @@ html.services-page {
     height: 215px !important;
   }
 
-  .section-video__inner-title {
-    bottom: 30%;
+  .section-video__inner-title-wrap {
+    top: 0;
+    bottom: 0;
     margin-top: 0;
+  }
+
+  .section-video__inner-title {
+    top: 0;
+    bottom: 0;
+    left: 0;
   }
 
   .section-video .section-video__inner-title h1:first-child {
@@ -14972,8 +14986,15 @@ html.services-page {
     padding: 0 !important;
   }
 
-  .section-video__inner-title {
-    left: 215px;
+  .section-video__inner-title-wrap {
+    left: 0;
+    right: 0;
+  }
+
+  .section-video__inner-title-wrap {
+    max-width: 1400px;
+    margin-right: 30px;
+    margin-left: 30px;
   }
 
   .section-video .section-video__inner-title h1:first-child {
@@ -15708,6 +15729,13 @@ html.services-page {
 @media (min-width: 1491px) {
   .temp-home #main-container > .container {
     max-width: 1200px;
+  }
+}
+
+@media (min-width: 1520px) {
+  .section-video__inner-title-wrap {
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
