@@ -5072,7 +5072,7 @@ iframe.uk-cover {
   font-weight: 300;
   font-style: normal;
   font-family: Gilroy;
-  src: local("Gilroy Light"), local("Gilroy-Light"), url(/fonts/Gilroy-Light.woff2) format("woff2"), url(/fonts/Gilroy-Light.woff) format("woff");
+  src: local("Gilroy Light"), local("Gilroy-Light"), url(../fonts/Gilroy-Light.woff2) format("woff2"), url(../fonts/Gilroy-Light.woff) format("woff");
   font-display: block;
 }
 
@@ -5080,7 +5080,7 @@ iframe.uk-cover {
   font-weight: 400;
   font-style: normal;
   font-family: Gilroy;
-  src: local("Gilroy Regular"), local("Gilroy-Regular"), url(/fonts/Gilroy-Regular.woff2) format("woff2"), url(/fonts/Gilroy-Regular.woff) format("woff");
+  src: local("Gilroy Regular"), local("Gilroy-Regular"), url(../fonts/Gilroy-Regular.woff2) format("woff2"), url(../fonts/Gilroy-Regular.woff) format("woff");
   font-display: block;
 }
 
@@ -5088,7 +5088,7 @@ iframe.uk-cover {
   font-weight: 600;
   font-style: normal;
   font-family: Gilroy;
-  src: local("Gilroy Semibold"), local("Gilroy-Semibold"), url(/fonts/Gilroy-Semibold.woff2) format("woff2"), url(/fonts/Gilroy-Semibold.woff) format("woff");
+  src: local("Gilroy Semibold"), local("Gilroy-Semibold"), url(../fonts/Gilroy-Semibold.woff2) format("woff2"), url(../fonts/Gilroy-Semibold.woff) format("woff");
   font-display: block;
 }
 
@@ -5096,7 +5096,7 @@ iframe.uk-cover {
   font-weight: 700;
   font-style: normal;
   font-family: Gilroy;
-  src: local("Gilroy Bold"), local("Gilroy-Bold"), url(/fonts/Gilroy-Bold.woff2) format("woff2"), url(/fonts/Gilroy-Bold.woff) format("woff");
+  src: local("Gilroy Bold"), local("Gilroy-Bold"), url(../fonts/Gilroy-Bold.woff2) format("woff2"), url(../fonts/Gilroy-Bold.woff) format("woff");
   font-display: block;
 }
 
@@ -5104,7 +5104,7 @@ iframe.uk-cover {
   font-weight: 800;
   font-style: normal;
   font-family: Gilroy;
-  src: local("Gilroy Extra Bold"), local("Gilroy-Extra-Bold"), url(/fonts/Gilroy-Extra-Bold.woff2) format("woff2"), url(/fonts/Gilroy-Extra-Bold.woff) format("woff");
+  src: local("Gilroy Extra Bold"), local("Gilroy-Extra-Bold"), url(../fonts/Gilroy-Extra-Bold.woff2) format("woff2"), url(../fonts/Gilroy-Extra-Bold.woff) format("woff");
   font-display: block;
 }
 
@@ -5112,7 +5112,7 @@ iframe.uk-cover {
   font-weight: 900;
   font-style: normal;
   font-family: Gilroy;
-  src: local("Gilroy Heavy"), local("Gilroy-Heavy"), url(/fonts/Gilroy-Heavy.woff2) format("woff2"), url(/fonts/Gilroy-Heavy.woff) format("woff");
+  src: local("Gilroy Heavy"), local("Gilroy-Heavy"), url(../fonts/Gilroy-Heavy.woff2) format("woff2"), url(../fonts/Gilroy-Heavy.woff) format("woff");
   font-display: block;
 }
 
