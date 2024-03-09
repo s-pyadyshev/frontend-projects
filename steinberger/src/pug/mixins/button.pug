@@ -1,8 +1,0 @@
-mixin button(tag, text)
-    +b(tag).button(
-        href=(tag == 'a' ? 'javascript:void(0);' : false) 
-        title=(tag == 'a' ? text : false)
-    )&attributes(attributes)
-        +e('span').text #{text}
-
-//- example: +button('button', 'Some text')(class="--modif" disabled)
