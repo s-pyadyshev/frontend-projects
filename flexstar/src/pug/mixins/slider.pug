@@ -1,0 +1,29 @@
+mixin slider()
+  .swiper-container.slider-product
+    .swiper-wrapper
+      .swiper-slide
+        .slider-product-image(style="background-image: url(img/slider1.png);")
+        noscript 
+          img(src="img/slider1.png" alt="")
+      .swiper-slide
+        .slider-product-image(style="background-image: url(img/slider1.png);")
+        noscript 
+          img(src="img/slider1.png" alt="")
+      .swiper-slide
+        .slider-product-image(style="background-image: url(img/slider1.png);")
+        noscript 
+          img(src="img/slider1.png" alt="")
+    .swiper-button-prev.icon-arrow-left
+    .swiper-button-next.icon-arrow-right
+    .swiper-pagination
+
+mixin sliderSingleItem()
+  .swiper-container.slider-product
+    .swiper-wrapper
+      .swiper-slide
+        .slider-product-image(style="background-image: url(img/slider1.png);")
+        noscript 
+          img(src="img/slider1.png" alt="")
+    .swiper-button-prev.icon-arrow-left
+    .swiper-button-next.icon-arrow-right
+    .swiper-pagination

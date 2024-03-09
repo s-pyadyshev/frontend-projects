@@ -1,0 +1,171 @@
+.h1 {
+  font-family: $heading-font-family;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: $heading-color;
+
+  @include mobile {
+    font-size: 58px;
+  }
+
+  @include tablet {
+    font-size: 96px;
+  }
+
+  @include tablet-large {
+    font-size: 122px;
+  }
+}
+
+.h2 {
+  font-family: $heading-font-family;
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $heading-color;
+
+  @include tablet-large {
+    font-size: 48px;
+  }
+}
+
+.h3 {
+  font-family: $heading-font-family;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 22px;
+  color: $title-color;
+
+  @include tablet-large {
+    font-size: 36px;
+    text-align: left;
+    margin-bottom: 18px;
+  }
+}
+
+.h5 {
+  font-size: 9px;
+  font-weight: 700;
+  color: $color-white;
+  font-family: "Source Sans Pro";
+  margin-bottom: 4px;
+
+  @include tablet-large {
+    font-size: 18px;
+  }
+}
+
+.h3-specs {
+  @include tablet-large {
+    margin-bottom: 46px;
+  }
+}
+
+.h3-dimension {
+  margin-bottom: 28px;
+
+  @include tablet-large {
+    margin-bottom: 4px;
+  }
+}
+
+.h3-contacts {
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 1.1;
+  z-index: 1;
+  @include tablet-large {
+    font-size: 116px;
+    width: 480px;
+  }
+}
+
+.section-contact-us .h3 {
+  font-weight: 700;
+  text-align: left;
+  font-size: 22px;
+  margin-bottom: 19px;
+
+  @include tablet-large {
+    font-size: 42px;
+    margin-bottom: 32px;
+  }
+}
+
+.title {
+  margin-bottom: 100px;
+  font-family: $font-family-secondary;
+  font-weight: 700;
+  font-size: 30px;
+  color: $title-color;
+
+  @include tablet-large {
+    font-size: 87px;
+  }
+}
+
+.section-meet-intro-text {
+  border-bottom: $color-lightgreen 1px solid;
+
+  p {
+    font-size: 12px;
+    padding-bottom: 40px;
+    margin-bottom: 0;
+
+    @include tablet-large {
+      padding-bottom: 0;
+      font-size: 20px;
+      line-height: 1.3;
+    }
+  }
+
+  .h3 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: 0;
+    text-align: left;
+    margin-bottom: 8px;
+
+    @include tablet-large {
+      font-size: 75px;
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.section-meet-list li .h3 {
+  line-height: 1.16;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left;
+  margin-top: -4px;
+  margin-bottom: 4px;
+
+  @include mobile {
+    font-size: 22px;
+  }
+
+  @include tablet-large {
+    font-size: 27px;
+    margin-bottom: 8px;
+  }
+
+  @include desktop {
+    font-size: 32px;
+    font-size: 43px;
+  }
+}
+
+.section-meet-list ul li p {
+  line-height: 1.3;
+  font-size: 10px;
+
+  @include tablet-large {
+    font-size: 20px;
+  }
+}

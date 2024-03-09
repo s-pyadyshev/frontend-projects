@@ -1,0 +1,9 @@
+@import "./variables.scss";
+
+.color-selected-hover {
+  color: $state-color-selected-hovered;
+}
+
+.color-disabled-note {
+  color: $state-color-disabled-note;
+}

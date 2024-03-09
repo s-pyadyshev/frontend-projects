@@ -1,0 +1,112 @@
+.swiper-wrapper {
+  padding-bottom: 40px;
+
+  @include tablet-large {
+    padding-bottom: 70px;
+  }
+}
+
+.swiper-button-prev:after,
+.swiper-container-rtl .swiper-button-next:after,
+.swiper-button-next:after,
+.swiper-container-rtl .swiper-button-prev:after {
+  content: "";
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @include transition;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  font-size: 16px;
+  border-radius: 50%;
+  background-color: #2a2a2a;
+  color: #a2a2a2;
+
+  &:hover {
+    @include transition;
+    color: $color-white;
+  }
+
+  &[hidden] {
+    display: none;
+  }
+
+  @include tablet-large {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+  }
+
+  svg {
+    pointer-events: none;
+  }
+}
+
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+  left: 0;
+}
+
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+  right: 0;
+}
+
+.swiper-container-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 8px;
+}
+
+button.swiper-pagination-bullet {
+  opacity: 1;
+  width: 6px;
+  height: 6px;
+  margin: 0 8px;
+  border: 1px solid $color-white;
+  background-color: transparent;
+
+  @include tablet-large {
+    width: 11px;
+    height: 11px;
+  }
+}
+
+button.swiper-pagination-bullet-active {
+  background-color: $color-white;
+  border: 1px solid $color-white;
+}
+
+// ie11
+.swiper-pagination {
+  right: 0;
+  bottom: 10px;
+  left: 0;
+}
+
+.slider-product {
+  .slider-product-image {
+    width: auto;
+    height: 140px;
+    margin-right: auto;
+    margin-left: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+
+    @include tablet-large {
+      width: 100%;
+      height: 300px;
+    }
+
+    @include desktop {
+      width: 600px;
+      height: 300px;
+    }
+  }
+}

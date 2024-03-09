@@ -1,0 +1,260 @@
+.card-about {
+  padding-top: 0;
+  margin-bottom: -90px;
+
+  @media (min-width: 992px) {
+    margin-bottom: 0;
+  }
+
+  @include laptop {
+    padding-top: 40px;
+  }
+
+  @include desktop-sm {
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: 1920px) {
+    margin-bottom: -170px;
+  }
+
+  h2 {
+    margin-top: -8px;
+
+    @include desktop-sm {
+      font-size: 34px;
+      line-height: 43px;
+      max-width: 290px;
+      padding-left: 0;
+    }
+
+    @include desktop-sm {
+      font-size: 28px;
+      line-height: 39px;
+      margin-bottom: 7px;
+    }
+
+    @include desktop {
+      font-size: 40px;
+      line-height: 1.2;
+      max-width: none;
+      padding-top: 0;
+      margin-bottom: 32px;
+    }
+  }
+
+  p {
+    line-height: 1.7;
+    margin-bottom: 32px;
+
+    @include desktop-sm {
+      padding: 10px 0px 0 18px;
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    @include desktop {
+      padding: 0;
+      font-size: 20px;
+      margin-bottom: 32px;
+    }
+  }
+
+  .greeting {
+    span {
+      font-weight: 400;
+      color: $color-black;
+    }
+
+    @include laptop {
+      margin-bottom: 90px;
+    }
+
+    @include desktop-sm {
+      margin-bottom: 73px;
+    }
+
+    @include desktop {
+      margin-bottom: 90px;
+    }
+  }
+
+  .row {
+    @media (min-width: 992px) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__header {
+    margin-bottom: 75px;
+
+    @include desktop {
+      font-size: 22px;
+      margin-bottom: 120px;
+    }
+
+    > *:not(:last-child) {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__text {
+    @media (min-width: 1600px) {
+      width: 25%;
+      margin-right: auto;
+    }
+  }
+
+  &--case-study {
+    margin-bottom: 0;
+
+    &.section {
+      padding-bottom: 0;
+      padding-top: 40px;
+
+      @media (min-width: 992px) {
+        margin-bottom: -50px;
+        padding-top: 75px;
+      }
+
+      @media (min-width: 1400px) {
+        margin-bottom: -100px;
+      }
+
+      + .section {
+        padding-top: calc((100vw * 246 / 393) / 2 + 75px);
+
+        @media (min-width: 992px) {
+          padding-top: 100px;
+        }
+
+        @media (min-width: 1400px) {
+          padding-top: 200px;
+        }
+      }
+    }
+
+    .row {
+      @media (min-width: 1600px) {
+        justify-content: flex-end;
+      }
+    }
+
+    p {
+      margin-bottom: 50px;
+
+      @media (min-width: 992px) {
+        margin-bottom: 0;
+      }
+    }
+
+    .card-about__text {
+      @media (min-width: 1600px) {
+        width: 34%;
+      }
+    }
+
+    .card-about__img {
+      height: calc(100vw * 246 / 393);
+      margin-bottom: calc((100vw * 246 / 393) / -2);
+
+      @media (min-width: 992px) {
+        margin-bottom: 0;
+        height: calc(100vw * 330 / 992);
+      }
+
+      @media (min-width: 1600px) {
+        height: calc(100vw * 527 / 1920);
+        max-height: 527px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        @media (min-width: 1600px) {
+          width: calc(100% + 135px);
+          max-width: none;
+          margin-left: -135px;
+        }
+      }
+    }
+  }
+
+  .link-more {
+    margin-bottom: 50px;
+
+    @media (min-width: 992px) {
+      margin-bottom: 0;
+    }
+
+    a {
+      @include desktop-sm {
+        font-size: 14px;
+        padding-left: 19px;
+      }
+
+      @include desktop {
+        padding-left: 0;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.card-about .container-lg {
+  @include desktop-sm {
+    max-width: 1200px;
+  }
+
+  @include desktop {
+    max-width: 1400px;
+  }
+
+  @include desktop-l {
+    max-width: 1920px;
+  }
+}
+
+.card-about .greeting h1 {
+  @include desktop-sm {
+    font-size: 15px;
+  }
+
+  @include desktop {
+    font-size: 17px;
+  }
+}
+
+.card-about .greeting .scribble {
+  @include desktop-sm {
+    padding: 3px 10px;
+    margin-left: 54px;
+  }
+
+  @include desktop {
+    padding: 12px 24px;
+    margin-left: 0;
+  }
+}
+
+.card-about .container-lg .col-xl-6 {
+  @include desktop-sm {
+    width: 59%;
+  }
+  @include desktop {
+    width: 50%;
+  }
+}
+
+.card-about .container-lg .offset-xl-1 {
+  @include desktop-sm {
+    margin-left: -0.66667%;
+    padding-left: 96px;
+  }
+  @include desktop {
+    margin-left: 8.3%;
+    padding-left: 0px;
+  }
+}

@@ -1,0 +1,51 @@
+extends pug/base
+
+prepend vars
+  //-
+  - title = 'Contact us'
+
+append vars
+  //-
+
+block content
+  main.main.contact-us-page
+    +get-quote
+    +scroll-down-bottom
+    section.section.section-intro
+      .container 
+        h1.h1 CONTACT US
+      .section.section-contact-us
+        .container
+          .section-contact-us-inner
+            .section-contact-office
+              h3.h3 OFFICE
+              ul.office-list.icons-list
+                li
+                  span.icon-map-pin
+                  span 2050 Lynx place Ontario CA 91761
+                li
+                  span.icon-email
+                  span
+                    a(href="mailto:sales@flex-star.com") sales@flex-star.com
+            .section-contact-faq
+              h3.h3 FAQ
+              ul.faq-list.icons-list
+                li
+                  span.icon-question
+                  span Do you offer wholesale or retail?
+                li
+                  span.icon-chat
+                  span We currently offer wholesale only
+                li
+                  span.icon-question
+                  span How could i get a quote for my order?
+                li
+                  span.icon-chat
+                  span Please email your detailed information to <a href="mailto:sales@flex-star.com">sales@flex-star.com</a>
+                li 
+                  span.icon-question
+                  span How long is the response time?
+                li
+                  span.icon-chat
+                  span We usually will respond to most of our inquiries within 24 hours
+    include ./pug/section-contact-form.pug

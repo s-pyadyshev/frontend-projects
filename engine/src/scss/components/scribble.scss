@@ -1,0 +1,64 @@
+.scribble {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  margin: -12px -24px;
+
+  svg {
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    stroke: #d8ff01;
+
+    @include desktop {
+      height: max-content;
+    }
+
+    path {
+      stroke-dashoffset: 700px;
+      stroke-dasharray: 700px;
+      transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+      transition-delay: 0.3s;
+      transition-duration: 1.5s;
+    }
+  }
+
+  .animate__animated,
+  .mobile-menu-active & {
+    opacity: 1;
+
+    path {
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
+.services h2 {
+  @include desktop-sm {
+    font-size: 35px;
+    line-height: 44px;
+  }
+
+  @include desktop {
+    font-size: 40px;
+    line-height: 49px;
+  }
+}
+
+.services__wrapper .greeting {
+  @include desktop-sm {
+    margin-bottom: 75px;
+  }
+
+  @include desktop {
+    margin-bottom: 60px;
+  }
+}
+
+.services h1 {
+  @include desktop {
+    font-size: 20px;
+  }
+}

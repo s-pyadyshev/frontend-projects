@@ -1,0 +1,11 @@
+.logo {
+  display: block;
+
+  img {
+    width: 130px;
+
+    @include tablet-large {
+      width: 107px;
+    }
+  }
+}

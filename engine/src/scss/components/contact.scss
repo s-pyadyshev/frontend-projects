@@ -1,0 +1,204 @@
+.contact {
+  padding: 80px 0 40px 0;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    margin: 0 auto;
+  }
+
+  @include laptop {
+    padding: 123px 0 130px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 180px;
+    margin: 0 auto;
+  }
+@include desktop-sm {
+  padding: 136px 0 130px 0;
+}
+  @include desktop {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 193px;
+  }
+}
+
+.contact__message h2 {
+  font-family: $font-secondary;
+  font-size: 27px;
+  font-weight: 700;
+  color: $color-white;
+  max-width: 190px;
+  margin-bottom: 20px;
+
+  @include laptop {
+    max-width: 500px;
+    font-size: 35px;
+    margin-bottom: 40px;
+  }
+
+  @include desktop-sm {
+    font-size: 34px;
+  }
+
+  @include desktop {
+    max-width: 520px;
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.contact__message p {
+  font-weight: 300;
+  font-family: $font-primary;
+  font-size: 16px;
+  color: $color-white;
+  margin-bottom: 30px;
+
+  @include laptop {
+    max-width: 510px;
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+@include desktop-sm {
+  max-width: 514px;
+  font-size: 17px;
+  margin-bottom: 21px;
+}
+
+  @include desktop {
+    max-width: 540px;
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+}
+
+.contact__message a {
+  font-weight: 300;
+  font-family: $font-primary;
+  font-size: 14px;
+  color: $color-white;
+  text-decoration: underline;
+
+  @include laptop {
+    font-size: 20px;
+  }
+
+  @include desktop {
+    font-size: 20px;
+  }
+}
+
+.contact__link-number {
+  padding: 53px 0 29px 0;
+
+  @include laptop {
+    padding: 0 0 29px 0;
+  }
+
+  @include desktop {
+    padding: 0 0 29px 0;
+  }
+}
+
+.contact__link-number h3 {
+  font-family: $font-secondary;
+  font-size: 22px;
+  font-weight: 700;
+  color: $color-white;
+  margin-bottom: 5px;
+
+  @include laptop {
+    font-size: 28px;
+  }
+@include desktop-sm {
+  font-size: 22px;
+  margin-top: 61px;
+}
+
+  @include desktop {
+    font-size: 28px;
+    margin-top: 0;
+  }
+}
+
+.contact__link-number a {
+  font-family: $font-secondary;
+  font-size: 22px;
+  font-weight: 700;
+  color: $color-primary;
+  text-decoration: none;
+  margin-bottom: 29px;
+
+  @include laptop {
+    font-size: 28px;
+  }
+
+  @include desktop-sm {
+    font-size: 21px;
+  }
+
+  @include desktop {
+    font-size: 28px;
+  }
+}
+
+.contact__link-email h3 {
+  font-family: $font-secondary;
+  font-size: 22px;
+  font-weight: 700;
+  color: $color-white;
+  margin-bottom: 5px;
+
+  @include laptop {
+    font-size: 28px;
+  }
+
+@include desktop-sm {
+  font-size: 22px;
+}
+
+  @include desktop {
+    font-size: 28px;
+  }
+}
+
+.contact__link-email a {
+  font-family: $font-secondary;
+  font-size: 22px;
+  font-weight: 700;
+  color: $color-primary;
+
+  @include laptop {
+    font-size: 28px;
+  }
+
+  @include desktop-sm {
+    font-size: 22px;
+
+  }
+
+  @include desktop {
+    font-size: 28px;
+  }
+}
+
+
+.contact .contact__links {
+
+  @include desktop-sm {
+    margin-right: auto;
+    margin-left:6%;
+  }
+
+  @include desktop {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,51 @@
+$control-margin-bottom: 20px;
+
+.form {
+  max-width: 812px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+  &__fieldset {
+    padding: 40px 15px 0 15px;
+    border-radius: 15px;
+    border: 1px solid #9B9B9B;
+
+    @include desktop {
+      padding: 40px 40px 0 40px;
+    }
+  }
+
+  &__rating {
+    > div {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}
+
+
+.control {
+  margin-bottom: $control-margin-bottom;
+
+  &--center {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+
+  &--full-width {
+    width: 100%;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  &--submit {
+    position: relative;
+    bottom: -24px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+}

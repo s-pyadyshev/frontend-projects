@@ -1,0 +1,72 @@
+extends pug/base
+
+prepend vars
+  //-
+  - title = 'Homepage'
+
+append vars
+  //-
+  - hasBgVideo = true
+
+block content
+  main.main#fullpage
+    include ./pug/section-scroll.pug
+    section.section.section-intro.section-intro-bg
+      .container
+        h1.h1 We are Flexstar
+    section.section-video-header
+      .container
+    section.section.section-video.section-video-1#profile
+      .container
+        header.section-header
+          h2.h2 Product Profile
+          .section-header-list
+            ul.ul
+              li FLEXSTAR® 645W PRO
+              li High-Efficacy, Full-Spectrum LED grow light specifically developed for professional growers.
+              li Proprietary design.
+    section.section.section-video.section-video-2#specs
+      .container
+        header.section-header
+          h2.h2 Specifications & Certifications
+          .section-header-list
+            ul.ul.ul-col-2
+              li PPF: 1800μmol/s
+              li PPE: 2.8μmol/J
+              li Q90:54000 Hours
+              li ETL, CE, DLC
+    section.section.section-video.section-video-3#heat1
+      .container
+        header.section-header
+          h2.h2 Superior Heat Dissipation
+          .section-header-list
+            ul.ul
+              li No more than 133°F / 56°C on the back of the bars after 12hrs use.
+    section.section.section-video.section-video-4#heat2
+      .container
+        header.section-header
+          h2.h2 Superior Heat Dissipation
+          .section-header-list
+            ul.ul
+              li No more than 133°F / 56°C on the back of the bars after 12hrs use.
+    section.section.section-video.section-video-5#waterproof
+      .container
+        .section-header-fixed
+        header.section-header
+          h2.h2 Waterproof
+          .section-header-list.full-width
+            ul.ul
+              li Waterproof Level: IP66
+              li Work perfectly in moist environments
+    section.section.section-video.section-video-6#control
+      .container
+        header.section-header
+          h2.h2 External control
+          .section-header-list.full-width
+            ul.ul
+              li Control up to 160 fixtures simultaneously
+    section.section.section-video.section-video-7#grow-light
+      .container
+        header.section-header
+          h2.h2 Grow light with FLEXSTAR lights
+    include ./pug/section-contact-form.pug

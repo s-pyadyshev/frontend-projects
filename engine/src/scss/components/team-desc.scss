@@ -1,0 +1,71 @@
+.team-desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-desc img {
+  margin-bottom: 70px;
+  width: 100%;
+  object-fit: cover;
+
+  @include tablet {
+    max-height: 550px;
+    margin-bottom: 50px;
+  }
+
+  @include laptop {
+    margin-bottom: 70px;
+  }
+
+  @include desktop {
+    margin-bottom: 91px;
+  }
+}
+
+.team-desc__description {
+  @media (min-width: 1024px) {
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+
+  @include desktop {
+    padding-right: 135px;
+    padding-left: 135px;
+  }
+}
+
+.team-desc h2 {
+  margin-bottom: 20px;
+  font-family: $font-secondary;
+  font-size: 27px;
+  font-weight: 700;
+  color: $text-title;
+  text-align: left;
+
+  @include laptop {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  @include desktop {
+    font-size: 40px;
+  }
+}
+
+.team-desc p {
+  color: $color-secondary;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  margin-bottom: 50px;
+
+  @include laptop {
+    font-size: 20px;
+    margin-bottom: 60px;
+  }
+
+  @include desktop {
+    font-size: 20px;
+    margin-bottom: 100px;
+  }
+}

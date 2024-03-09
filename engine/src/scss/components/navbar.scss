@@ -1,0 +1,55 @@
+.navbar {
+  &__link {
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 400;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition-property: border-color;
+    transition-duration: $transition-duration;
+
+    @include laptop {
+      font-weight: 300;
+    }
+
+    @include desktop-sm {
+      font-size: 34px;
+    }
+
+    @include desktop {
+      font-size: 40px;
+      line-height: 52px;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      border-color: #000;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    gap: 40px;
+
+    @include laptop {
+      align-items: flex-start;
+    }
+
+    @include desktop-sm {
+      align-items: flex-start;
+      gap: 73px;
+    }
+
+    @include desktop {
+      gap: 56px;
+    }
+
+    @media (min-width: 1280px) and (max-height: 920px) {
+      gap: 50px;
+    }
+  }
+}

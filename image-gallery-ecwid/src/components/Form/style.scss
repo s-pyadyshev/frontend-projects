@@ -1,0 +1,68 @@
+.button {
+  display: inline-block;
+  padding: 10px 16px;
+  font-size: 16px;
+  line-height: 14px;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 24px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+.control {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 32px;
+
+  @media (min-width: 768px) {
+    width: auto;
+    margin-right: 32px;
+    margin-bottom: 0;
+  }
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 2px solid #000;
+
+  @media (min-width: 768px) {
+    min-width: 320px;
+    width: auto;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 2px solid #0086cc;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border: 2px solid #0086cc;
+  }
+}
+
+.control__error {
+  position: absolute;
+  bottom: -21px;
+  left: 0;
+}
+
+.form {
+  padding: 32px;
+  text-align: center;
+}
+
+.color-error {
+  color: #f00;
+}

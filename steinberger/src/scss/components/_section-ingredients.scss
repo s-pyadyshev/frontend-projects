@@ -1,0 +1,24 @@
+.section-ingredients {
+  margin-bottom: 80px;
+
+  @include tablet {
+    margin-bottom: 148px;
+  }
+
+  &__header {
+    padding-top: 65px;
+    padding-bottom: 45px;
+    text-align: center;
+
+    .social {
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__summary {
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    line-height: 1.4;
+  }
+}

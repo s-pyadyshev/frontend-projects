@@ -1,0 +1,11 @@
++b('article').comment
+  +e('header').header
+    +e('span').username Richard M.
+    +b('span') &nbsp;am&nbsp;
+    +e('span').date 03.03.2020
+  +e('p') Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+  +e.rating
+    +b.rate
+  +e('button').reply-button(aria-expanded='false') Deine Antwort…
+  +e.reply-form
+    include ./form.pug

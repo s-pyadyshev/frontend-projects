@@ -1,0 +1,13 @@
+mixin page-header(title, subtitle, text, image, svg)
+  section.page-header.background-secondary(class!=attributes.class)
+    .container
+      h1
+        span.scribble=title
+          | !{svg}
+      if (subtitle)
+        .page-header__text
+          h3 !{subtitle}
+          if text
+            p= text
+      if image 
+        img(src=image alt="alt.")

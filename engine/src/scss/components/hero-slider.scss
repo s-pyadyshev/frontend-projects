@@ -1,0 +1,391 @@
+.hero-slider {
+  z-index: 1;
+  position: relative;
+  z-index: 1;
+
+  @include laptop {
+    padding-right: 27px;
+  }
+
+  @include desktop-sm {
+    margin: 0 -30px;
+    padding: 0 30px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: calc(54px + calc(100vw * 220 / 393));
+    transform: translateY(50%);
+    left: 10px;
+    width: 85px;
+    height: 85px;
+    background-image: url("../images/recent-cases.png");
+    z-index: 2;
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+
+    @media (min-width: 575px) {
+      bottom: 375px;
+    }
+
+    @include tablet {
+      width: 120px;
+      height: 120px;
+      bottom: 415px;
+    }
+
+    @media (min-width: 992px) {
+      bottom: 520px;
+    }
+
+    @include laptop {
+      bottom: 460px;
+      transform: translate(-50%, 50%);
+    }
+
+    @media (min-width: 1200px) {
+      transform: translate(25%, 50%);
+      bottom: 580px;
+    }
+
+    @include desktop-sm {
+      background-size: contain;
+      transform: translate(50%, 50%);
+    }
+
+    @include desktop {
+      width: 167px;
+      height: 167px;
+      top: 0;
+      bottom: 680px;
+      transform: translate(-50%, 110%);
+    }
+  }
+
+  .swiper-pagination {
+    bottom: calc(56px + calc(100vw * 214 / 393));
+    text-align: right;
+    left: -17px;
+
+    @media (min-width: 575px) {
+      bottom: 369px;
+    }
+
+    @include tablet {
+      bottom: 412px;
+    }
+
+    @media (min-width: 992px) {
+      bottom: 535px;
+    }
+
+    @include laptop {
+      display: flex;
+      flex-direction: column;
+      right: 0;
+      left: auto;
+      width: auto;
+      bottom: auto;
+      top: 175px;
+    }
+
+    @media (min-width: 1280px) {
+      top: 160px;
+    }
+
+    @include desktop {
+      top: 245px;
+    }
+
+    .swiper-pagination-bullet {
+      vertical-align: top;
+      width: 7px;
+      height: 7px;
+      background-color: #909090;
+      margin: 0 6px;
+
+      @include laptop {
+        width: 10px;
+        height: 10px;
+        margin: 8px 0;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $color-primary;
+    }
+  }
+
+  .hero-swiper {
+    overflow: visible;
+    margin-bottom: calc(41px - calc(100vw * 214 / 393));
+    cursor: pointer;
+    z-index: 2;
+    padding-right: 23px;
+
+    @media (min-width: 575px) {
+      margin-bottom: -272px;
+    }
+
+    @include laptop {
+      position: static;
+      overflow: hidden;
+      margin-bottom: -220px;
+      padding-right: 0;
+    }
+
+    @media (min-width: 1200px) {
+      margin-bottom: -262px;
+    }
+
+    @include desktop {
+      margin-bottom: calc(
+        316px - calc(578px + (726 - 578) * ((100vw - 1360px) / (1920 - 1360)))
+      );
+    }
+
+    @media (min-width: 1920px) {
+      margin-bottom: -410px;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      order: 3;
+      font-family: $font-secondary;
+      font-size: 16px;
+      line-height: 20px;
+      color: $color-secondary;
+      opacity: 0;
+      transition: opacity 0.3s, transform 0.3s;
+
+      @include laptop {
+        flex-direction: row;
+        order: initial;
+        justify-content: space-evenly;
+        color: $color-white;
+        margin-bottom: 18px;
+        padding-right: 0;
+      }
+
+      @include desktop {
+        font-size: 18px;
+        line-height: 23px;
+      }
+
+      & span:last-child {
+        font-weight: 700;
+
+        @include desktop-sm {
+          font-size: 13px;
+        }
+
+        @include desktop {
+          font-size: 18px;
+        }
+      }
+    }
+
+    &__info-item {
+      span:first-child {
+        display: none;
+
+        @include laptop {
+          display: inline;
+        }
+
+        @include desktop-sm {
+          font-size: 13px;
+        }
+        @include desktop {
+          font-size: 18px;
+        }
+      }
+    }
+
+    &__img {
+      height: calc(100vw * 214 / 393);
+      margin-bottom: 1em;
+      margin-top: auto;
+      max-height: 314px;
+
+      @include tablet {
+        height: 351px;
+        max-height: none;
+      }
+
+      @media (min-width: 992px) {
+        height: 480px;
+      }
+
+      @media (min-width: 1200px) {
+        height: 578px;
+      }
+
+      @include laptop {
+        margin-bottom: 0;
+        height: 480px;
+      }
+
+      @include desktop {
+        height: calc(578px + (726 - 578) * ((100vw - 1360px) / (1920 - 1360)));
+        max-height: 726px;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+
+    .swiper-slide-active {
+      h1,
+      h2 {
+        opacity: 1;
+      }
+
+      .hero-swiper__info {
+        color: #909090;
+        opacity: 1;
+      }
+    }
+
+    .swiper-slide-prev {
+      h1,
+      h2,
+      .hero-swiper__info {
+        transform: translateX(calc(100% + 20px));
+
+        @include laptop {
+          transform: translateX(100%);
+        }
+      }
+    }
+    .swiper-slide-next {
+      h1,
+      h2,
+      .hero-swiper__info {
+        transform: translateX(calc(-100% - 20px));
+
+        @include laptop {
+          transform: translateX(-100%);
+        }
+      }
+    }
+  }
+
+  h1,
+  h2 {
+    min-height: 105px;
+    margin-bottom: 40px;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    margin-right: -23px;
+
+    @include laptop {
+      margin-right: 0;
+    }
+
+    @include desktop {
+      min-height: 213px;
+      margin-bottom: 10px;
+    }
+  }
+
+  h1 {
+    @include desktop-sm {
+      font-size: 36px;
+      min-height: 84px;
+    }
+    @include desktop {
+      min-height: 105px;
+      font-size: 55px;
+      margin-bottom: 120px;
+    }
+  }
+
+  h2 {
+    margin-bottom: 80px;
+    font-size: 27px;
+    line-height: 35px;
+    color: $color-white;
+    text-align: center;
+    font-size: 38px;
+
+    span {
+      color: $color-primary;
+    }
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include desktop-sm {
+      margin-bottom: 24px;
+    }
+
+    @include desktop {
+      font-size: 55px;
+      line-height: 71px;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  @keyframes fillBackground {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 316px;
+    }
+  }
+}
+
+.hero-slider-progress {
+  display: none;
+
+  @include laptop {
+    display: block;
+    width: 10px;
+    height: 0;
+    top: 183px;
+    left: auto;
+    right: 20px;
+    background-color: $color-primary;
+    position: absolute;
+  }
+
+  @include desktop-sm {
+    top: 168px;
+  }
+
+  @include desktop {
+    top: 254px;
+  }
+}
+
+.hero-swiper__info-item {
+  &:first-child {
+    @include desktop {
+      width: 45%;
+      padding-left: 275px;
+    }
+  }
+
+  &:last-child {
+    @include desktop {
+      width: 55%;
+    }
+  }
+}

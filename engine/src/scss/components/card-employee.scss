@@ -1,0 +1,482 @@
+.card-employee-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-bottom: 70px;
+
+  @include laptop {
+    padding-bottom: 90px;
+  }
+
+  @include desktop {
+    padding-bottom: 108px;
+    gap: 100px;
+  }
+}
+
+.card-employee {
+  background-color: $color-muted;
+  padding: 50px 0 50px 0;
+
+  @include tablet {
+    display: flex;
+    padding: 0;
+    gap: 20px;
+    align-items: center;
+    padding-right: 20px;
+  }
+
+  @media (min-width: 1024px) {
+    gap: 40px;
+  }
+
+  @media (min-width: 1200px) {
+    gap: 130px;
+  }
+
+  @include desktop {
+    gap: 20px;
+    max-height: 400px;
+  }
+
+  @media (min-width: 1640px) {
+    gap: 40px;
+    min-height: 236px;
+  }
+}
+
+.card-employee__name {
+  font-family: $font-secondary;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  padding-bottom: 25px;
+  justify-content: center;
+  align-items: flex-start;
+
+  @media (min-width: 375px) {
+    gap: 25px;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    order: 2;
+    padding: 0;
+    gap: 25px;
+    width: 50%;
+  }
+
+  @include laptop {
+    min-height: 236px;
+  }
+
+  @media (min-width: 1640px) {
+    gap: 92px;
+    min-width: 218px;
+  }
+
+  .scribble svg {
+    height: auto;
+  }
+}
+
+.card-employee__name span:first-child {
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+
+  @include laptop {
+    font-size: 18px;
+  }
+
+  @include desktop {
+    font-size: 27px;
+  }
+}
+
+.card-employee__name span:last-child {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: $font-secondary;
+  color: $color-black;
+  max-width: 140px;
+
+  @include tablet {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  @include laptop {
+    font-size: 15px;
+  }
+
+  @include desktop {
+    font-size: 21px;
+  }
+
+  @media (min-width: 1640px) {
+    min-width: 100%;
+    font-size: 22px;
+  }
+}
+
+.card-employee__photo-wrap {
+  width: 222px;
+  height: 236px;
+  margin: 0 auto 30px;
+
+  @include tablet {
+    order: -1;
+    padding: 0;
+    margin: 0;
+  }
+
+  @include desktop {
+    width: 400px;
+    height: 400px;
+  }
+  > div {
+    width: inherit;
+    height: inherit;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &:hover {
+    .card-employee__photo {
+      @include laptop {
+        display: none;
+      }
+    }
+
+    .card-employee__photo-hover {
+      @include laptop {
+        display: block;
+      }
+    }
+  }
+}
+
+.card-employee__photo-hover {
+  @include laptop {
+    display: none;
+  }
+}
+
+.card-employee p {
+  font-size: 16px;
+  font-weight: 400;
+  color: $color-black;
+  margin: 0 auto;
+  padding: 0 50px;
+
+  @include tablet {
+    order: 1;
+    font-size: 14px;
+    line-height: 1.5;
+    width: 70%;
+    padding: 0 10px 0 0;
+  }
+
+  @include laptop {
+    margin: 0;
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  @include desktop {
+    font-size: 20px;
+    line-height: 35px;
+    padding: 5px 37px;
+    max-width: 36%;
+  }
+}
+
+.card-employee--right {
+  &.card-employee {
+    @include tablet {
+      display: flex;
+      flex-direction: row-reverse;
+      padding-right: 0;
+      padding-left: 20px;
+    }
+
+    @media (min-width: 1024px) {
+      padding-left: 40px;
+    }
+
+    @include desktop {
+      padding-left: 20px;
+    }
+
+    @include desktop-l {
+      padding-left: 80px;
+    }
+  }
+
+  .card-employee__name {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 13px;
+    align-items: center;
+    justify-content: center;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+      padding: 0;
+      order: 1;
+      gap: 25px;
+    }
+
+    @include laptop {
+      gap: 20px;
+    }
+
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 0;
+      align-items: flex-start;
+    }
+
+    @media (min-width: 1640px) {
+      padding: 20px;
+      gap: 62px;
+    }
+
+    .scribble {
+      @include tablet {
+        padding: 12px 24px 12px 12px;
+      }
+      @include desktop-sm {
+        font-size: 26px;
+        margin-top: 12px;
+        
+      }
+
+      @include desktop {
+        font-size: 26px;
+      }
+    }
+  }
+
+  .card-employee__name span:first-child {
+    font-family: $font-secondary;
+    font-weight: 700;
+    margin-left: auto;
+    padding-right: 64px;
+
+    @include tablet {
+      text-align: left;
+      margin-left: 0;
+      min-width: 175px;
+      padding-right: 6px;
+    }
+
+    @include desktop {
+      text-align: left;
+      padding-right: 30px;
+    }
+  }
+
+  .card-employee__name span:last-child {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: $font-secondary;
+    color: $color-black;
+    max-width: 198px;
+
+    @include tablet {
+      padding: 0;
+      min-height: 100px;
+    }
+
+    @include laptop {
+      font-size: 15px;
+    }
+
+    @include desktop {
+      font-size: 20px;
+      padding: 0px 18px;
+    }
+
+    @media (min-width: 1640px) {
+      font-size: 22px;
+    }
+  }
+
+  .card-employee img {
+    @include tablet {
+      padding: 0;
+    }
+  }
+
+  .card-employee p {
+    @include tablet {
+      order: -1;
+    }
+
+    @include laptop {
+      padding-left: 40px;
+    }
+
+    @include desktop {
+      padding-left: 84px;
+    }
+  }
+}
+
+.card-employee--center {
+  @include tablet {
+    padding-right: 20px;
+  }
+
+  @media (min-width: 1024px) {
+    padding-right: 40px;
+  }
+
+  @include laptop {
+    padding-right: 0;
+  }
+
+  .card-employee__name {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+
+    @include tablet {
+      display: flex;
+      text-align: left;
+      order: 2;
+      padding: 0;
+      gap: 25px;
+    }
+
+    @include laptop {
+      max-width: 263px;
+      justify-content: center;
+      text-align: left;
+      align-items: flex-start;
+      padding-right: 20px;
+    }
+
+    @include desktop {
+      gap: 40px;
+    }
+
+    @media (min-width: 1640px) {
+      gap: 92px;
+    }
+  }
+
+  .card-employee__name span:first-child {
+    font-family: $font-secondary;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+
+    @include tablet {
+      text-align: left;
+    }
+
+    @include desktop {
+      font-size: 26px;
+    }
+  }
+
+  .card-employee__name span:last-child {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: $font-secondary;
+    color: $color-black;
+    min-width: 198px;
+    margin-left: -20px;
+
+    @include tablet {
+      padding: 0;
+      min-width: 140px;
+      margin: 0;
+    }
+
+    @include laptop {
+      font-size: 15px;
+      margin: 0;
+    }
+
+    @include desktop {
+      font-size: 21px;
+    }
+
+    @media (min-width: 1640px) {
+      min-width: 100%;
+      font-size: 22px;
+    }
+  }
+}
+
+.card-employee--left {
+  @media (min-width: 1024px) {
+    padding-right: 40px;
+  }
+
+  @include laptop {
+    padding-right: 20px;
+  }
+}
+
+.card-employee--center .card-employee__name,
+.card-employee--left .card-employee__name {
+  @include desktop {
+    max-width: 20%;
+    margin-left: 0;
+  }
+}
+
+.card-employee--left .scribble {
+  margin-left: 9px;
+}
+
+.card-employee--left .card-employee__name .scribble,
+.card-employee--right .card-employee__name .scribble {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-employee--left .card-employee__name {
+  justify-content: space-between;
+  @include laptop {
+    justify-content: space-around;
+  }
+}
+
+.card-employee--left .card-employee__name {
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.card-employee--right .card-employee__name .scribble {
+  @include laptop {
+    font-size: 18px !important;
+  }
+  @include desktop {
+    font-size: 20px !important;
+  }
+  @include desktop-l {
+    font-size: 26px !important;
+  }
+}

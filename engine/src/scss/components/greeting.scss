@@ -1,0 +1,72 @@
+.greeting {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+
+  div {
+    position: absolute;
+  }
+
+  h1 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-primary;
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 300;
+
+    @include laptop {
+      font-size: 17px;
+      margin-bottom: 48px;
+    }
+
+    @include desktop-sm {
+      font-size: 17px;
+    }
+
+    @include desktop {
+      font-size: 20px;
+    }
+
+    span {
+      font-weight: 400;
+      color: $color-white;
+    }
+  }
+
+  &--small {
+    justify-content: flex-start;
+    margin-bottom: 24px;
+
+    @include laptop {
+      margin-bottom: 56px;
+    }
+
+    > * {
+      margin-bottom: 0 !important;
+
+      @include laptop {
+        font-size: 20px;
+        line-height: 23px;
+      }
+
+      > span {
+        color: $color-white;
+      }
+    }
+  }
+
+  &.dark {
+    span {
+      color: $color-secondary;
+    }
+  }
+}
+
+
+.main-cases .greeting--small {
+  @include desktop-sm {
+    margin-bottom: 75px;
+  }
+}

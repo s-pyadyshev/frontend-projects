@@ -1,0 +1,23 @@
+.partners {
+  background-color: $color-muted;
+
+  &.section {
+    padding: 80px 0;
+
+    @include desktop {
+      padding: 150px 0 120px 0;
+    }
+  }
+
+  img {
+    height: 43px;
+    width: 105px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include desktop {
+      height: 65px;
+      width: auto;
+    }
+  }
+}

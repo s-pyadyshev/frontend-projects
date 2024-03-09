@@ -1,0 +1,46 @@
+$link-primary-hover-bg: $color-primary;
+$link-primary-hover-color: $color-white-global;
+
+$link-secondary-hover-bg: $color-white-global;
+$link-secondary-hover-color: $color-primary;
+
+@mixin link-primary-hover() {
+    font-weight: 400;
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 2px;
+    background: linear-gradient(to bottom, $link-primary-hover-bg 0%, $link-primary-hover-bg 100%);
+    transition: background-size $transition-duration;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-size: 4px 100%;
+        color: $link-primary-hover-color;
+    }
+}
+
+@mixin link-secondary-hover() {
+    font-weight: 400;
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 2px;
+    background: linear-gradient(to bottom, $link-secondary-hover-bg 0%, $link-secondary-hover-bg 100%);
+    transition: background-size $transition-duration;
+    color: $color-white-global;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-size: 4px 100%;
+        color: $link-secondary-hover-color;
+    }
+}
+
+.link-primary {
+    @include link-primary-hover;
+}
+
+.link-secondary {
+    @include link-secondary-hover;
+}

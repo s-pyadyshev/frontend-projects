@@ -1,0 +1,58 @@
+.switch-lang {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: $color-white;
+  z-index: 11;
+
+  &__link {
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: 300;
+    letter-spacing: 0.2px;
+    text-decoration-color: transparent;
+    transition: color text-decoration-color $transition-duration;
+
+    @include laptop {
+      font-size: 13px;
+      line-height: 19px;
+    }
+
+    @include desktop {
+      font-size: 15px;
+    }
+
+    &.focus,
+    &:active,
+    &:hover,
+    &.active {
+      color: $color-primary;
+      text-decoration-color: $color-primary;
+    }
+  }
+
+  .mobile-menu-active &,
+  .header-light & {
+    color: $color-secondary;
+
+    &__link {
+      &.focus,
+      &:active,
+      &:hover,
+      &.active {
+        color: $color-secondary;
+        text-decoration-color: $color-secondary;
+      }
+    }
+  }
+}
+
+.switch-lang__divider {
+  font-size: 12px;
+  margin-right: 4px;
+  margin-left: 4px;
+
+  @include laptop {
+    font-size: 14px;
+  }
+}

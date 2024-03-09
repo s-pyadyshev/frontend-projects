@@ -1,0 +1,142 @@
+// unordered list with corner marker on top left
+.ul {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 1.3;
+  color: $color-primary;
+
+  @include tablet {
+    font-size: 20px;
+  }
+
+  li {
+    display: flex;
+
+    &:before {
+      content: "";
+      flex-shrink: 0;
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 3px;
+      margin-right: 5px;
+      border-style: solid;
+      border-width: 4px 4px 0 0;
+      border-color: $color-primary transparent transparent transparent;
+
+      @include tablet {
+        margin-top: 7px;
+        border-width: 7px 7px 0 0;
+      }
+    }
+  }
+}
+
+.ul-col-2 {
+  column-count: 2;
+}
+
+// numbered ordered list, e.g. product page setup list
+.ol {
+  counter-reset: section;
+  font-size: 9px;
+  padding-top: 0;
+
+  @include tablet-large {
+    padding-top: 22px;
+    font-size: 18px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+
+    @include tablet-large {
+      margin-bottom: 18px;
+    }
+
+    &:before {
+      counter-increment: section;
+      content: counters(section, ".");
+      display: inline-block;
+      min-width: 10px;
+      margin-right: 12px;
+      font-size: 12px;
+      font-family: $font-family-secondary;
+      font-weight: 500;
+      text-align: center;
+
+      @include tablet-large {
+        min-width: 16px;
+        font-size: 24px;
+        margin-right: 24px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.icons-list {
+  [class^="icon-"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: $color-lightgreen;
+    margin-right: 12px;
+    color: $color-black;
+    padding: 1px 2px;
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+
+    @include tablet-large {
+      width: 23px;
+      height: 23px;
+      font-size: 16px;
+    }
+  }
+
+  a {
+    @include transition;
+
+    &:hover,
+    &:focus,
+    &:active {
+      @include transition;
+      color: $color-primary;
+    }
+  }
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    font-size: 13px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+
+    @include tablet-large {
+      font-size: 20px;
+      margin-bottom: 36px;
+    }
+
+    &:nth-child(odd) {
+      margin-bottom: 18px;
+    }
+  }
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.full-width {
+  max-width: 100% !important;
+  width: 100%;
+}

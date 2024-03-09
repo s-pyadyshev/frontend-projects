@@ -1,0 +1,89 @@
+// Media Queries
+$tablet: 768px;
+$desktop: 1025px;
+
+
+// Fonts
+$font-family: 'Lato', sans-serif;
+$font-weight: 300;
+$font-size: 1.6rem;
+$line-height: 1.4;
+
+
+// Layout
+$container-width: 1280px;
+
+
+// Padding
+$padding-top: 20px;
+$padding-top-md: 40px;
+$padding-top-xl: 80px;
+
+$padding-right: 20px;
+$padding-right-md: 40px;
+$padding-right-xl: 80px;
+
+$padding-bottom: 20px;
+$padding-bottom-md: 40px;
+$padding-bottom-xl: 80px;
+
+$padding-left: 20px;
+$padding-left-md: 40px;
+$padding-left-xl: 80px;
+
+$padding: $padding-top $padding-right $padding-bottom $padding-left;
+$padding-md: $padding-top-md $padding-right-md $padding-bottom-md $padding-left-md;
+$padding-xl: $padding-top-xl $padding-right-xl $padding-bottom-xl $padding-left-xl;
+
+// Margin
+$margin-right: 20px;
+$margin-left: 20px;
+$margin-right-md: 20px;
+$margin-left-md: 20px;
+
+// Colors
+$color-primary: #003366;
+$color-secondary: #e6f0fa;
+
+$background-color-primary: #003366;
+$background-color-secondary: #e6f0fa;
+
+$color-white-global: #fff;
+$color-black-global: #000;
+
+$text-color: #222222;
+$text-highlight: #ff0000;
+
+
+// Borders
+$border-width: 1px;
+$border-style: solid;
+$border-color: #000;
+
+
+// Text
+$link-color: $color-primary;;
+$link-visited-color: $color-secondary;
+$link-hover-color: $color-secondary;
+$link-active-color: $color-secondary;
+
+
+// Buttons
+$button-primary-bg: $background-color-primary;
+$button-primary-color: $color-white-global;
+$button-primary-border-color: $color-primary;
+
+$button-secondary-bg: transparent;
+$button-secondary-bg-hover: $background-color-primary;
+$button-secondary-color: $color-primary;
+$button-secondary-border-color: $color-primary;
+
+// Shadows
+$box-shadow: 0 1px 10px rgba(34, 34, 34, 0.1);
+
+
+// Z-index
+$z-index-header: 1;
+
+// Transitions
+$transition-duration: 0.3s;

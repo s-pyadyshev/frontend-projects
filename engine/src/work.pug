@@ -1,0 +1,24 @@
+extends pug/base
+
+prepend vars
+  - title = 'Work'
+
+append vars
+
+block content
+  +page-header(
+      'Work',
+      'Projects <span>fueled</span> by engine<span>.</span>',
+      false,
+      false,
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 40" width="126" height="46" data-scrollspy><path d="M93.29 41.55c-27.12-.27-57.94.1-82.34-13.59C5.59 24.95-1.28 19.33.92 12.32 3.36 4.58 14.58 4.01 21.2 3.07 36 .92 50.96.12 65.9.67c7.75.3 15.48 1.04 23.14 2.22 6.51 1 13.75 1.82 19.57 5.11 6.38 3.61 8.76 10.73 3.94 16.83-5.28 6.68-16.87 8.12-24.74 9.5a139.526 139.526 0 0 1-45 .53c-7.32-1.09-14.54-2.76-21.59-4.99-5.18-1.65-13.9-4.09-14.87-10.56C4.96 9.95 20.63 7.96 26.94 6.48c8.51-1.99 17.14-3.41 25.84-4.25C70.26.57 87.89 1.19 105.21 4.08" style="fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px"/></svg>'
+    )
+  section.background-secondary
+    .container
+      .project__list
+        +project("images/engine_rhnl.jpg", "images/rode-kruis-white.svg", "RefugeeHomeNL - UX/UI, Web design, Web development", "Vivamus nec quam nec arcu mattis tincidunt. Sed a bibendum nulla.", "animate__fadeInUp")
+        +project("images/engine_wiko.jpg", "images/wiko-white.svg", "Brand refresh - Visual identity", "Vivamus nec quam nec arcu mattis tincidunt. Sed a bibendum nulla.", "animate__fadeInLeft").project--left
+        +project("images/engine_zilter.jpg", "images/zilter-white.svg", "Brand kickstart - Visual identity, Web design, Web development", "Vivamus nec quam nec arcu mattis tincidunt. Sed a bibendum nulla.", "animate__fadeInRight").project--right
+        +project("images/engine_rodekruis.jpg", "images/rode-kruis-white.svg", "Campaign visuals - graphic design", "Vivamus nec quam nec arcu mattis tincidunt. Sed a bibendum nulla.", "animate__fadeInUp")
+        +project("images/engine_totebag.jpg", "images/women-white.svg", "Brand refresh - Visual identity", "Vivamus nec quam nec arcu mattis tincidunt. Sed a bibendum nulla.", "animate__fadeInLeft").project--left
+        +project("images/engine_nexios.jpg", "images/nexios-white.svg", "Brand maintenance - UX/UI, web design", "Vivamus nec quam nec arcu mattis tincidunt. Sed a bibendum nulla.", "animate__fadeInRight").project--right

@@ -1,0 +1,194 @@
+.top-header {
+  z-index: $zindex-header;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $top-header-background;
+
+  &.transparent {
+    background-color: transparent;
+
+    .meganav,
+    .top-header-top {
+      background-color: transparent;
+    }
+  }
+
+  &.scrolled {
+    background-color: $top-header-background;
+
+    .meganav {
+      border-top: 1px solid $meganav-background;
+    }
+
+    .meganav-inner {
+      max-width: 1280px;
+      padding-right: 0;
+      padding-left: 0;
+
+      @include tablet-large {
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+
+      @include desktop {
+        padding-right: 80px;
+        padding-left: 80px;
+      }
+    }
+
+    .meganav-logo {
+      flex-shrink: 0;
+      display: block;
+      margin-right: 24px;
+
+      @include desktop {
+        margin-right: 78px;
+      }
+    }
+
+    .top-header-top {
+      @include tablet-large {
+        display: none;
+      }
+    }
+  }
+
+  &.meganav-is-open {
+    z-index: $zindex-header;
+  }
+}
+
+.top-header-links {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  color: $color-white;
+
+  @include tablet {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  a {
+    color: $color-white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  [class^="icon-"] {
+    padding: 0;
+    margin-left: 12px;
+    color: $color-white;
+
+    + img {
+      z-index: $zindex-qrcode;
+      display: none;
+      position: absolute;
+      top: 28px;
+      right: 0;
+      border-radius: 5px;
+    }
+
+    &:hover {
+      + img {
+        display: block;
+      }
+    }
+  }
+}
+
+.top-header-top {
+  z-index: $zindex-header;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 9px 0;
+  background-color: $top-header-background;
+
+  @include tablet {
+    position: static;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.top-header-button-menu {
+  display: inline-block;
+  vertical-align: middle;
+  height: 24px;
+
+  @include tablet-large {
+    display: none;
+  }
+
+  // hamburger
+  .button-menu {
+    position: relative;
+    top: -5px;
+    padding: 0;
+    font-size: 30px;
+    color: $color-white;
+  }
+}
+
+a.top-header-button-call {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: $color-primary;
+  color: $color-white;
+
+  @include tablet-large {
+    display: none;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.top-header-wechat {
+  @include tablet-large {
+    display: none;
+  }
+}
+
+.top-header-button-mail {
+  font-size: 20px;
+  width: 24px;
+  height: 20px;
+  margin-right: 18px;
+  color: $color-white;
+}
+
+.top-header-wechat-button {
+  display: none;
+
+  @include tablet-large {
+    display: block;
+    padding: 6px 0 2px;
+  }
+}
+
+.top-header-search-toggle {
+  @include tablet-large {
+    display: none;
+  }
+
+  @include desktop {
+    display: block;
+  }
+}

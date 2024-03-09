@@ -1,0 +1,237 @@
+.service {
+  margin-bottom: 20px;
+
+  @include laptop {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  @include desktop {
+    gap: 40px;
+  }
+}
+
+.service__content {
+  background-color: $color-muted;
+  padding: 40px 31px 46px 31px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  @include laptop {
+    width: 50%;
+    margin: 0;
+    padding: 70px 31px 57px 31px;
+  }
+
+  @include desktop {
+    margin: 0;
+    padding: 66px 65px 60px 65px;
+  }
+
+  @include desktop-l {
+    padding: 66px 136px 60px 65px;
+  }
+}
+
+.service__content h3 {
+  color: $text-title;
+  font-family: $font-secondary;
+  font-weight: 700;
+  font-size: 27px;
+  margin-bottom: 10px;
+
+  @include laptop {
+    margin-bottom: 0px;
+  }
+
+  @include desktop {
+    margin-bottom: 20px;
+    font-size: 40px;
+  }
+}
+
+.service__content p {
+  font-weight: 400;
+  font-size: 16px;
+  color: $color-secondary;
+  width: 100%;
+
+  @include laptop {
+    font-size: 20px;
+  }
+
+  @include desktop {
+    margin-bottom: 36px;
+  }
+}
+
+.service__content p:last-child {
+  @include laptop {
+    margin: 0;
+  }
+}
+
+.service__content h4 {
+  font-family: $font-secondary;
+  color: $color-black;
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  @include tablet {
+    font-size: 26px;
+  }
+
+  @include desktop {
+    font-size: 26px;
+    margin-bottom: 38px;
+  }
+}
+
+.service__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @include laptop {
+    gap: 40px;
+  }
+
+  @include desktop {
+    gap: 50px;
+  }
+}
+
+.service__footer a,
+.service__footer button {
+  font-weight: 400;
+  font-size: 14px;
+  color: $color-secondary;
+  text-decoration: underline;
+
+  @include tablet {
+    font-size: 17px;
+  }
+
+  @include desktop {
+    font-size: 22px;
+  }
+}
+
+.service img {
+  position: relative;
+  z-index: 1;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.service__link {
+  position: absolute;
+  display: block;
+  left: 0;
+  max-width: 187px;
+  max-height: 50px;
+  background-color: $color-primary;
+  color: $color-black;
+  font-weight: 400;
+  font-size: 20px;
+  padding: 15px 20px;
+  line-height: 1;
+  text-decoration: none;
+  border-radius: 3px;
+  z-index: 1;
+  right: 0;
+  margin: -25px auto 0;
+  transition: background-color $transition-duration;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $color-primary !important;
+    background-color: $color-black;
+    text-decoration: none;
+  }
+
+  @include laptop {
+    text-decoration: underline;
+    background-color: transparent;
+    bottom: 66px;
+    right: 83px;
+    left: auto;
+  }
+
+  @include desktop {
+    bottom: 66px;
+    right: 83px;
+    left: auto;
+    line-height: 1;
+  }
+
+  &.text-default {
+    color: #000 !important;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $color-primary !important;
+      background-color: $color-black;
+      text-decoration: none;
+    }
+
+    @include laptop {
+      color: #fff !important;
+    }
+  }
+}
+
+.service__img-wrap {
+  width: 100%;
+  position: relative;
+
+  @include laptop {
+    width: 50%;
+    max-height: 100%;
+  }
+
+  > div,
+  > div > div {
+    height: 100%;
+  }
+}
+
+.section.company-intro {
+  @include tablet {
+    padding-bottom: 120px;
+  }
+
+  @media (min-width: 1024px) {
+    padding-top: 160px;
+  }
+
+  @include laptop {
+    padding-top: 150px;
+  }
+
+  @include desktop {
+    padding-top: 224px;
+  }
+}
+
+.company-intro.company-intro--contact .greeting--small {
+  margin-bottom: 35px;
+
+  @include laptop {
+    margin-bottom: 60px;
+  }
+}

@@ -1,0 +1,183 @@
+extends pug/base
+
+prepend vars
+  //-
+  - title = 'Product detail page'
+
+append vars
+  //-
+
+block content
+  main.main
+    //- include ./pug/section-scroll.pug
+    section.section.section-product-list(style=("padding-top: 200px"))
+      .container
+        h1.title.text-center FLEXSTAR CLONE LED
+        ul.product-list(data-tabs="products")
+          li
+            .product-list-item-wrap
+              button.product-list-item.tab-button(data-tab="product1")
+                .product-list-image(style="background-image: url(img/120w.png")
+                noscript 
+                  img(src="img/120w.png" alt="product")
+                .product-list-title
+                  h3 FLEXSTAR® 18W
+                  p CLONE LED GROW LIGHT
+
+    section.section
+      .container
+        .product-tabs
+        .tab-content(data-tabs-content="products")
+          div.is-active(data-tab-content="product1")
+            .product-tabs-content
+              .product-tabs-slider
+                +sliderSingleItem
+              .product-tabs-detail The Flexstar Photon Board LED Grow Light is a full-spectrum, high-efficiency LED plant lighting system developed for indoor growers. The rich spectral range is suitable for all stages of plant growth. The small, thin design makes it more suitable for limited space such as grow tents. The Flexstar Photon Board series LED grow lights are available in different sizes and can be used in different situations.
+
+    section.section.section-advantage
+      .container
+        .advantage
+          h3.h3 ADVANTAGES
+          ul.advantage-list
+            li.advantage-item
+              .advantage-card High efficacy
+                .advantage-image(style="background-image: url(img/efficacy.svg);")
+                noscript 
+                  img(src="img/efficacy.svg" alt="")
+            li.advantage-item
+              .advantage-card Full spectrum
+                .advantage-image(style="background-image: url(img/full-spectrum.svg);")
+                noscript 
+                  img(src="img/full-spectrum.svg" alt="")
+            li.advantage-item
+              .advantage-card Low heat
+                .advantage-image(style="background-image: url(img/low-heat.svg);")
+                noscript 
+                  img(src="img/low-heat.svg" alt="")
+            li.advantage-item
+              .advantage-card Energy Efficient
+                .advantage-image(style="background-image: url(img/energy-efficient.svg);")
+                noscript 
+                  img(src="img/energy-efficient.svg" alt="")
+            li.advantage-item
+              .advantage-card Slim and lightweight
+                .advantage-image(style="background-image: url(img/slim-and-lightweight.svg);")
+                noscript 
+                  img(src="img/slim-and-lightweight.svg" alt="")
+            li.advantage-item
+              .advantage-card Easy to set up
+                .advantage-image(style="background-image: url(img/easy-to-set-up.svg);")
+                noscript 
+                  img(src="img/easy-to-set-up.svg" alt="")
+            li.advantage-item
+              .advantage-card Durable
+                .advantage-image(style="background-image: url(img/durable.svg);")
+                noscript 
+                  img(src="img/durable" alt="")
+    section.section.section-features
+      .container
+        h3.h3 FEATURES
+        .features
+          .features-item
+            .feature-detail
+              h5.h5 Light Source
+              p Samsung 3030 diodes
+          .features-item
+            .feature-detail
+              h5.h5 Spectrum Range
+              p Full spectrum
+          .features-item
+            .feature-detail
+              h5.h5 PPF
+              p 550 μmol/s
+          .features-item
+            .feature-detail
+              h5.h5 Efficacy
+              p 2.3 μmol/J
+          .features-item
+            .feature-detail
+              h5.h5 Input Power
+              p 240W
+          .features-item
+            .feature-detail
+              h5.h5 Mounting Height
+              p >6" Above Canopy
+          .features-item
+            .feature-detail
+              h5.h5 Thermal Management
+              p Passive
+          .features-item
+            .feature-detail
+              h5.h5 Dimming Option
+              p 40% / 50% / 60% / 80% / 100% / EXT OFF
+          .features-item
+            .feature-detail
+              h5.h5 Light Distribution
+              p 120°
+    section.section 
+      .container 
+        .section-product-specs
+          .table-dimensions
+            h3.h3.h3-dimension Product Dimension
+            table.table
+              thead
+                tr
+                  th
+                  th Net / Packing
+                  th Net / Packing
+              tr
+                th Length
+                td 11.8 / 13.2 (inch)
+                td 30 / 35 (cm)
+              tr 
+                th Width
+                td 11.8 / 13.2 (inch)
+                td 30 / 33.5 (cm)
+              tr 
+                th Height
+                td 2.2 / 3.2 (inch)
+                td 5.5 / 8.2 (cm)
+              tr 
+                th Weight
+                td 3.7 / 4.9 (lbs)
+                td 1.7 / 2.3 (kg)
+          .table-specs
+            h3.h3.h3-specs SPECIFICATIONS
+            table.table.table-large
+              tr 
+                th Input Voltage
+                td 120V
+                td 208V
+                td 240V
+                td 277V 
+              tr 
+                th Input Current
+                td 1.00A
+                td 0.58A
+                td 0.50A
+                td 0.43A
+    section.section 
+      .container 
+        .section-setup 
+          h3.h3 SETUP 
+          ol.ol
+            li Take out the LED light, power cord, hooks, and other accessories from the box.
+            li Install the hook to the hanging rod and hang the light on the hook.
+            li Connect the power supply and you LED light is ready to be used.
+    section.section 
+      .container 
+        .section-standard 
+          .product-standards
+            .product-standard(style="background-image: url(img/Intertek-logo.svg)")
+            noscript
+              img(src="img/Intertek-logo.svg", alt="")
+            .product-standard(style="background-image: url(img/CE-logo.svg)")
+            noscript
+              img(src="img/CE-logo.svg", alt="")
+            .product-standard(style="background-image: url(img/DLC-logo.svg)")
+            noscript
+              img(src="img/DLC-logo.svg", alt="")
+            .product-standard(style="background-image: url(img/IP65-logo.svg)")
+            noscript
+              img(src="img/IP65-logo.svg", alt="")
+    include ./pug/section-contact-form.pug

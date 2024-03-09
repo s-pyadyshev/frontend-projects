@@ -1,0 +1,64 @@
+extends pug/base-mega-menu
+
+append vars
+  - title= "Homepage"
+
+append links
+  link(rel="icon" href='favicon.ico')
+  link(rel="icon" href='favicon-16x16.png' sizes="16x16")
+  link(rel="icon" href='favicon-32x32.png' sizes="32x32")
+  link(rel="apple-touch-icon" href='apple-touch-icon.png')
+
+block content
+  //- ...
+  +b('main').overview
+    +e('header').header
+      +e('h1').title-page 
+        | Gesunde Rezepte, 
+        br
+        | Die deiner Küche Freude bereiten.
+
+    +b.sort
+      +e.main
+        +e('ul').list
+          +e.item
+            +e('a').link(href="#", title).-is-active Alle
+          +e.item
+            +e('a').link(href="#", title) Vegan
+          +e.item
+            +e('a').link(href="#", title) Vegetarisch
+          +e.item
+            +e('a').link(href="#", title) Mit Fisch
+          +e.item
+            +e('a').link(href="#", title) Mit Fleisch
+
+      +e.popover-button
+        +e('button')(type="button").button
+          | Sortieren 
+          +svg('arrow-down')
+
+        +b.popover
+          +e.header
+            +e('button')(type="button").close
+              +svg('close')
+            +e.title Sortieren
+
+          +e.content
+            +e.value-list
+              +e('button').value.-is-active Beliebteste
+              +e('button').value Neueste Rezepte
+              +e('button').value Geringste Gesamtzeit
+
+    +e('section').recipes
+      .container
+        +e.text-head
+          +e('h2').recipes-text-large Unsere Rezepte Entstehen in Zusammenarbeit mit Profiköchen, influencern, Bloggern und euch.
+          +e('h3').recipes-text-small Dein Rezept fehlt noch? Sende uns deinen Rezeptvorschlag an 
+            a(href="mailto:rezepte@steinberger-naturprodukte.de")
+              | rezepte@steinberger-naturprodukte.de
+
+      include ./pug/recipe-list.pug
+
+      +e.load-more
+        +e('a')(href='#', title="Weitere Rezepte anzeigen") 
+          | Weitere Rezepte anzeigen

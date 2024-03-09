@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "At Hauss Std";
+  src: url("../fonts/athaussstd-light.woff2") format("woff2"),
+    url("../fonts/athaussstd-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "At Hauss Std";
+  src: url("../fonts/athaussstd-regular.woff2") format("woff2"),
+    url("../fonts/athaussstd-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "At Hauss Std";
+  src: url("../fonts/athaussstd-bold.woff2") format("woff2"),
+    url("../fonts/athaussstd-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lufga";
+  src: url("../fonts/lufga-regular.woff2") format("woff2"),
+    url("../fonts/lufga-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lufga";
+  src: url("../fonts/lufga-bold.woff2") format("woff2"),
+    url("../fonts/lufga-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "At Hauss Std";
+  src: url("../fonts/athaussstd-thin.woff2") format("woff2"),
+    url("../fonts/athaussstd-thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,21 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/media";
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include desktop {
+    justify-content: space-between;
+  }
+
+  li {
+    flex-shrink: 0;
+    margin: 20px 0;
+
+    @include tablet {
+      margin: 20px;
+    }
+  }
+}

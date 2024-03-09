@@ -1,0 +1,43 @@
+extends pug/base
+
+prepend vars
+  - title = 'About us'
+
+append vars
+
+block content
+  +page-header(
+      'About us', 
+      'We’re a <span>smooth</span> running engine<span>.</span>',
+      'Engine is a creative agency based in Amsterdam, near the Westergas. Our team consists of an all-rounder, a creative genius and a design junkie. For the last decade we have been working together on inspiring, impactful and fun projects. Introducing: Daniel, Emmanuel and Irene.',
+      false,
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 142.61 48.53" width="143" height="59" data-scrollspy><path d="M39.78 58.03c17.67-.04 35.42-.17 52.94-3.48a121.2 121.2 0 0 0 25.41-7.58c4.13-1.73 8.13-3.76 11.97-6.06 2.85-1.74 5.88-4.12 7.52-7.78 4.49-9.98-6.74-17.29-12.16-20.28-8.05-4.43-16.88-6.49-25.44-8.34a176.476 176.476 0 0 0-56.28-3c-8.87.96-17.97 2.14-26.54 5.47a35.275 35.275 0 0 0-11.18 6.47C3.33 15.9.69 19.53.51 24.08.1 34.63 11.57 38.42 17.44 40.24c9.04 2.8 18.44 3.98 27.66 5.13 18.47 2.3 37.34 3.44 55.86 1.27 8.81-.93 17.46-3.02 25.72-6.2 4.18-1.55 8.19-3.53 11.96-5.91a7.4 7.4 0 0 0 3.27-3.91c.5-2.01.04-4.14-1.25-5.76a21.652 21.652 0 0 0-5.05-4.69 44.79 44.79 0 0 0-5.33-3.38 64.487 64.487 0 0 0-12.13-4.84c-8.94-2.64-18.02-4.75-27.21-6.3A258.205 258.205 0 0 0 20.12 3.1" data-name="Path 9" style="fill:none;stroke:#d8ff01;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px"/></svg>'
+    )
+  .section-about
+    .container
+      +team-desc("images/team.jpg", "Meet our pit crew", "Team Engine has been working together for years. We often only need a few words to understand each other’s ideas, but that doesn’t mean that it’s quiet at our office. At Engine, working hard equals lot’s of fun. We like to joke as much as we like to whip up stunning designs and websites. We know what to expect from one another, we do our part, and we trust the process. Like we said, we’re a smooth running engine.")
+      .card-employee-list
+        +card-employee(
+          "Daniel Tijl", 
+          "Web developer, project manager, money guy, tennis and padel champ", 
+          "images/daniel-tijl-1.jpg", 
+          "images/daniel-tijl-2.jpg", 
+          "Our all-rounder. Daniël builds and maintains websites and manages our finances. He’s basically our chef-mechanic, he keeps our engine running smoothly and makes sure we get our dose of vitamins by sharing a slice of his daily fruit. And he’s annoyingly good at table tennis. And tennis. And padel.",
+          '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 174.61 49.36" data-scrollspy><path d="M77.38 1.24a202.478 202.478 0 0 0-44.03 8.42c-6.82 2.01-13.46 4.55-19.88 7.59C8.11 19.9 3.12 23.49 1.24 28.39c-4.13 10.75 10.08 15.33 20.65 17.2 15.09 2.67 30.65 3.39 46.14 3.26 29.71-.27 61.91-2.38 88.7-13.84C166.9 30.66 179 21.02 172.08 11.3c-5.86-8.23-20.88-9.06-31.52-9.89-34.83-2.7-69.86.71-103.52 10.05" style="fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px;stroke:#d8ff01"/></svg>'
+          ).card-employee--left
+        +card-employee(
+          "Emmanuel Zegeling", 
+          "Art director, project manager, graphic designer, Amsterdam expert, musician", 
+          "images/emanuel-zegeling-1.jpg",
+          "images/emanuel-zegeling-2.jpg",
+          "Creative genius with tons of experience. Emmanuel really knows what to do with your wishes. He would rather say yes than no to challenging deadlines, he just keeps working until it’s finished, with heart and soul. And he knows a thing or two about Amsterdam. Like, everything.",
+          '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292.45 50.87" data-scrollspy><path d="M161.47 50.37a527.21 527.21 0 0 0 74.18-7.22 331.04 331.04 0 0 0 33.72-7.24c9.13-2.59 17.68-6.17 21.12-11.25 7.54-11.14-15.97-16.47-33.55-18.83-25.1-3.36-51.09-4.69-77.03-5.11C130.17-.1 76.16.93 30.66 11.99c-17.28 4.2-38.1 13.88-27.08 24.34C12.91 45.2 38 46.61 55.76 47.88a794.196 794.196 0 0 0 173.83-6.75" style="fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px;stroke:#d8ff01"/></svg>'
+          ).card-employee--right
+        +card-employee(
+          "Irene Flietstra", 
+          "Graphic designer, photographer, hiker, runner, nature lover", 
+          "images/irene-flietstra-1.jpg",
+          "images/irene-flietstra-2.jpg",
+          "Irene is our graphic designer. With an undeniable eye for detail and her innate creativity, she stuns us and our clients with her designs. She knows her Adobe-tools inside-out and is the first to learn about new features with each update. Oh, and she’s a professional photographer too. Show-off.",
+          '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.65 56.87" data-scrollspy><path d="M132.86 56.37c20.54-.75 40.97-3.45 60.99-8.09 9.42-2.07 18.68-4.78 27.73-8.11 7.51-2.9 14.54-6.92 17.37-12.61 6.2-12.48-13.13-18.45-27.59-21.09-20.64-3.77-42.01-5.25-63.34-5.73-40.9-.91-85.31.24-122.72 12.63-14.21 4.7-31.33 15.54-22.27 27.27 7.67 9.93 28.3 11.52 42.9 12.94 47.76 4.61 95.94 2.06 142.94-7.56" style="fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px;stroke:#d8ff01"/></svg>'
+        ).card-employee--center

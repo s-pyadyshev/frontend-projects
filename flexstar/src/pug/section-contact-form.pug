@@ -1,0 +1,26 @@
+section.section.section-contact-form
+  .container
+    .section-contact-form-inner
+      h3.h1 GET A QUOTE
+      form(action="#" method="post").form.form-contact
+        .form-inputs
+          .form-item
+            label(for="firstname") First name
+            input(type="text" id="firstname" name="firstname" required)
+          .form-item
+            label(for="lastname") Last name
+            input(type="text" id="lastname" name="lastname" required)
+          .form-item
+            label(for="email") Email
+            input(type="email" id="email" name="email" required)
+          .form-item
+            label(for="tel") Tel
+            input(type="tel" id="tel" name="tel" required)
+          .form-textarea
+            label(for="comments") Comments
+            textarea(name="comments" rows="3" id="comments" required)
+        a(href="#modal-quote" rel="modal:open").form-submit
+          span.form-submit-text Click to get your quote
+          span.form-submit-icon.icon-send-quote
+        //- a(href="#modal-quote" rel="modal:open") show modal quote
+  include ./footer

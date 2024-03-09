@@ -1,0 +1,12 @@
+import './vendor';
+import './toggle-head-dropdown';
+import './toggle-collapse-menu';
+import './toggle-menu';
+import './popover';
+import './rate';
+import './toggle-reply';
+import './align-columns';
+import './toggle-search';
+import './scroll-header';
+import './scroll-to';
+import './toggle-animations';

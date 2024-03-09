@@ -1,0 +1,11 @@
+- var loading = typeof loading !== 'undefined' ? loading : null
+
+mixin project(img, logo, title, desc, animation)
+  .project(class!=attributes.class)
+    .project__header-img(data-scrollspy=animation)
+      img(src=`${img}`, alt="img", height="" , width="")
+    .project__wrapper
+      img.project__logo(src=`${logo}`, alt="logo", height="" , width="")
+      .project__info
+        p=title
+        a(href="/")=desc

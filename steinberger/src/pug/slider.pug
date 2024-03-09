@@ -1,0 +1,23 @@
++b.slider
+    +e.image-wrap
+        +e('img').image(src="./images/recipe-detail.jpg", alt="")
+
+    +e.content
+        +e.icon-wrap
+            +e('img').icon(src="./images/vegetarian.svg")
+
+        +e('h3').category Vegetarisch
+
+        +e('a').link-back(src="#") 
+            +svg('arrow-back')
+            | Zurück zur Rezept-übersicht
+
+        +e.name 
+            +e('h1').title Pasta mit rucola-parmesan-topping Und bio Olivenöl
+
+            +e.arrow-wrap
+                +e('a').arrow(href="#")
+                    +svg('chevron-left')
+
+                +e('a').arrow(href="#")
+                    +svg('chevron-right')

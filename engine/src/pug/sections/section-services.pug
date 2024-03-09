@@ -1,0 +1,70 @@
+section.section.section-services.background-secondary
+  .container-lg
+    .section-services__tabs
+      h4.services__filter-title Select a service:
+      .tabs(data-tabs="tabs-services")
+        button.button.button--inverse-primary.is-active(data-tab="branding") branding
+        button.button.button--inverse-primary(data-tab="graphicdesign") graphic design
+        button.button.button--inverse-primary(data-tab="webdesign") webdesign
+        button.button.button--inverse-primary(data-tab="uxui") UX/UI
+        button.button.button--inverse-primary(data-tab="webdev") web development
+        button.button.button--inverse-primary(data-tab="animations") animations
+        button.button.button--inverse-primary(data-tab="photo") photography
+  .container-lg
+    .tab-content(data-tabs-content="tabs-services")
+      .is-active(data-tab-content="branding")
+        .service
+          .service__content
+            h3="Branding"
+            p=`Businesses need branding. Fact. Well considered and correct branding can set a business apart from its competitors, promote products and services in the eyes of consumers, cultivate brand loyalty to retain customers, and bolster competitive advantage in crowded markets.`
+            p="But to achieve that, branding needs to be built on individuality. So, that’s where we come in. At Engine we’re a branding agency with an ethos to take the uniqueness of every business, elevate it, and then let it communicate its value to the world."
+            h4="Related case studies:"
+            .service__footer.link-more(data-tabs="tabs1")
+              button(data-tab="project01").is-active Zilter Makelaardij
+              button(data-tab="project02") Wiko Dakkapellen
+          .service__img-wrap
+            div(data-tabs-content="tabs1")
+              div.is-active(data-tab-content="project01")
+                img(src="images/project3.jpg")
+                a(href="/").service__link="View case study"
+              div(data-tab-content="project02")
+                img(src="images/project2.jpg") 
+                a(href="/").service__link.text-default="View case study"
+      div(data-tab-content="graphicdesign")
+        div Tab 2
+      div(data-tab-content="webdesign")
+        div Tab 3
+      div(data-tab-content="uxui")
+        div Tab 4
+      div(data-tab-content="webdev")
+        div Tab 5
+      div(data-tab-content="animations")
+        .service
+          .service__content.service__animation
+            h3="Animations" 
+            p=`Animations are a powerful tool, turning complex subjects into clear and engaging narratives. Through dynamic visuals and storytelling, they simplify intricate concepts, making them accessible and easy to understand. The fluidity and creativity of animations not only enhance comprehension but also leave a lasting impact, making them an invaluable asset in effective communication across various platforms.`
+            h4="We created animations for:"
+            .service__footer.link-more
+              .link-more-wrap(data-tabs="animations-projects")
+                button(data-tab="animations-projects01").is-active Netherlands Red Cross
+                button(data-tab="animations-projects02") CARE Nederland
+                button(data-tab="animations-projects03") Jeugd Educatie Fonds
+          .service__video-wrap
+            div(data-tabs-content="animations-projects")
+              div.is-active(data-tab-content="animations-projects01")
+                video(src="video/video.mp4" poster="images/project3.jpg" controls) 
+                .service__video-text
+                  h4="Het Nederlandse Rode Kruis"
+                  p="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in ex gravida, feugiat orci pellentesque, scelerisque orci. Nullam suscipit ut ex sit amet rhoncus. Aliquam erat volutpat. Nullam mollis mollis efficitur."
+              div(data-tab-content="animations-projects02")
+                <iframe width="100%" src="https://www.youtube.com/embed/NpEaa2P7qZI" title="video placeholder" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                .service__video-text
+                  h4="CARE Nederland"
+                  p="Lorem ipsum"
+              div(data-tab-content="animations-projects03")
+                video(src="video/video.mp4" controls) 
+                .service__video-text
+                  h4="Jeugd Educatie Fonds"
+                  p="Lorem ipsum"
+      div(data-tab-content="photo")
+        div Tab 7

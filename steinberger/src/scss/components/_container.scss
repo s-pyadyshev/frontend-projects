@@ -1,0 +1,13 @@
+.container {
+  max-width: 1700px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @include desktop {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}

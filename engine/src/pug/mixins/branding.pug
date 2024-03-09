@@ -1,0 +1,9 @@
+mixin branding(title, description, title-foter, name1, name2, img)
+  .branding 
+    h2=title 
+    p=description
+    .branding__footer 
+      h3=title-foter
+      span=name1 
+      span=name2
+  img(src=`${img}`, alt="") 

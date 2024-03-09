@@ -1,0 +1,21 @@
+.social {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  margin: 0 -7px;
+
+  &__item {
+    list-style: none;
+    margin: 0 14px;
+  }
+
+  &__link {
+    display: block;
+    line-height: 0;
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}

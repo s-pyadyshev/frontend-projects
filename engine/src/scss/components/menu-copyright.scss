@@ -1,0 +1,62 @@
+.menu-copyright {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $color-gray;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 175px;
+  max-width: 323px;
+
+  &--mobile {
+    margin-top: auto;
+  }
+
+  @include laptop {
+    font-size: 20px;
+    line-height: 35px;
+
+    &--mobile {
+      display: none;
+    }
+  }
+}
+
+.menu-copyright img {
+  width: 68px;
+  height: 40px;
+  margin-top: 8px;
+
+  @include laptop {
+    width: 80px;
+    height: 48px;
+    margin-top: 0;
+  }
+  @include desktop-sm {
+    width: 75px;
+    height: 60px;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+
+  @include desktop {
+    width: 68px;
+    height: 40px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+}
+
+.menu-copyright p {
+  @include desktop-sm {
+    padding: 0px 8px;
+    margin-top: -10px;
+    font-size: 18px;
+  }
+  @include desktop {
+    padding: 0px;
+    font-size: 20px;
+    margin-top: 0;
+  }
+}

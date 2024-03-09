@@ -1,0 +1,185 @@
+.section-services {
+  padding-top: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(32, 32, 32, 1) 0%,
+    rgba(32, 32, 32, 1) 29%,
+    rgba(255, 255, 255, 1) 29%,
+    rgba(255, 255, 255, 1) 100%
+  );
+
+  @include desktop {
+    padding-top: 80px;
+  }
+
+  @media (min-width: 1680px) {
+    background: linear-gradient(
+      180deg,
+      rgba(32, 32, 32, 1) 0%,
+      rgba(32, 32, 32, 1) 32%,
+      rgba(255, 255, 255, 1) 32%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
+}
+
+.section-services__tabs {
+  margin-bottom: 50px;
+
+  @include desktop {
+    margin-bottom: 80px;
+  }
+}
+
+.section-services__tabs ul {
+  @include desktop {
+    justify-content: space-between;
+  }
+}
+
+.services__filter-title {
+  font-size: 20px;
+  margin-bottom: 28px;
+  @include laptop {
+    display: none;
+  }
+}
+
+.service__video-wrap {
+  background-color: $color-white;
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  @include laptop {
+    width: 50%;
+    min-height: 990px;
+  }
+
+  @include desktop-sm {
+    min-height: 750px;
+  }
+  @include desktop {
+    min-height: 990px;
+  }
+}
+
+.service__video-wrap h4,
+.service__video-wrap p {
+  color: $color-black;
+}
+
+.service__video-wrap video,
+.service__video-wrap iframe {
+  height: 380px;
+  object-fit: cover;
+
+  @include desktop {
+    height: 450px;
+  }
+}
+
+.service__video-text {
+  padding: 20px;
+
+  @include desktop-sm {
+    padding: 20px 30px;
+  }
+  @include desktop {
+    padding: 64px 40px 40px 70px;
+  }
+}
+
+.service__video-text h4 {
+  @include laptop {
+    font-size: 30px;
+    margin-bottom: 18px;
+  }
+}
+
+.link-more-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.link-more-wrap button {
+  margin-bottom: 35px;
+  text-align: left;
+  max-width: 70%;
+  word-wrap: break-word;
+
+  @include laptop {
+    max-width: 60%;
+  }
+
+  @include desktop {
+    max-width: 70%;
+  }
+}
+
+.link-more-wrap button.is-active {
+  position: relative;
+
+  &:after {
+    content: "▶";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    font-size: 17px;
+    font-weight: 300;
+    min-width: 20px;
+    padding-left: 0;
+    letter-spacing: -0.2px;
+    line-height: 1;
+    white-space: nowrap;
+    padding-left: 20px;
+
+    @include tablet {
+      content: "Currently playing ▶";
+    }
+
+    @include laptop {
+      font-size: 15px;
+    }
+
+    @include desktop {
+      font-size: 17px;
+      padding-left: 50px;
+    }
+  }
+}
+
+.link-more-playing {
+  display: none;
+  flex-shrink: 0;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.link-more-playing p {
+  font-weight: 300 !important;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  font-size: 16px !important;
+  line-height: 1.2;
+
+  @include desktop {
+    font-size: 16px !important;
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.link-more-playing p::after {
+  content: " ";
+  display: block;
+  border: 7px solid transparent;
+  border-left: 13px solid $color-black;
+  margin-left: 10px;
+}

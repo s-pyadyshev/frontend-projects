@@ -1,0 +1,110 @@
+$progress-circle-width: 2px;
+
+.scroll-down-wrap {
+  @include transition;
+  z-index: 3;
+  position: fixed;
+  right: 0;
+  left: 0;
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 30px;
+  margin-right: auto;
+  margin-left: auto;
+  bottom: 40px;
+
+  &.to-bottom,
+  .video-is-playing &,
+  .header-sticky & {
+    @include tablet {
+      top: calc(100% - 90px);
+      bottom: auto;
+    }
+
+    @include tablet-large {
+      top: calc(100% - 170px);
+    }
+  }
+
+  @include tablet {
+    @include transition;
+    top: 250px;
+    bottom: auto;
+  }
+
+  @include tablet-large {
+    top: 310px;
+  }
+
+  @include desktop-l {
+    padding: 0 70px;
+  }
+}
+
+.scroll-down {
+  display: flex;
+  justify-content: flex-end;
+
+  .scroll-down-circle {
+    width: 48px;
+    height: 48px;
+    transform: rotate(-90deg);
+
+    @include tablet-large {
+      width: 96px;
+      height: 96px;
+    }
+  }
+
+  .scroll-down-text {
+    max-width: 50px;
+    font-family: $scroll-down-font-family;
+    font-weight: 300;
+    font-size: 10px;
+    margin-right: 8px;
+    line-height: 1;
+    text-align: right;
+    text-transform: uppercase;
+    color: $color-lightgreen;
+
+    @include tablet-large {
+      max-width: 90px;
+      font-size: 20px;
+      margin-right: 12px;
+    }
+  }
+}
+
+.scroll-down-arrow {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  width: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  transform: translateY(-50%);
+  color: $color-primary;
+
+  @include tablet-large {
+    width: 40px;
+  }
+}
+
+.scroll-down-circle-progress {
+  @include transition;
+  fill: none;
+  stroke-dasharray: 101;
+  stroke-width: $progress-circle-width;
+  stroke: $color-primary;
+}
+
+.scroll-down-circle-bg {
+  fill: none;
+  stroke-width: $progress-circle-width;
+  stroke: $color-white;
+}
+
+.scroll-down-icon {
+  position: relative;
+}

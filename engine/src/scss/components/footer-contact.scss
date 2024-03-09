@@ -1,0 +1,133 @@
+.footer-contact {
+  border: none;
+
+  &__wrapper {
+    @include tablet {
+      display: flex;
+      gap: 50px;
+    }
+
+    @include laptop {
+      gap: 70px;
+    }
+
+    @include desktop {
+      gap: 119px;
+    }
+  }
+
+  p {
+    line-height: 30px;
+  }
+
+  &__invitation {
+    padding-top: 20px;
+    margin-bottom: 68px;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      padding-top: 0;
+      margin-bottom: 30px;
+    }
+
+    @include desktop {
+      margin-bottom: 64px;
+    }
+
+    p {
+      text-align: right;
+      max-width: 238px;
+      margin-left: auto;
+
+      @include tablet {
+        max-width: 340px;
+        padding-left: 40px;
+        margin-left: calc((100vw - 720px) / 2);
+        text-align: left;
+        margin-top: -6px;
+      }
+
+      @media (min-width: 992px) {
+        margin-left: 0;
+      }
+
+      @include laptop {
+        max-width: 516px;
+      }
+
+      @include desktop {
+        padding-left: 138px;
+        max-width: 654px;
+      }
+
+      @media (min-width: 1640px) {
+        margin-left: calc((100vw - 1640px) / 2);
+      }
+
+      @media (min-width: 1920px) {
+        margin-left: 140px;
+      }
+    }
+  }
+
+  &__invitation-img {
+    @include tablet {
+      flex-grow: 1;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__location {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__address {
+    margin-bottom: 30px;
+    max-width: 238px;
+
+    @include tablet {
+      max-width: none;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__map {
+    margin-bottom: 30px;
+
+    @include tablet {
+      order: -1;
+      height: calc(100vw * 379 / 1920);
+      max-height: 379px;
+    }
+
+    @include desktop {
+      margin-bottom: 60px;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .contact {
+    padding: 0;
+    justify-content: flex-start;
+    margin: 0;
+
+    &__link-number {
+      padding-top: 0;
+    }
+  }
+}

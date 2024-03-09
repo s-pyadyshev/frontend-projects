@@ -1,0 +1,9 @@
+mixin team-desc(img, title, description)
+  .team-desc(data-scrollspy="animate__fadeInUp")
+    picture
+      source(srcset="images/team-d.jpg", media="(min-width: 768px)") 
+      img(src=`${img}`, alt="")  
+    .team-desc__description
+      h2=title 
+      p=description 
+  

@@ -1,0 +1,12 @@
+mixin card-employee(name, achievements, img, img2, desc, svg)
+  .card-employee(class!=attributes.class)
+    .card-employee__name 
+      span.scribble=name
+        | !{svg}
+      span=achievements
+    .card-employee__photo-wrap
+      .card-employee__photo
+        img(src=`${img}`, alt="", width="", height="")
+      .card-employee__photo-hover.is-hidden
+        img(src=`${img2}`, alt="", width="", height="")
+    p=desc 

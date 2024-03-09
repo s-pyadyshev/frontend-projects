@@ -1,0 +1,60 @@
+$tab-active-background-color: $color-primary;
+$tab-active-color: $color-white;
+$tab-border-color: $color-secondary;
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px !important;
+  list-style-type: none;
+
+  @include laptop {
+    justify-content: space-between;
+  }
+
+  .button {
+    font-family: $font-primary;
+    letter-spacing: 0.3px;
+
+    &.is-active {
+      background-color: $tab-active-background-color;
+      color: $color-black;
+
+      @include laptop {
+        background-color: transparent;
+        border: 0;
+        color: $color-primary;
+        text-decoration: underline;
+      }
+    }
+
+    @include laptop {
+      background-color: transparent;
+      border: 0;
+      color: $color-white;
+      padding-right: 0;
+      padding-left: 0;
+
+      &:focus,
+      &:hover,
+      &:active {
+        background-color: transparent;
+        border: 0;
+        color: $color-primary;
+        text-decoration: underline;
+      }
+    }
+
+    @include desktop {
+      font-size: 26px;
+    }
+  }
+}
+
+[data-tab-content] {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}

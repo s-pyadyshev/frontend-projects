@@ -1,0 +1,16 @@
+extends pug/base
+
+prepend vars
+  - title = 'Services'
+
+append vars
+
+block content
+  +page-header(
+    'Services', 
+    'Creative solutions <span>under the hood</span> of every project<span>.</span>',
+    'Shorter meetings and a faster process. Sounds like a dream? At Engine, you get to work with the people who actually do the work. We not talkers, but doers. Whatever service you need, we’re ready to fuel your brand with our creativity.',
+    false,
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 174.88 62.96" width="175" height="63" data-scrollspy><path d="M81.56.7c-15.05-.75-30.14.61-44.81 4.02-7.15 1.54-14.14 3.74-20.88 6.58-5.73 2.54-11.25 6.3-13.93 12.17-5.87 12.89 7.37 20.75 17.47 24.67 14.43 5.6 29.65 8.82 44.94 10.95 29.34 4.08 61.43 6.22 89.76-4.19 10.76-3.95 24.3-14.26 19.11-27.5-4.4-11.21-19.07-14.48-29.42-17.11A237.17 237.17 0 0 0 40.08 7.52" style="fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px"/></svg>'
+  )
+  include pug/sections/section-services

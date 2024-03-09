@@ -1,0 +1,52 @@
+.client-quote {
+  &.section {
+    @include desktop {
+      padding-bottom: 100px;
+    }
+  }
+
+  &__wrapper {
+    padding: 74px 40px;
+    background-color: $color-light-gray;
+
+    @include desktop {
+      padding: 133px 138px;
+    }
+
+    h2 {
+      @include desktop {
+        margin-bottom: 16px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+
+      @include desktop {
+        font-size: 20px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__links {
+    .link-more {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      font-size: 20px;
+      line-height: 23px;
+      text-decoration: none;
+
+      @include desktop {
+        font-size: 26px;
+        line-height: 30px;
+      }
+    }
+  }
+}

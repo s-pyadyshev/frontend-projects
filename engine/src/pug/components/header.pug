@@ -1,0 +1,75 @@
+header.header
+  .container-lg
+    .header__inner
+      a.header__logo(href="/")
+        img.logo(src="images/logo-engine.svg" alt="logo-engine" width="249" height="46")
+        img.logo.logo-dark(src="images/logo-engine-dark.svg" alt="logo-engine" width="249" height="46")
+      .header__lang
+        .switch-lang
+          a.switch-lang__link(href="/" title="Nederlands")
+            span.visible-mobile NL
+            span.hidden-mobile Nederlands
+          span.switch-lang__divider /
+          a.switch-lang__link.active(href="/" title="English")
+            span.visible-mobile EN
+            span.hidden-mobile English
+      .header__menu
+        .container
+          .header__menu-wrap
+            .header__menu-title
+              span.scribble Menu
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.2 45.1" width="128" height="45"><path d="M70.76 44.6c11.04-.61 21.93-2.76 32.38-6.39a86.93 86.93 0 0 0 14.72-6.4c3.99-2.29 7.72-5.46 9.22-9.95 3.29-9.85-6.97-14.57-14.64-16.65-10.96-2.98-22.3-4.15-33.62-4.53-21.72-.71-45.3.2-65.16 9.98C6.12 14.37-2.97 22.93 1.84 32.18c4.07 7.84 15.02 9.09 22.77 10.22 25.42 3.63 51.33 1.6 75.87-5.97" style="fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px;stroke:#d8ff01"/></svg>
+            +navbar(
+              [
+                {
+                  active: true,
+                  text: "Home",
+                  href: "/"
+                },
+                {
+                  text: "Work",
+                  href: "/work"
+                },
+                {
+                  text: "About us",
+                  href: "/about"
+                },
+                {
+                  text: "Services",
+                  href: "/services"
+                },
+                {
+                  text: "Contact",
+                  href: "/contact"
+                }
+              ]
+            )
+          .menu-copyright.menu-copyright--mobile
+            img(src="images/logo-bno-lid.svg" alt="BNO Lid" width="68" height="40")
+            p Wij zijn lid van de Beroeporganisatie Nederlandse Ontwerpers
+          .menu-address
+            .menu-address__item
+              img(src="images/menu-img-1.jpg" alt="" width="352" height="228")
+            .menu-address__item
+              .menu-address__location
+                p Engine Branding &amp; Identity Nieuwpoortkade 2a 1055 RX Amsterdam
+                a(href="tel:+31206060920" title="phone") +31 20 60 60 920
+                a(href="mailto:info@enginebranding.nl" title="email") info@enginebranding.nl
+              img(src="images/menu-img-2.jpg" alt="" width="245" height="293")
+            .menu-address__item
+              img(src="images/menu-img-3.jpg" alt="" width="342" height="222")
+              .menu-copyright
+                img(src="images/logo-bno-lid.svg" alt="BNO Lid" width="68" height="40")
+                p Wij zijn lid van de Beroeporganisatie Nederlandse Ontwerpers
+      .header__menu-toggle
+        button.menu-toggle-open.js-open-menu(type="button")
+          span
+          span
+          span
+        button.menu-toggle-close.js-close-menu(type="button")
+          <svg xmlns="http://www.w3.org/2000/svg" width="38.064" height="35.354" viewBox="0 0 38.064 35.354">
+            <g id="Component_26_1" data-name="Component 26 – 1" transform="translate(3.533 3.533)">
+              <line id="Line_1" data-name="Line 1" y1="28.289" x2="30.636" fill="none" stroke="#202020" stroke-linecap="round" stroke-width="5"/>
+              <line id="Line_2" data-name="Line 2" x2="31" y2="28" transform="translate(0 0.289)" fill="none" stroke="#202020" stroke-linecap="round" stroke-width="5"/>
+            </g>
+          </svg>

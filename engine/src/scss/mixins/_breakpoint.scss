@@ -1,0 +1,29 @@
+@mixin desktop-l {
+  @media (min-width: $desktop-l * 1px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop * 1px) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (min-width: $desktop-sm * 1px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: $laptop * 1px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet * 1px) {
+    @content;
+  }
+}

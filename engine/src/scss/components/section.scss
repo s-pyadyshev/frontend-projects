@@ -1,0 +1,19 @@
+.section {
+  padding-top: $section-padding-vertical;
+  padding-bottom: $section-padding-vertical;
+
+  @include desktop {
+    padding-top: $section-padding-vertical-desktop;
+    padding-bottom: $section-padding-vertical-desktop;
+  }
+}
+
+.section-about {
+  background: linear-gradient(
+    180deg,
+    rgba(32, 32, 32, 1) 0%,
+    rgba(32, 32, 32, 1) 225px,
+    transparent 225px,
+    transparent 100%
+  );
+}

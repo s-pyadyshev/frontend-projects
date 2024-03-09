@@ -1,0 +1,194 @@
+.form-select {
+  padding: 12px 12px 11px;
+  height: 44px;
+  border: 1px solid $input-border-color;
+  color: $input-color;
+  @include transition;
+
+  // select in header nav have less height
+  .nav-aside & {
+    height: auto;
+  }
+
+  &:hover {
+    border-color: $input-border-color-hover;
+    @include transition;
+  }
+
+  &:focus {
+    border-color: $input-border-color-focus;
+  }
+
+  &.error {
+    + .error {
+      display: block;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+
+      .background-primary & {
+        color: $color-white;
+      }
+    }
+  }
+
+  &.error + label + .CaptionCont {
+    border-color: $state-error-color;
+
+    .background-primary & {
+      border-color: $color-white;
+    }
+  }
+}
+
+.select.select-ghost {
+  padding: 4px 12px 5px 0 !important;
+
+  + .CaptionCont {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(169, 165, 197, 0.5);
+    border-radius: 0;
+
+    > label > i {
+      width: 10px;
+      margin-right: 0;
+    }
+
+    > span {
+      font-size: 20px;
+      line-height: 27px;
+      color: $color-white;
+    }
+  }
+}
+
+.SumoSelect {
+  width: 100%;
+
+  @include tablet {
+    width: auto;
+    min-width: 168px;
+  }
+
+  .CaptionCont {
+    border-radius: 0;
+    border-color: $input-border-color;
+  }
+}
+
+.SumoSelect p {
+  padding-left: 12px !important;
+}
+
+.SumoSelect > .optWrapper {
+  border-top: none;
+  border-radius: 0;
+}
+
+.SumoSelect.open > .optWrapper {
+  padding-bottom: 8px;
+  top: 37px;
+  border-color: $input-border-color-focus;
+}
+
+.SumoSelect > .optWrapper > .options li.opt {
+  border-bottom: none;
+}
+
+.SumoSelect > .optWrapper > .options li.opt.disabled {
+  padding-top: 0;
+}
+
+.SumoSelect > .optWrapper > .options li.opt:hover {
+  background-color: $select-option-background-hover;
+}
+
+.SumoSelect > .optWrapper > .options li label {
+  font-size: 12px;
+}
+
+.SumoSelect > .CaptionCont > span.placeholder {
+  font-style: normal;
+  color: $select-placeholder-color;
+}
+
+.SumoSelect > .CaptionCont > label > i {
+  background-image: none;
+  font-size: 7px;
+  opacity: 1;
+}
+
+.SumoSelect:hover > .CaptionCont {
+  box-shadow: none;
+  border-color: $input-border-color-hover;
+}
+
+.SumoSelect:focus > .CaptionCont,
+.SumoSelect.open > .CaptionCont {
+  box-shadow: none;
+  border-color: $input-border-color-focus;
+}
+
+.SumoSelect > .CaptionCont > label > i:before {
+  @extend .icon-triangle-down;
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  position: relative;
+  top: -2px;
+}
+
+.form-inverse,
+.background-primary {
+  .SumoSelect > .CaptionCont {
+    border-color: $color-white;
+    background-color: transparent;
+
+    &:hover {
+      border-color: $select-border-color-hover;
+
+      + .optWrapper {
+        border-color: $select-border-color-hover;
+      }
+    }
+  }
+
+  .SumoSelect > .CaptionCont > span.placeholder {
+    color: $color-white;
+  }
+
+  .SumoSelect > .CaptionCont > label > i {
+    color: $color-white;
+  }
+
+  .SumoSelect.open > .optWrapper {
+    background: $color-primary;
+    border-color: $color-white;
+  }
+
+  .SumoSelect > .optWrapper > .options li.opt label {
+    color: $color-white;
+  }
+
+  .SumoSelect > .optWrapper > .options li.opt:hover label {
+    color: $color-text;
+  }
+
+  .SumoSelect > .CaptionCont,
+  .SumoSelect .select-all > label {
+    color: $color-white;
+  }
+
+  .SumoSelect.open > .CaptionCont,
+  .form-inverse .SumoSelect .select-all > label {
+    border-bottom-color: transparent;
+  }
+}

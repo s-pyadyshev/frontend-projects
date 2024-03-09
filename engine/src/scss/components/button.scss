@@ -1,0 +1,207 @@
+$button-background-color: $color-white;
+$button-background-color-hover: transparent;
+$button-border-color: $color-white;
+$button-color: $color-secondary;
+$button-color-hover: $color-white;
+$button-color-active: $color-white;
+
+.button {
+  position: relative;
+  display: inline-block;
+  min-width: auto;
+  min-height: 50px;
+  font-family: $font-secondary;
+  font-size: 20px;
+  line-height: 14px;
+  font-weight: 400;
+  padding: 12px 20px 12px 20px;
+  outline: none;
+  appearance: none;
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-align: left;
+  border-radius: 3px;
+  border: 1px solid $button-border-color;
+  background-color: $button-background-color;
+  color: $button-color;
+
+  @include laptop {
+    line-height: 18px;
+    letter-spacing: 1.3px;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: $color-secondary;
+    border-color: $color-secondary;
+    color: $color-white;
+
+    .button__icon {
+      fill: $color-white;
+    }
+  }
+
+  &[disabled] {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  .button__icon {
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    width: 17px;
+    height: 17px;
+    transform: translateY(-50%);
+    fill: $color-primary;
+    transition: fill $transition-duration;
+  }
+
+  &.icon-left {
+    .button__icon {
+      left: 18px;
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
+  &--inverse {
+    background-color: transparent;
+    border-color: $color-white;
+    color: $color-white;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: $color-white;
+      border-color: $color-white;
+      color: $color-secondary;
+
+      .background-default & {
+        background-color: transparent;
+        border-color: $color-primary;
+        color: $color-primary;
+      }
+
+      .button__icon {
+        fill: $color-secondary;
+
+        .background-default & {
+          fill: $color-primary;
+        }
+      }
+    }
+
+    .button__icon {
+      fill: $color-white;
+    }
+  }
+
+  &.button--inverse-primary {
+    background-color: transparent;
+    border-color: $color-primary;
+    color: $color-primary;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: $color-primary;
+      color: $color-secondary;
+    }
+
+    .button__icon {
+      fill: $color-primary;
+    }
+  }
+
+  &--inverse-secondary {
+    background-color: transparent;
+    border-color: $color-primary;
+    color: $color-primary;
+
+    .button__icon {
+      fill: $color-primary;
+    }
+  }
+
+  &--primary {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    color: $color-black;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: $color-secondary;
+      border-color: $color-secondary;
+
+      .background-secondary & {
+        border-color: $color-white;
+      }
+    }
+
+    .button__icon {
+      fill: $color-white;
+    }
+  }
+
+  &--secondary {
+    border-color: $color-secondary;
+    background-color: $color-secondary;
+    color: $color-white;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: $color-primary;
+      border-color: $color-primary;
+      color: $color-black;
+    }
+
+    .button__icon {
+      fill: $color-white;
+    }
+  }
+
+  &--up {
+    opacity: 1;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    position: fixed;
+    top: auto;
+    bottom: 80px;
+    right: 25px;
+    transform: translateY(-50%);
+    z-index: 1;
+    border: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='55' height='55' viewBox='0 0 55 55'%3E%3Cg id='Group_83' transform='translate(-273 -4039)'%3E%3Cg id='Group_84'%3E%3Ccircle id='Ellipse_16' cx='27.5' cy='27.5' r='27.5' transform='translate(273 4039)' fill='%23d8ff01'/%3E%3Cg id='Group_82' transform='translate(-9.298 -2.148)'%3E%3Cline id='Line_2' x2='13.298' y2='13.298' transform='translate(309.798 4062)' fill='none' stroke='%23202020' stroke-linecap='round' stroke-width='5'/%3E%3Cline id='Line_23' x1='13.298' y2='13.298' transform='translate(296.5 4062)' fill='none' stroke='%23202020' stroke-linecap='round' stroke-width='5'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+    transition-property: opacity z-index;
+    transition-duration: $transition-duration;
+
+    @include laptop {
+      display: none;
+    }
+
+    &.is-hidden {
+      opacity: 0;
+      z-index: -1;
+    }
+
+    .footer-contact & {
+      top: auto;
+      bottom: calc(171px - 55px);
+      transform: none;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: $color-primary;
+    }
+  }
+}

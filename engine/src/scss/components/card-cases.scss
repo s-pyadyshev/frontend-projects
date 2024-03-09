@@ -1,0 +1,85 @@
+.card-cases {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45%;
+    background: transparent
+      linear-gradient(180deg, #00000000 0%, #00000090 70%, #000000af 100%);
+    opacity: 0;
+    transition: opacity $transition-duration;
+    z-index: 1;
+  }
+
+  &:hover,
+  &:active {
+    @include laptop {
+      &::before {
+        opacity: 1;
+      }
+
+      .card-cases__text {
+        opacity: 1;
+      }
+
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    transition: transform $transition-duration;
+  }
+
+  &__text {
+    color: $color-black;
+
+    @include laptop {
+      position: absolute;
+      bottom: 45px;
+      left: 45px;
+      color: $color-white;
+      opacity: 0;
+      transition: opacity $transition-duration;
+      z-index: 2;
+    }
+
+    h3 {
+      @include desktop-sm {
+        font-size: 22px;
+      }
+    }
+
+    p {
+      @include desktop-sm {
+        font-size: 17px;
+      }
+    }
+  }
+
+  h3 {
+    @include laptop {
+      margin-bottom: 11px;
+    }
+  }
+
+  p {
+    font-size: 12px;
+    margin-bottom: 0;
+
+    @include desktop {
+      font-size: 20px;
+    }
+  }
+}

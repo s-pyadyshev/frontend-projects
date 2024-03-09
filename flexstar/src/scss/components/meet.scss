@@ -1,0 +1,88 @@
+.icon-f {
+  display: none;
+
+  @include tablet-large {
+    display: block;
+    font-size: 141px;
+    color: $color-lightgreen;
+    background-color: $color-black;
+    border: $color-lightgreen 1px solid;
+    padding: 54px 74px;
+    margin-right: 66px;
+  }
+}
+
+.section-meet-list ul li {
+  display: flex;
+  align-items: flex-start;
+}
+
+.section-meet-list li {
+  [class^="icon-"] {
+    color: $color-black;
+    background-color: $color-lightgreen;
+    font-size: 58px;
+
+    @include tablet-large {
+      font-size: 114px;
+    }
+  }
+}
+
+.section-meet-list li span:first-child {
+  margin-right: 18px;
+  width: 78px;
+  height: 78px;
+
+  @include tablet-large {
+    width: 156px;
+    height: 156px;
+    margin-right: 34px;
+    margin-top: 4px;
+  }
+}
+
+.section-meet-list ul li {
+  margin-bottom: 40px;
+
+  @include tablet-large {
+    width: 50%;
+    margin-bottom: 80px;
+    padding-right: 24px;
+  }
+
+  @include desktop {
+    padding-right: 70px;
+  }
+}
+
+.section-meet-list {
+  [class^="icon-"] {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+
+    @include tablet-large {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+.section-meet-list ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section-meet-list li:nth-child(2) {
+  [class^="icon-"] {
+    font-size: 44px;
+
+    @include tablet-large {
+      font-size: 84px;
+    }
+  }
+}

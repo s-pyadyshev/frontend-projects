@@ -1,0 +1,134 @@
+.form {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+
+  &.form-contact {
+    padding-top: 12px;
+
+    .form-inputs {
+      @include tablet-large {
+        padding-right: 24px;
+      }
+
+      @include desktop {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .form-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-bottom: 120px;
+    margin-left: -15px;
+
+    @include tablet-large {
+      max-width: 460px;
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+
+  .form-item {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 22px;
+
+    @include tablet-large {
+      width: 50%;
+    }
+
+    input {
+      width: 100%;
+      height: 32px;
+      border: 0;
+    }
+  }
+
+  .form-textarea {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    textarea {
+      width: 100%;
+      border: 0;
+    }
+  }
+
+  input,
+  textarea {
+    padding: 6px 10px;
+    font-size: 16px;
+  }
+
+  label {
+    margin-bottom: 9px;
+    font-family: $font-family-secondary;
+    font-size: 10px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $label-color;
+
+    @include tablet {
+      font-size: 12px;
+      font-weight: 400;
+      margin-bottom: 6px;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      width: 7px;
+      height: 1px;
+      margin-top: 3px;
+      background-color: $color-primary;
+
+      @include tablet {
+        display: inline-block;
+        margin-left: 4px;
+      }
+    }
+  }
+}
+
+.form-submit {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  margin-left: auto;
+  color: $color-primary;
+
+  @include tablet {
+    padding-bottom: 30px;
+  }
+
+  .form-submit-icon {
+    font-size: 42px;
+
+    @include tablet-large {
+      font-size: 95px;
+    }
+  }
+
+  .form-submit-text {
+    max-width: 38px;
+    margin-right: 8px;
+    font-family: $font-family-secondary;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: right;
+
+    @include tablet-large {
+      max-width: 75px;
+      margin-right: 16px;
+      font-size: 20px;
+    }
+  }
+}

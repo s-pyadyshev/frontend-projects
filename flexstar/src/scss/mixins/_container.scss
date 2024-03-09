@@ -1,0 +1,30 @@
+// Container mixins
+
+@mixin make-container($gutter: $container-padding-x) {
+  width: 100%;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 1440px) {
+    padding-right: 70px;
+    padding-left: 70px;
+  }
+}
+
+@mixin container-fluid-mobile {
+  margin-right: -$container-padding-x;
+  margin-left: -$container-padding-x;
+
+  @include tablet {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.container-fluid {
+  max-width: 100%;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}

@@ -1,0 +1,115 @@
+.overview {
+  margin-bottom: 50px;
+
+  @include desktop {
+    margin-bottom: 80px;
+  }
+
+  &__header {
+    margin: 35px 0;
+
+    @include desktop {
+      margin: 62px 0;
+    }
+  }
+
+  &__recipes {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  &__title-page {
+    font-size: 22px;
+    line-height: 1.65;
+    letter-spacing: 4.4px;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: center;
+
+    @include desktop {
+      font-size: 32px;
+      letter-spacing: 3.52px;
+      line-height: 39px;
+    }
+  }
+
+  &__recipes-text-large {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 2.2px;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include desktop {
+      font-size: 26px;
+      line-height: 32px;
+      letter-spacing: 2.86px;
+    }
+  }
+
+  &__recipes-text-small {
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 1.76px;
+    line-height: 19px;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+
+    @include desktop {
+      font-size: 16px;
+    }
+
+    a {
+      font-size: inherit;
+      letter-spacing: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      text-decoration: none;
+      color: $color-black;
+    }
+  }
+
+  &__text-head {
+    max-width: 1200px;
+    margin: 35px auto;
+
+    @include desktop {
+      margin: 68px auto;
+    }
+  }
+
+  &__load-more {
+    text-align: center;
+
+    @include desktop {
+      margin-top: 16px;
+    }
+
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 16px;
+      letter-spacing: 1.76px;
+      line-height: 19px;
+      color: $color-grey;
+      cursor: pointer;
+      transition-property: color;
+      transition-duration: $global-animation-time;
+
+      &:focus,
+      &:hover,
+      &:active {
+        color: $color-text-primary;
+        transition-property: color;
+        transition-duration: $global-animation-time;
+      }
+    }
+  }
+}

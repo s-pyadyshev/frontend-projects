@@ -1,0 +1,145 @@
+.footer {
+  padding: 34px 0;
+  border-top: 1px solid #d9d9d9;
+
+  @include tablet {
+    padding: 75px 0 42px 0;
+  }
+
+  &__title {
+    font-size: 14px;
+    letter-spacing: 1.54px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    font-family: $font-secondary;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    color: $color-text-secondary;
+
+    @include tablet {
+      font-size: 16px;
+    }
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+
+    a {
+      color: inherit;
+      line-height: inherit;
+      font-size: inherit;
+      font-family: inherit;
+      text-underline-position: under;
+      text-decoration-color: currentColor;
+    }
+  }
+
+  &__block {
+    @include tablet {
+      flex: 1 1 50%;
+      margin-bottom: 50px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @include desktop {
+      flex: 0 1 auto;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 48px;
+    }
+
+    &--text {
+      @include tablet {
+        flex-basis: 460px;
+      }
+    }
+  }
+
+  &__link-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__list-item {
+    list-style: none;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    a {
+      font-size: 15px;
+      line-height: 22px;
+      color: $color-text-secondary;
+      text-decoration: none;
+      font-family: $font-secondary;
+
+      @include tablet {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__storename {
+    font-size: 14px;
+    letter-spacing: 1.54px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: $color-black;
+    text-decoration: none;
+  }
+
+  &__copyright {
+    text-align: center;
+
+    @include tablet {
+      text-align: left;
+    }
+  }
+
+  &__aside {
+    margin-top: 65px;
+
+    @include tablet {
+      margin-top: 0;
+    }
+  }
+
+  &__container {
+    margin: 0 auto;
+    padding: 0 24px;
+
+    @include tablet {
+      padding: 0 50px;
+    }
+  }
+
+  &__inner {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-left: -40px;
+      margin-right: -40px;
+    }
+  }
+
+  a {
+    transition: color $global-animation-time;
+
+    &:hover {
+      color: $color-black;
+    }
+  }
+}

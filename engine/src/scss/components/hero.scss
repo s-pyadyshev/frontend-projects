@@ -1,0 +1,53 @@
+.hero {
+  position: relative;
+
+  &.section {
+    margin-top: -30px;
+    padding-top: 0;
+    padding-bottom: 0;
+    @include desktop-sm {
+      margin-top: -14px;
+    }
+    @include desktop {
+      margin-top: -30px;
+    }
+  }
+
+  + .promo-text {
+    padding-top: calc(9px + calc(100vw * 214 / 393));
+
+    @media (min-width: 575px) {
+      padding-top: 322px;
+    }
+
+    @include laptop {
+      padding-top: 300px;
+    }
+
+    @include desktop-sm {
+      padding-top: 350px;
+    }
+    @media (min-width: 1200px) {
+      padding-top: 312px;
+    }
+
+    @include desktop {
+      padding-top: calc(
+        -226px + calc(578px + (726 - 578) * ((100vw - 1360px) / (1920 - 1360)))
+      );
+    }
+
+    @media (min-width: 1920px) {
+      padding-top: 500px;
+    }
+  }
+}
+
+.line {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 10px;
+  height: 200px;
+  background-color: rgb(112, 176, 230);
+}

@@ -1,0 +1,87 @@
+// stylelint-disable scss/dollar-variable-empty-line-before
+
+// Fonts
+// stylelint-disable-next-line
+$font-primary: "At Hauss Std", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+$font-secondary: "Lufga", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+$font-weight: 400;
+$line-height: 1.5;
+$font-size: 16px;
+$font-size-desktop: 20px;
+
+// Colors
+$color-black: #000;
+$color-white: #fff;
+$color-muted: #f8f8f8;
+$color-gray: #aaaaaa;
+$color-light-gray: #efefef;
+
+// Primary - Secondary
+$color-primary: #d8ff01;
+$color-secondary: #202020;
+
+// Forms
+$input-background-color: $color-white;
+$input-border-width: 1px;
+$input-border-color: $color-black;
+$input-icon-width: 32px;
+$input-padding-x: 8px;
+$input-padding-y: 8px;
+$input-padding: $input-padding-x $input-padding-y;
+$input-hint-font-size: 14px;
+$input-padding-icon-x: $input-icon-width + $input-padding-x;
+$input-color: $color-secondary;
+
+// Global cosmetic styles
+$overlay: rgba(0, 0, 0, 0.2);
+$border-color: #5a5a5a;
+$text-title: #2a2a2a;
+
+// Sections
+$section-padding-vertical: 40px;
+$section-padding-vertical-desktop: 80px;
+
+// Transitions
+$transition-duration: 0.2s;
+
+// Settings
+$tablet: 768; // Tablets, Ipads (portrait) - from 768px to 1024px
+$laptop: 1025; // Laptops, Desktops - from 1025px to 1366px
+$desktop-sm: 1280;
+$desktop: 1440; // Desktops = 1440px to higher resolution desktops
+$desktop-l: 1600;
+
+// Bootstrap overrides
+
+// scss-docs-end grid-breakpoints
+$grid-gutter-width: 16px;
+
+$container-padding-x: 70px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+) !default;
+
+@each $breakpoint, $value in $grid-breakpoints {
+  .hidden-#{$breakpoint} {
+    @media (min-width: $value) {
+      display: none;
+    }
+  }
+}
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1710px,
+) !default;
+// scss-docs-end container-max-widths

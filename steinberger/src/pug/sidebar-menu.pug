@@ -1,0 +1,34 @@
++b('section').sidebar-menu(aria-hidden="true")
+    +e('header').header
+        +e('button').close(type='button')
+            +svg('close')
+
+    +e.content
+        +e.main
+            +e.container
+                +e('nav').nav
+                    +e.collapsible
+                        +e('a').link(href="#") Start
+
+                    +e.collapsible
+                        +e('button').link(type="button", aria-expanded="false") Speiseöl-Sortiment
+                            +e('span').plus
+
+                        +e.collapsible-inner
+                            +e.collapsible-content
+                                +e.collapsible
+                                    +e('a').link(href="#") Speiseöle
+
+                                +e.collapsible
+                                    +e('a').link(href="#") Gewürze
+
+                                +e.collapsible
+                                    +e('a').link(href="#") Superfoods
+
+                    +e.collapsible
+                        +e('a').link(href="#") Rezepte
+
+                +e('nav').secondary-nav
+                    +e('ul').secondary-list
+                        +e.secondary-item
+                            +e('a').secondary-link(href="#") Account

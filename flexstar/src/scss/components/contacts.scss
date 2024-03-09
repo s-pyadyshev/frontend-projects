@@ -1,0 +1,11 @@
+.section-contact-form-inner {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-bottom: 370px;
+
+  @include tablet {
+    flex-direction: row;
+    padding-bottom: 0;
+  }
+}

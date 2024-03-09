@@ -1,0 +1,154 @@
+//- main sticky nav
+mixin sticky-nav-button()
+  .container-fluild.background-default.nav-border
+    .container
+      nav.nav(role="navigation")
+        .row
+          .col-sm-10.col-lg-8.offset-lg-1
+            ul.nav-list
+              li.nav-item
+                a.nav-link.is-active(href="#") The market
+              li.nav-item
+                a.nav-link(href="#") Customer voice
+              li.nav-item
+                a.nav-link(href="#") Industry challenges
+              li.nav-item
+                a.nav-link(href="#") Solutions
+              li.nav-item
+                a.nav-link(href="#") Hot topics & events
+          .col-sm-2
+            .nav-aside
+              a(href="#").button.button-primary
+                span Download
+                i.button-icon-arrow.icon-triangle-right
+
+mixin sticky-nav-filters()
+  .container-fluild.background-default.nav-border
+    .container
+      nav.nav(role="navigation")
+        .row
+          .col-sm-6.col-lg-5.offset-lg-1
+            ul.nav-list
+              li.nav-item
+                a.nav-link.is-active(href="#") All
+              li.nav-item
+                a.nav-link(href="#") Fashion
+              li.nav-item
+                a.nav-link(href="#") Automotive
+              li.nav-item
+                a.nav-link(href="#") Furniture
+          .col-sm-6.col-lg-5
+            form(action="#" method="get").nav-aside
+              .control
+                select(name="name" placeholder="Filter").select.has-error
+                  option(disabled selected value="Filter")
+                  option Fabric Cutting
+                  option Nesting
+                  option CAD
+                  option PLM/DAM
+                  option On demand
+              .control
+                select(name="name" placeholder="Filter").select.has-error
+                  option(disabled selected value="Filter")
+                  option Fabric Cutting
+                  option Nesting
+                  option CAD
+                  option PLM/DAM
+                  option On demand
+
+mixin nav-filters
+  .container-fluild.nav-border
+    .container
+      .row
+        .col-md-10.offset-md-1
+          .nav
+            form(action="#" method="get").nav-aside
+              .control
+                select(name="name" placeholder="Filter").select.has-error
+                  option(disabled selected value="Filter")
+                  option Fabric Cutting
+                  option Nesting
+                  option CAD
+                  option PLM/DAM
+                  option On demand
+              .control
+                select(name="name" placeholder="Filter").select.has-error
+                  option(disabled selected value="Filter")
+                  option Fabric Cutting
+                  option Nesting
+                  option CAD
+                  option PLM/DAM
+                  option On demand
+
+mixin sticky-nav-library()
+  .container-fluild.background-default.nav-border
+    .container
+      nav.nav(role="navigation")
+        .row
+          .col-sm-6.col-lg-5.offset-lg-1
+            ul.nav-list
+              li.nav-item
+                a.nav-link.is-active(href="#") All
+              li.nav-item
+                a.nav-link(href="#") Fashion
+              li.nav-item
+                a.nav-link(href="#") Automotive
+              li.nav-item
+                a.nav-link(href="#") Furniture
+          .col-sm-6.col-lg-5
+            form(action="#" method="get").nav-aside
+              .control
+                select(name="content" placeholder="Content type").select.has-error
+                  option(disabled selected value="Content type")
+                  option Fabric Cutting
+                  option Nesting
+                  option CAD
+                  option PLM/DAM
+                  option On demand
+
+mixin sticky-nav-events()
+  .container-fluild.background-default.nav-border
+    .container
+      nav.nav(role="navigation")
+        .row
+          .col-sm-6.col-md-5.offset-md-1
+            ul.nav-list
+              li.nav-item
+                a.nav-link.is-active(href="#") All
+              li.nav-item
+                a.nav-link(href="#") Fashion
+              li.nav-item
+                a.nav-link(href="#") Automotive
+              li.nav-item
+                a.nav-link(href="#") Furniture
+          .col-sm-6.col-lg-5
+            form(action="#" method="get").nav-aside
+              .control
+                select(name="content" placeholder="Solution").select.has-error
+                  option(disabled selected value="Solution")
+                  option Fabric Cutting
+                  option Nesting
+                  option CAD
+                  option PLM/DAM
+                  option On demand
+              .control
+                select(name="event" placeholder="Event type").select.has-error
+                  option(disabled selected value="Event type")
+                  option Event
+                  option Replay
+                  option Webinar
+
+mixin sticky-nav-search()
+  .container-fluild.background-default.nav-border
+    .container
+      nav.nav(role="navigation")
+        .row
+          .col-md-10.offset-md-1
+            form(action="#" method="get").nav-aside.nav-aside-left
+              .nav-filter-label Search by
+              .control
+                select(name="search" placeholder="Relevance").select.has-error
+                  option(disabled selected value="Relevance")
+                  option Event
+                  option Replay
+                  option Webinar

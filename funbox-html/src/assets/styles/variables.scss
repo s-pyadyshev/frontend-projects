@@ -1,0 +1,37 @@
+// Fonts
+$font-family: "Trebuchet MS", sans-serif;
+$font-weight: 400;
+$font-size: 16px;
+$line-height: 1.5;
+$font-family-h1: "exo20", sans-serif;
+
+// Colors
+// Colors
+$color-primary: #1698d9;
+$color-primary-hover: #2ea8e6;
+$color-secondary: #e6f0fa;
+$color-white-global: #fff;
+$color-black-global: #000;
+
+// Background colors
+$background-color-primary: $color-primary;
+$background-color-secondary: #e6f0fa;
+
+// Text colors
+$text-color-secondary: #666;
+
+// State colors
+$state-color-selected: #d91667;
+$state-color-selected-hovered: #e62e7a;
+$state-color-disabled: #b3b3b3;
+$state-color-disabled-note: #ffff66;
+
+// Headings
+$title-h1-color: $color-white-global;
+
+// Media
+$tablet: 640px;
+$desktop: 1200px;
+
+// Transitions
+$transition-duration: 0.3s;

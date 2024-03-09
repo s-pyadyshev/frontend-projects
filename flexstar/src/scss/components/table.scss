@@ -1,0 +1,96 @@
+.table {
+  font-family: "Source Sans Pro";
+  border-collapse: collapse;
+  border: none;
+  width: 100%;
+
+  td,
+  th {
+    border: 1px $color-lightgreen solid;
+    padding: 8px 18px 8px 18px;
+
+    @include tablet-large {
+      padding: 12px 38px 15px 38px;
+    }
+  }
+
+  thead {
+  }
+}
+
+.table td {
+  font-size: 9px;
+
+  @include tablet-large {
+    font-size: 18px;
+  }
+}
+
+.table th {
+  font-size: 9px;
+  @include tablet-large {
+    font-size: 18px;
+    padding: 12px 28px 15px 28px;
+  }
+}
+
+.table td {
+  @include tablet-large {
+    padding: 12px 24px 15px 24px;
+  }
+
+  @include desktop {
+    padding: 12px 56px 15px 56px;
+  }
+}
+
+.table-subtitle {
+  font-family: "Source Sans Pro";
+}
+
+.section-product-specs {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet-large {
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+  }
+}
+
+.table thead th,
+.table thead td {
+  border: none;
+  font-size: 7px;
+  font-weight: 400;
+  text-align: right;
+
+  @include tablet-large {
+    font-size: 12px;
+    padding-right: 0;
+    padding-bottom: 6px;
+  }
+}
+
+.table-dimensions {
+  margin-bottom: 57px;
+  @include tablet-large {
+    width: 50%;
+    margin-right: 46px;
+    margin-bottom: 0;
+  }
+}
+
+table.table-large td,
+table.table-large th {
+  padding: 11px 4px 11px 15px;
+
+  @include tablet-large {
+    padding: 39px 24px 38px 24px;
+  }
+
+  @include desktop {
+    padding: 39px 31px 38px 31px;
+  }
+}

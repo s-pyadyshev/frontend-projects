@@ -1,0 +1,265 @@
+.section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @include tablet-large {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+}
+
+.section.section-intro {
+  padding-top: 100px;
+
+  @include tablet-large {
+    padding-top: 160px;
+  }
+
+  .h1 {
+    margin-bottom: 0;
+  }
+
+  .container {
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.section-intro-bg {
+  position: relative;
+  height: 100vh;
+
+  &:before {
+    content: "";
+    opacity: 1;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.8) 10%,
+        transparent 50%,
+        transparent 100%
+      ),
+      url("../img/homepage-background.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%, 50% 50%;
+    background-size: 100%, 100%;
+    background-color: $color-black;
+    animation-name: fadeIn;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+    animation-duration: 1s;
+
+    @include tablet {
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.8) 0%,
+          rgba(0, 0, 0, 0.8) 50%,
+          transparent 50%,
+          transparent 100%
+        ),
+        url("../img/homepage-background.jpg");
+      background-position: 50% 50%, 50% 50%;
+      background-size: 100%, 105%;
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-black;
+  }
+
+  .h1 {
+    max-width: 700px;
+  }
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  .h2 {
+    margin-top: -8px;
+  }
+}
+
+.section-video-header {
+  background-color: $color-black;
+  pointer-events: none;
+
+  @include tablet {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .video-is-playing & {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    bottom: auto;
+    margin: 0 auto;
+    min-height: 190px;
+    padding: 60px 0 30px;
+
+    @include tablet {
+      top: 110px;
+      padding: 15px 0 30px;
+    }
+
+    @include tablet-large {
+      top: 143px;
+    }
+  }
+
+  .section-header {
+    opacity: 0;
+    animation-delay: 2s;
+  }
+}
+
+.section-header-list {
+  @include tablet-large {
+    max-width: 30%;
+  }
+}
+
+.section.section-video {
+  padding-top: 120px;
+  background-color: $color-black;
+
+  @include tablet {
+    padding-top: 160px;
+  }
+
+  .section-header {
+    display: none;
+  }
+}
+
+.section.section-contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  height: 100vh;
+  padding-top: 70px;
+  padding-bottom: 0;
+  background-image: linear-gradient(
+      $color-black 50%,
+      transparent 70%,
+      transparent 100%
+    ),
+    url("../img/footer-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%, 50% 60%;
+  background-size: 100%, auto;
+
+  @include tablet-large {
+    padding-top: 143px;
+    background-position: 50% 50%, 50% 50%;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.8) 50%,
+        transparent 50%,
+        transparent 100%
+      ),
+      url("../img/footer-bg.jpg");
+  }
+
+  // @media (max-height: 840px) {
+  //   background-image: linear-gradient(
+  //       rgba(0, 0, 0, 0.8) 0%,
+  //       rgba(0, 0, 0, 0.8) 60%,
+  //       transparent 60%,
+  //       transparent 100%
+  //     ),
+  //     url("../img/footer-bg.jpg");
+  // }
+
+  .h1 {
+    max-width: 500px;
+
+    @include tablet {
+      font-size: 64px;
+      margin-right: 18px;
+    }
+
+    @include desktop {
+      font-size: 96px;
+    }
+
+    @include desktop-l {
+      font-size: 121px;
+      line-height: 1;
+    }
+  }
+
+  &.active.fp-completely {
+    @media (max-width: 767px) {
+      height: auto !important;
+    }
+  }
+}
+
+.section-product-list {
+  height: auto;
+
+  @include tablet-large {
+    height: 100vh;
+  }
+}
+
+.section-meet-header {
+  display: flex;
+}
+
+.section.section-meet,
+.section.section-meet-header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @include tablet-large {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+// background with top darkened half (footer, meet page)
+.section-bg {
+  height: 100vh;
+  padding-top: 70px;
+  padding-bottom: 320px;
+  background-image: linear-gradient(
+      $color-black 10%,
+      transparent 70%,
+      transparent 100%
+    ),
+    url("../img/homepage-background.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%, 50% center;
+  background-size: 100%, contain;
+
+  @include tablet-large {
+    background-position: 50% 50%, 50% 100%;
+    background-size: 100%, cover;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.8) 50%,
+        transparent 50%,
+        transparent 100%
+      ),
+      url("../img/footer-bg.jpg");
+  }
+}
