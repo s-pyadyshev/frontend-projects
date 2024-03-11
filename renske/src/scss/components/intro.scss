@@ -1,0 +1,57 @@
+.intro {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 60px;
+
+  @include laptop {
+    padding-top: 25px;
+    padding-bottom: 110px;
+  }
+}
+
+.intro__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include laptop {
+    justify-content: flex-start;
+  }
+}
+
+.intro-inner__text-wrap-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include laptop {
+    margin-left: -46px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.intro-inner__text-wrap-details li {
+  display: flex;
+  font-size: 10px;
+  flex-shrink: 0;
+
+  align-items: baseline;
+}
+
+.intro-inner__text-wrap-details li p {
+  letter-spacing: 3px;
+  font-size: 10px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.intro-inner__text-wrap-details li p:last-child {
+  font-family: "OfficinaSanITCMedium";
+  color: $color-primary;
+  font-style: italic;
+  font-size: 14px;
+  letter-spacing: 0px;
+  margin-right: 0px;
+}

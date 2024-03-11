@@ -1,0 +1,85 @@
+.book-inner {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include laptop {
+    flex-direction: row;
+  }
+}
+
+.book {
+  background-color: $color-secondary;
+  padding-top: 76px;
+  padding-bottom: 82px;
+  overflow: hidden;
+
+  @include laptop {
+    padding-top: 32px;
+    padding-left: 14px;
+    padding-bottom: 98px;
+  }
+}
+
+.book .section-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid $color-primary;
+  border-radius: 160px;
+  width: 190px;
+  height: 330px;
+  margin: 0 auto 80px;
+
+  @include tablet {
+    width: 250px;
+    height: 500px;
+  }
+
+  @include laptop {
+    margin: 100px 0 0 0;
+    width: 26%;
+    margin-top: 100px;
+    height: 506px;
+    position: relative;
+  }
+}
+
+.book .section-text {
+  @include laptop {
+    margin-right: 122px;
+  }
+}
+
+.book .section-text__wrap {
+  margin-bottom: 38px;
+
+  @include laptop {
+    margin-bottom: 32px;
+  }
+}
+
+.book .section-image img {
+  scale: 1.5;
+  margin-bottom: -20px;
+  margin-right: -15px;
+  margin-left: 12px;
+  transition-duration: 0.5s;
+  @include laptop {
+    position: absolute;
+    right: -42px;
+    left: 0;
+    margin: 0 auto;
+    bottom: 95px;
+    scale: 1.5;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+  }
+}
+
+.book-inner .section-text span {
+  font-style: italic;
+  line-height: 26px;
+}

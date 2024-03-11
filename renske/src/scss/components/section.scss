@@ -1,0 +1,133 @@
+.section {
+  padding-top: $section-padding-vertical;
+  padding-bottom: $section-padding-vertical;
+
+  @include desktop {
+    padding-top: $section-padding-vertical-desktop;
+    padding-bottom: $section-padding-vertical-desktop;
+  }
+}
+
+.section-text h2 {
+  color: $color-primary;
+  font-family: "ITCOfficinaSerif LT BoldIt";
+  font-size: 34px;
+  line-height: 40px;
+  margin-bottom: 33px;
+  @include laptop {
+    font-size: 39px;
+    line-height: 46px;
+    margin-bottom: 35px;
+  }
+}
+
+.section-text h2 span:first-child {
+  color: $color-primary;
+  font-family: "ITCOfficinaSerif LT BoldIt";
+  font-size: 34px;
+  line-height: 40px;
+
+  @include laptop {
+    font-size: 39px;
+    line-height: 46px;
+  }
+}
+
+.section-text h2 span:last-child {
+  color: $color-black;
+  font-family: "ITCOfficinaSans LT BookIt";
+  font-style: italic;
+  font-size: 34px;
+  font-weight: 500;
+
+  @include laptop {
+    font-size: 39px;
+    line-height: 46px;
+  }
+}
+
+.section-text p {
+  width: 85%;
+  line-height: 2;
+  margin-left: auto;
+  margin-top: 0;
+  font-size: 15px;
+  line-height: 30px;
+
+  @include tablet {
+    line-height: 2;
+  }
+
+  @include laptop {
+    width: 50%;
+    margin-left: 0px;
+    font-size: 13px;
+  }
+}
+
+.section-text__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 40px;
+
+  @include laptop {
+    padding-left: 80px;
+    margin-bottom: 80px;
+    flex-wrap: nowrap;
+    gap: 50px;
+  }
+}
+
+.section-image {
+  @include laptop {
+    width: 39%;
+  }
+}
+
+.section-text {
+  @include laptop {
+    width: 61%;
+    padding-top: 67px;
+    position: relative;
+  }
+}
+
+.section-text__wrap::before {
+  content: " ";
+  width: 10px;
+  height: 10px;
+  left: 0px;
+  top: 10px;
+  background-color: $color-primary;
+  display: block;
+  position: absolute;
+
+  @include laptop {
+    left: 5px;
+  }
+}
+
+.section__links {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  gap: 25px;
+
+  @include tablet {
+    gap: 50px;
+  }
+}
+
+.section__links .button {
+  font-weight: 900;
+  width: 100%;
+  text-align: center;
+
+  @include tablet {
+    max-width: 222px;
+    width: auto;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}

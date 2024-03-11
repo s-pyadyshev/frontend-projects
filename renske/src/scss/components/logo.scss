@@ -1,0 +1,19 @@
+.logo {
+  font-size: 25px;
+  letter-spacing: -1.24px;
+
+  @include laptop {
+    font-size: 31px;
+  }
+
+  span:first-child {
+    font-family: "ITCOfficinaSerif LT BoldIt";
+    color: $color-primary;
+  }
+
+  span:last-child {
+    font-family: "ITCOfficinaSerif LT Book";
+    color: $color-black;
+    margin-left: -3px;
+  }
+}

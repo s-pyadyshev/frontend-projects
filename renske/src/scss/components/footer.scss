@@ -1,0 +1,73 @@
+.footer {
+  padding-top: 90px;
+  padding-bottom: 90px;
+
+  @include laptop {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  a {
+    font-family: "OfficinaSanITCMedium";
+    font-size: 25px;
+    letter-spacing: -0.75px;
+
+    &:focus,
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
+
+  h2 {
+    font-family: "ITCOfficinaSerif LT BoldIt";
+    font-size: 34px;
+    line-height: 1;
+
+    @include laptop {
+      font-size: 39px;
+    }
+  }
+
+  h2,
+  p {
+    margin: 0;
+  }
+
+  p {
+    max-width: 370px;
+    font-size: 15px;
+    line-height: 2;
+    font-style: italic;
+
+    @include laptop {
+      font-size: 13px;
+    }
+  }
+}
+
+.footer__contact {
+  &:before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: $color-white;
+    display: inline-block;
+    margin-right: 20px;
+  }
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 370px;
+  margin: 0 auto;
+
+  @include laptop {
+    flex-direction: row;
+    align-items: center;
+    max-width: 100%;
+  }
+}

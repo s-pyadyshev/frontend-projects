@@ -1,0 +1,6 @@
+mixin menu(links)
+  nav.menu
+    ul.menu__list
+      each link in links
+        li.menu__item
+          a.menu__link(href=link.href data-text=link.text)= link.text

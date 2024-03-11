@@ -1,0 +1,106 @@
+extends pug/base
+
+prepend vars
+  - title = 'Homepage'
+
+append vars
+
+block content
+
+  section.agenda#agenda
+    .container 
+      .agenda__inner
+        .agenda-text
+          .section-text
+            h2 Agenda
+            .section-text__wrap
+              p Politiek is meer dan politiek Den Haag, daarom ben ik regelmatig ergens anders. Hier kunt u vinden waar ik in het land te vinden ben voor
+              p een bijeenkomst, dat kan een debat, lezing of iets anders zijn. Kijk hieronder voor meer informatie.
+          .agenda-inner__events
+            .agenda-inner__events-header
+              h3 Waar?
+              p Geplande openbare optredens
+            .agenda-inner__list.custom-scroll-primary
+              ul
+                li 
+                  span Boekhandel Scheltema
+                  span 06/06/2024
+                  span AMSTERDAM
+                li 
+                  span Athenaeum Boekhandel
+                  span 08/06/2024
+                  span HAARLEM
+                li 
+                  span Westergas
+                  span 06/06/2024
+                  span AMSTERDAM
+                li 
+                  span Boekhandel Scheltema
+                  span 06/06/2024
+                  span AMSTERDAM
+                li 
+                  span Boekhandel Scheltema
+                  span 06/06/2024
+                  span AMSTERDAM
+                li 
+                  span Athenaeum Boekhandel
+                  span 08/06/2024
+                  span HAARLEM
+                li 
+                  span Westergas
+                  span 06/06/2024
+                  span AMSTERDAM
+                li 
+                  span Boekhandel Scheltema
+                  span 06/06/2024
+                  span AMSTERDAM
+        .section-image 
+          h3 
+            span Zo 
+            span bereikt 
+            span u mij
+          a.button.button--primary(href="#contact") Contact
+          img(src="images/little-portrait.png" alt="Renske Leijten.")
+  section.media#media
+    .container 
+      .media__inner
+        .section-image 
+          img(src="images/magazine.png" alt="magazine.")
+        .media-text
+          .section-text
+              h2 
+                span Recente 
+                span media
+              .section-text__wrap
+                p Hier vindt u publieke bijdragen over maatschappelijke onderwerpen of mijn persoonlijke drijfveren. Omdat een compleet 
+                p overzicht moeilijk te geven, staan hier de belangrijkste en meest recente artikelen, video’s, podcasts of andere interviews.
+          .media__inner-cards.custom-scroll-secondary
+            ul 
+              li
+                +card("Artikel", "06/06/2024", "BRON: VOLKSKRANT")
+              li
+                +card("Video", "06/06/2024", "BRON: RTL")
+              li
+                +card("Column", "06/06/2024", "BRON: HET PAROOL")
+              li
+                +card("Artikel", "06/06/2024", "BRON: VOLKSKRANT")
+              li
+                +card("Artikel", "06/06/2024", "BRON: VOLKSKRANT")
+              li
+                +card("Artikel", "06/06/2024", "BRON: VOLKSKRANT")
+  section.book#book
+    .container
+      .book-inner
+        .section-text
+          h2 
+            span Leuker 
+            span kunnen we het niet maken
+          .section-text__wrap
+            p Voordat iedereen in 2019 kennis maakte met de ontspoorde fraudejacht bij de Belastingdienst/Toeslagen in 2019, streed advocate Eva González Pérez al vijf jaar voor gerechtigheid voor de ouders die haar hulp inschakelden. In die vijf jaar ging ze van rechtbank naar rechtbank, klopte ze overal aan voor gerechtigheid. Gewonnen rechtszaken leken niet te helpen, een rapport van de ombudsman ook niet. Ondanks hulp van een medewerker van de Belastingdienst lijkt erkenning en eerherstel voor de ouders eerder verder weg dan dichtbij.
+            p Tot dat journalisten gaan speuren en Kamerleden vele stevige vragen stellen en het toeslagenschandaal aan het licht komt, maar dit was nóóit gebeurd zonder de vasthoudende advocate. Wie is zij? Wat beweegt haar? In “Leuker kunnen we het niet maken” maakt u kennis met deze vriendelijke en standvastige advocate. U leest over haar leven en haar strijd. Omdat Nederland het verdient te weten hoe deze bijzondere vrouw aan de bron stond van het blootleggen van een van de grootste schandalen van onze recente geschiedenis.
+          span Het boek is beschikbaar als e-book en paperback
+          .section__links
+            a.button(href="#") Bestel e-book
+            a.button(href="#") Bestel paperback
+        .section-image
+          img(src="images/book.png", alt="")

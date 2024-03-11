@@ -1,0 +1,60 @@
+header.header
+  .container
+    .header__inner
+      .header__logo
+        .logo
+          span(translate="no") Renske
+          span(translate="no") Leijten
+
+      .header__menu
+        +menu(
+          [
+            {
+              active: true,
+              text: "Even voorstellen",
+              href: "#intro"
+            },
+            {
+              text: "Agenda",
+              href: "#agenda"
+            },
+            {
+              text: "Recente media",
+              href: "#media"
+            },
+            {
+              text: "Boek 2024",
+              href: "#book"
+            },
+            {
+              text: "Contact",
+              href: "#contact"
+            }
+          ]
+        )
+      .header__menu-toggle
+        button.menu-toggle-open.js-open-menu(type="button")
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path d="M5.5 9a1.5 1.5 0 1 0 0 3h37a1.5 1.5 0 1 0 0-3h-37zm0 13.5a1.5 1.5 0 1 0 0 3h37a1.5 1.5 0 1 0 0-3h-37zm0 13.5a1.5 1.5 0 1 0 0 3h37a1.5 1.5 0 1 0 0-3h-37z"/></svg>
+        button.menu-toggle-close.js-close-menu(type="button")
+          <svg xmlns="http://www.w3.org/2000/svg" width="24.828" height="24.828" viewBox="0 0 24.828 24.828"><g fill="none" stroke-linecap="round" stroke-width="2"><path d="m1.414 1.414 22 22"/><path d="m1.414 23.414 22-22"/></g></svg>
+    section.intro
+      .intro__inner
+        .section-image 
+          img(src="images/large-portrait.png" alt="Renske Leijten.")
+        .section-text
+          h2
+            span Even 
+            span voorstellen
+          .section-text__wrap
+            p Na een geweldige studietijd in Groningen keerde ik in 2005 terug naar Haarlem en ging ik aan het werk in Den Haag. Dat ik bijna zeventien jaar Kamerlid zou worden, kon in toen niet voorspellen. Toch is die tijd omgevlogen. Met veel plezier, inspiratie en motivatie werkte ik samen met mensen voor betere gezondheidszorg, eerlijkere overheid en integer openbaar bestuur.
+            p Voor mijn motto <span>‘wie goed doet, goed ontmoet’</span> is de Haagse politieke wereld niet bevorderend geweest; om niet cynisch te worden koos ik voor de zomer van 2023 om terug te keren naar de normale samenleving. Om goed te ontmoeten en samen te werken aan een gezonde en eerlijke samenleving.
+          ul.intro-inner__text-wrap-details
+            li 
+              p GEBOREN 
+              p Leiden, 17 maart 1979
+            li 
+              p KAMERLID 
+              p 2006-2023
+            li 
+              p BEKEND VAN
+              p Toeslagenschandaal

@@ -1,0 +1,62 @@
+$mobile-menu-background-color: $color-primary;
+
+.header {
+  background-color: $color-secondary;
+  overflow: hidden;
+
+  > .container {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: auto;
+      right: 0;
+      height: 352px;
+      width: 70%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 100% 100%;
+      background-image: url(../images/letter-r.png);
+      margin: 0;
+      bottom: 0;
+
+      @include laptop {
+        top: 0;
+        right: -100px;
+        height: 100%;
+        width: 100%;
+        background-image: url(../images/letter-r.png);
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 36px 0;
+}
+
+.header__logo {
+  z-index: 11;
+  position: relative;
+}
+
+.header__menu-toggle {
+  z-index: 10;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  background-color: $color-white;
+  border-radius: 3px;
+
+  @include laptop {
+    display: none;
+  }
+}
