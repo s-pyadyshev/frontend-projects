@@ -33,7 +33,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 252px;
+  height: 400px;
   gap: 20px;
 
   @include laptop {
@@ -45,10 +45,15 @@
 .media__inner-cards ul li {
   list-style-type: none;
   border-radius: 15px;
+
+  @media (min-width: 1366px) {
+    width: calc(50% - 20px);
+  }
 }
 
 .media__inner .section-image {
   display: none;
+
   @include laptop {
     display: block;
     width: 30%;

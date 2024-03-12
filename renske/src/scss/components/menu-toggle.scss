@@ -1,9 +1,16 @@
 .menu-toggle-close {
+  display: flex;
+  width: 42px;
+  height: 42px;
   padding: 0;
   margin: 0;
   background: none;
   border: 0;
   display: none;
+
+  &:focus-visible {
+    outline: 0;
+  }
 
   .menu-active & {
     display: block;
@@ -11,10 +18,17 @@
 }
 
 .menu-toggle-open {
+  display: flex;
+  width: 42px;
+  height: 42px;
   padding: 0;
   margin: 0;
   background: none;
   border: 0;
+
+  &:focus-visible {
+    outline: 0;
+  }
 
   .menu-active & {
     display: none;
@@ -24,11 +38,13 @@
 .menu-toggle-open svg {
   width: 28px;
   height: 28px;
+  margin: auto;
   fill: #f05450;
 }
 
 .menu-toggle-close svg {
   width: 24px;
   height: 24px;
+  margin: auto;
   stroke: #f05450;
 }

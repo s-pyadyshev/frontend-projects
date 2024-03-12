@@ -34,10 +34,31 @@ $mobile-menu-background-color: $color-primary;
 }
 
 .header__inner {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+
+  &.fixed {
+    background-color: $color-secondary;
+  }
+}
+
+.header__wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 36px 0;
+  padding: 20px 30px;
+  max-width: 1086px;
+  height: auto;
+  margin: 0 auto;
+
+  @include laptop {
+    padding: 36px 0;
+    height: 118px;
+  }
 }
 
 .header__logo {

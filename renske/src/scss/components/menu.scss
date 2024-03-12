@@ -60,7 +60,8 @@
 
     &:focus,
     &:hover,
-    &:active {
+    &:active,
+    &.active {
       font-family: "OfficinaSanITCExtraBoldItalic";
       color: $color-primary;
     }
@@ -71,7 +72,11 @@
     align-items: center;
     flex-direction: column;
     list-style-type: none;
-    gap: 70px;
+    gap: 30px;
+
+    @media (min-height: 667px) {
+      gap: 70px;
+    }
 
     @include laptop {
       flex-direction: row;

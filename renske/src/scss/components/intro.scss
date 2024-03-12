@@ -1,10 +1,11 @@
 .intro {
   position: relative;
   z-index: 1;
+  padding-top: 103px;
   padding-bottom: 60px;
 
   @include laptop {
-    padding-top: 25px;
+    padding-top: 143px;
     padding-bottom: 110px;
   }
 }

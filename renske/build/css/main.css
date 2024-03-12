@@ -464,7 +464,7 @@ label:has(+ input:disabled)) {
 @font-face {
   font-family: "ITCOfficinaSans LT BookIt";
   src: url("../fonts/officinasanslt-bookitalic.woff2") format("woff2"), url("../fonts/officinasanslt-bookitalic.woff") format("woff");
-  font-weight: normal;
+  font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
@@ -488,7 +488,7 @@ label:has(+ input:disabled)) {
 @font-face {
   font-family: "ITCOfficinaSerif LT Book";
   src: url("../fonts/officinaseriflt-book.woff2") format("woff2"), url("../fonts/officinaseriflt-book.woff") format("woff");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -543,6 +543,11 @@ body {
 
 body.menu-active {
   overflow: hidden;
+}
+
+a,
+button {
+  transition: 0.2s;
 }
 
 button {
@@ -781,7 +786,7 @@ video {
   -ms-overflow-style: none;
   scrollbar-width: none;
   padding-right: 20px;
-  margin-right: -20px;
+  margin-right: -10px;
 }
 
 .custom-scroll-secondary::-webkit-scrollbar {
@@ -933,7 +938,7 @@ h6 {
 .footer a:focus,
 .footer a:hover,
 .footer a:active {
-  text-decoration: none;
+  color: #242424;
 }
 
 .footer h2 {
@@ -997,10 +1002,26 @@ h6 {
 }
 
 .header__inner {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header__inner.fixed {
+  background-color: #f2eee7;
+}
+
+.header__wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 36px 0;
+  padding: 20px 30px;
+  max-width: 1086px;
+  height: auto;
+  margin: 0 auto;
 }
 
 .header__logo {
@@ -1034,7 +1055,7 @@ h6 {
   background-color: #f2eee7;
   transform: translateX(-100%);
   transition-property: transform;
-  transition-duration: 0.6s;
+  transition-duration: 0.4s;
 }
 
 .menu--closed {
@@ -1076,7 +1097,8 @@ h6 {
 
 .menu__link:focus,
 .menu__link:hover,
-.menu__link:active {
+.menu__link:active,
+.menu__link.active {
   font-family: "OfficinaSanITCExtraBoldItalic";
   color: #d65b58;
 }
@@ -1086,7 +1108,7 @@ h6 {
   align-items: center;
   flex-direction: column;
   list-style-type: none;
-  gap: 70px;
+  gap: 30px;
 }
 
 .intro .section-image {
@@ -1096,6 +1118,9 @@ h6 {
 }
 
 .menu-toggle-close {
+  display: flex;
+  width: 42px;
+  height: 42px;
   padding: 0;
   margin: 0;
   background: none;
@@ -1103,15 +1128,26 @@ h6 {
   display: none;
 }
 
+.menu-toggle-close:focus-visible {
+  outline: 0;
+}
+
 .menu-active .menu-toggle-close {
   display: block;
 }
 
 .menu-toggle-open {
+  display: flex;
+  width: 42px;
+  height: 42px;
   padding: 0;
   margin: 0;
   background: none;
   border: 0;
+}
+
+.menu-toggle-open:focus-visible {
+  outline: 0;
 }
 
 .menu-active .menu-toggle-open {
@@ -1121,12 +1157,14 @@ h6 {
 .menu-toggle-open svg {
   width: 28px;
   height: 28px;
+  margin: auto;
   fill: #f05450;
 }
 
 .menu-toggle-close svg {
   width: 24px;
   height: 24px;
+  margin: auto;
   stroke: #f05450;
 }
 
@@ -1171,10 +1209,10 @@ h6 {
 
 .section-text h2 span:last-child {
   color: #242424;
-  font-family: "ITCOfficinaSans LT BookIt";
-  font-style: italic;
+  font-family: "ITCOfficinaSerif LT Book";
   font-size: 34px;
-  font-weight: 500;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .section-text p {
@@ -1226,6 +1264,7 @@ h6 {
 .intro {
   position: relative;
   z-index: 1;
+  padding-top: 103px;
   padding-bottom: 60px;
 }
 
@@ -1280,12 +1319,16 @@ h6 {
   flex-direction: column;
 }
 
+.agenda-text .section-text__wrap p {
+  margin-bottom: 0;
+}
+
 .agenda__inner .section-text::after {
   content: " ";
   display: block;
   width: 100%;
   height: 1px;
-  background-color: #E2E2E2;
+  background-color: #e2e2e2;
   margin-bottom: 56px;
 }
 
@@ -1353,11 +1396,13 @@ h6 {
   font-size: 24px;
   line-height: 29px;
   font-family: "ITCOfficinaSerif LT BoldIt";
+  margin-bottom: 0;
 }
 
 .agenda-inner__events-header p {
   font-size: 15px;
   line-height: 30px;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -1409,6 +1454,7 @@ h6 {
   text-align: right;
   font-size: 10px;
   line-height: 26px;
+  font-weight: 300;
 }
 
 .agenda-inner__list ul li {
@@ -1449,7 +1495,7 @@ h6 {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 252px;
+  height: 400px;
   gap: 20px;
 }
 
@@ -1497,7 +1543,7 @@ h6 {
   background-color: #f5f5f5;
   border-radius: 15px;
   text-decoration: none;
-  width: 210px;
+  width: 250px;
   max-width: 100%;
 }
 
@@ -1610,7 +1656,7 @@ h6 {
 
 @media (min-width: 360px) {
   .card {
-    width: 274px;
+    width: 300px;
   }
 }
 
@@ -1623,6 +1669,11 @@ h6 {
 @media (min-width: 768px) {
   .hidden-md {
     display: none;
+  }
+
+  [class^="container"] {
+    padding-right: 100px;
+    padding-left: 100px;
   }
 
   .section-text p {
@@ -1649,6 +1700,13 @@ h6 {
 @media (min-width: 992px) {
   .hidden-lg {
     display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  [class^="container"] {
+    padding-right: 140px;
+    padding-left: 140px;
   }
 }
 
@@ -1688,12 +1746,6 @@ h6 {
   .button {
     font-size: 14px;
     line-height: 18px;
-    letter-spacing: 1.3px;
-  }
-
-  [class^="container"] {
-    padding-right: 70px;
-    padding-left: 70px;
   }
 
   .footer {
@@ -1722,6 +1774,11 @@ h6 {
     width: 100%;
     background-image: url(../images/letter-r.png);
     bottom: 0;
+  }
+
+  .header__wrap {
+    padding: 36px 0;
+    height: 118px;
   }
 
   .header__menu-toggle {
@@ -1797,7 +1854,7 @@ h6 {
   }
 
   .intro {
-    padding-top: 25px;
+    padding-top: 143px;
     padding-bottom: 110px;
   }
 
@@ -2030,14 +2087,15 @@ h6 {
     font-size: 16px;
   }
 
-  [class^="container"] {
-    padding-right: 140px;
-    padding-left: 140px;
-  }
-
   .section {
     padding-top: 80px;
     padding-bottom: 80px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .media__inner-cards ul li {
+    width: calc(50% - 20px);
   }
 }
 
@@ -2064,6 +2122,12 @@ h6 {
 
   .sprite-login {
     background-image: url("../images/sprites@2x.png");
+  }
+}
+
+@media (min-height: 667px) {
+  .menu__list {
+    gap: 70px;
   }
 }
 /*# sourceMappingURL=main.css.map */

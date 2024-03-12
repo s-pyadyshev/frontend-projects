@@ -1,43 +1,44 @@
 header.header
   .container
     .header__inner
-      .header__logo
-        .logo
-          span(translate="no") Renske
-          span(translate="no") Leijten
+      .header__wrap
+        .header__logo
+          .logo
+            span(translate="no") Renske
+            span(translate="no") Leijten
 
-      .header__menu
-        +menu(
-          [
-            {
-              active: true,
-              text: "Even voorstellen",
-              href: "#intro"
-            },
-            {
-              text: "Agenda",
-              href: "#agenda"
-            },
-            {
-              text: "Recente media",
-              href: "#media"
-            },
-            {
-              text: "Boek 2024",
-              href: "#book"
-            },
-            {
-              text: "Contact",
-              href: "#contact"
-            }
-          ]
-        )
-      .header__menu-toggle
-        button.menu-toggle-open.js-open-menu(type="button")
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path d="M5.5 9a1.5 1.5 0 1 0 0 3h37a1.5 1.5 0 1 0 0-3h-37zm0 13.5a1.5 1.5 0 1 0 0 3h37a1.5 1.5 0 1 0 0-3h-37zm0 13.5a1.5 1.5 0 1 0 0 3h37a1.5 1.5 0 1 0 0-3h-37z"/></svg>
-        button.menu-toggle-close.js-close-menu(type="button")
-          <svg xmlns="http://www.w3.org/2000/svg" width="24.828" height="24.828" viewBox="0 0 24.828 24.828"><g fill="none" stroke-linecap="round" stroke-width="2"><path d="m1.414 1.414 22 22"/><path d="m1.414 23.414 22-22"/></g></svg>
-    section.intro
+        .header__menu
+          +menu(
+            [
+              {
+                active: true,
+                text: "Even voorstellen",
+                href: "#intro"
+              },
+              {
+                text: "Agenda",
+                href: "#agenda"
+              },
+              {
+                text: "Recente media",
+                href: "#media"
+              },
+              {
+                text: "Boek 2024",
+                href: "#book"
+              },
+              {
+                text: "Contact",
+                href: "#contact"
+              }
+            ]
+          )
+        .header__menu-toggle
+          button.menu-toggle-open.js-open-menu(type="button")
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path d="M5.5 9a1.5 1.5 0 1 0 0 3h37a1.5 1.5 0 1 0 0-3h-37zm0 13.5a1.5 1.5 0 1 0 0 3h37a1.5 1.5 0 1 0 0-3h-37zm0 13.5a1.5 1.5 0 1 0 0 3h37a1.5 1.5 0 1 0 0-3h-37z"/></svg>
+          button.menu-toggle-close.js-close-menu(type="button")
+            <svg xmlns="http://www.w3.org/2000/svg" width="24.828" height="24.828" viewBox="0 0 24.828 24.828"><g fill="none" stroke-linecap="round" stroke-width="2"><path d="m1.414 1.414 22 22"/><path d="m1.414 23.414 22-22"/></g></svg>
+    section.intro#intro
       .intro__inner
         .section-image 
           img(src="images/large-portrait.png" alt="Renske Leijten.")

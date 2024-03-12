@@ -19,7 +19,6 @@ $button-color-active: $color-white;
   @include laptop {
     font-size: 14px;
     line-height: 18px;
-    letter-spacing: 1.3px;
   }
 
   &:focus,
