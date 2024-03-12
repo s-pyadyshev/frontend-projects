@@ -38,6 +38,8 @@
     align-items: center;
     justify-content: space-between;
     font-size: 22px;
+    font-weight: 500;
+    font-style: italic;
     font-family: "OfficinaSanITCMediumItalic";
     text-decoration: none;
     letter-spacing: -0.42px;
@@ -54,6 +56,8 @@
       overflow: hidden;
       user-select: none;
       pointer-events: none;
+      font-weight: 700;
+      font-style: italic;
       font-family: "OfficinaSanITCExtraBoldItalic";
       color: $color-primary;
     }
@@ -62,6 +66,8 @@
     &:hover,
     &:active,
     &.active {
+      font-weight: 700;
+      font-style: italic;
       font-family: "OfficinaSanITCExtraBoldItalic";
       color: $color-primary;
     }

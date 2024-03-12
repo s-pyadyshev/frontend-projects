@@ -100,7 +100,7 @@
 .agenda__inner .section-image .button {
   position: absolute;
   font-size: 12px;
-  padding: 8px 24px;
+  padding: 10px 24px 8px;
   bottom: 20px;
   left: 37px;
 
@@ -142,7 +142,9 @@
 }
 
 .agenda__inner .section-image h3 span {
-  font-family: "ITCOfficinaSerif LT BoldIt";
+  font-weight: 700;
+  font-style: italic;
+  font-family: "ITCOfficinaSerif LT BoldIt", sans-serif;
   color: $color-primary;
 }
 
@@ -156,7 +158,9 @@
   color: $color-primary;
   font-size: 24px;
   line-height: 29px;
-  font-family: "ITCOfficinaSerif LT BoldIt";
+  font-weight: 700;
+  font-style: italic;
+  font-family: "ITCOfficinaSerif LT BoldIt", sans-serif;
   margin-bottom: 0;
 
   @include laptop {

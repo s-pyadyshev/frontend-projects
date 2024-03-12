@@ -895,6 +895,8 @@ h6 {
 }
 
 .button--primary {
+  font-weight: 700;
+  font-style: normal;
   font-family: "OfficinaSansITCPro ExtraBd";
   background-color: #d65b58;
   color: #fff;
@@ -930,6 +932,7 @@ h6 {
 }
 
 .footer a {
+  font-weight: 500;
   font-family: "OfficinaSanITCMedium";
   font-size: 25px;
   letter-spacing: -0.75px;
@@ -942,7 +945,9 @@ h6 {
 }
 
 .footer h2 {
-  font-family: "ITCOfficinaSerif LT BoldIt";
+  font-weight: 700;
+  font-style: italic;
+  font-family: "ITCOfficinaSerif LT BoldIt", sans-serif;
   font-size: 34px;
   line-height: 1;
 }
@@ -1076,6 +1081,8 @@ h6 {
   align-items: center;
   justify-content: space-between;
   font-size: 22px;
+  font-weight: 500;
+  font-style: italic;
   font-family: "OfficinaSanITCMediumItalic";
   text-decoration: none;
   letter-spacing: -0.42px;
@@ -1091,6 +1098,8 @@ h6 {
   -moz-user-select: none;
   user-select: none;
   pointer-events: none;
+  font-weight: 700;
+  font-style: italic;
   font-family: "OfficinaSanITCExtraBoldItalic";
   color: #d65b58;
 }
@@ -1099,6 +1108,8 @@ h6 {
 .menu__link:hover,
 .menu__link:active,
 .menu__link.active {
+  font-weight: 700;
+  font-style: italic;
   font-family: "OfficinaSanITCExtraBoldItalic";
   color: #d65b58;
 }
@@ -1193,23 +1204,27 @@ h6 {
 }
 
 .section-text h2 {
+  font-weight: 700;
+  font-style: italic;
   color: #d65b58;
-  font-family: "ITCOfficinaSerif LT BoldIt";
+  font-family: "ITCOfficinaSerif LT BoldIt", sans-serif;
   font-size: 34px;
   line-height: 40px;
   margin-bottom: 33px;
 }
 
 .section-text h2 span:first-child {
+  font-weight: 700;
+  font-style: italic;
   color: #d65b58;
-  font-family: "ITCOfficinaSerif LT BoldIt";
+  font-family: "ITCOfficinaSerif LT BoldIt", sans-serif;
   font-size: 34px;
   line-height: 40px;
 }
 
 .section-text h2 span:last-child {
   color: #242424;
-  font-family: "ITCOfficinaSerif LT Book";
+  font-family: "ITCOfficinaSerif LT Book", sans-serif;
   font-size: 34px;
   font-weight: 400;
   font-style: italic;
@@ -1295,7 +1310,8 @@ h6 {
 }
 
 .intro-inner__text-wrap-details li p:last-child {
-  font-family: "OfficinaSanITCMedium";
+  font-weight: 500;
+  font-family: "OfficinaSanITCMediumItalic";
   color: #d65b58;
   font-style: italic;
   font-size: 14px;
@@ -1359,7 +1375,7 @@ h6 {
 .agenda__inner .section-image .button {
   position: absolute;
   font-size: 12px;
-  padding: 8px 24px;
+  padding: 10px 24px 8px;
   bottom: 20px;
   left: 37px;
 }
@@ -1381,7 +1397,9 @@ h6 {
 }
 
 .agenda__inner .section-image h3 span {
-  font-family: "ITCOfficinaSerif LT BoldIt";
+  font-weight: 700;
+  font-style: italic;
+  font-family: "ITCOfficinaSerif LT BoldIt", sans-serif;
   color: #d65b58;
 }
 
@@ -1395,7 +1413,9 @@ h6 {
   color: #d65b58;
   font-size: 24px;
   line-height: 29px;
-  font-family: "ITCOfficinaSerif LT BoldIt";
+  font-weight: 700;
+  font-style: italic;
+  font-family: "ITCOfficinaSerif LT BoldIt", sans-serif;
   margin-bottom: 0;
 }
 
@@ -1526,12 +1546,14 @@ h6 {
 }
 
 .logo span:first-child {
-  font-family: "ITCOfficinaSerif LT BoldIt";
+  font-weight: 700;
+  font-style: italic;
+  font-family: "ITCOfficinaSerif LT BoldIt", sans-serif;
   color: #d65b58;
 }
 
 .logo span:last-child {
-  font-family: "ITCOfficinaSerif LT Book";
+  font-family: "ITCOfficinaSerif LT Book", sans-serif;
   color: #242424;
   margin-left: -3px;
 }
@@ -1569,7 +1591,9 @@ h6 {
 }
 
 .card__header h3 {
-  font-family: "ITCOfficinaSerif LT BoldIt";
+  font-weight: 700;
+  font-style: italic;
+  font-family: "ITCOfficinaSerif LT BoldIt", sans-serif;
   font-size: 16px;
   line-height: 20px;
   color: #d65b58;

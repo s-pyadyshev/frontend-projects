@@ -8,6 +8,7 @@
   }
 
   a {
+    font-weight: 500;
     font-family: "OfficinaSanITCMedium";
     font-size: 25px;
     letter-spacing: -0.75px;
@@ -20,7 +21,9 @@
   }
 
   h2 {
-    font-family: "ITCOfficinaSerif LT BoldIt";
+    font-weight: 700;
+    font-style: italic;
+    font-family: "ITCOfficinaSerif LT BoldIt", sans-serif;
     font-size: 34px;
     line-height: 1;
 

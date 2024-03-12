@@ -9,8 +9,10 @@
 }
 
 .section-text h2 {
+  font-weight: 700;
+  font-style: italic;
   color: $color-primary;
-  font-family: "ITCOfficinaSerif LT BoldIt";
+  font-family: "ITCOfficinaSerif LT BoldIt", sans-serif;
   font-size: 34px;
   line-height: 40px;
   margin-bottom: 33px;
@@ -22,8 +24,10 @@
 }
 
 .section-text h2 span:first-child {
+  font-weight: 700;
+  font-style: italic;
   color: $color-primary;
-  font-family: "ITCOfficinaSerif LT BoldIt";
+  font-family: "ITCOfficinaSerif LT BoldIt", sans-serif;
   font-size: 34px;
   line-height: 40px;
 
@@ -35,7 +39,7 @@
 
 .section-text h2 span:last-child {
   color: $color-black;
-  font-family: "ITCOfficinaSerif LT Book";
+  font-family: "ITCOfficinaSerif LT Book", sans-serif;
   font-size: 34px;
   font-weight: 400;
   font-style: italic;
